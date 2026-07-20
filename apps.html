@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apps — CultureBlocs</title>
+<meta name="description" content="The CultureBlocs ecosystem: totem hardware, the Studio, the Spine, the day's string, and workers.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html" aria-current="page">Apps</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <div class="hero"><h1>Small tools, one thread.</h1>
+  <p class="lede">Every app is an independent producer or reader of the same
+  lexicon-shaped records. None of them talk to each other — they only share the
+  schemas — which is why you can use one, some, or all of them.</p></div>
+
+  <section>
+    <h2 class="sec">Minting — where beads begin</h2>
+    <div class="cards">
+      <div class="card"><h3>The Totem <span class="status working">working</span></h3>
+        <p>A pocket ESP32 device (M5Stack StickS3). Hold the button to mint a bead
+        wearing your current <em>mask</em>; press together with a friend for a mutual
+        encounter, notarised on both devices. No clock, no network, weeks of battery.</p>
+        <div class="links"><a href="https://github.com/Geocontrol">source →</a></div></div>
+      <div class="card"><h3>AR Gallery <span class="status prototype">prototype</span></h3>
+        <p>Point a phone at a painting; it resolves the work (Wikidata, accession
+        numbers) and mints an annotation — a bookmark on that exact piece.</p></div>
+      <div class="card"><h3>Scrobble worker <span class="status working">working</span></h3>
+        <p>Deliberate listening, recorded: Sonos plays scrobble to Last.fm; the worker
+        clusters them into sessions and proposes one <em>listen</em> bead per session.
+        Machine-minted beads stay proposals until you keep them.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Telling — where beads become memory</h2>
+    <div class="cards">
+      <div class="card"><h3>CultureBloc Studio <span class="status working">working</span></h3>
+        <p>The desk where the field notebook gets dated, named and filed. Pulls the
+        totem over USB, resolves times, manages the mask wardrobe, and pushes kept
+        beads to your spine.</p></div>
+      <div class="card"><h3>The Day's String <span class="status working">working</span></h3>
+        <p>A timeline of each day: annotate beads, attach photos, link event pages,
+        and group beads into named <em>strands</em> — the publishable story unit.
+        Machine beads sit on their own dotted rail.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Keeping &amp; sharing</h2>
+    <div class="cards">
+      <div class="card"><h3>The Spine <span class="status working">working</span></h3>
+        <p>A small self-hosted record store (FastAPI + SQLite): validates every record
+        against the lexicons, deduplicates, keeps a change feed, and serves the
+        timeline. Your data, your disk, one Docker container.</p>
+        <div class="links"><a href="https://github.com/Geocontrol">source →</a></div></div>
+      <div class="card"><h3>Strand embed <span class="status working">working</span></h3>
+        <p>A dependency-free web component that renders published strands on any
+        static site. Feed it a baked export today, a live ATProto repo tomorrow —
+        same markup either way.</p>
+        <div class="links"><a href="https://geekyoto.com">see it live →</a></div></div>
+      <div class="card"><h3>ATProto publishing <span class="status planned">planned</span></h3>
+        <p>Personal data server + promoter: selected strands become signed public
+        records under your own identity, discoverable across the open network.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+</div></footer>
+</body>
+</html>

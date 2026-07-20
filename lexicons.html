@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protocol — CultureBlocs</title>
+<meta name="description" content="The com.cultureblocs.* lexicons: open schemas for beads, annotations and strands of cultural memory.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html" aria-current="page">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <div class="hero"><h1>The schema commons.</h1>
+  <p class="lede">Four small <a href="https://atproto.com/guides/lexicon">ATProto
+  lexicons</a> under the <code>com.cultureblocs.*</code> namespace — anchored to
+  this domain, which is what makes them citable. The same shapes describe a record
+  on a device, in a self-hosted spine, or published to the open network; privacy is
+  a property of where a record lives, not of its schema. <b>Status: draft</b> —
+  in daily use by the reference apps, formal DNS-resolvable publication to follow.</p>
+  <p class="meetup-meta">jump to:
+    <a href="#bead">bead</a> · <a href="#annotation">annotation</a> ·
+    <a href="#strand">strand</a> · <a href="#defs">shared defs</a> —
+    fields marked <span class="req">✱</span> are required</p></div>
+<div class="lex" id="bead">
+<h3>com.cultureblocs.bead</h3>
+<p class="desc">An atomic cultural memory: a visit, a dwell, an encounter, a screening. Minted on-device or by hand; annotated later.</p>
+<h4>record · key: tid</h4><p class="desc">An atomic cultural memory: a visit, a dwell, an encounter, a screening. Minted on-device or by hand; annotated later.</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> createdAt</td><td class="t">string · datetime</td><td></td></tr><tr><td class="n"><span class="req">✱</span> kind</td><td class="t">string</td><td>What kind of cultural moment: bloc is the neutral default (a marked moment); read/listen/watch cover at-home culture; visit/dwell/screening/performance cover being out; encounter is a mutual mint. Known values: bloc, visit, dwell, encounter, read, listen, watch, screening, performance, note.</td></tr><tr><td class="n">subject</td><td class="t">union: com.cultureblocs.defs#workRef | com.cultureblocs.defs#placeRef | com.cultureblocs.defs#strongRef</td><td>What the bead is about: a work, a place, or a published record (event, exhibition).</td></tr><tr><td class="n">note</td><td class="t">string · ≤3000</td><td></td></tr><tr><td class="n">tags</td><td class="t">array of string · ≤64 (max 8)</td><td>Freeform tags: the CultureBloc mask worn at mint time, ad-hoc event tags (emfcamp26), etc.</td></tr><tr><td class="n">geo</td><td class="t">ref → com.cultureblocs.defs#geo</td><td></td></tr><tr><td class="n">media</td><td class="t">array of ref → com.cultureblocs.defs#mediaRef (max 10)</td><td></td></tr><tr><td class="n">prev</td><td class="t">ref → com.cultureblocs.defs#strongRef</td><td>Previous bead in the day&#x27;s chain, if any.</td></tr><tr><td class="n">provenance</td><td class="t">ref → com.cultureblocs.defs#provenance</td><td></td></tr><tr><td class="n">links</td><td class="t">array of ref → com.cultureblocs.defs#linkRef (max 8)</td><td>Event page, venue page, etc.</td></tr></tbody></table>
+</div>
+<div class="lex" id="annotation">
+<h3>com.cultureblocs.annotation</h3>
+<p class="desc">A bookmark/note about a specific work, typically minted by the AR gallery app at the moment of recognition. Meaningful entirely on its own — no bead required.</p>
+<h4>record · key: tid</h4><p class="desc">A bookmark/note about a specific work, typically minted by the AR gallery app at the moment of recognition. Meaningful entirely on its own — no bead required.</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> createdAt</td><td class="t">string · datetime</td><td></td></tr><tr><td class="n"><span class="req">✱</span> work</td><td class="t">ref → com.cultureblocs.defs#workRef</td><td></td></tr><tr><td class="n">note</td><td class="t">string · ≤3000</td><td></td></tr><tr><td class="n">media</td><td class="t">array of ref → com.cultureblocs.defs#mediaRef (max 10)</td><td></td></tr><tr><td class="n">geo</td><td class="t">ref → com.cultureblocs.defs#geo</td><td></td></tr><tr><td class="n">context</td><td class="t">ref → com.cultureblocs.defs#strongRef</td><td>Optional exhibition or event record this annotation was made within.</td></tr><tr><td class="n">matchConfidence</td><td class="t">string</td><td>How the work was identified: cosine embedding match, ORB geometric verification, or manual entry. Known values: embedding, geometric, manual.</td></tr><tr><td class="n">provenance</td><td class="t">ref → com.cultureblocs.defs#provenance</td><td></td></tr></tbody></table>
+</div>
+<div class="lex" id="strand">
+<h3>com.cultureblocs.strand</h3>
+<p class="desc">A curated, ordered string of beads and annotations — typically one day&#x27;s cultural path. The publishable story unit.</p>
+<h4>record · key: tid</h4><p class="desc">A curated, ordered string of beads and annotations — typically one day&#x27;s cultural path. The publishable story unit.</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> createdAt</td><td class="t">string · datetime</td><td></td></tr><tr><td class="n">title</td><td class="t">string · ≤300</td><td></td></tr><tr><td class="n">narrative</td><td class="t">string · ≤10000</td><td></td></tr><tr><td class="n"><span class="req">✱</span> items</td><td class="t">array of ref → com.cultureblocs.defs#strongRef (max 200)</td><td>Ordered refs to bead and annotation records.</td></tr><tr><td class="n">day</td><td class="t">string · datetime</td><td>The day this strand covers (date portion significant).</td></tr><tr><td class="n">links</td><td class="t">array of ref → com.cultureblocs.defs#linkRef (max 8)</td><td></td></tr><tr><td class="n">place</td><td class="t">ref → com.cultureblocs.defs#placeRef</td><td>Where this strand happened (e.g. Tate Modern).</td></tr></tbody></table>
+</div>
+<div class="lex" id="defs">
+<h3>com.cultureblocs.defs</h3>
+<h4>object · #workRef</h4><p class="desc">Reference to an artwork/creative work. At least one resolvable ID or a descriptive fallback (title).</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n">wikidata</td><td class="t">string</td><td>Wikidata QID, e.g. Q1892745</td></tr><tr><td class="n">accession</td><td class="t">ref → #accessionRef</td><td></td></tr><tr><td class="n">linkedArt</td><td class="t">string · uri</td><td>Linked Art object URI</td></tr><tr><td class="n">title</td><td class="t">string · ≤500</td><td></td></tr><tr><td class="n">creator</td><td class="t">string · ≤300</td><td></td></tr><tr><td class="n">date</td><td class="t">string · ≤100</td><td>Freeform creation date, e.g. &#x27;1972&#x27; or &#x27;c. 1889&#x27;</td></tr><tr><td class="n">image</td><td class="t">ref → #mediaRef</td><td></td></tr></tbody></table>
+<h4>object · #accessionRef</h4><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> institution</td><td class="t">string · did</td><td>DID of the holding institution</td></tr><tr><td class="n"><span class="req">✱</span> id</td><td class="t">string · ≤200</td><td>Accession/inventory number</td></tr></tbody></table>
+<h4>object · #placeRef</h4><p class="desc">A venue with an ATProto identity, or an ad-hoc named place.</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n">did</td><td class="t">string · did</td><td>Venue DID if it has an ATProto account</td></tr><tr><td class="n">name</td><td class="t">string · ≤300</td><td></td></tr><tr><td class="n">geo</td><td class="t">ref → #geo</td><td></td></tr></tbody></table>
+<h4>object · #geo</h4><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> lat</td><td class="t">number</td><td></td></tr><tr><td class="n"><span class="req">✱</span> lng</td><td class="t">number</td><td></td></tr><tr><td class="n"><span class="req">✱</span> precision</td><td class="t">string</td><td>Declared coordinate fuzzing level. Coordinates MUST already be fuzzed to this precision before the record leaves Tier 0. Known values: exact, 100m, 1km, city.</td></tr></tbody></table>
+<h4>object · #mediaRef</h4><p class="desc">Tier 0/1 media reference. Replaced by an atproto blob at promotion time.</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> uri</td><td class="t">string · uri</td><td></td></tr><tr><td class="n">mime</td><td class="t">string · ≤100</td><td></td></tr><tr><td class="n">alt</td><td class="t">string · ≤1000</td><td></td></tr></tbody></table>
+<h4>object · #provenance</h4><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> app</td><td class="t">string · ≤100</td><td>Producing app id, e.g. &#x27;culturebloc&#x27;, &#x27;ar-gallery&#x27;</td></tr><tr><td class="n">device</td><td class="t">string · ≤100</td><td>Device identifier, e.g. StickS3 id</td></tr><tr><td class="n"><span class="req">✱</span> mintedAt</td><td class="t">string · datetime</td><td></td></tr><tr><td class="n">mutualMint</td><td class="t">boolean</td><td>True if created by a mutual-press ceremony</td></tr><tr><td class="n">mintId</td><td class="t">string · ≤64</td><td>Device-generated mint identifier (hex). Shared between both parties&#x27; beads on a mutual mint — the encounter join key.</td></tr><tr><td class="n">timeAnchored</td><td class="t">boolean</td><td>False when the device knew only the time-of-day or nothing; createdAt is then a best guess</td></tr></tbody></table>
+<h4>object · #strongRef</h4><p class="desc">Local stand-in for com.atproto.repo.strongRef</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> uri</td><td class="t">string · uri</td><td></td></tr><tr><td class="n">cid</td><td class="t">string</td><td></td></tr></tbody></table>
+<h4>object · #linkRef</h4><p class="desc">External link attached to a bead or strand: event page, venue page, ticket listing.</p><table><thead><tr><th>field</th><th>type</th><th>notes</th></tr></thead><tbody><tr><td class="n"><span class="req">✱</span> uri</td><td class="t">string · uri</td><td></td></tr><tr><td class="n">title</td><td class="t">string · ≤300</td><td></td></tr></tbody></table>
+</div>
+  <section>
+    <h2 class="sec">Design notes</h2>
+    <p>Records reference artworks by stable external identity (Wikidata QIDs,
+    institution accession numbers, Linked Art URIs) with a descriptive fallback —
+    works are referenced, never owned. Coordinate fuzzing is a schema concept
+    (<code>geo.precision</code>), not an app afterthought. <code>knownValues</code>
+    on <code>kind</code> is advisory, so the vocabulary can grow without breaking
+    old records. Event and calendar shapes are deliberately absent: for those we
+    intend to interoperate with the
+    <a href="https://github.com/lexicon-community">Lexicon Community</a> calendar
+    work rather than fork it.</p>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+</div></footer>
+</body>
+</html>

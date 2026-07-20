@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CultureBlocs — cultural memory, strung by hand</title>
+<meta name="description" content="Open schemas and small tools for keeping a record of your cultural life — exhibitions, gigs, films, books and encounters — locally first, on your own terms.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <div class="hero">
+    <h1>Cultural memory, strung by hand.</h1>
+    <p class="lede">CultureBlocs is a set of <b>open schemas</b> and <b>small tools</b>
+    for keeping a record of your cultural life — the exhibitions, gigs, films, books
+    and encounters that make it up. Moments are minted as <b>beads</b>, told into
+    <b>strands</b>, and kept in a <b>spine</b> you run yourself. Publishing is a
+    deliberate act, never a default.</p>
+  </div>
+
+  <div class="string-hero" role="img"
+       aria-label="A thread strung with beads: bloc, visit, read, listen, watch, encounter — the kinds of cultural moment CultureBlocs records">
+    <svg viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="52" x2="900" y2="52" stroke="var(--thread)" stroke-width="2.5"/>
+      <circle cx="90"  cy="52" r="13" fill="var(--bloc)"/>
+      <circle cx="235" cy="52" r="13" fill="var(--visit)"/>
+      <circle cx="380" cy="52" r="13" fill="var(--read)"/>
+      <circle cx="525" cy="52" r="13" fill="var(--listen)"/>
+      <circle cx="670" cy="52" r="13" fill="var(--watch)"/>
+      <circle cx="815" cy="52" r="13" fill="var(--encounter)"/>
+      <rect x="443" y="14" width="12" height="12" fill="var(--plaster)"
+            stroke="var(--ink)" stroke-width="2.5"/>
+      <text x="90"  y="92" text-anchor="middle">bloc</text>
+      <text x="235" y="92" text-anchor="middle">visit</text>
+      <text x="380" y="92" text-anchor="middle">read</text>
+      <text x="525" y="92" text-anchor="middle">listen</text>
+      <text x="670" y="92" text-anchor="middle">watch</text>
+      <text x="815" y="92" text-anchor="middle">encounter</text>
+      <text x="470" y="23" text-anchor="start" style="text-transform:none;letter-spacing:.04em">a bookmark on a work</text>
+    </svg>
+  </div>
+
+  <div class="principles">
+    <div><h2>Local-first</h2>
+      <p>Beads are minted on your devices and live in your own spine. Nothing needs
+      the network to work; a gallery basement is a fine place to remember something.</p></div>
+    <div><h2>Own your data</h2>
+      <p>The record store runs on your machine. Every schema is open, every export
+      is yours, and the tools are small enough to read.</p></div>
+    <div><h2>Privacy by default</h2>
+      <p>Everything starts private. Sharing is a promotion you perform on purpose —
+      per bead, per strand — with locations fuzzed and devices stripped on the way out.</p></div>
+  </div>
+
+  <section>
+    <h2 class="sec">How a moment travels</h2>
+    <div class="pipeline">totem press ──> Studio (date, name, tell) ──> Spine (your record store)
+                                                        │
+     AR bookmark ───────────────────────────────────────┤
+     scrobbled listening ──────────────────────────────>│
+                                                        ▼
+                                        the day's string · strands
+                                                        │ deliberate publish
+                                                        ▼
+                              your website · (soon) your ATProto repo</div>
+    <p>The same schemas describe a bead whether it lives on a device, in your spine,
+    or published to the open web — privacy is a property of <em>where a record lives</em>,
+    not of its shape. That is what makes local-first and federation two ends of one
+    thread rather than two systems.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Start somewhere</h2>
+    <div class="cards">
+      <div class="card"><h3>Read the schemas</h3>
+        <p>Four small lexicons — beads, annotations, strands, and their shared parts —
+        published under <code>com.cultureblocs.*</code>.</p>
+        <div class="links"><a href="/lexicons.html">Protocol reference →</a></div></div>
+      <div class="card"><h3>See the tools</h3>
+        <p>A hardware totem, a browser studio, a record spine, a timeline, and a
+        scrobbler — all small, all yours to run.</p>
+        <div class="links"><a href="/apps.html">The apps →</a></div></div>
+      <div class="card"><h3>Come to the meetup</h3>
+        <p>A London evening for people working across technology, data, creativity
+        and culture. Newcomers welcome.</p>
+        <div class="links"><a href="/meetup.html">CultureBlocs meetup →</a></div></div>
+    </div>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+</div></footer>
+</body>
+</html>
