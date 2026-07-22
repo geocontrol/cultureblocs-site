@@ -107,8 +107,12 @@ def main() -> None:
   lexicons</a> under the <code>com.cultureblocs.*</code> namespace — anchored to
   this domain, which is what makes them citable. The same shapes describe a record
   on a device, in a self-hosted spine, or published to the open network; privacy is
-  a property of where a record lives, not of its schema. <b>Status: draft</b> —
-  in daily use by the reference apps, formal DNS-resolvable publication to follow.</p>
+  a property of where a record lives, not of its schema. <b>Status: published and
+  resolvable</b> — these schemas are live protocol infrastructure, in daily use by
+  the reference apps.</p>
+  <p class="meetup-meta">resolve it yourself: <code>_lexicon.cultureblocs.com</code>
+  → <code>did:plc:l3726um33xesakwqhjkkpoet</code> → e.g.
+  <code>at://cultureblocs.com/com.atproto.lexicon.schema/com.cultureblocs.bead</code></p>
   <p class="meetup-meta">jump to:
     <a href="#bead">bead</a> · <a href="#annotation">annotation</a> ·
     <a href="#strand">strand</a> · <a href="#defs">shared defs</a> —
