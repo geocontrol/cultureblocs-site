@@ -11,7 +11,11 @@ import html
 import json
 from pathlib import Path
 
-ORDER = ["bead", "annotation", "strand", "defs"]
+ORDER = ["com.cultureblocs.bead", "com.cultureblocs.annotation",
+         "com.cultureblocs.strand", "com.cultureblocs.creative.profile",
+         "com.cultureblocs.creative.work", "com.cultureblocs.creative.connection",
+         "com.cultureblocs.venue.profile", "com.cultureblocs.venue.listing",
+         "com.cultureblocs.defs"]
 ESC = html.escape
 
 
@@ -64,7 +68,7 @@ def render_def(name: str, d: dict) -> str:
 
 
 def render_lexicon(doc: dict) -> str:
-    out = [f'<div class="lex" id="{doc["id"].split(".")[-1]}">',
+    out = [f'<div class="lex" id="{doc["id"].replace("com.cultureblocs.", "").replace(".", "-")}">',
            f'<h3>{ESC(doc["id"])}</h3>']
     main = doc["defs"].get("main")
     if main and main.get("description"):
@@ -80,9 +84,9 @@ def render_lexicon(doc: dict) -> str:
 
 def main() -> None:
     docs = {}
-    for f in Path("lexicons").glob("*.json"):
+    for f in Path("lexicons").rglob("*.json"):
         doc = json.loads(f.read_text())
-        docs[doc["id"].split(".")[-1]] = doc
+        docs[doc["id"]] = doc
     body = "\n".join(render_lexicon(docs[k]) for k in ORDER if k in docs)
 
     page = f"""<!doctype html>
@@ -103,7 +107,7 @@ def main() -> None:
 </nav>
 <main>
   <div class="hero"><h1>The schema commons.</h1>
-  <p class="lede">Four small <a href="https://atproto.com/guides/lexicon">ATProto
+  <p class="lede">Eight small <a href="https://atproto.com/guides/lexicon">ATProto
   lexicons</a> under the <code>com.cultureblocs.*</code> namespace — anchored to
   this domain, which is what makes them citable. The same shapes describe a record
   on a device, in a self-hosted spine, or published to the open network; privacy is
@@ -113,13 +117,33 @@ def main() -> None:
   <p class="meetup-meta">resolve it yourself: <code>_lexicon.cultureblocs.com</code>
   → <code>did:plc:l3726um33xesakwqhjkkpoet</code> → e.g.
   <code>at://cultureblocs.com/com.atproto.lexicon.schema/com.cultureblocs.bead</code></p>
-  <p class="meetup-meta">jump to:
+  <p class="meetup-meta">personal record:
     <a href="#bead">bead</a> · <a href="#annotation">annotation</a> ·
-    <a href="#strand">strand</a> · <a href="#defs">shared defs</a> —
+    <a href="#strand">strand</a><br>creative identity:
+    <a href="#creative-profile">creative.profile</a> ·
+    <a href="#creative-work">creative.work</a> ·
+    <a href="#creative-connection">creative.connection</a><br>venues:
+    <a href="#venue-profile">venue.profile</a> ·
+    <a href="#venue-listing">venue.listing</a> ·
+    <a href="#defs">shared defs</a> —
     fields marked <span class="req">✱</span> are required</p></div>
 {body}
   <section>
     <h2 class="sec">Design notes</h2>
+    <p><b>Self-assertion is the normal state.</b> A creative's profile and
+    work claims live in their own repository; that is the claim. A work
+    record proves one narrow, honest thing — this claim was made on this
+    date by the holder of this repository — which is enough to tag work as
+    yours and to be referenced by everything further up the stack. Industry
+    metadata, scene-specific layers and commercial registrations belong in
+    other namespaces that <em>reference</em> these records rather than
+    growing them. Attestation is an optional overlay: when two parties
+    independently point at each other, a reader can compute a verified
+    relationship; unattested records are ordinary, not deficient.</p>
+    <p><b>Venues stay small.</b> A listing exists to be a stable thing that
+    beads can point at. Audiences publish their own records referencing it,
+    so a venue reads public references rather than collecting anything about
+    the people who came.</p>
     <p>Records reference artworks by stable external identity (Wikidata QIDs,
     institution accession numbers, Linked Art URIs) with a descriptive fallback —
     works are referenced, never owned. Coordinate fuzzing is a schema concept
