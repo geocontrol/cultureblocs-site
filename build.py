@@ -14,8 +14,8 @@ from pathlib import Path
 ORDER = ["com.cultureblocs.bead", "com.cultureblocs.annotation",
          "com.cultureblocs.strand", "com.cultureblocs.creative.profile",
          "com.cultureblocs.creative.work", "com.cultureblocs.creative.connection",
-         "com.cultureblocs.venue.profile", "com.cultureblocs.venue.listing",
-         "com.cultureblocs.defs"]
+         "com.cultureblocs.venue.profile", "com.cultureblocs.venue.lineup",
+         "com.cultureblocs.venue.listing", "com.cultureblocs.defs"]
 ESC = html.escape
 
 
@@ -107,7 +107,7 @@ def main() -> None:
 </nav>
 <main>
   <div class="hero"><h1>The schema commons.</h1>
-  <p class="lede">Eight small <a href="https://atproto.com/guides/lexicon">ATProto
+  <p class="lede">Nine small <a href="https://atproto.com/guides/lexicon">ATProto
   lexicons</a> under the <code>com.cultureblocs.*</code> namespace — anchored to
   this domain, which is what makes them citable. The same shapes describe a record
   on a device, in a self-hosted spine, or published to the open network; privacy is
@@ -124,7 +124,8 @@ def main() -> None:
     <a href="#creative-work">creative.work</a> ·
     <a href="#creative-connection">creative.connection</a><br>venues:
     <a href="#venue-profile">venue.profile</a> ·
-    <a href="#venue-listing">venue.listing</a> ·
+    <a href="#venue-lineup">venue.lineup</a> ·
+    <a href="#venue-listing">venue.listing <em>(deprecated)</em></a> ·
     <a href="#defs">shared defs</a> —
     fields marked <span class="req">✱</span> are required</p></div>
 {body}
@@ -140,10 +141,17 @@ def main() -> None:
     growing them. Attestation is an optional overlay: when two parties
     independently point at each other, a reader can compute a verified
     relationship; unattested records are ordinary, not deficient.</p>
-    <p><b>Venues stay small.</b> A listing exists to be a stable thing that
-    beads can point at. Audiences publish their own records referencing it,
-    so a venue reads public references rather than collecting anything about
-    the people who came.</p>
+    <p><b>Venues stay small — and we do not own the event.</b> Nights are
+    published as
+    <a href="https://lexicon.community/lexicons/">community.lexicon.calendar.event</a>,
+    the shared event record of the open social web, so a venue's programme
+    appears in every calendar app that speaks it rather than only in ours.
+    Our own <code>venue.lineup</code> is a layer over that shared record,
+    carrying only what it does not — who is on, works shown — and referencing
+    it by strongRef. <code>venue.listing</code> is deprecated and kept
+    published so old records stay resolvable. An RSVP on an event says
+    <em>I'm going</em>; a bead pointing at the same event says <em>I was
+    here</em> — two tenses, one record, different apps.</p>
     <p>Records reference artworks by stable external identity (Wikidata QIDs,
     institution accession numbers, Linked Art URIs) with a descriptive fallback —
     works are referenced, never owned. Coordinate fuzzing is a schema concept
