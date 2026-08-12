@@ -146,6 +146,10 @@ function renderRef(){
 }
 
 /* ---------- state ---------- */
+// Declared up here on purpose: flush() reads `acct` during start-up, and a
+// `let` further down the file would be in its temporal dead zone at that
+// moment — the script would throw and everything after it would never bind.
+let acct = null, OA = null;
 const LS = k => JSON.parse(localStorage.getItem('pt:'+k) || 'null');
 const SV = (k,v) => localStorage.setItem('pt:'+k, JSON.stringify(v));
 let cfg = LS('cfg') || {url:'http://localhost:8100', tok:''};
@@ -321,7 +325,6 @@ document.getElementById('sSave').onclick = ()=>{
 };
 
 /* ---------- account: publish to your own repo ---------- */
-let OA = null, acct = null;
 async function oauth(){
   if(!OA) OA = await import('./oauth.js');
   return OA;
@@ -339,12 +342,23 @@ function renderAcct(){
   }
   setStatus();
 }
+function acctMsg(text){
+  const line = document.getElementById('acct-out');
+  if(line) line.textContent = text;
+  status.textContent = String(text).toUpperCase().slice(0,60);
+}
 document.getElementById('sSignin').onclick = async ()=>{
   const h = document.getElementById('sHandle').value.trim();
-  if(!h) return;
-  status.textContent = 'FINDING YOUR ACCOUNT…';
-  try{ const m = await oauth(); await m.startLogin(h); }
-  catch(e){ status.textContent = String(e.message||e).toUpperCase().slice(0,60); }
+  if(!h){ acctMsg('enter your handle first'); return }
+  acctMsg('finding your account…');
+  try{
+    const m = await oauth();
+    await m.startLogin(h);
+  }catch(e){
+    // the settings panel is open when this runs, so say it there too
+    acctMsg(e && e.message ? e.message : 'sign-in failed');
+    console.error('[pocket] sign-in:', e);
+  }
 };
 document.getElementById('sSignout').onclick = async ()=>{
   const m = await oauth(); await m.signOut(); acct = null; renderAcct();
@@ -375,7 +389,9 @@ document.getElementById('pub').onclick = async ()=>{
 };
 
 (async function initAccount(){
-  const m = await oauth();
+  let m;
+  try{ m = await oauth(); }
+  catch(e){ console.error('[pocket] oauth module failed to load:', e); return; }
   try{
     if(m.pendingCallback()){
       status.textContent = 'SIGNING IN…';

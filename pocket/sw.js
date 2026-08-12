@@ -1,5 +1,6 @@
-const V = 'pt-1';
-const SHELL = ['.', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
+const V = 'pt-2';   // bump on every deploy: old shells are cached hard
+const SHELL = ['.', 'index.html', 'oauth.js', 'manifest.webmanifest',
+               'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', e =>
   e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e =>
