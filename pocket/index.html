@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pocket Totem</title>
 <meta name="theme-color" content="#000000">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="/pocket/manifest.webmanifest">
 <link rel="atproto-client" href="https://www.cultureblocs.com/pocket/client-metadata.json">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="/pocket/icon-192.png">
 <style>
 :root{
   --void:#000; --paper:#EDEDED; --dim:#5A5A5A; --red:#D71921;
@@ -326,7 +326,15 @@ document.getElementById('sSave').onclick = ()=>{
 
 /* ---------- account: publish to your own repo ---------- */
 async function oauth(){
-  if(!OA) OA = await import('./oauth.js');
+  if(OA) return OA;
+  // Resolve the module against the client-metadata link, which is absolute.
+  // A relative './oauth.js' breaks when the page is served at /pocket
+  // without a trailing slash: the browser resolves it to /oauth.js and the
+  // import fails with nothing but "importing a module script failed".
+  const cm = document.querySelector('link[rel="atproto-client"]');
+  const url = cm ? cm.href.replace(/client-metadata\.json$/, 'oauth.js')
+                 : new URL('oauth.js', document.baseURI).href;
+  OA = await import(url);
   return OA;
 }
 function renderAcct(){
@@ -408,7 +416,7 @@ document.getElementById('pub').onclick = async ()=>{
 
 /* ---------- PWA ---------- */
 if('serviceWorker' in navigator && location.protocol==='https:')
-  navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.register('/pocket/sw.js', {scope: '/pocket/'});
 </script>
 </body>
 </html>

@@ -3,14 +3,35 @@
     {
       "source": "/pocket/client-metadata.json",
       "headers": [
-        { "key": "content-type", "value": "application/json" },
-        { "key": "access-control-allow-origin", "value": "*" },
-        { "key": "cache-control", "value": "public, max-age=300" }
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
       ]
     },
     {
       "source": "/pocket/sw.js",
-      "headers": [{ "key": "cache-control", "value": "no-cache" }]
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "no-cache"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/pocket",
+      "destination": "/pocket/",
+      "permanent": false
     }
   ]
 }

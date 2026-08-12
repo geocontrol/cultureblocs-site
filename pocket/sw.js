@@ -1,6 +1,9 @@
-const V = 'pt-2';   // bump on every deploy: old shells are cached hard
-const SHELL = ['.', 'index.html', 'oauth.js', 'manifest.webmanifest',
-               'icon-192.png', 'icon-512.png'];
+const V = 'pt-3';   // bump on every deploy: old shells are cached hard
+// Absolute paths: this app is served at /pocket/ and a relative shell
+// mis-resolves when the page is opened without the trailing slash.
+const SHELL = ['/pocket/', '/pocket/index.html', '/pocket/oauth.js',
+               '/pocket/manifest.webmanifest', '/pocket/icon-192.png',
+               '/pocket/icon-512.png'];
 self.addEventListener('install', e =>
   e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e =>
