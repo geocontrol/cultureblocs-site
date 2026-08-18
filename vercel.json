@@ -63,6 +63,11 @@
       "source": "/easel",
       "destination": "/easel/",
       "permanent": false
+    },
+    {
+      "source": "/catalogue",
+      "destination": "/catalogue/",
+      "permanent": false
     }
   ]
 }
