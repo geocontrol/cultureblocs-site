@@ -1,0 +1,12 @@
+{
+  "client_id": "https://www.cultureblocs.com/nunhead/client-metadata.json",
+  "client_name": "Nunhead Art Trail",
+  "client_uri": "https://www.cultureblocs.com/nunhead/",
+  "application_type": "native",
+  "dpop_bound_access_tokens": true,
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "redirect_uris": ["com.cultureblocs.www:/callback"],
+  "scope": "atproto",
+  "token_endpoint_auth_method": "none"
+}
