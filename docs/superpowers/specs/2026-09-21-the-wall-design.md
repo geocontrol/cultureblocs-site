@@ -221,10 +221,17 @@ Both are pure functions returning HTML strings, so both are tested directly.
 Ten strands a page, the page number in the URL (`/wall/<handle>/?page=2`), so
 every page is a link that can be sent. Page one omits the parameter.
 
-The whole list is fetched and sorted **once**, then paged in the browser:
-*newer* and *older* both become instant, both directions work from a cold
-link, and there are real page numbers. A page beyond the end shows the last
-page rather than an empty one.
+The whole list is fetched and sorted **once per page load**, then sliced:
+both directions work from a cold link, and there are real page numbers. A page
+beyond the end shows the last page rather than an empty one.
+
+Paging is plain links, so each one is a fresh document load that resolves the
+actor and walks the list again. What fetching everything buys is therefore
+**correct order**, not speed — at seven strands the difference is invisible,
+and keeping `wall.js` free of history and in-memory state is worth more than
+instant paging. If the wall ever grows enough for that to bite, the answer is
+`history.pushState` and re-rendering from the list already in memory, which is
+a change to one module.
 
 The cost is that the first paint waits for the whole walk. At one request per
 hundred strands that is one request today and two at two hundred; several
@@ -267,16 +274,20 @@ question.
 
 ## 8 · The duplication this accepts
 
-`wall/lib/atproto.js` will hold its own copy of handle resolution — about
-forty lines that `catalogue/lib/atproto.js` already has. That is deliberate:
+`wall/lib/atproto.js` holds its own copy of handle resolution — about **eighty
+identical lines** (`getJson`, `pdsFromDoc`, `notResolved`, `resolveActor`),
+plus `fetchAllStrands`, which is `fetchAllWorks` differing only in the
+collection it names. The repository also ends up with a third copy of `esc`. That is deliberate:
 extracting a shared module now would mean changing a working, deployed surface
 to serve one that does not exist yet, and `catalogue`'s tests live in the
 `cultureblocs-string` repo, so a regression here would not be caught by
 anything in this one.
 
 Once the wall works, both uses are visible and the shared module is the
-obvious follow-up. The spec records the debt so it is a decision rather than
-an accident.
+obvious follow-up, and it has a shape: one `lib/atproto.js` whose
+`listAll(pds, did, nsid)` is the single cursor loop both surfaces call. The
+spec records the debt at its real size so it is a decision rather than an
+accident — and so the follow-up is scheduled rather than aspirational.
 
 ## 9 · Testing
 
