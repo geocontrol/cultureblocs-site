@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to — CultureBlocs</title>
+<meta name="description" content="The basic things: write a bead, tell a strand, keep a proposal, claim a work, publish an event, publish a strand, and render published records on a site.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html" aria-current="page">How to</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <div class="hero"><h1>The basic things.</h1>
+  <p class="lede">Eight recipes covering most of what anyone actually does with
+  CultureBlocs. Each one gives <b>the app way</b> and, where there is one, <b>the
+  command line</b> — they write the same records, so pick whichever is nearer to
+  hand.</p>
+  <p class="toc">
+    <a href="#bead">write a bead</a> · <a href="#strand">tell a strand</a> ·
+    <a href="#proposal">keep a proposal</a> · <a href="#work">claim a work</a> ·
+    <a href="#event">publish an event</a> · <a href="#publish">publish a strand</a> ·
+    <a href="#embed">put it on a site</a> · <a href="#roundtrip">bring a record home</a>
+  </p></div>
+
+  <section>
+    <h2 class="sec">What you need first</h2>
+    <p>Less than you might think. <b>Pocket</b>, <b>Easel</b> and <b>Loom</b> run
+    entirely in a browser: Pocket and Easel publish to your own ATProto repository
+    with nothing of ours in between, and Loom works with no server at all. You need
+    <b>an ATProto account</b> (a Bluesky handle will do) only to publish, and
+    <b>a String</b> only if you want one private store that every app writes into.
+    The command-line recipes below assume a String at
+    <code>http://localhost:8100</code>; set <code>STRING_URL</code> and
+    <code>STRING_TOKEN</code> if yours lives elsewhere.</p>
+    <div class="pipeline">docker compose up -d --build   # in cultureblocs-string  → :8100 the String, :8101 timeline
+docker compose up -d           # in cultureblocs-loom    → :8108 Loom</div>
+  </section>
+
+  <section>
+    <h2 class="sec">The recipes</h2>
+
+    <div class="recipe" id="bead">
+      <h3>Write a bead</h3>
+      <p>A <b>bead</b> is one moment: a gallery afternoon, an album, a book
+      finished at breakfast, a film, an encounter. It carries a kind, a time, a
+      note, tags, a place, photos, links, and <em>refs</em> — what it is about.
+      Provenance is fixed at the moment you save it and never changes afterwards;
+      the content stays editable, and a correction is recorded as an edit.</p>
+
+      <p class="way">In Loom</p>
+      <p>Open settings, point Loom at your String, <b>check</b>, then
+      <b>import</b> — that pulls what is already there. Press <b>+ New bead</b>
+      and fill the one form: kind, when it happened, the note, tags, place,
+      photos, links and refs. Save writes it to this browser; <b>send</b> takes
+      it to the String.</p>
+
+      <p class="way">On a phone</p>
+      <p>Open <a href="/pocket/">Pocket</a>, choose a mask, press the button.
+      Beads queue locally and flush to your String, or publish straight to your
+      own repository if you signed in. If you scanned a venue’s QR on the way in,
+      that night’s event is already attached.</p>
+
+      <p class="way">From a totem</p>
+      <p>Press the button on the device; plug it in later. Loom holds the serial
+      port, reads the dump, and resolves the totem’s elapsed-time counters into
+      real instants — the device has no clock and no network by design.</p>
+
+      <p class="way">On the command line</p>
+      <div class="pipeline">python scripts/mint.py --note "Ben Pester, The Expansion Project" --kind read \
+  --tags "fiction,sf" --place "home" --time 2026-09-18T08:20:00Z</div>
+      <p class="note">Kinds: <code>bloc</code>, <code>visit</code>,
+      <code>dwell</code>, <code>encounter</code>, <code>read</code>,
+      <code>listen</code>, <code>watch</code>, <code>screening</code>,
+      <code>performance</code>, <code>note</code>. The list is advisory in the
+      schema, so it can grow without breaking old records.</p>
+    </div>
+
+    <div class="recipe" id="strand">
+      <h3>Tell a strand</h3>
+      <p>A <b>strand</b> is the story of a day or an evening, and the unit you
+      publish. It has a title, a day, a narrative of up to 10,000 characters, a
+      place, links, refs — and the beads it strings together. The beads do not
+      change when you add them; the strand points at them.</p>
+
+      <p class="way">In Loom</p>
+      <p>Press <b>+ New strand</b>. While it is open, every bead in the String
+      column carries a tick box: ticking one puts it in the strand, in order.
+      Ticking a proposal keeps it at the same time. Write the narrative beside
+      the column, save, and <b>send</b>.</p>
+
+      <p class="way">In the timeline</p>
+      <p>Load a day at <code>:8101</code>, select the beads you want and choose
+      <b>group into strands</b>. The strand gets its own title, place and event
+      link.</p>
+
+      <p class="note">Refs are the part worth the effort. Naming the film, the
+      book or the venue as a <code>ref</code> — <code>subject</code> for what the
+      entry is about, <code>mention</code> for what it reaches for — is what lets
+      two people writing about the same night ever find each other. The text
+      itself is never rewritten: no wikilinks, no markup, just a small array
+      beside it. See the <a href="/lexicons.html#defs">shared defs</a>.</p>
+    </div>
+
+    <div class="recipe" id="proposal">
+      <h3>Keep or release a proposal</h3>
+      <p>Machines may suggest; only a person decides. The scrobbler clusters
+      Last.fm plays into listening sessions and proposes one <code>listen</code>
+      bead per session; those arrive with <code>state: proposal</code> and sit on
+      a dotted rail. A proposal may be <em>revised</em> by a later run — a set
+      that turned out to have more tracks in it — and a re-run will not erase
+      edits you have made to it. The moment you <b>keep</b> one, it becomes a
+      mint fact and no worker can touch it again. <b>Release</b> discards it.</p>
+      <p>Both buttons are in the String column in Loom, and on the dotted rail in
+      the timeline. This is the whole contract: proposals are not facts.</p>
+    </div>
+
+    <div class="recipe" id="work">
+      <h3>Claim a work</h3>
+      <p>A <b>work claim</b> tags a piece of work as yours. It lives in your own
+      repository, and that <em>is</em> the claim. What it proves is narrow and
+      honest — this claim was made on this date by the holder of this repository
+      — not authorship, not ownership. That narrowness is the feature. Unattested
+      is the normal state, not a deficient one: there are no verification badges
+      and no completeness scores.</p>
+
+      <p class="way">In Easel</p>
+      <p>Open <a href="/easel/">Easel</a>, sign in with your handle, fill in your
+      <b>profile</b> once, then <b>+ New work</b>: title, date, description,
+      credits, links, external identifiers and images with alt text. Publish it
+      to your repository. Easel tracks drift, so a work you have edited since
+      publishing says so, and republishing updates the same record rather than
+      making a second one.</p>
+
+      <p class="way">On the command line</p>
+      <div class="pipeline">python scripts/creative.py profile --name "Your Name" \
+  --disciplines "sound,installation" --based "London"
+
+python scripts/creative.py work --title "Tideline" --date 2024 \
+  --description "Four-channel piece for a tidal river." \
+  --credit "Your Name|composer" --link "https://…|listen" \
+  --external-id isni:0000000121174403
+
+python scripts/promote.py publish &lt;record-id&gt; --identity personal</div>
+      <p class="note">Layers reference; they never grow the core. Industry
+      metadata, scene vocabularies and licensing terms belong in other namespaces
+      pointing at a work’s URI, which is why the work record stays tiny.
+      Registration with ISNI, ISWC and the rest is somebody else’s business —
+      <code>externalIds</code> is the hook such a bridge writes back into.</p>
+    </div>
+
+    <div class="recipe" id="event">
+      <h3>Publish an event</h3>
+      <p>A night is published as <b>a shared record we do not own</b>:
+      <code>community.lexicon.calendar.event</code>, stewarded by
+      <a href="https://lexicon.community">Lexicon Community</a>, so your programme
+      reaches every calendar app that speaks it rather than only ours. Our
+      <code>venue.lineup</code> is a thin layer over that event carrying what it
+      does not — who is on, works shown — pinned to it by strongRef.</p>
+
+      <p class="way">In Doors</p>
+      <p>Fill one form and it writes both records, publishes them under the
+      venue’s own identity, and prints a QR code for the door and the poster. The
+      QR opens Pocket with the event attached, so a bead about tonight is one tap
+      for anyone who came.</p>
+
+      <p class="way">On the command line</p>
+      <div class="pipeline"># once: the venue as a publishing party, at rkey "self"
+python scripts/venue.py profile --name "The Ivy House" --address "40 Stuart Rd" \
+  --capacity 150 --accessibility "step-free entry, accessible toilet" \
+  --link "https://…|website"
+
+# a night, in the shared type
+python scripts/venue.py event --title "Friday Session" \
+  --start 2026-10-02T20:00:00Z --end 2026-10-02T23:00:00Z \
+  --city London --venue-name "The Ivy House" --link "https://dice.fm/…|tickets"
+
+# optional: who is on
+python scripts/venue.py lineup --event-uri at://…/community.lexicon.calendar.event/… \
+  --event-cid bafy… --billing "The Bug Club|live"
+
+python scripts/promote.py publish &lt;record-id&gt; --identity ivyhouse</div>
+      <p class="note">Then the audience half happens on its own: people who came
+      publish beads referencing the event, and the venue counts <em>public</em>
+      references. It collects nothing and stores nothing about a person — the
+      evidence is published by the people who chose to publish it. An RSVP says
+      <em>I’m going</em>; a bead pointing at the same event says <em>I was
+      here</em>. Public references are countable; identities are not the venue’s
+      to collect. Early on this is a handful of beads a night, which is a lovely
+      record of an evening and useless as analytics — say so rather than dressing
+      three references as a dashboard.</p>
+    </div>
+
+    <div class="recipe" id="publish">
+      <h3>Publish a strand</h3>
+      <p>Publishing is a deliberate act, per strand, never a default. The String
+      holds your <b>identities</b> — use app passwords, never account passwords —
+      and multiple identities are the point: personal strands publish as you,
+      organisational strands as the org. Same desk, different letterhead.</p>
+      <div class="pipeline">curl -X PUT http://localhost:8100/identities/personal \
+  -H 'content-type: application/json' \
+  -d '{"handle":"you.bsky.social","appPassword":"xxxx-xxxx-xxxx-xxxx"}'
+
+python scripts/promote.py publish &lt;strand-id&gt; --identity personal
+python scripts/promote.py status        # what has drifted since it was published</div>
+      <p>The timeline has publish, republish and unpublish buttons per strand,
+      with a confirm showing which identity will speak. <b>What publishes:</b>
+      place names, notes, tags, links, kinds, times, and refs. <b>What never
+      leaves:</b> geo coordinates, provenance, device identifiers, mint ids,
+      local media, and any person named only by a name.</p>
+      <p class="note">That strip is one rule with two implementations — Python in
+      the String, JavaScript in the browser — held together by shared fixtures, so
+      the two cannot quietly disagree about what leaves your machine. It fails
+      closed: a field or a ref type it does not recognise is dropped rather than
+      guessed at.</p>
+    </div>
+
+    <div class="recipe" id="embed">
+      <h3>Put published records on a site</h3>
+      <p>Everything published is readable by anything that speaks ATProto,
+      including three readers of ours that need no hosting behind them.</p>
+
+      <p class="way">The strand embed</p>
+      <p>A dependency-free web component. Point it at a handle and it reads that
+      repository live; point it at a baked export and the markup is identical.</p>
+      <div class="pipeline">&lt;script type="module" src="/cultureblocs-strands.js"&gt;&lt;/script&gt;
+&lt;cultureblocs-strands actor="cultureblocs.com" limit="5"&gt;&lt;/cultureblocs-strands&gt;</div>
+
+      <p class="way">The wall and the catalogue</p>
+      <p><a href="/wall/">The wall</a> is one person’s published cultureblocs,
+      newest first, with a URL per strand:
+      <code>/wall/&lt;handle&gt;/</code> and
+      <code>/wall/&lt;handle&gt;/&lt;rkey&gt;</code>.
+      <a href="/catalogue/">The catalogue</a> is an artist’s published works —
+      <code>/catalogue/?actor=&lt;handle&gt;&amp;template=grid</code>, with
+      <code>index</code> and <code>feature</code> as the other templates, or your
+      own same-origin stylesheet via <code>&amp;css=</code>. Both read the actor’s
+      own PDS in the browser, so nothing of ours sits between a reader and the
+      record.</p>
+
+      <p class="way">A static export, with photos</p>
+      <div class="pipeline">python scripts/export_public.py export &lt;strand-id&gt; --out &lt;site&gt;/cultureblocs</div>
+      <p class="note">Same privacy strip, plus media copied content-addressed.</p>
+    </div>
+
+    <div class="recipe" id="roundtrip">
+      <h3>Bring a born-public record home</h3>
+      <p>A bead minted on a phone and published straight to your repository has
+      no private original — it was born public. Bring it home to annotate it,
+      attach photos and put it in a strand:</p>
+      <div class="pipeline">python scripts/import_repo.py --actor you.bsky.social --dry-run
+python scripts/import_repo.py --actor you.bsky.social</div>
+      <p>Imported records keep their public identity, so re-running imports
+      nothing twice, and they remember their published twin: because the String
+      reuses the original record key, re-publishing <b>updates the public record
+      in place</b> rather than leaving an orphaned duplicate beside it.</p>
+      <p class="note">Two things follow from being born public. There is no
+      richer private version to fall back on — what you minted is what the world
+      saw. And every later edit is a public amendment, visible in your
+      repository’s history. That is honest, and worth knowing before you edit a
+      note someone has already read.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Where to go next</h2>
+    <div class="cards">
+      <div class="card"><h3>Read the schemas</h3>
+        <p>Every field these recipes fill in, with its type and its notes —
+        generated from the schema files themselves, so the docs cannot drift.</p>
+        <div class="links"><a href="/lexicons.html">Protocol reference →</a></div></div>
+      <div class="card"><h3>See the tools</h3>
+        <p>What each app is, what state it is in, and what the next phases of
+        Loom change about the String.</p>
+        <div class="links"><a href="/apps.html">The apps →</a></div></div>
+      <div class="card"><h3>Ask someone</h3>
+        <p>A London evening for people working across technology, data,
+        creativity and culture. Newcomers welcome.</p>
+        <div class="links"><a href="/meetup.html">CultureBlocs meetup →</a></div></div>
+    </div>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+</div></footer>
+</body>
+</html>

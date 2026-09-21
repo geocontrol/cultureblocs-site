@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Apps — CultureBlocs</title>
-<meta name="description" content="The CultureBlocs ecosystem: totem hardware, the Studio, the Spine, the day's string, and workers.">
+<meta name="description" content="The CultureBlocs ecosystem: the Loom desk, the String record store, the totem, Pocket, Easel, Doors, and the readers that render published records.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -12,13 +12,55 @@
   <a class="mark" href="/">Culture<span>Blocs</span></a>
   <a class="item" href="/lexicons.html">Protocol</a>
   <a class="item" href="/apps.html" aria-current="page">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
   <div class="hero"><h1>Small tools, one thread.</h1>
   <p class="lede">Every app is an independent producer or reader of the same
   lexicon-shaped records. None of them talk to each other — they only share the
-  schemas — which is why you can use one, some, or all of them.</p></div>
+  schemas — which is why you can use one, some, or all of them. Two are the
+  centre of gravity: <b>Loom</b>, the desk where records are written, and
+  <b>the String</b>, the store that keeps them.</p></div>
+
+  <section>
+    <h2 class="sec">How a moment travels</h2>
+    <div class="pipeline">totem press ───┐
+phone mint ────┤
+scrobbled play ┤──> Loom (the desk: write it whole, keep proposals) ──> the String
+hand-written ──┘         │                                              (your store)
+                         │ deliberate publish
+                         ▼
+   your ATProto repo ──> the wall · the catalogue · the strand embed · the AppView</div>
+    <p>Beads arrive from whatever had your hands at the time. Loom is where they
+    become an entry; the String is where they stay. Publishing is a separate,
+    deliberate press — and what leaves is decided by one strip rule, held to its
+    Python and JavaScript implementations by shared fixtures.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">The desk</h2>
+    <div class="cards">
+      <div class="card"><h3>Loom <span class="status working">phase 1b</span></h3>
+        <p>The whole loop in one page: your String always in view as a column —
+        month calendar, entries newest first, proposals kept or released in
+        place — and an editor beside it where a <em>bead</em> or a
+        <em>strand</em> is written whole. Vanilla ES modules and IndexedDB, no
+        framework, no build step; it works with no server at all. <b>Send</b>
+        carries every change to the String — new, edited, kept, deleted — each
+        against the version Loom last saw, so a record changed on both sides is
+        flagged for you to choose rather than silently overwritten.</p>
+        <div class="links"><a href="https://github.com/geocontrol/cultureblocs-loom">source →</a> ·
+        <a href="/howto.html#bead">write a bead →</a></div></div>
+      <div class="card"><h3>CultureBloc Studio <span class="status planned">retired</span></h3>
+        <p>The old desk: pull the totem over USB, resolve its elapsed-time
+        counters to real instants, tell the day, push to the store. Retired in
+        September 2026 once Loom took Web Serial and the totem sync. The totem
+        has no network path by construction, so a browser holding the serial
+        port is the only way in — and two apps holding it was one too many.
+        Everything Studio did, Loom does.</p></div>
+    </div>
+  </section>
 
   <section>
     <h2 class="sec">Minting — where beads begin</h2>
@@ -26,50 +68,137 @@
       <div class="card"><h3>The Totem <span class="status working">working</span></h3>
         <p>A pocket ESP32 device (M5Stack StickS3). Hold the button to mint a bead
         wearing your current <em>mask</em>; press together with a friend for a mutual
-        encounter, notarised on both devices. No clock, no network, weeks of battery.</p>
+        encounter, notarised on both devices. No clock, no network, weeks of battery
+        — it counts elapsed time and Loom resolves that to real instants when you
+        plug it in.</p>
         <div class="links"><a href="https://github.com/geocontrol/culturebloc-totem">source →</a></div></div>
-      <div class="card"><h3>AR Gallery <span class="status prototype">prototype</span></h3>
-        <p>Point a phone at a painting; it resolves the work (Wikidata, accession
-        numbers) and mints an annotation — a bookmark on that exact piece.</p></div>
+      <div class="card"><h3>Pocket Totem <span class="status working">working</span></h3>
+        <p>The totem on glass: a mask strip and a mint button rendered as a live
+        dot-matrix. Beads queue locally and go to your String, or — signed in with
+        ATProto OAuth — straight to your own repository with no server of your own.
+        Scanning a venue’s QR attaches that night’s event to what you mint.</p>
+        <div class="links"><a href="/pocket/">open Pocket →</a></div></div>
       <div class="card"><h3>Scrobble worker <span class="status working">working</span></h3>
         <p>Deliberate listening, recorded: Sonos plays scrobble to Last.fm; the worker
         clusters them into sessions and proposes one <em>listen</em> bead per session.
-        Machine-minted beads stay proposals until you keep them.</p></div>
+        Machine beads arrive with <code>state: proposal</code>, sit on a dotted rail,
+        and may be revised by a later run — until a person keeps one, after which no
+        worker can touch it again.</p></div>
+      <div class="card"><h3>By hand <span class="status working">working</span></h3>
+        <p>For moments no device witnessed: <code>scripts/mint.py</code> on the
+        command line, or the Claude Code skill, which mints, edits and publishes
+        conversationally from a terminal.</p>
+        <div class="links"><a href="/howto.html#bead">how to →</a></div></div>
+      <div class="card"><h3>AR Gallery <span class="status planned">parked</span></h3>
+        <p>Point a phone at a painting; it resolves the work and mints an
+        annotation. Parked pending a rethink — the reframe when it returns is
+        phone-first and lens-as-gesture, matching on-device against venue-published
+        packs so no images leave the phone. The <code>annotation</code> lexicon
+        waits ready.</p></div>
     </div>
   </section>
 
   <section>
-    <h2 class="sec">Telling — where beads become memory</h2>
-    <div class="cards">
-      <div class="card"><h3>CultureBloc Studio <span class="status working">working</span></h3>
-        <p>The desk where the field notebook gets dated, named and filed. Pulls the
-        totem over USB, resolves times, manages the mask wardrobe, and pushes kept
-        beads to your spine.</p></div>
-      <div class="card"><h3>The Day's String <span class="status working">working</span></h3>
-        <p>A timeline of each day: annotate beads, attach photos, link event pages,
-        and group beads into named <em>strands</em> — the publishable story unit.
-        Machine beads sit on their own dotted rail.</p></div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="sec">Keeping &amp; sharing</h2>
+    <h2 class="sec">Keeping — the String</h2>
     <div class="cards">
       <div class="card"><h3>The String <span class="status working">working</span></h3>
   <p>A small self-hosted record store — beads on a thread, in the lineage of
   the quipu. Validates every record against the lexicons, deduplicates, keeps
-  a change feed, serves the timeline, holds your publishing identities. Your
-  data, your disk, one container.</p>
+  an append-only change feed, serves the timeline, holds your publishing
+  identities. One SQLite file, your disk, one container. (Formerly “the
+  Spine”: renamed, but the API, the data and existing <code>spine://</code>
+  record URIs are unchanged.)</p>
   <div class="links"><a href="https://github.com/Geocontrol/cultureblocs-string">source →</a></div></div>
+      <div class="card"><h3>What Phase 0 changed <span class="status working">landed</span></h3>
+        <p>The foundations a local-first client needs. The lexicon validator and
+        the publish strip were ported to the browser and are held to their Python
+        originals by shared fixtures. Records grew an explicit <code>state</code>,
+        so the dotted rail is stored rather than guessed from an app name. The
+        change feed gained HLC stamps, device and actor. <code>PATCH</code> honours
+        <code>If-Match</code> and removes a field sent as <code>null</code>;
+        <code>DELETE</code> honours it too. A connector re-run can revise its own
+        proposal and can no longer erase a person’s edits to one.</p></div>
+      <div class="card"><h3>The timeline <span class="status working">working</span></h3>
+        <p>The String’s own day view: annotate, attach photos, set kind, tags,
+        place and links, keep or release proposals, group beads into strands and
+        publish them. Still running, and not retired — Loom is built alongside it,
+        and daily use decides the rest.</p></div>
+      <div class="card"><h3>The DataBrick <span class="status planned">spec written</span></h3>
+        <p>A Raspberry Pi as an always-on host: a physical object in the house
+        holding the household’s cultural memory, and the natural home for a
+        personal sync server. Retires the sleeping-laptop failure class.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Creative identity &amp; venues</h2>
+    <div class="cards">
+      <div class="card"><h3>Easel <span class="status working">working</span></h3>
+        <p>Claim your work: a browser app for <code>creative.profile</code> and
+        <code>creative.work</code> records, with images, alt text and dimensions.
+        IndexedDB and content-addressed blobs; signs in with ATProto OAuth and
+        publishes to your own repository, tracking drift against what is public.
+        No server involved at any point.</p>
+        <div class="links"><a href="/easel/">open Easel →</a> ·
+        <a href="/howto.html#work">claim a work →</a></div></div>
+      <div class="card"><h3>Doors <span class="status working">working</span></h3>
+        <p>The venue app: a profile at <code>rkey: self</code>, and a night
+        published as a shared <code>community.lexicon.calendar.event</code> with
+        our <code>venue.lineup</code> layered over it — both records from one
+        form. Prints a QR per event that opens Pocket with the event attached,
+        so a bead about tonight is one tap.</p>
+        <div class="links"><a href="/howto.html#event">publish an event →</a></div></div>
+      <div class="card"><h3>The audience↔work join <span class="status working">working</span></h3>
+        <p>The part no other system has. A venue puts out an event; people who
+        came publish their own beads referencing it; the venue counts
+        <em>public</em> references. It collects nothing and stores nothing about
+        a person — the evidence is published by the people who chose to publish
+        it. Public references are countable; identities are not the venue’s to
+        collect.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Reading — what published records look like</h2>
+    <div class="cards">
+      <div class="card"><h3>The wall <span class="status working">working</span></h3>
+        <p>One actor’s published cultureblocs, newest first, one URL per strand.
+        Reads their own PDS in the browser — no index in the middle, nothing of
+        ours between a reader and the record.</p>
+        <div class="links"><a href="/wall/">the wall →</a></div></div>
+      <div class="card"><h3>Catalogue <span class="status working">working</span></h3>
+        <p>An artist’s published works, read live from the network and rendered
+        through a swappable template stylesheet — grid, index or feature. Point
+        it at a handle and it is a portfolio site with no hosting behind it.</p>
+        <div class="links"><a href="/catalogue/">the catalogue →</a></div></div>
       <div class="card"><h3>Strand embed <span class="status working">working</span></h3>
         <p>A dependency-free web component that renders published strands on any
-        static site. Feed it a baked export today, a live ATProto repo tomorrow —
-        same markup either way.</p>
-        <div class="links"><a href="https://geekyoto.com">see it live →</a></div></div>
-      <div class="card"><h3>ATProto publishing <span class="status planned">planned</span></h3>
-        <p>Personal data server + promoter: selected strands become signed public
-        records under your own identity, discoverable across the open network.</p></div>
+        static site — live from a repo, or from a baked export. Same markup
+        either way. The meetup page below runs on it.</p>
+        <div class="links"><a href="/howto.html#embed">embed it →</a></div></div>
+      <div class="card"><h3>AppView <span class="status working">working</span></h3>
+        <p>A network index over public records: a Jetstream consumer and a query
+        API turning scattered references into counts. It indexes the shared
+        calendar types too, so it works for venues that have never heard of
+        CultureBlocs — verified against a festival’s published programme.
+        Counts, not dossiers.</p></div>
     </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Where this goes next</h2>
+    <p>Loom’s remaining phases are the plan of record. <b>Phase 2</b> makes the
+    String a <em>personal sync server</em>: a discovery record in your own
+    repository so a new device finds your String by signing in rather than by
+    typing a URL and a token; DID-scoped, NSID-scoped grants in place of one
+    shared bearer, so a connector that may propose listen beads cannot read your
+    identities; and a change feed that goes both ways. <b>Phase 3</b> brings the
+    vault — credentials that sync, encrypted under a passphrase the server never
+    sees — and connectors as manifests, including the resolver that proposes
+    refs. <b>Phase 4</b> moves publishing into Loom, client-side, so a person
+    with no String at all still has the whole loop.</p>
+    <p>Nothing is retired on argument alone. Studio went because two apps could
+    not share one serial port; the rest waits on a season of daily use.</p>
   </section>
 </main>
 <footer><div class="inner">

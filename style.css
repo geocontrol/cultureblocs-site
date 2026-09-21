@@ -119,3 +119,15 @@ footer{border-top:1px solid var(--edge);margin-top:2rem}
 footer .inner{max-width:60rem;margin:0 auto;padding:1.6rem 1.4rem;
   font:.8rem var(--mono);color:var(--faint)}
 footer a{color:var(--faint)}
+
+/* how-to */
+.toc{font:.85rem var(--mono);color:var(--faint);margin:.2rem 0 1.4rem;max-width:38rem}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.recipe{margin:0 0 2.8rem;scroll-margin-top:1.5rem}
+.recipe h3{font:600 1.2rem var(--disp);letter-spacing:.02em;margin:0 0 .5rem}
+.recipe p{max-width:38rem;margin:0 0 .9rem}
+.recipe .way{font:600 .72rem var(--disp);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);margin:1.3rem 0 .4rem}
+.recipe .note{font-size:.92rem;color:var(--faint);max-width:38rem}
+.recipe .note code{color:var(--ink)}
