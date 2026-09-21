@@ -120,22 +120,33 @@ export async function fetchStrand(pds, did, rkey, { fetchFn = fetch } = {}) {
  */
 export async function fetchBeads(pds, strand, { fetchFn = fetch } = {}) {
   const items = Array.isArray(strand?.items) ? strand.items : [];
-  const beads = await Promise.all(items.map(async (ref) => {
+  const beads = await Promise.all(items.map(async (ref, index) => {
     const uri = String(ref?.uri || '');
     const [, , repo, collection, rkey] = uri.split('/');
-    if (!repo || !collection || !rkey) return { uri, missing: true };
+    if (!repo || !collection || !rkey) return { uri, missing: true, index };
     const url = `${pds}/xrpc/com.atproto.repo.getRecord`
       + `?repo=${encodeURIComponent(repo)}&collection=${encodeURIComponent(collection)}`
       + `&rkey=${encodeURIComponent(rkey)}`;
     try {
       const rec = await getJson(fetchFn, url);
-      return { uri, value: rec.value };
+      return { uri, value: rec.value, index };
     } catch {
-      return { uri, missing: true };
+      return { uri, missing: true, index };
     }
   }));
-  return beads.sort((a, b) =>
-    String(a.value?.createdAt || '').localeCompare(String(b.value?.createdAt || '')));
+  // A bead with no value (always a missing one) has no createdAt to sort by.
+  // Comparing dates only when both sides have one, and falling back to the
+  // published index otherwise, keeps a missing bead in place instead of
+  // collapsing it to the top of the list (spec §6).
+  return beads
+    .sort((a, b) => {
+      const createdA = a.value?.createdAt;
+      const createdB = b.value?.createdAt;
+      return createdA && createdB
+        ? String(createdA).localeCompare(String(createdB))
+        : a.index - b.index;
+    })
+    .map(({ index, ...bead }) => bead);
 }
 
 /* Every strand, then sorted by date.

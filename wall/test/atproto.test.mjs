@@ -158,18 +158,25 @@ test('fetchBeads hydrates the items in time order, oldest first', async () => {
   assert.deepEqual(beads.map((b) => b.value.note), ['note b1', 'note b2']);
 });
 
-test('a bead that will not load is marked, not dropped', async () => {
+test('a bead that will not load is marked, not dropped, and keeps its published position', async () => {
   const items = [
     { uri: 'at://did:plc:abc/com.cultureblocs.bead/b1' },
     { uri: 'at://did:plc:abc/com.cultureblocs.bead/gone' },
+    { uri: 'at://did:plc:abc/com.cultureblocs.bead/b3' },
   ];
   const fetchFn = async (url) => (url.includes('gone')
     ? { ok: false, status: 404, json: async () => ({}), text: async () => 'not found' }
-    : { ok: true, status: 200, json: async () => BEAD('b1') });
+    : { ok: true, status: 200,
+        json: async () => (url.includes('rkey=b1')
+          ? BEAD('b1', { createdAt: '2026-09-18T09:00:00Z' })
+          : BEAD('b3', { createdAt: '2026-09-18T18:00:00Z' })) });
 
   const beads = await fetchBeads('https://pds.example', { items }, { fetchFn });
-  assert.equal(beads.length, 2, 'the wall says a bead is missing rather than hiding it');
+  assert.equal(beads.length, 3, 'the wall says a bead is missing rather than hiding it');
   assert.equal(beads.filter((b) => b.missing).length, 1);
+  assert.equal(beads[1].missing, true, 'the missing bead stays second, its published position');
+  assert.equal(beads[0].value.note, 'note b1');
+  assert.equal(beads[2].value.note, 'note b3');
 });
 
 test('blobBase builds the getBlob prefix the images hang off', () => {
