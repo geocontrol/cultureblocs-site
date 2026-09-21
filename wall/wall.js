@@ -23,7 +23,7 @@ function terminal(heading, body) {
 
 function needsAnActor() {
   terminal('The wall',
-    'A wall is one person\'s published cultureblocs, newest first. '
+    "A wall is one person's published cultureblocs, newest first. "
     + `Try <a href="${wallHref('cultureblocs.com')}">cultureblocs.com</a>.`);
 }
 
@@ -55,7 +55,7 @@ async function main() {
     if (rkey) {
       const strand = await fetchStrand(pds, did, rkey);
       if (!strand) {
-        return terminal('That strand isn't there',
+        return terminal("That strand isn't there",
           `It may have been unpublished. <a href="${wallHref(actor)}">See the wall</a>.`);
       }
       const beads = await fetchBeads(pds, strand.value);

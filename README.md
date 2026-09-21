@@ -24,3 +24,8 @@ and the embed on meetup.html picks it up.
 Tests (the wall's pure and injectable modules):
 
     node --test 'wall/test/*.test.mjs'
+
+The wall's boot module (wall.js) is impure and not tested; verify it parses as an ES
+module before deploy:
+
+    node --input-type=module --check < wall/wall.js
