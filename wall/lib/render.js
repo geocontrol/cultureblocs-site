@@ -28,7 +28,9 @@ export function longDay(iso) {
 /* The first words of the narrative, cut on a word boundary. A summary is an
  * invitation, not the thing itself. */
 export function opening(narrative) {
-  const flat = String(narrative || '').replace(/\s+/g, ' ').trim();
+  const lines = String(narrative || '').split('\n');
+  const noMarkers = lines.map(line => line.replace(/^[\s*-]+/, '').trimStart()).join(' ');
+  const flat = noMarkers.replace(/\s+/g, ' ').trim();
   if (flat.length <= OPENING_MAX) return flat;
   const cut = flat.slice(0, OPENING_MAX - 1);
   const at = cut.lastIndexOf(' ');
@@ -80,8 +82,16 @@ export function renderWall({ actor, records, page }) {
   if (!records.length) {
     return `<p class="notice">Nothing published yet.</p>`;
   }
-  const p = paging(records.length, page, { actor });
-  const items = records.slice(p.from, p.to)
+  const sorted = [...records].sort((a, b) => {
+    const dayA = dayOf(a.value);
+    const dayB = dayOf(b.value);
+    if (dayA !== dayB) return dayB.localeCompare(dayA); // Newest first
+    const createdA = String(a.value?.createdAt || '');
+    const createdB = String(b.value?.createdAt || '');
+    return createdB.localeCompare(createdA); // Tie-break by createdAt, newest first
+  });
+  const p = paging(sorted.length, page, { actor });
+  const items = sorted.slice(p.from, p.to)
     .map((r) => renderSummary(strandSummary(r, { actor }))).join('\n');
   const nav = p.pages > 1
     ? `<nav class="paging">

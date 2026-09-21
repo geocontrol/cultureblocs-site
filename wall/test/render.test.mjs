@@ -88,7 +88,7 @@ test('the wall renders ten summaries and its paging', () => {
   const html = renderWall({ actor: ACTOR, records, page: 1 });
   assert.equal((html.match(/class="strand"/g) || []).length, PAGE_SIZE);
   assert.ok(html.includes('page=2'));
-  assert.ok(html.includes(`/wall/${ACTOR}/r0`));
+  assert.ok(html.includes(`/wall/${ACTOR}/r11`), 'newest record r11 on page 1');
 });
 
 test('an actor with nothing published says so, and is not an error', () => {
@@ -170,4 +170,50 @@ test('a strand with no beads still renders, rather than looking broken', () => {
   const html = renderStrand({ strand: rec('r1', { items: [] }), actor: ACTOR, blobBase: BLOB, beads: [] });
   assert.ok(html.includes('At the National Gallery'));
   assert.ok(!/class="bead[ "]/.test(html), 'no bead elements in the output');
+});
+
+test('records whose day order differs from createdAt order come out in day order', () => {
+  // Three strands: created in order A, B, C but about days C, A, B
+  const records = [
+    rec('r1', { createdAt: '2026-09-16T10:00:00Z', day: '2026-09-18T00:00:00Z', title: 'TitleA' }),
+    rec('r2', { createdAt: '2026-09-17T10:00:00Z', day: '2026-09-16T00:00:00Z', title: 'TitleB' }),
+    rec('r3', { createdAt: '2026-09-18T10:00:00Z', day: '2026-09-17T00:00:00Z', title: 'TitleC' }),
+  ];
+  const html = renderWall({ actor: ACTOR, records, page: 1 });
+  // Extract title order from the HTML
+  const aIdx = html.indexOf('TitleA');
+  const bIdx = html.indexOf('TitleB');
+  const cIdx = html.indexOf('TitleC');
+  assert.ok(aIdx < cIdx && cIdx < bIdx, 'sorted by day (18, 17, 16), newest first');
+});
+
+test('two strands sharing a day fall back to createdAt', () => {
+  const records = [
+    rec('r1', { day: '2026-09-18T00:00:00Z', createdAt: '2026-09-18T08:00:00Z', title: 'TitleFirst' }),
+    rec('r2', { day: '2026-09-18T00:00:00Z', createdAt: '2026-09-18T10:00:00Z', title: 'TitleSecond' }),
+  ];
+  const html = renderWall({ actor: ACTOR, records, page: 1 });
+  // Second has createdAt 10:00, First has 08:00, so Second should come first (newer)
+  assert.ok(html.indexOf('TitleSecond') < html.indexOf('TitleFirst'), 'same day, sorted by createdAt, newest first');
+});
+
+test('a strand with no day still sorts by createdAt', () => {
+  const records = [
+    rec('r1', { day: null, createdAt: '2026-09-16T10:00:00Z', title: 'Old' }),
+    rec('r2', { day: '2026-09-17T00:00:00Z', createdAt: '2026-09-18T10:00:00Z', title: 'New' }),
+  ];
+  const html = renderWall({ actor: ACTOR, records, page: 1 });
+  // When day is null, dayOf falls back to createdAt
+  const hasOld = html.includes('Old');
+  const hasNew = html.includes('New');
+  assert.ok(hasOld && hasNew, 'both strands rendered');
+  // New (day 2026-09-17) should come before Old (createdAt 2026-09-16)
+  assert.ok(html.indexOf('New') < html.indexOf('Old'), 'sorted correctly');
+});
+
+test('bullet markers do not leak into the summary', () => {
+  const narrative = 'First para.\n\n* Bullet one\n* Bullet two\n\nLast para.';
+  const m = strandSummary(rec('r1', { narrative }), { actor: ACTOR });
+  assert.ok(!m.opening.includes('*'), `no * in opening: "${m.opening}"`);
+  assert.match(m.opening, /First para/, 'opening starts with first paragraph');
 });
