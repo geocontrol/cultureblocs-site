@@ -5,6 +5,7 @@
  * destination, so a blank page reads as a broken site (the rule catalogue/
  * states in its own boot module).
  */
+import { esc } from './lib/embed.js';
 import { blobBase, fetchAllStrands, fetchBeads, fetchStrand, resolveActor } from './lib/atproto.js';
 import { renderStrand, renderWall } from './lib/render.js';
 import { parse, wallHref } from './lib/route.js';
@@ -23,7 +24,7 @@ function terminal(heading, body) {
 
 function needsAnActor() {
   terminal('The wall',
-    "A wall is one person's published cultureblocs, newest first. "
+    "A wall is one person’s published cultureblocs, newest first. "
     + `Try <a href="${wallHref('cultureblocs.com')}">cultureblocs.com</a>.`);
 }
 
@@ -31,10 +32,10 @@ function needsAnActor() {
  * a fault on the way there and must not be reported as a typo. */
 function failed(actor, err) {
   if (err?.status >= 400 && err.status < 500) {
-    terminal('No such handle', `Nothing resolves for <code>${actor}</code>. Check the spelling.`);
+    terminal('No such handle', `Nothing resolves for <code>${esc(actor)}</code>. Check the spelling.`);
   } else {
     terminal('Could not load the wall',
-      `${actor}'s records could not be reached just now. Please try again.`);
+      `${esc(actor)}’s records could not be reached just now. Please try again.`);
   }
 }
 
@@ -55,7 +56,7 @@ async function main() {
     if (rkey) {
       const strand = await fetchStrand(pds, did, rkey);
       if (!strand) {
-        return terminal("That strand isn't there",
+        return terminal("That strand isn’t there",
           `It may have been unpublished. <a href="${wallHref(actor)}">See the wall</a>.`);
       }
       const beads = await fetchBeads(pds, strand.value);
@@ -68,7 +69,7 @@ async function main() {
     clearStatus();
     return show(renderWall({ actor, records, page }));
   } catch (err) {
-    return terminal('Could not load the wall', err?.message || 'Please try again.');
+    return terminal('Could not load the wall', esc(err?.message) || 'Please try again.');
   }
 }
 
