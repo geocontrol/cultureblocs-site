@@ -95,6 +95,49 @@ export const STRAND_NSID = 'com.cultureblocs.strand';
 export const PAGE_LIMIT = 100;
 export const MAX_PAGES = 50;   // 5,000 strands; a stuck cursor must not spin the browser
 
+export const blobBase = (pds, did) =>
+  `${pds}/xrpc/com.atproto.sync.getBlob?did=${encodeURIComponent(did)}&cid=`;
+
+/* One strand by its key. A key that is not there is null rather than a
+ * throw: "that strand isn't there" is a thing the wall says, not a fault. */
+export async function fetchStrand(pds, did, rkey, { fetchFn = fetch } = {}) {
+  const url = `${pds}/xrpc/com.atproto.repo.getRecord`
+    + `?repo=${encodeURIComponent(did)}&collection=${STRAND_NSID}&rkey=${encodeURIComponent(rkey)}`;
+  try {
+    return await getJson(fetchFn, url);
+  } catch (e) {
+    if (e.status === 404 || e.status === 400) return null;
+    throw e;
+  }
+}
+
+/* The strand's members, in the order the evening happened.
+ *
+ * A bead that will not load comes back marked `missing` rather than dropped.
+ * The embed drops them because it is a guest on someone else's page; the
+ * wall is the destination, and a strand quietly missing a third of its
+ * evening is worse than one that admits it (spec §6).
+ */
+export async function fetchBeads(pds, strand, { fetchFn = fetch } = {}) {
+  const items = Array.isArray(strand?.items) ? strand.items : [];
+  const beads = await Promise.all(items.map(async (ref) => {
+    const uri = String(ref?.uri || '');
+    const [, , repo, collection, rkey] = uri.split('/');
+    if (!repo || !collection || !rkey) return { uri, missing: true };
+    const url = `${pds}/xrpc/com.atproto.repo.getRecord`
+      + `?repo=${encodeURIComponent(repo)}&collection=${encodeURIComponent(collection)}`
+      + `&rkey=${encodeURIComponent(rkey)}`;
+    try {
+      const rec = await getJson(fetchFn, url);
+      return { uri, value: rec.value };
+    } catch {
+      return { uri, missing: true };
+    }
+  }));
+  return beads.sort((a, b) =>
+    String(a.value?.createdAt || '').localeCompare(String(b.value?.createdAt || '')));
+}
+
 /* Every strand, then sorted by date.
  *
  * Not one listRecords call, and not cursor paging either: a strand is

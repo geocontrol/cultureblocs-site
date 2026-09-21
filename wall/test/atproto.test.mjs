@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { MAX_PAGES, PAGE_LIMIT, fetchAllStrands, resolveActor } from '../lib/atproto.js';
+import { MAX_PAGES, PAGE_LIMIT, fetchAllStrands, resolveActor, blobBase, fetchBeads, fetchStrand } from '../lib/atproto.js';
 
 const PLC_DOC = { service: [{ id: '#atproto_pds', type: 'AtprotoPersonalDataServer', serviceEndpoint: 'https://pds.example' }] };
 
@@ -117,4 +117,62 @@ test('more strands than the cap throws rather than showing a silent half', async
 test('a repository with no strands is an empty list, not a failure', async () => {
   const fetchFn = stub([['listRecords', { records: [] }]]);
   assert.deepEqual(await fetchAllStrands('https://pds.example', 'did:plc:abc', { fetchFn }), []);
+});
+
+const BEAD = (rkey, over = {}) => ({
+  uri: `at://did:plc:abc/com.cultureblocs.bead/${rkey}`,
+  value: { $type: 'com.cultureblocs.bead', kind: 'bloc', createdAt: '2026-09-18T10:00:00Z', note: `note ${rkey}`, ...over },
+});
+
+test('fetchStrand asks for one record by rkey', async () => {
+  const seen = [];
+  const fetchFn = async (url) => {
+    seen.push(url);
+    return { ok: true, status: 200, json: async () => strand('r1', '2026-09-18T12:52:57Z') };
+  };
+  const out = await fetchStrand('https://pds.example', 'did:plc:abc', 'r1', { fetchFn });
+  assert.ok(seen[0].includes('com.atproto.repo.getRecord'));
+  assert.ok(seen[0].includes('rkey=r1'));
+  assert.equal(out.value.title, 'strand r1');
+});
+
+test('a strand that is not there is null, not an exception', async () => {
+  const gone = async () => ({ ok: false, status: 404, json: async () => ({}), text: async () => 'not found' });
+  assert.equal(await fetchStrand('https://pds.example', 'did:plc:abc', 'nope', { fetchFn: gone }), null);
+
+  const down = async () => ({ ok: false, status: 502, json: async () => ({}), text: async () => 'bad gateway' });
+  await assert.rejects(fetchStrand('https://pds.example', 'did:plc:abc', 'r1', { fetchFn: down }));
+});
+
+test('fetchBeads hydrates the items in time order, oldest first', async () => {
+  const items = [
+    { uri: 'at://did:plc:abc/com.cultureblocs.bead/b2' },
+    { uri: 'at://did:plc:abc/com.cultureblocs.bead/b1' },
+  ];
+  const fetchFn = async (url) => ({ ok: true, status: 200,
+    json: async () => (url.includes('rkey=b1')
+      ? BEAD('b1', { createdAt: '2026-09-18T09:00:00Z' })
+      : BEAD('b2', { createdAt: '2026-09-18T18:00:00Z' })) });
+
+  const beads = await fetchBeads('https://pds.example', { items }, { fetchFn });
+  assert.deepEqual(beads.map((b) => b.value.note), ['note b1', 'note b2']);
+});
+
+test('a bead that will not load is marked, not dropped', async () => {
+  const items = [
+    { uri: 'at://did:plc:abc/com.cultureblocs.bead/b1' },
+    { uri: 'at://did:plc:abc/com.cultureblocs.bead/gone' },
+  ];
+  const fetchFn = async (url) => (url.includes('gone')
+    ? { ok: false, status: 404, json: async () => ({}), text: async () => 'not found' }
+    : { ok: true, status: 200, json: async () => BEAD('b1') });
+
+  const beads = await fetchBeads('https://pds.example', { items }, { fetchFn });
+  assert.equal(beads.length, 2, 'the wall says a bead is missing rather than hiding it');
+  assert.equal(beads.filter((b) => b.missing).length, 1);
+});
+
+test('blobBase builds the getBlob prefix the images hang off', () => {
+  assert.equal(blobBase('https://pds.example', 'did:plc:abc'),
+    'https://pds.example/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Aabc&cid=');
 });

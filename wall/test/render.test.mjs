@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { blocksHtml, esc } from '../lib/embed.js';
-import { PAGE_SIZE, paging, renderWall, strandSummary } from '../lib/render.js';
+import { PAGE_SIZE, paging, renderWall, renderStrand, strandSummary } from '../lib/render.js';
 
 const ACTOR = 'geocontrol.bsky.social';
 const rec = (rkey, over = {}) => ({
@@ -122,4 +122,50 @@ test('blocksHtml makes paragraphs and bullets, exactly as the embed does', () =>
 test('esc escapes the four characters that matter in markup', () => {
   assert.equal(esc('<a href="x">&</a>'), '&lt;a href=&quot;x&quot;&gt;&amp;&lt;/a&gt;');
   assert.equal(esc(undefined), '');
+});
+
+const BLOB = 'https://pds.example/xrpc/com.atproto.sync.getBlob?did=did%3Aplc%3Aabc&cid=';
+const bead = (over = {}) => ({
+  uri: 'at://did:plc:abc/com.cultureblocs.bead/b1',
+  value: { $type: 'com.cultureblocs.bead', kind: 'visit', createdAt: '2026-09-18T10:00:00Z', note: 'Room 32.', ...over },
+});
+
+test('the strand page renders the narrative as blocks and every bead in order', () => {
+  const html = renderStrand({
+    strand: rec('r1'), actor: ACTOR, blobBase: BLOB,
+    beads: [bead(), bead({ createdAt: '2026-09-18T11:00:00Z', note: 'Then the café.' })],
+  });
+  assert.ok(html.includes('<div class="narrative">'));
+  assert.equal((html.match(/class="bead"/g) || []).length, 2);
+  assert.ok(html.includes('Room 32.'));
+  assert.ok(html.includes(`href="/wall/${ACTOR}/"`), 'and a way back to the wall');
+});
+
+test('a bead photo renders through getBlob, with its alt and dimensions', () => {
+  const withImage = bead({ images: [{
+    image: { $type: 'blob', ref: { $link: 'bafkreiA' }, mimeType: 'image/jpeg', size: 1 },
+    alt: 'The bar at closing time.',
+    aspectRatio: { width: 1200, height: 900 },
+  }] });
+  const html = renderStrand({ strand: rec('r1'), actor: ACTOR, blobBase: BLOB, beads: [withImage] });
+  assert.ok(html.includes('com.atproto.sync.getBlob'), html);
+  assert.ok(html.includes('cid=bafkreiA'), 'the cid hangs off the getBlob prefix');
+  assert.ok(html.includes('&amp;cid='), 'and the query is escaped for markup');
+  assert.ok(html.includes('alt="The bar at closing time."'));
+  assert.ok(html.includes('width="1200"'));
+  assert.ok(html.includes('loading="lazy"'));
+});
+
+test('a missing bead is said out loud', () => {
+  const html = renderStrand({
+    strand: rec('r1'), actor: ACTOR, blobBase: BLOB,
+    beads: [bead(), { uri: 'at://did:plc:abc/com.cultureblocs.bead/gone', missing: true }],
+  });
+  assert.match(html, /a bead could not be loaded/i);
+});
+
+test('a strand with no beads still renders, rather than looking broken', () => {
+  const html = renderStrand({ strand: rec('r1', { items: [] }), actor: ACTOR, blobBase: BLOB, beads: [] });
+  assert.ok(html.includes('At the National Gallery'));
+  assert.ok(!html.includes('class="bead"'));
 });

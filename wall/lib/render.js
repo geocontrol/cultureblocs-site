@@ -92,3 +92,37 @@ export function renderWall({ actor, records, page }) {
     : '';
   return `<h1 class="wall-title">${esc(actor)}</h1>\n${items}\n${nav}`;
 }
+
+function renderImage(entry, base) {
+  const m = imageModel(entry);
+  if (!m || !base) return '';
+  const dims = m.width && m.height ? ` width="${m.width}" height="${m.height}"` : '';
+  return `<img class="bead-image" loading="lazy" src="${esc(base + encodeURIComponent(m.cid))}" alt="${esc(m.alt)}"${dims}>`;
+}
+
+function renderBead(b, base) {
+  if (b.missing) {
+    return `<li class="bead"><p>A bead could not be loaded.</p></li>`;
+  }
+  const v = b.value || {};
+  const time = String(v.createdAt || '').slice(11, 16);
+  const images = beadImages(v).map((e) => renderImage(e, base)).filter(Boolean).join('');
+  return `<li class="bead">
+  ${time ? `<span class="bead-time">${esc(time)}</span>` : ''}
+  ${v.note ? `<div class="bead-note">${blocksHtml(v.note)}</div>` : ''}
+  ${images ? `<div class="bead-images">${images}</div>` : ''}
+</li>`;
+}
+
+export function renderStrand({ strand, beads, actor, blobBase: base }) {
+  const v = strand?.value || {};
+  const day = dayOf(v);
+  const meta = [longDay(day), v.place?.name || ''].filter(Boolean).join(' · ');
+  return `<article class="strand-page">
+  <p class="back"><a href="${esc(wallHref(actor))}">← ${esc(actor)}</a></p>
+  <h1 class="strand-title">${esc(v.title || longDay(day))}</h1>
+  ${meta ? `<p class="strand-meta">${esc(meta)}</p>` : ''}
+  ${v.narrative ? `<div class="narrative">${blocksHtml(v.narrative)}</div>` : ''}
+  ${beads.length ? `<ol class="beads">${beads.map((b) => renderBead(b, base)).join('\n')}</ol>` : ''}
+</article>`;
+}
