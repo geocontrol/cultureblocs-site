@@ -173,8 +173,14 @@ export async function fetchAllStrands(pds, did, { fetchFn = fetch } = {}) {
     const body = await getJson(fetchFn, url);
     const next = body.cursor || '';
     // A repeated cursor is caught before this page is accumulated, or a stuck
-    // PDS yields a page of duplicates.
-    if (next && next === seen) break;
+    // PDS yields a page of duplicates. This throws rather than breaking
+    // silently, unlike catalogue/lib/atproto.js — the spec (§6) asks the wall
+    // to say when a repository's paging is repeating rather than show a
+    // silent half.
+    if (next && next === seen) {
+      throw new Error(
+        `this repository's paging is repeating; the wall cannot show them all`);
+    }
     out.push(...(body.records || []));
     if (!next) break;
     seen = next;

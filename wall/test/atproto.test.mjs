@@ -95,16 +95,16 @@ test('the result is newest-first by createdAt, however the repository orders its
   assert.ok(out[0].cid, 'and its cid');
 });
 
-test('a repeated cursor stops the walk instead of spinning the browser', async () => {
+test('a repeated cursor speaks up rather than truncating silently', async () => {
   let calls = 0;
   const fetchFn = async () => {
     calls += 1;
     return { ok: true, status: 200,
       json: async () => ({ records: [strand(`r${calls}`, '2026-09-01T00:00:00Z')], cursor: 'stuck' }) };
   };
-  const out = await fetchAllStrands('https://pds.example', 'did:plc:abc', { fetchFn });
-  assert.equal(calls, 2, 'the second answer repeats the cursor, so it stops there');
-  assert.equal(out.length, 1, 'and the repeated page is not accumulated');
+  await assert.rejects(fetchAllStrands('https://pds.example', 'did:plc:abc', { fetchFn }),
+    /repeating/);
+  assert.equal(calls, 2, 'the second answer repeats the cursor, so it stops there rather than spinning');
 });
 
 test('more strands than the cap throws rather than showing a silent half', async () => {
