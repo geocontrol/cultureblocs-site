@@ -102,12 +102,12 @@ function renderImage(entry, base) {
 
 function renderBead(b, base) {
   if (b.missing) {
-    return `<li class="bead"><p>A bead could not be loaded.</p></li>`;
+    return `<li class="bead bead-missing"><p>A bead could not be loaded.</p></li>`;
   }
   const v = b.value || {};
   const time = String(v.createdAt || '').slice(11, 16);
   const images = beadImages(v).map((e) => renderImage(e, base)).filter(Boolean).join('');
-  return `<li class="bead">
+  return `<li class="bead bead-${esc(v.kind || 'bloc')}">
   ${time ? `<span class="bead-time">${esc(time)}</span>` : ''}
   ${v.note ? `<div class="bead-note">${blocksHtml(v.note)}</div>` : ''}
   ${images ? `<div class="bead-images">${images}</div>` : ''}

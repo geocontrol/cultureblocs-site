@@ -136,9 +136,10 @@ test('the strand page renders the narrative as blocks and every bead in order', 
     beads: [bead(), bead({ createdAt: '2026-09-18T11:00:00Z', note: 'Then the café.' })],
   });
   assert.ok(html.includes('<div class="narrative">'));
-  assert.equal((html.match(/class="bead"/g) || []).length, 2);
+  assert.equal((html.match(/class="bead[ "]/g) || []).length, 2);
   assert.ok(html.includes('Room 32.'));
   assert.ok(html.includes(`href="/wall/${ACTOR}/"`), 'and a way back to the wall');
+  assert.ok(html.includes('class="bead bead-visit"'), 'each bead carries its kind class');
 });
 
 test('a bead photo renders through getBlob, with its alt and dimensions', () => {
@@ -162,10 +163,11 @@ test('a missing bead is said out loud', () => {
     beads: [bead(), { uri: 'at://did:plc:abc/com.cultureblocs.bead/gone', missing: true }],
   });
   assert.match(html, /a bead could not be loaded/i);
+  assert.ok(html.includes('class="bead bead-missing"'), 'the stylesheet depends on the missing class');
 });
 
 test('a strand with no beads still renders, rather than looking broken', () => {
   const html = renderStrand({ strand: rec('r1', { items: [] }), actor: ACTOR, blobBase: BLOB, beads: [] });
   assert.ok(html.includes('At the National Gallery'));
-  assert.ok(!html.includes('class="bead"'));
+  assert.ok(!/class="bead[ "]/.test(html), 'no bead elements in the output');
 });
