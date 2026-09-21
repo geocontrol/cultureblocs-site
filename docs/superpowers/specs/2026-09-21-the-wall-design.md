@@ -1,6 +1,6 @@
 # The wall — a page of published blocs, and the first permalink: design
 
-Status: approved 2026-09-21.
+Status: approved 2026-09-21; §5 amended the same day, after the finding in §3.1.
 Answers `cultureblocs-loom` `docs/backlog.md` item 3, the last of the five
 things using the desk turned up.
 Code lands in **this repository** (`cultureblocs-site`), at `/wall/`. One
@@ -14,8 +14,8 @@ paging back through older entries — and, underneath it, the thing the rest of
 the project has been missing: **a URL for a single strand**.
 
 Success looks like: `cultureblocs.com/wall/geocontrol.bsky.social/` lists the
-strands newest first; pressing *older* shows the next ten and is itself a
-link someone can send; and clicking a strand opens
+strands newest first, ten of them; page two is
+`…/?page=2`, a link someone can send; and clicking a strand opens
 `cultureblocs.com/wall/geocontrol.bsky.social/3lxyz`, the whole thing —
 narrative, beads, photos — at an address that can be pasted into a post.
 
@@ -30,7 +30,7 @@ its author.
 | Where it lives | **This repo, served at `/wall/`.** Beside `catalogue/`, which is the precedent for a sub-app here |
 | How it renders | **Static files, fetching in the browser.** No build step, no server, works for any actor |
 | Data source | **The actor's own PDS**, via `com.atproto.repo.listRecords`. Not the appview: it has no cursor, it only knows actors it has indexed, and `APPVIEW.md` says "No ranking, no feed, no algorithm" |
-| Paging | **One fetch per page, ten strands, the cursor in the URL.** *Older* walks forward; *newer* is `history.back()` |
+| Paging | **Walk every cursor once, sort by date, page in the browser.** Ten per page, the page number in the URL. Forced by §3.1: cursor order is not date order |
 | A wall entry | **A summary** — title, date, place, the narrative's opening, a bead count — so a page of ten is ten records and one request |
 | The whole strand | **Its own URL**, `/wall/<handle>/<rkey>`, rendered with every bead and photo |
 | Relationship to the embed | **Its own modules.** The embed gains one additive fix so it can link inward (§7) |
@@ -65,17 +65,39 @@ record browser. That is the gap this design closes, and it is why the wall
 gates the rest of syndication: an Instagram caption needs a link, and a
 Bluesky post deserves one.
 
+### 3.1 · The finding that changed the paging
+
+**A published strand's record key is a UUID, so key order is not date order.**
+`publisher._rkey_for` writes a strand under its String record id, which is a
+`uuid4`. Cursor paging follows key order, so it cannot produce a date-ordered
+wall. Against the seven strands `geocontrol.bsky.social` has published, the
+PDS returns 18 September, 4 August, 23 July, 15 September, 2 August, 19 July,
+8 August — arbitrary with respect to date.
+
+This is why the embed sorts client-side after fetching: inside one page of 50,
+sorting is enough. A paged wall cannot do that, because page one would be an
+arbitrary ten rather than the newest ten.
+
+Fetching everything up front is cheap here **because §2 chose summaries**: a
+summary needs no beads, so the whole walk is one `listRecords` request per
+hundred strands. The expensive thing was never the strand records; it was
+hydrating beads, and the wall only does that on a single strand's page.
+
+Publishing under time-ordered keys instead was considered and rejected: it
+changes how publishing works, breaks the rkey reuse that lets a republish
+update a record in place, and would not reorder the strands already out there.
+
 ## 4 · Architecture
 
 Four modules, one impure. The split follows `catalogue/`: the network takes an
 injected `fetch`, rendering is pure, and only the boot module touches the DOM.
 
     /wall/<handle>/           the wall, page one
-    /wall/<handle>/?cursor=…  a later page
+    /wall/<handle>/?page=2    a later page
     /wall/<handle>/<rkey>     one strand, whole
       │
-      ├── route.js     the URL ⇄ {actor, rkey, cursor}, both directions, pure
-      ├── atproto.js   resolveActor, fetchStrandPage, fetchStrand, fetchBeads
+      ├── route.js     the URL ⇄ {actor, rkey, page}, both directions, pure
+      ├── atproto.js   resolveActor, fetchAllStrands, fetchStrand, fetchBeads
       ├── render.js    record → model → HTML, pure: strandSummary, strandPage
       └── wall.js      reads the location, fetches, renders, wires the buttons
 
@@ -101,9 +123,8 @@ link reading must not disagree, and a round-trip test is what guarantees that.
 ### 4.1 `lib/atproto.js`
 
 ```js
-resolveActor(actor, { fetchFn })        // -> { did, pds }
-fetchStrandPage(pds, did, { cursor, limit = 10, fetchFn })
-                                        // -> { strands: [{ uri, cid, value }], cursor }
+resolveActor(actor, { fetchFn })         // -> { did, pds }
+fetchAllStrands(pds, did, { fetchFn })   // -> [{ uri, cid, value }], newest first
 fetchStrand(pds, did, rkey, { fetchFn }) // -> { uri, cid, value } | null
 fetchBeads(pds, strand, { fetchFn })     // -> [{ uri, value } | { uri, missing: true }]
 ```
@@ -114,11 +135,14 @@ fetchBeads(pds, strand, { fetchFn })     // -> [{ uri, value } | { uri, missing:
   a 4xx (this handle does not resolve) and anything else (we could not reach
   the resolver). Reporting a network fault as "no such handle" sends someone
   hunting for a typo that isn't there.
-- **`fetchStrandPage` asks for `limit + 1`** and returns `cursor` only when
-  the extra record proves a further page exists. Without that, *older* can
-  lead to an empty page, which is the most common way a cursor pager lies.
-- **A repeated cursor stops the walk**, as in `catalogue`: a PDS that returns
-  the same cursor forever must not spin the browser.
+- **`fetchAllStrands` is `catalogue`'s `fetchAllWorks`** over
+  `com.cultureblocs.strand`: a hundred records a request, every cursor
+  followed, sorted newest-first by `createdAt` at the end. It keeps both of
+  that function's guards — a repeated cursor stops the walk, and hitting the
+  page cap **throws** rather than returning a partial list, because a plain
+  array cannot say "this is not all of it".
+- **It keeps each record's `uri`**, which is what the permalink is built from
+  and the thing the embed drops (§3).
 - **`fetchBeads` tolerates a missing bead.** Each item is fetched in parallel;
   one that fails comes back marked `missing` rather than dropped, so §6 can
   say so out loud.
@@ -128,10 +152,13 @@ fetchBeads(pds, strand, { fetchFn })     // -> [{ uri, value } | { uri, missing:
 Pure, and the canonical form is the path:
 
 ```js
-parse(pathname, search)   // -> { actor, rkey, cursor }  — any supported shape
-wallHref(actor, cursor)   // -> /wall/<handle>/[?cursor=…]
+parse(pathname, search)   // -> { actor, rkey, page }  — any supported shape
+wallHref(actor, page)     // -> /wall/<handle>/[?page=N]
 strandHref(actor, rkey)   // -> /wall/<handle>/<rkey>
 ```
+
+`page` parses to 1 for anything absent, unparseable or below 1, so a mangled
+`?page=` shows the wall rather than an error.
 
 The query form `/wall/?actor=…` **parses** too, because `catalogue` taught
 people that shape and an embed may already point that way, but links are
@@ -184,18 +211,18 @@ Both are pure functions returning HTML strings, so both are tested directly.
 
 ## 5 · Paging, precisely
 
-Ten strands per page. The cursor rides in the URL, so every page is a link
-that can be sent.
+Ten strands a page, the page number in the URL (`/wall/<handle>/?page=2`), so
+every page is a link that can be sent. Page one omits the parameter.
 
-- **Older** — fetch with the cursor the previous page returned, push the new
-  URL into history, render. Shown only when `fetchStrandPage` reported a
-  cursor.
-- **Newer** — `history.back()`, shown only when there is history to go back
-  to. A cursor URL opened cold therefore offers only *older*, which is
-  honest: a cursor knows nothing about what came before it.
-- **No page numbers, and no jump to the end.** A cursor only moves forward.
-  Page numbers would need the whole history walked first, which is the
-  trade-off §2 declined.
+The whole list is fetched and sorted **once**, then paged in the browser:
+*newer* and *older* both become instant, both directions work from a cold
+link, and there are real page numbers. A page beyond the end shows the last
+page rather than an empty one.
+
+The cost is that the first paint waits for the whole walk. At one request per
+hundred strands that is one request today and two at two hundred; several
+thousand strands would want a date cursor the appview does not have yet, and
+that is a different piece of work than this.
 
 ## 6 · When things go wrong
 
@@ -206,8 +233,9 @@ Each state says which it is, because a blank page reads as a broken site.
 | Handle does not resolve (4xx) | "No such handle" — naming the handle |
 | Resolver or PDS unreachable | "Could not reach it", distinct from the above |
 | Actor has published nothing | "Nothing published yet." Not an error |
-| A page beyond the end | Cannot happen: `limit + 1` decides whether *older* exists |
+| A page beyond the end | The last page, rather than an empty one |
 | A stuck cursor | The walk stops and says the repository's paging is repeating |
+| More strands than the page cap | Says so and stops, as `catalogue` does — never a silent half |
 | `rkey` not found | "That strand isn't there", with a link to the wall |
 | A bead fails to load | A visible "a bead could not be loaded" line, in place |
 | No actor at all (`/wall/`) | A line saying what the wall is, linking to `cultureblocs.com`'s own |
@@ -249,13 +277,15 @@ an accident.
 No `package.json` is needed; the site stays a no-build static site. The
 command goes in `README.md`.
 
-- **`atproto.js`** with an injected `fetchFn`: cursor threaded into the next
-  request and absent from the first; a cursor reported only when a further
-  page exists (the `limit + 1` rule); a repeated cursor stopping the walk; a
-  4xx told apart from a 5xx in `resolveActor`; a missing bead coming back
-  marked rather than dropped.
-- **`route.js`**: every supported shape parsed — path, path with cursor, the
-  legacy query form — and the round trip, that `strandHref` then `parse`
+- **`atproto.js`** with an injected `fetchFn`: every cursor threaded into the
+  next request and absent from the first; a repeated cursor stopping the walk;
+  the page cap throwing rather than truncating; the result sorted newest-first
+  by `createdAt` **even when key order disagrees** (§3.1's real data is the
+  fixture); a 4xx told apart from a 5xx in `resolveActor`; a missing bead
+  coming back marked rather than dropped.
+- **`route.js`**: every supported shape parsed — path, path with a page
+  number, the legacy query form — a page number that is absent, zero, negative
+  or nonsense landing on 1, and the round trip, that `strandHref` then `parse`
   returns the same actor and rkey. Handles with dots and `did:plc:` actors
   both survive.
 - **`render.js`**: a summary from a strand record; a strand with no narrative;
@@ -282,7 +312,8 @@ link back, and an Instagram caption has something to name.
   unfurl and no search indexing. That is the cost of staying a static site,
   taken knowingly.
 - **Search, filters, tags, months.** The backlog asked for date order and
-  paging. Nothing else.
+  paging. Nothing else — though once the whole list is in memory (§5), search
+  becomes nearly free, which is worth remembering rather than building.
 - **Any appview change**, including the cursor it lacks.
 - **Instagram**, which needs this wall first but is its own design.
 - **Any change to `geekyoto`**, and any linking from the embeds inward (§7).
