@@ -1,0 +1,51 @@
+/* The wall. One column, quiet, and legible in either scheme. */
+:root {
+  --ink: #141414;
+  --faint: #6b6b6b;
+  --rule: #e3e3e3;
+  --ground: #fff;
+  --accent: #2b4bc7;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #ececec; --faint: #9a9a9a; --rule: #333; --ground: #131313; --accent: #8fa5ff; }
+}
+
+body { color: var(--ink); background: var(--ground); }
+#wall { max-width: 42rem; margin-inline: auto; padding: 2rem 1rem 4rem; }
+#wall a { color: var(--accent); }
+.notice { color: var(--faint); }
+
+.wall-title { font-size: 1rem; font-weight: 600; color: var(--faint); margin: 0 0 2rem; }
+
+.strand { padding-block: 1.5rem; border-top: 1px solid var(--rule); }
+.strand:first-of-type { border-top: 0; padding-top: 0; }
+.strand-title { font-size: 1.35rem; line-height: 1.25; margin: 0 0 .35rem; }
+.strand-title a { text-decoration: none; }
+.strand-title a:hover { text-decoration: underline; }
+.strand-meta { font-size: .85rem; color: var(--faint); margin: 0 0 .6rem; }
+.strand-opening { margin: 0; }
+
+.paging { display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.paging .where { font-size: .85rem; color: var(--faint); }
+
+/* One strand, whole. blocksHtml emits whole blocks and leaves single
+   newlines to the renderer, hence pre-line. */
+.back { font-size: .85rem; margin: 0 0 1.5rem; }
+.strand-page .strand-title { font-size: 1.8rem; }
+.narrative, .bead-note { white-space: pre-line; }
+.narrative { margin-block: 1rem 2rem; }
+.narrative p, .bead-note p { margin-block: 0 .75rem; }
+.narrative ul.bullets, .bead-note ul.bullets { margin-block: 0 .75rem; padding-left: 1.25rem; }
+.narrative ul.tracks, .bead-note ul.tracks { list-style: none; padding: 0; margin-block: 0 .75rem; }
+ul.tracks .tt { color: var(--faint); font-variant-numeric: tabular-nums; margin-right: .5rem; }
+
+.beads { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--rule); }
+.bead { padding: 0 0 1.75rem 1.25rem; position: relative; }
+.bead::before { content: ""; position: absolute; left: -5px; top: .45rem;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--rule); }
+.bead-time { display: block; font-size: .8rem; color: var(--faint);
+  font-variant-numeric: tabular-nums; margin-bottom: .25rem; }
+.bead-images { display: grid; gap: .5rem; margin-top: .5rem; }
+.bead-image { max-width: 100%; height: auto; border-radius: 2px; }
+.bead-missing p { color: var(--faint); font-style: italic; margin: 0; }

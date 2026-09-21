@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The wall — CultureBlocs</title>
+<link rel="stylesheet" href="/wall/wall.css">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.5 system-ui,sans-serif}
+  #status,.notice{padding:2rem;max-width:38rem;margin-inline:auto}
+  #status h1,.notice h1{font-size:1.1rem;margin:0 0 .5rem}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+  <noscript>
+    <p style="padding:2rem;max-width:38rem;margin-inline:auto;font:16px/1.5 system-ui,sans-serif">
+      This page reads published cultureblocs live from the AT Protocol network.
+      It needs JavaScript enabled to do that — please turn it on and reload.
+    </p>
+  </noscript>
+  <div id="status" role="status" aria-live="polite"></div>
+  <main id="wall"></main>
+  <script type="module" src="/wall/wall.js"></script>
+</body>
+</html>
