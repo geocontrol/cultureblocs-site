@@ -69,5 +69,10 @@
       "destination": "/catalogue/",
       "permanent": false
     }
+  ],
+  "rewrites": [
+    { "source": "/wall/:actor/:rkey", "destination": "/wall/index.html" },
+    { "source": "/wall/:actor/", "destination": "/wall/index.html" },
+    { "source": "/wall/:actor", "destination": "/wall/index.html" }
   ]
 }
