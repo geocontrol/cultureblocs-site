@@ -223,3 +223,31 @@ test('a leading minus is prose, not a bullet marker, and survives intact', () =>
     { actor: ACTOR });
   assert.match(m.opening, /^-5 degrees outside/, `leading minus preserved: "${m.opening}"`);
 });
+
+test('a numeric title does not take the page down, and the day stands in for it', () => {
+  const records = [rec('r1', { title: 2026 })];
+  assert.doesNotThrow(() => renderWall({ actor: ACTOR, records, page: 1 }));
+  const html = renderWall({ actor: ACTOR, records, page: 1 });
+  assert.ok(!html.includes('>2026<'), `numeric title absent, not rendered raw: ${html}`);
+  assert.ok(html.includes('18 September 2026'), 'falls back to the day, like an empty title does');
+});
+
+test('an object title does not take a strand page down, and the day stands in for it', () => {
+  assert.doesNotThrow(() => renderStrand({ strand: rec('r1', { title: {} }), actor: ACTOR, blobBase: BLOB, beads: [] }));
+  const html = renderStrand({ strand: rec('r1', { title: {} }), actor: ACTOR, blobBase: BLOB, beads: [] });
+  assert.ok(!html.includes('[object Object]'), html);
+  assert.ok(html.includes('18 September 2026'), 'falls back to the day');
+});
+
+test('an object narrative does not take a strand page down, and is simply absent', () => {
+  assert.doesNotThrow(() => renderStrand({ strand: rec('r1', { narrative: {} }), actor: ACTOR, blobBase: BLOB, beads: [] }));
+  const html = renderStrand({ strand: rec('r1', { narrative: {} }), actor: ACTOR, blobBase: BLOB, beads: [] });
+  assert.ok(!html.includes('class="narrative"'), 'a non-string narrative reads as absent, not thrown');
+});
+
+test('an object place name does not take the page down, and is simply absent', () => {
+  const strand = rec('r1', { place: { name: {} } });
+  assert.doesNotThrow(() => renderStrand({ strand, actor: ACTOR, blobBase: BLOB, beads: [] }));
+  const html = renderStrand({ strand, actor: ACTOR, blobBase: BLOB, beads: [] });
+  assert.ok(!html.includes('[object Object]'), html);
+});

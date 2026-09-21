@@ -9,6 +9,13 @@ import { strandHref, wallHref } from './route.js';
 export const PAGE_SIZE = 10;
 const OPENING_MAX = 240;
 
+/* Every value here came off the network, and the lexicon does not enforce
+ * its own types at read time: a `title`, `place.name` or `kind` can arrive
+ * as a number, an object, anything. A non-string reads as absent rather
+ * than throwing partway through the page (spec §6: a malformed record must
+ * not take the whole page down). */
+const text = (v) => (typeof v === 'string' ? v : '');
+
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
   'August', 'September', 'October', 'November', 'December'];
 
@@ -44,10 +51,10 @@ export function strandSummary(record, { actor }) {
   return {
     rkey,
     href: strandHref(actor, rkey),
-    title: v.title || longDay(day),
+    title: text(v.title) || longDay(day),
     day,
     dayLong: longDay(day),
-    place: v.place?.name || '',
+    place: text(v.place?.name),
     opening: opening(v.narrative),
     beads: Array.isArray(v.items) ? v.items.length : 0,
   };
@@ -117,9 +124,10 @@ function renderBead(b, base) {
   const v = b.value || {};
   const time = String(v.createdAt || '').slice(11, 16);
   const images = beadImages(v).map((e) => renderImage(e, base)).filter(Boolean).join('');
-  return `<li class="bead bead-${esc(v.kind || 'bloc')}">
+  const note = text(v.note);
+  return `<li class="bead bead-${esc(text(v.kind) || 'bloc')}">
   ${time ? `<span class="bead-time">${esc(time)}</span>` : ''}
-  ${v.note ? `<div class="bead-note">${blocksHtml(v.note)}</div>` : ''}
+  ${note ? `<div class="bead-note">${blocksHtml(note)}</div>` : ''}
   ${images ? `<div class="bead-images">${images}</div>` : ''}
 </li>`;
 }
@@ -127,12 +135,13 @@ function renderBead(b, base) {
 export function renderStrand({ strand, beads, actor, blobBase: base }) {
   const v = strand?.value || {};
   const day = dayOf(v);
-  const meta = [longDay(day), v.place?.name || ''].filter(Boolean).join(' · ');
+  const narrative = text(v.narrative);
+  const meta = [longDay(day), text(v.place?.name)].filter(Boolean).join(' · ');
   return `<article class="strand-page">
   <p class="back"><a href="${esc(wallHref(actor))}">← ${esc(actor)}</a></p>
-  <h1 class="strand-title">${esc(v.title || longDay(day))}</h1>
+  <h1 class="strand-title">${esc(text(v.title) || longDay(day))}</h1>
   ${meta ? `<p class="strand-meta">${esc(meta)}</p>` : ''}
-  ${v.narrative ? `<div class="narrative">${blocksHtml(v.narrative)}</div>` : ''}
+  ${narrative ? `<div class="narrative">${blocksHtml(narrative)}</div>` : ''}
   ${beads.length ? `<ol class="beads">${beads.map((b) => renderBead(b, base)).join('\n')}</ol>` : ''}
 </article>`;
 }
