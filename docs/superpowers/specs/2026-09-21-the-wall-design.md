@@ -109,6 +109,7 @@ wall/
 ├── lib/
 │   ├── atproto.js
 │   ├── route.js
+│   ├── embed.js        the text and image helpers, copied from the embed
 │   └── render.js
 └── test/
     ├── atproto.test.mjs
@@ -206,6 +207,12 @@ makes a page of ten cost one request.
 every bead in time order with its photos. Photos resolve through the actor's
 own PDS, the same construction the embed uses:
 `{pds}/xrpc/com.atproto.sync.getBlob?did={did}&cid={cid}`.
+
+The narrative formatter and the image reader are **copied verbatim** from the
+canonical embed into `lib/embed.js`, comments included, and pinned by tests
+against a real published narrative. The wall does not import the embed (§2),
+but a narrative must read the same in both places, so this is a copy rather
+than a reimplementation — the same trade as §8, for the same reason.
 
 Both are pure functions returning HTML strings, so both are tested directly.
 
