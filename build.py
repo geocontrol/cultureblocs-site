@@ -2,8 +2,8 @@
 """Generate lexicons.html from the JSON lexicon documents in ./lexicons.
 
 The reference page is built from the actual schema files — the same ones the
-Spine validates against — so the docs cannot drift from the truth. Re-run
-after syncing lexicons/ from the cultureblocs-spine repo:
+String validates against — so the docs cannot drift from the truth. Re-run
+after syncing lexicons/ from the cultureblocs-string repo:
 
     python build.py
 """
@@ -103,6 +103,7 @@ def main() -> None:
   <a class="mark" href="/">Culture<span>Blocs</span></a>
   <a class="item" href="/lexicons.html" aria-current="page">Protocol</a>
   <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
@@ -110,7 +111,7 @@ def main() -> None:
   <p class="lede">Nine small <a href="https://atproto.com/guides/lexicon">ATProto
   lexicons</a> under the <code>com.cultureblocs.*</code> namespace — anchored to
   this domain, which is what makes them citable. The same shapes describe a record
-  on a device, in a self-hosted spine, or published to the open network; privacy is
+  on a device, in a self-hosted String, or published to the open network; privacy is
   a property of where a record lives, not of its schema. <b>Status: published and
   resolvable</b> — these schemas are live protocol infrastructure, in daily use by
   the reference apps.</p>
@@ -152,13 +153,46 @@ def main() -> None:
     published so old records stay resolvable. An RSVP on an event says
     <em>I'm going</em>; a bead pointing at the same event says <em>I was
     here</em> — two tenses, one record, different apps.</p>
+    <p><b>What an entry is about is data, not prose.</b> A narrative can
+    say that the book was Ben Pester’s <em>The Expansion Project</em>, that it
+    rhymes with <em>Severance</em>, and that its ancestry runs back through the
+    SF New Wave — all of it legible to a reader and invisible to everything
+    else. Prose does not join: two people write two paragraphs about the same
+    film and there is no common key in either record. <code>refs</code> is that
+    key — a small array beside the text naming what the entry is about
+    (<code>role: subject</code>) and what it reaches for
+    (<code>role: mention</code>). The text is never rewritten: no wikilinks, no
+    inline markup, and a reader that ignores refs renders the entry correctly.
+    The anchor into the text is a UTF-8 byte range with the same field names as
+    <a href="https://atproto.com/blog/create-post#rich-text-facets">app.bsky.richtext.facet</a>,
+    because anyone who has implemented facets has implemented most of this.
+    Subject versus mention is the whole relation vocabulary, deliberately:
+    <code>influencedBy</code> and friends are where twenty years of semantic web
+    effort went, and the cheap distinction captures nearly all of the value —
+    a mention is not a watch, not a read, not an attendance.</p>
+    <p><b>The work and the manifestation are different things.</b> Two people
+    log the same film; the work ref is what connects them, and
+    <code>presentation</code> — IMAX 70mm against a streaming rip, a
+    Peckhamplex screening against a living room — is often why they
+    disagree. Record at the level the person knew: “I read <em>The Left Hand
+    of Darkness</em>” is a complete claim and nobody should be made to pick an
+    edition, but capture the edition when they do know it, because an index can
+    generalise upward and never downward. <code>presentation.venueRef</code> is a
+    reference to a venue and carries no coordinates; <code>subject</code>’s
+    place ref remains where-you-were, with geo, stripped to its name on the way
+    out. The two can name the same building; only one can ever carry a
+    coordinate.</p>
     <p>Records reference artworks by stable external identity (Wikidata QIDs,
-    institution accession numbers, Linked Art URIs) with a descriptive fallback —
-    works are referenced, never owned. Coordinate fuzzing is a schema concept
+    institution accession numbers, Linked Art URIs, ISBNs) with a descriptive
+    fallback — works are referenced, never owned. A person ref publishes only
+    when it already carries a DID or a public identifier, so no one is ever
+    matched by name alone. Coordinate fuzzing is a schema concept
     (<code>geo.precision</code>), not an app afterthought. <code>knownValues</code>
     on <code>kind</code> is advisory, so the vocabulary can grow without breaking
-    old records. Event and calendar shapes are deliberately absent: for those we
-    intend to interoperate with the
+    old records. <code>defs#workRef</code> is deprecated in favour of
+    <code>defs#ref</code> and stays published so old records resolve. Event and
+    calendar shapes are deliberately absent: for those we
+    interoperate with the
     <a href="https://github.com/lexicon-community">Lexicon Community</a> calendar
     work rather than fork it.</p>
   </section>

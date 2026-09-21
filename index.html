@@ -12,6 +12,7 @@
   <a class="mark" href="/">Culture<span>Blocs</span></a>
   <a class="item" href="/lexicons.html">Protocol</a>
   <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
@@ -20,7 +21,7 @@
     <p class="lede">CultureBlocs is a set of <b>open schemas</b> and <b>small tools</b>
     for keeping a record of your cultural life — the exhibitions, gigs, films, books
     and encounters that make it up. Moments are minted as <b>beads</b>, told into
-    <b>strands</b>, and kept in a <b>spine</b> you run yourself. Publishing is a
+    <b>strands</b>, and kept in a <b>String</b> you run yourself. Publishing is a
     deliberate act, never a default.</p>
   </div>
 
@@ -48,7 +49,7 @@
 
   <div class="principles">
     <div><h2>Local-first</h2>
-      <p>Beads are minted on your devices and live in your own spine. Nothing needs
+      <p>Beads are minted on your devices and live in a store you run. Nothing needs
       the network to work; a gallery basement is a fine place to remember something.</p></div>
     <div><h2>Own your data</h2>
       <p>The record store runs on your machine. Every schema is open, every export
@@ -60,16 +61,14 @@
 
   <section>
     <h2 class="sec">How a moment travels</h2>
-    <div class="pipeline">totem press ──> Studio (date, name, tell) ──> Spine (your record store)
-                                                        │
-     AR bookmark ───────────────────────────────────────┤
-     scrobbled listening ──────────────────────────────>│
-                                                        ▼
-                                        the day's string · strands
-                                                        │ deliberate publish
-                                                        ▼
-                              your website · (soon) your ATProto repo</div>
-    <p>The same schemas describe a bead whether it lives on a device, in your spine,
+    <div class="pipeline">totem press ──────┐
+phone mint ───────┤
+scrobbled play ───┤──> Loom ──> the String (your record store)
+written by hand ──┘   the desk         │
+                                       │ deliberate publish
+                                       ▼
+                         your ATProto repo ──> the wall · a catalogue · an embed</div>
+    <p>The same schemas describe a bead whether it lives on a device, in your String,
     or published to the open web — privacy is a property of <em>where a record lives</em>,
     not of its shape. That is what makes local-first and federation two ends of one
     thread rather than two systems.</p>
@@ -79,12 +78,17 @@
     <h2 class="sec">Start somewhere</h2>
     <div class="cards">
       <div class="card"><h3>Read the schemas</h3>
-        <p>Four small lexicons — beads, annotations, strands, and their shared parts —
-        published under <code>com.cultureblocs.*</code>.</p>
+        <p>Nine small lexicons — beads, annotations, strands, creative identity,
+        venues, and their shared parts — published under
+        <code>com.cultureblocs.*</code> and resolvable from this domain.</p>
         <div class="links"><a href="/lexicons.html">Protocol reference →</a></div></div>
+      <div class="card"><h3>Do the basic things</h3>
+        <p>Write a bead, tell a strand, claim a work, publish an event, put the
+        result on a website — one recipe each, app and command line.</p>
+        <div class="links"><a href="/howto.html">How to →</a></div></div>
       <div class="card"><h3>See the tools</h3>
-        <p>A hardware totem, a browser studio, a record spine, a timeline, and a
-        scrobbler — all small, all yours to run.</p>
+        <p>A hardware totem, the Loom desk, the String record store, a phone
+        minter, an easel for your own work — all small, all yours to run.</p>
         <div class="links"><a href="/apps.html">The apps →</a></div></div>
       <div class="card"><h3>Come to the meetup</h3>
         <p>A London evening for people working across technology, data, creativity
