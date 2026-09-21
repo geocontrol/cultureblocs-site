@@ -20,12 +20,22 @@ function pageFrom(q) {
   return n >= 1 ? n : 1;
 }
 
+/* Decode a URL segment defensively. A malformed percent-escape is a state
+ * (no actor / no rkey), not an error. */
+function decode(s) {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return null;
+  }
+}
+
 export function parse(pathname = '', search = '') {
   const q = new URLSearchParams(search || '');
   const page = pageFrom(q);
   const path = String(pathname || '');
   const rest = path.startsWith(WALL_BASE) ? path.slice(WALL_BASE.length) : '';
-  const parts = rest.split('/').filter(Boolean).map(decodeURIComponent);
+  const parts = rest.split('/').filter(Boolean).map(decode);
   if (!parts.length) {
     return {
       actor: (q.get('actor') || '').trim() || null,

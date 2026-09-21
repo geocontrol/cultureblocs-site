@@ -54,3 +54,20 @@ test('links are built as paths, and round-trip to what built them', () => {
   const paged = new URL(wallHref(HANDLE, 2), 'https://cultureblocs.com');
   assert.deepEqual(parse(paged.pathname, paged.search), { actor: HANDLE, rkey: null, page: 2 });
 });
+
+test('a malformed actor segment does not throw', () => {
+  // Malformed percent-escape %E0%25 would throw decodeURIComponent(), but parse() handles it
+  assert.deepEqual(parse('/wall/%E0%25/', ''), { actor: null, rkey: null, page: 1 });
+});
+
+test('a malformed rkey segment does not throw, but keeps the actor', () => {
+  // Good actor, malformed rkey → visitor sees the actor's wall, not an error
+  assert.deepEqual(parse(`/wall/${HANDLE}/%E0%25`, ''), { actor: HANDLE, rkey: null, page: 1 });
+});
+
+test('a legitimately encoded DID actor still round-trips', () => {
+  const did = 'did:plc:diptbrfpxsowq6hp4bgxjftd';
+  const href = strandHref(did, RKEY);
+  assert.deepEqual(parse(new URL(href, 'https://cultureblocs.com').pathname, ''),
+    { actor: did, rkey: RKEY, page: 1 });
+});
