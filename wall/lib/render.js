@@ -29,7 +29,7 @@ export function longDay(iso) {
  * invitation, not the thing itself. */
 export function opening(narrative) {
   const lines = String(narrative || '').split('\n');
-  const noMarkers = lines.map(line => line.replace(/^[\s*-]+/, '').trimStart()).join(' ');
+  const noMarkers = lines.map(line => line.replace(/^\s*[*-]\s+/, '').trimStart()).join(' ');
   const flat = noMarkers.replace(/\s+/g, ' ').trim();
   if (flat.length <= OPENING_MAX) return flat;
   const cut = flat.slice(0, OPENING_MAX - 1);

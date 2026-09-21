@@ -217,3 +217,9 @@ test('bullet markers do not leak into the summary', () => {
   assert.ok(!m.opening.includes('*'), `no * in opening: "${m.opening}"`);
   assert.match(m.opening, /First para/, 'opening starts with first paragraph');
 });
+
+test('a leading minus is prose, not a bullet marker, and survives intact', () => {
+  const m = strandSummary(rec('r1', { narrative: '-5 degrees outside, and still we went.' }),
+    { actor: ACTOR });
+  assert.match(m.opening, /^-5 degrees outside/, `leading minus preserved: "${m.opening}"`);
+});
