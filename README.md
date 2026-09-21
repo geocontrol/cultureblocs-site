@@ -8,10 +8,11 @@ apps built on it, and the London meetup.
     build.py + lexicons/*.json             regenerate: python build.py
     cultureblocs-strands.js                the strand embed component
     meetup/strands.json                    (future) published meetup strands
-    wall/                                  the wall: one actor's published cultureblocs, newest first, and a
-                                           URL for each strand (`/wall/<handle>/` and `/wall/<handle>/<rkey>`). Reads
-                                           the actor's own PDS in the browser; needs the `/wall/` rewrites in
-                                           `vercel.json`.
+    wall/                                  one actor's published cultureblocs, newest
+                                           first, one URL per strand (/wall/<handle>/
+                                           and /wall/<handle>/<rkey>). Reads the actor's
+                                           own PDS in the browser; needs the /wall/
+                                           rewrites in vercel.json.
 
 Deploy: push to GitHub, import into Vercel as a plain static project (no
 framework, no build step needed — lexicons.html is committed). To update
