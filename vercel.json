@@ -51,6 +51,15 @@
           "value": "no-cache"
         }
       ]
+    },
+    {
+      "source": "/wall/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data:; connect-src https:"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -68,10 +77,16 @@
       "source": "/catalogue",
       "destination": "/catalogue/",
       "permanent": false
+    },
+    {
+      "source": "/wall",
+      "destination": "/wall/",
+      "permanent": false
     }
   ],
   "rewrites": [
     { "source": "/wall/:actor/:rkey", "destination": "/wall/index.html" },
+    { "source": "/wall/:actor/:rkey/", "destination": "/wall/index.html" },
     { "source": "/wall/:actor/", "destination": "/wall/index.html" },
     { "source": "/wall/:actor", "destination": "/wall/index.html" }
   ]
