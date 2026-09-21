@@ -26,6 +26,54 @@
  */
 const XRPC_PUBLIC = 'https://public.api.bsky.app/xrpc';
 
+export const esc = s => (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const BULLET = /^\s*[*-]\s+/;
+const TIMED = /^\d{2}:\d{2}\s/;
+
+/* Plain text -> block markup, for a bead's `note` and a strand's `narrative`.
+ *
+ * Both are plain lexicon strings: there is no markup to parse and no facet for
+ * structure, so a blank line is a paragraph break and a `* ` or `- ` line is a
+ * bullet. The text itself is never rewritten — refs anchor into it by UTF-8
+ * byte range — so this only ever chooses the elements the text is poured into.
+ *
+ * A block of mostly `HH:MM ` lines stays a tracklist (scrobbler notes rely on
+ * it). A block with no bullets is emitted whole, so its single newlines are
+ * still the renderer's to show via `white-space: pre-line`. */
+export function blocksHtml(text){
+  if(!text) return '';
+  return text.split('\n\n').map(bk=>{
+    const lines = bk.split('\n').filter(Boolean);
+    if(!lines.length) return '';
+    const timed = lines.filter(l=>TIMED.test(l)).length;
+    if(lines.length>1 && timed >= lines.length*0.7){
+      return `<ul class="tracks">${lines.map(l=>{
+        const m=l.match(/^(\d{2}:\d{2})\s+(.*)$/);
+        return `<li>${m?`<span class="tt">${esc(m[1])}</span>${esc(m[2])}`:esc(l)}</li>`;
+      }).join('')}</ul>`;
+    }
+    if(!lines.some(l=>BULLET.test(l))) return `<p>${esc(bk)}</p>`;
+    // Consecutive lines of a kind travel together: a lead-in line stays a
+    // paragraph, the bullets under it become one list, prose after it another.
+    const runs = [];
+    for(const line of lines){
+      const bullet = BULLET.test(line);
+      const last = runs[runs.length-1];
+      if(last && last.bullet === bullet) last.lines.push(line);
+      else runs.push({bullet, lines:[line]});
+    }
+    return runs.map(run=>run.bullet
+      ? `<ul class="bullets">${run.lines.map(l=>`<li>${esc(l.replace(BULLET,''))}</li>`).join('')}</ul>`
+      : `<p>${esc(run.lines.join('\n'))}</p>`).join('');
+  }).join('');
+}
+
+/* A strand's narrative, as blocks. The container is a `div`, not a `p`: the
+ * blocks are themselves `p` and `ul` elements, which a `p` cannot contain. */
+export const narrativeHtml = strand =>
+  (strand?.narrative ? `<div class="narrative">${blocksHtml(strand.narrative)}</div>` : '');
+
 /* A bead's published images. `images` is the current field; `photos` was the
  * name before the imageRef change and is still read, because this element
  * takes an `actor` attribute and renders any repository on the network. */
@@ -82,7 +130,10 @@ export async function fetchActorStrands(actor, {pds=null, limit=0, fetchFn=fetch
       }catch(e){ return null; }
     }))).filter(Boolean)
        .sort((a,b)=>(a.createdAt||'') < (b.createdAt||'') ? -1 : 1);
-    bundles.push({strand: s.value, items, blobBase});
+    // The uri and cid travel with the record: a renderer that wants to link to
+    // one strand (the wall, cultureblocs.com/wall/<handle>/<rkey>) cannot
+    // rebuild them from the body. This element ignores both.
+    bundles.push({uri: s.uri, cid: s.cid, strand: s.value, items, blobBase});
   }
   return bundles;
 }
@@ -90,10 +141,25 @@ export async function fetchActorStrands(actor, {pds=null, limit=0, fetchFn=fetch
 if (typeof customElements !== 'undefined' && typeof HTMLElement !== 'undefined') {
 class CultureblocsStrands extends HTMLElement {
   static get observedAttributes(){ return ['actor','pds','src','limit'] }
-  attributeChangedCallback(){ this.#load() }
-  connectedCallback(){ this.#load() }
+  attributeChangedCallback(){ if(this.isConnected) this.#schedule() }
+  connectedCallback(){ this.#schedule() }
+
+  /* Attributes arrive one at a time (a framework sets `actor` before `limit`),
+   * and each change used to start its own fetch: the unlimited one, being
+   * slower, finished last and painted every strand. Coalesce a burst of
+   * changes into one load, and drop the result of any load a newer one has
+   * superseded. */
+  #pending = false;
+  #generation = 0;
+  #schedule(){
+    if(this.#pending) return;
+    this.#pending = true;
+    queueMicrotask(()=>{ this.#pending = false; this.#load(); });
+  }
 
   async #load(){
+    const generation = ++this.#generation;
+    const stale = () => generation !== this.#generation;
     const actor = this.getAttribute('actor');
     const src = this.getAttribute('src');
     const limit = parseInt(this.getAttribute('limit') || '0');
@@ -101,6 +167,7 @@ class CultureblocsStrands extends HTMLElement {
       if(actor){
         const bundles = await fetchActorStrands(actor,
           {pds: this.getAttribute('pds'), limit});
+        if(stale()) return;
         this.#render(bundles, '');
         return;
       }
@@ -108,10 +175,12 @@ class CultureblocsStrands extends HTMLElement {
       const res = await fetch(src);
       if(!res.ok) throw new Error(res.status);
       const doc = await res.json();
+      if(stale()) return;
       let strands = doc.strands || [];
       if(limit > 0) strands = strands.slice(0, limit);
       this.#render(strands, src);
     }catch(e){
+      if(stale()) return;
       this.#shadow().innerHTML = '';   // fail silent on a public page
     }
   }
@@ -120,26 +189,11 @@ class CultureblocsStrands extends HTMLElement {
 
   #render(strands, src){
     const base = src.slice(0, src.lastIndexOf('/')+1);
-    const esc = s => (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
     const hhmm = iso => (iso||'').slice(11,16);
     const kindColor = {visit:'var(--cb-accent,#2B4BC7)', dwell:'#C7860F',
       encounter:'#B0326E', screening:'#0F6E6B', performance:'#5B2BC7',
       bloc:'#4A4741', read:'#2E7A4F', listen:'#C74E2B', watch:'#0F6E6B'};
 
-    const noteHtml = note => {
-      if(!note) return '';
-      return note.split('\n\n').map(bk=>{
-        const lines = bk.split('\n').filter(Boolean);
-        const timed = lines.filter(l=>/^\d{2}:\d{2}\s/.test(l)).length;
-        if(lines.length>1 && timed >= lines.length*0.7){
-          return `<ul class="tracks">${lines.map(l=>{
-            const m=l.match(/^(\d{2}:\d{2})\s+(.*)$/);
-            return `<li>${m?`<span class="tt">${esc(m[1])}</span>${esc(m[2])}`:esc(l)}</li>`;
-          }).join('')}</ul>`;
-        }
-        return `<p>${esc(bk)}</p>`;
-      }).join('');
-    };
     let blobBase = '';
     const item = it => {
       const isWork = it.$type==='com.cultureblocs.annotation' || it.work;
@@ -163,7 +217,7 @@ class CultureblocsStrands extends HTMLElement {
       return `<li>
         <time>${hhmm(it.createdAt)}</time>${dot}
         <div class="body">${head}
-          ${noteHtml(it.note)}
+          ${blocksHtml(it.note)}
           ${media?`<div class="media">${media}</div>`:''}
           ${links?`<div class="links">${links}</div>`:''}
         </div></li>`;
@@ -175,7 +229,7 @@ class CultureblocsStrands extends HTMLElement {
         <div class="meta">${esc((b.strand.day||b.strand.createdAt||'').slice(0,10))}${
           b.strand.place?.name?` · ${esc(b.strand.place.name)}`:''}${
           (b.strand.links||[]).map(l=>` · <a href="${esc(l.uri)}" target="_blank" rel="noopener">${esc(l.title||'event')}</a>`).join('')}</div>
-        ${b.strand.narrative?`<p class="narrative">${esc(b.strand.narrative)}</p>`:''}
+        ${narrativeHtml(b.strand)}
       </header>
       <ul class="stops">${b.items.map(item).join('')}</ul>
     </article>`;
@@ -188,7 +242,13 @@ class CultureblocsStrands extends HTMLElement {
       .meta{font-size:.78em;color:var(--cb-faint,#8A8880);margin:.15rem 0 .6rem}
       .meta a{color:var(--cb-accent,#2B4BC7)}
       .narrative{margin:.2rem 0 .8rem;font-style:italic}
+      .narrative p{margin:.35rem 0;white-space:pre-line}
+      .narrative p:first-child{margin-top:0}
+      .narrative p:last-child{margin-bottom:0}
       ul{list-style:none;margin:0;padding:0}
+      .bullets{margin:.35rem 0;padding-left:1.15rem;list-style:disc}
+      .bullets li{display:list-item;margin:.15rem 0}
+      .body .bullets{font-size:.92em;line-height:1.45}
       .stops{position:relative}
       .stops::before{content:"";position:absolute;left:3.05rem;top:.3rem;bottom:.3rem;
         width:2px;background:var(--cb-thread,#C9C7C0)}
@@ -208,7 +268,7 @@ class CultureblocsStrands extends HTMLElement {
       .work{font-weight:600;font-size:.92em}
       .artist{font-style:italic;font-size:.88em}
       .media{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.4rem}
-      .media img{height:88px;border-radius:4px;border:1px solid var(--cb-edge,#E4E2DB)}
+      .media img{height:88px;width:auto;max-width:100%;object-fit:cover;border-radius:4px;border:1px solid var(--cb-edge,#E4E2DB)}
       .links{margin-top:.25rem;font-size:.8em}
       .links a{color:var(--cb-accent,#2B4BC7)}
     </style>
