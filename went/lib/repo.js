@@ -62,10 +62,19 @@ export async function getRecord(pds, repo, collection, rkey, { fetchFn = fetch }
   }
 }
 
-/* Does this account post to Bluesky (or anywhere using Bluesky's post
- * records — Blacksky, Eurosky…)? A profile record is the sign. */
-export async function postsToBluesky(pds, did, opts) {
-  return Boolean(await getRecord(pds, did, 'app.bsky.actor.profile', 'self', opts));
+/* Does this account post to Bluesky (or anywhere using Bluesky's records —
+ * Blacksky, Eurosky…)? Ask the repository what it holds: any app.bsky.*
+ * collection (posts, likes, follows, a profile) is the sign. A profile
+ * record alone is NOT enough — it only exists once someone has set a
+ * display name or avatar, and plenty of active accounts never have.
+ * If describeRepo fails, fall back to looking for the profile. */
+export async function postsToBluesky(pds, did, { fetchFn = fetch } = {}) {
+  try {
+    const d = await getJson(fetchFn,
+      `${pds}/xrpc/com.atproto.repo.describeRepo?repo=${encodeURIComponent(did)}`);
+    if (Array.isArray(d.collections)) return d.collections.some(c => String(c).startsWith('app.bsky.'));
+  } catch { /* older or unusual servers: try the profile */ }
+  return Boolean(await getRecord(pds, did, 'app.bsky.actor.profile', 'self', { fetchFn }));
 }
 
 /* Display name and avatar, if Bluesky's public view knows the account. */
