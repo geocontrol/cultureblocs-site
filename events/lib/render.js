@@ -1,0 +1,121 @@
+/* HTML for an event directory. Pure: strings in, strings out.
+ *
+ * Every value from a record is escaped — the records are ours today, but
+ * they arrive over the network and the page must not care who wrote them.
+ */
+import { FILTERS, arrange, dateLabel, dayLabel, statusOf } from './schedule.js';
+
+export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+}[c]));
+
+/* Only http(s) links from a record become hrefs. */
+export function safeHref(u) {
+  try {
+    const url = new URL(String(u));
+    return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+const place = (record) => {
+  const loc = (record?.locations || []).find(l =>
+    String(l?.$type || '').endsWith('location.address') || l?.name);
+  if (!loc) return null;
+  const query = [loc.name, loc.street, loc.postalCode, loc.locality].filter(Boolean).join(', ');
+  return {
+    name: loc.name || loc.street || loc.locality || 'Venue',
+    map: `https://www.openstreetmap.org/search?query=${encodeURIComponent(query)}`,
+  };
+};
+
+const STATUS_NOTE = {
+  cancelled: 'cancelled', postponed: 'postponed', rescheduled: 'rescheduled', planned: 'dates tbc',
+};
+
+function eventHtml({ ev, when }, idSuffix) {
+  const r = ev.record || {};
+  const where = place(r);
+  const status = STATUS_NOTE[statusOf(r)];
+  const links = (r.uris || [])
+    .map(u => ({ href: safeHref(u?.uri), name: u?.name || u?.uri }))
+    .filter(u => u.href)
+    .map(u => `<a href="${esc(u.href)}" rel="noopener">${esc(u.name)}</a>`)
+    .join(' · ');
+  return `<article class="ev ev-${esc(ev.group)}${status ? ' ev-flag' : ''}" data-group="${esc(ev.group)}" id="${esc(ev.slug)}${idSuffix}">
+  <div class="ev-when">${esc(when)}</div>
+  <div class="ev-body">
+    <h3>${esc(r.name)}${status ? ` <span class="status prototype">${esc(status)}</span>` : ''}</h3>
+    ${where ? `<p class="ev-where"><a href="${esc(where.map)}" rel="noopener">${esc(where.name)}</a></p>` : ''}
+    <details>
+      <summary>Details</summary>
+      ${r.description ? `<p>${esc(r.description)}</p>` : ''}
+      ${links ? `<p class="ev-links">${links}</p>` : ''}
+      <p class="ev-ref">Reference this event in a bead:<br>
+        <code>${esc(ev.uri)}</code>
+        <button type="button" class="copy" data-copy="${esc(ev.uri)}">Copy</button></p>
+    </details>
+  </div>
+</article>`;
+}
+
+function dayHtml(day, today) {
+  const isToday = day.date === today;
+  const timed = day.timed.map(x => eventHtml(x, `--${day.date}`)).join('\n');
+  const open = day.open.map(x => eventHtml(x, `--${day.date}`)).join('\n');
+  return `<section class="day" id="d-${esc(day.date)}" data-day="${esc(day.date)}">
+  <h2 class="sec">${esc(dayLabel(day.date))}${isToday ? ' <span class="status working">today</span>' : ''}</h2>
+  ${timed ? `<div class="ev-group" data-kind="timed">${timed}</div>` : ''}
+  ${open ? `<div class="ev-group" data-kind="open"><p class="ev-sub"${timed ? '' : ' hidden'}>Open this day</p>${open}</div>` : ''}
+</section>`;
+}
+
+function runningHtml(running, weekEnd) {
+  if (!running.length) return '';
+  const items = running.map(({ ev, sh }) => {
+    const closing = sh.endDate <= weekEnd;
+    const when = closing
+      ? `Closes ${dayLabel(sh.endDate)}`
+      : `Until ${dateLabel(sh.endDate)}`;
+    return eventHtml({ ev, when }, '');
+  });
+  return `<section class="day" id="running" data-day="running">
+  <h2 class="sec">On throughout the week</h2>
+  <p class="ev-intro">Exhibitions open across the week. Check each venue for daily hours.</p>
+  ${items.join('\n  ')}
+</section>`;
+}
+
+export function sourceLine({ actor, live, total, error }) {
+  if (live === total && total > 0) {
+    return `Live from <code>@${esc(actor)}</code> · all ${total} events read from the repository just now.`;
+  }
+  if (live > 0) {
+    return `Live from <code>@${esc(actor)}</code> · ${live} of ${total} events published so far; the rest are shown from the prepared listing.`;
+  }
+  return error
+    ? `Showing the prepared listing — <code>@${esc(actor)}</code> couldn’t be reached just now.`
+    : `Showing the prepared listing — these events are not yet published to <code>@${esc(actor)}</code>.`;
+}
+
+/* The whole schedule. `today` is a London date string or null. */
+export function renderDirectory({ events, today = null }) {
+  const { days, running } = arrange(events);
+  const weekEnd = days.length ? days[days.length - 1].date : '';
+  const groups = new Set(events.map(e => e.group).filter(Boolean));
+  const filters = FILTERS.filter(([key]) => key === 'all' || groups.has(key))
+    .map(([key, label]) =>
+      `<button type="button" class="chip" data-filter="${key}" aria-pressed="${key === 'all'}">${esc(label)}</button>`)
+    .join('');
+  const jump = [
+    ...days.map(d => `<a href="#d-${d.date}"${d.date === today ? ' aria-current="date"' : ''}>${esc(dayLabel(d.date))}</a>`),
+    ...(running.length ? ['<a href="#running">All week</a>'] : []),
+  ].join('');
+  return `<div class="ev-controls">
+  <div class="chips" role="group" aria-label="Show">${filters}</div>
+  <div class="jump" role="navigation" aria-label="Days">${jump}</div>
+</div>
+${days.map(d => dayHtml(d, today)).join('\n')}
+${runningHtml(running, weekEnd)}`;
+}

@@ -1,0 +1,69 @@
+/* Event directories. Builds on /style.css; colours reuse the bead-kind
+ * palette so a fair reads like a visit and a talk like a listen. */
+
+.ev-meta{font:.85rem var(--mono);color:var(--faint);margin:.2rem 0 1.4rem;max-width:40rem}
+.ev-meta code{color:var(--ink)}
+.ev-intro{color:var(--faint);font-size:.95rem;margin:-.4rem 0 1rem;max-width:38rem}
+
+/* controls: category chips and day jump, pinned while scrolling */
+.ev-controls{position:sticky;top:0;z-index:2;background:var(--plaster);
+  border-bottom:1px solid var(--edge);padding:.8rem 0 .7rem;margin:1.6rem 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{font:600 .72rem var(--disp);letter-spacing:.12em;text-transform:uppercase;
+  background:var(--card);color:var(--faint);border:1px solid var(--edge);
+  border-radius:999px;padding:.45rem .85rem;cursor:pointer;min-height:2.1rem}
+.chip:hover{color:var(--ink);border-color:var(--thread)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--plaster);border-color:var(--ink)}
+.jump{display:flex;gap:1rem;overflow-x:auto;margin-top:.7rem;padding-bottom:.2rem;
+  font:.78rem var(--mono);white-space:nowrap;scrollbar-width:thin}
+.jump a{color:var(--faint);text-decoration:none}
+.jump a:hover,.jump a[aria-current]{color:var(--accent)}
+
+section.day{margin:2.4rem 0;scroll-margin-top:7.5rem}
+.ev-sub{font:600 .7rem var(--disp);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);margin:1.3rem 0 .5rem}
+
+/* one event */
+.ev{--k:var(--ink);display:grid;grid-template-columns:9.5rem 1fr;gap:.2rem 1.1rem;
+  background:var(--card);border:1px solid var(--edge);border-left:3px solid var(--k);
+  border-radius:8px;padding:.85rem 1.1rem;margin:0 0 .6rem;
+  box-shadow:0 1px 2px rgba(27,29,34,.05);scroll-margin-top:7.5rem}
+.ev-fairs{--k:var(--visit)}
+.ev-talks{--k:var(--listen)}
+.ev-exhibitions{--k:var(--read)}
+.ev-galleries{--k:var(--dwell)}
+.ev-nights{--k:var(--performance)}
+.ev-when{font:600 .78rem var(--mono);color:var(--k);padding-top:.2rem}
+.ev h3{font:600 1rem/1.35 var(--disp);letter-spacing:.02em;margin:0}
+.ev-where{margin:.15rem 0 0;font-size:.9rem}
+.ev-where a{color:var(--faint);text-decoration-color:var(--thread)}
+.ev-where a:hover{color:var(--accent)}
+.ev details{margin-top:.35rem;font-size:.92rem}
+.ev summary{cursor:pointer;font:600 .7rem var(--disp);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);width:max-content}
+.ev summary:hover{color:var(--accent)}
+.ev details p{margin:.55rem 0 0;max-width:40rem}
+.ev-links{font:.8rem var(--mono)}
+.ev-ref{font-size:.82rem;color:var(--faint)}
+.ev-ref code{font:.74rem var(--mono);color:var(--ink);word-break:break-all}
+.copy{font:600 .66rem var(--disp);letter-spacing:.12em;text-transform:uppercase;
+  background:none;border:1px solid var(--edge);border-radius:6px;color:var(--accent);
+  padding:.2rem .5rem;margin-left:.3rem;cursor:pointer}
+
+/* directory of directories */
+.dirs .card{border-left-color:var(--accent)}
+.dirs .when{font:.78rem var(--mono);color:var(--faint);margin:.1rem 0 .4rem}
+
+@media (max-width:40rem){
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;
+    margin:0 -1.4rem;padding:0 1.4rem}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .jump{margin:.6rem -1.4rem 0;padding:0 1.4rem .2rem}
+  .ev{grid-template-columns:1fr}
+  .ev-when{padding-top:0}
+  section.day{scroll-margin-top:9rem}
+}
+
+/* long NSIDs in the explainer cards */
+.card code{overflow-wrap:anywhere}

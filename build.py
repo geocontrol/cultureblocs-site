@@ -104,6 +104,7 @@ def main() -> None:
   <a class="item" href="/lexicons.html" aria-current="page">Protocol</a>
   <a class="item" href="/apps.html">Apps</a>
   <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Events</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
