@@ -1,6 +1,23 @@
 {
   "headers": [
     {
+      "source": "/week/client-metadata.json",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
       "source": "/went/client-metadata.json",
       "headers": [
         {
@@ -121,6 +138,15 @@
           "value": "public, max-age=300"
         }
       ]
+    },
+    {
+      "source": "/week/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -167,6 +193,11 @@
     {
       "source": "/w/fwl/:key",
       "destination": "/went/?dir=frieze-week-london&e=:key",
+      "permanent": false
+    },
+    {
+      "source": "/week",
+      "destination": "/week/",
       "permanent": false
     }
   ],

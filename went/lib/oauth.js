@@ -26,7 +26,11 @@ const CLIENT_ID = document.querySelector('link[rel="atproto-client"]')?.href
   || `${location.origin}${location.pathname.replace(/\/?$/, '/')}client-metadata.json`;
 const REDIRECT_URI = CLIENT_ID.replace(/client-metadata\.json$/, '');
 const GENERIC = 'atproto transition:generic';
-const P = 'went:';   // storage prefix
+/* Each app that signs people in is its own OAuth client (its own metadata
+ * URL), so each keeps its own session and key: <meta name="oauth-store">
+ * names the store; "went" by default. */
+const STORE = document.querySelector('meta[name="oauth-store"]')?.content || 'went';
+const P = `${STORE}:`;   // storage prefix
 const PUBLIC_API = 'https://public.api.bsky.app/xrpc';
 
 /* ---------- small helpers ---------- */
@@ -44,7 +48,7 @@ const jget = async url => {
 /* ---------- tiny IndexedDB for the DPoP key ---------- */
 function idb(mode, fn) {
   return new Promise((res, rej) => {
-    const open = indexedDB.open('went-oauth', 1);
+    const open = indexedDB.open(`${STORE}-oauth`, 1);
     open.onupgradeneeded = () => open.result.createObjectStore('kv');
     open.onerror = () => rej(open.error);
     open.onsuccess = () => {

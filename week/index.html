@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My week — CultureBlocs</title>
+<meta name="description" content="Your week, told in beads: everything you said you went to, on one page you can share — and publish as a strand in your own account.">
+<meta name="oauth-store" content="week">
+<link rel="atproto-client" href="https://www.cultureblocs.com/week/client-metadata.json">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CultureBlocs">
+<meta property="og:title" content="My Frieze Week — CultureBlocs">
+<meta property="og:description" content="A week of art, told in beads kept in my own account.">
+<meta property="og:image" content="https://www.cultureblocs.com/events/frieze-week-london/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/events/events.css">
+<link rel="stylesheet" href="/went/went.css">
+<link rel="stylesheet" href="/week/week.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/" aria-current="page">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <p class="ev-meta" id="crumbs"><a href="/events/">Events</a> / My week</p>
+  <div class="hero"><h1 id="wk-title">My week.</h1>
+  <p class="lede" id="wk-lede">Everything you said you went to, on one page — from the
+  beads in your own account. Share it, or publish it as a <b>strand</b>: your
+  week, told your way.</p></div>
+
+  <div id="status" class="went-status" role="status" aria-live="polite">Loading…</div>
+
+  <form id="ask" class="went" hidden novalidate>
+    <label class="field"><span>Whose week?</span>
+      <input id="who" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="you.bsky.social"></label>
+    <button type="submit" class="cta quiet">Show the week</button>
+  </form>
+
+  <section id="week" hidden>
+    <div id="thread" class="wk-thread"></div>
+    <p class="wk-stats" id="stats"></p>
+    <div id="days"></div>
+    <p class="wk-share">Share this week: <code id="share-url"></code>
+      <button type="button" class="copy" id="share-copy">Copy</button></p>
+  </section>
+
+  <form id="publish-form" class="went" hidden novalidate>
+    <section class="step">
+      <h2 class="sec">Publish it as a strand</h2>
+      <p class="hint" id="pub-intro">A strand gathers these beads into one story in your
+      own account — it appears on your <a href="/wall/">wall</a>, and Loom can pick it
+      up later.</p>
+      <label class="field"><span>Title</span><input id="title" type="text"></label>
+      <label class="field"><span>Your week, in a few lines <span class="opt">optional</span></span>
+        <textarea id="narrative" rows="5" placeholder="What made the week? What will you remember?"></textarea></label>
+      <p class="count" id="narrative-count"></p>
+      <div id="bsky" hidden>
+        <label class="check"><input type="checkbox" id="post"> Also post this to Bluesky</label>
+        <div id="post-box" hidden>
+          <label class="field"><span class="sr">Post text</span><textarea id="post-text" rows="2"></textarea></label>
+          <p class="count" id="post-count"></p>
+          <p class="hint" id="post-again" hidden>You’ve published this week before. Posting
+          creates a <b>new</b> Bluesky post; it won’t change an earlier one.</p>
+        </div>
+      </div>
+      <p class="public-note"><b>This will be public</b>, like the beads it gathers.</p>
+      <p class="hint" id="perm-note"></p>
+      <button type="submit" class="cta" id="publish">Sign in &amp; publish</button>
+      <p class="went-error" id="pub-error" hidden></p>
+    </section>
+  </form>
+
+  <section id="done" class="went-done" hidden></section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+<script type="module" src="/week/week.js"></script>
+</body>
+</html>

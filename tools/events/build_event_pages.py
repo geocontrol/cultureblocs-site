@@ -18,7 +18,7 @@ from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
-RESERVED = {"cards"}   # folders in a directory that aren't event pages
+RESERVED = {"cards", "report"}   # folders in a directory that aren't event pages
 SITE = "https://www.cultureblocs.com"
 LONDON = ZoneInfo("Europe/London")
 E = html.escape
