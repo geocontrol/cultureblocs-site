@@ -1,0 +1,42 @@
+/* Printable "I went" cards: eight 95 × 69 mm cards per A4 sheet.
+ * On screen the sheets are previews; in print each sheet is one page. */
+
+.sheet{width:210mm;height:297mm;margin:1.5rem auto;padding:10mm;background:#fff;
+  box-shadow:0 1px 6px rgba(27,29,34,.12);display:grid;
+  grid-template-columns:95mm 95mm;grid-template-rows:repeat(4,69mm);
+  gap:0;box-sizing:border-box;break-after:page;page-break-after:always}
+.sheet:last-child{break-after:auto;page-break-after:auto}
+
+.qc{--k:var(--ink);position:relative;display:grid;grid-template-columns:1fr 31mm;
+  gap:4mm;padding:5.5mm 5.5mm 5mm 7.5mm;border:.2mm dashed #D9D7D0;
+  overflow:hidden;box-sizing:border-box;color:var(--ink);background:#fff}
+.qc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2.2mm;background:var(--k)}
+.k-fairs{--k:var(--visit)}
+.k-talks{--k:var(--listen)}
+.k-exhibitions{--k:var(--read)}
+.k-galleries{--k:var(--dwell)}
+.k-nights{--k:var(--performance)}
+
+.qc-text{display:flex;flex-direction:column;min-width:0}
+.qc-mark{font:700 6.6pt var(--disp);letter-spacing:.16em;text-transform:uppercase;margin:0 0 2.2mm;color:var(--ink)}
+.qc-mark span{color:var(--accent)}
+.qc h2{font:600 12.5pt/1.18 var(--disp);letter-spacing:.01em;margin:0 0 1.8mm;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.qc-line{font:8pt/1.35 var(--body);color:#4A4741;margin:0}
+.qc-cap{font:7.4pt/1.35 var(--body);color:var(--ink);margin:auto 0 0;padding-top:2mm}
+.qc-cap b{color:var(--k)}
+.qc-qr{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.qc-qr svg{width:29mm;height:29mm;display:block}
+.qc-url{font:5.2pt/1.25 var(--mono);color:var(--faint);margin:1.6mm 0 0;text-align:center;
+  overflow-wrap:anywhere;max-width:31mm}
+
+@media screen and (max-width:230mm){
+  .sheet{transform-origin:top left;margin-left:1rem}
+}
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff}
+  nav,.cards-intro,footer{display:none!important}
+  .sheet{margin:0;box-shadow:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}

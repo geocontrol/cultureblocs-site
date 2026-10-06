@@ -70,6 +70,8 @@ Event directories:
     python3 tools/events/publish_frieze_events.py --apply
     python3 tools/events/sync_from_repo.py           # pull DID URIs + CIDs from the live repo
     python3 tools/events/build_event_pages.py        # per-event pages and link-card images
+    python3 tools/events/build_cards.py              # printable QR cards (pip install segno)
+                                                     # -> /events/<dir>/cards/, 8 per A4 sheet
 
 Rebuilding the listing keeps DID URIs, and keeps CIDs for records that haven't
 changed. After editing an event: build, publish --apply, build_event_pages, commit.

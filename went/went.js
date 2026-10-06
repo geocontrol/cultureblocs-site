@@ -406,13 +406,22 @@ async function boot() {
     }
   } else {
     const q = new URLSearchParams(location.search);
-    const given = q.get('event');
+    const dir = validDirectory(q.get('dir')) ? q.get('dir') : null;
+    // Short form ?dir=…&e=<slug or record key>: printed QR cards arrive this
+    // way (via the /w/ redirects in vercel.json). Resolve it to the event.
+    let given = q.get('event');
+    if (!given && dir && /^[a-z0-9-]{1,120}$/.test(q.get('e') || '')) {
+      try {
+        const r = await fetch(`/events/${dir}/events.json`, { cache: 'no-cache' });
+        const hit = r.ok ? (await r.json()).records?.find(x => x.slug === q.get('e') || x.rkey === q.get('e')) : null;
+        if (hit) given = hit.atUri;
+      } catch { /* falls through to the message below */ }
+    }
     if (!given) {
       say(`<h2>Pick an event first</h2><p>Open a programme and choose
         <b>I went</b> on anything you were at.</p><p><a href="/events/">Browse the events →</a></p>`);
       return;
     }
-    const dir = validDirectory(q.get('dir')) ? q.get('dir') : null;
     draft = { given, dir };
     const saved = loadDraft();
     if (saved && saved.given === given) draft = { ...saved, autopublish: false };

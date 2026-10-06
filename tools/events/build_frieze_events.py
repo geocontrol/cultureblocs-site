@@ -272,6 +272,7 @@ doc = {
     "name": "Frieze Week London 2026",
     "directory": "frieze-week-london",
     "tag": "frieze-week-london-2026",
+    "short": "fwl",   # printed QR cards: cultureblocs.com/w/fwl/<rkey> (redirect in vercel.json)
     "repo": REPO,
     "collection": COLL,
     "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",

@@ -18,6 +18,7 @@ from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
+RESERVED = {"cards"}   # folders in a directory that aren't event pages
 SITE = "https://www.cultureblocs.com"
 LONDON = ZoneInfo("Europe/London")
 E = html.escape
@@ -285,6 +286,8 @@ def main():
 
     # A slug that is no longer in the listing is a page that should go.
     for child in base.iterdir():
+        if child.name in RESERVED:
+            continue
         if child.is_dir() and child.name not in wanted and (child / "index.html").exists():
             shutil.rmtree(child)
             print("removed stale page", child.name)
