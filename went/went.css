@@ -1,0 +1,61 @@
+/* "I went" composer. Builds on /style.css and /events/events.css. */
+
+.went-status{font:.9rem var(--mono);color:var(--faint);margin:1rem 0}
+.went-status h2{font:600 1.1rem var(--disp);color:var(--ink);margin:0 0 .4rem}
+.went-status p{font-family:var(--body);font-size:1rem;color:var(--ink);max-width:38rem}
+.went .step{margin:2.2rem 0}
+.went h2.sec .n{display:inline-grid;place-items:center;width:1.5rem;height:1.5rem;
+  border-radius:50%;background:var(--ink);color:var(--plaster);font-size:.72rem;
+  letter-spacing:0;margin-right:.5rem;vertical-align:.1em}
+.went h2.sec .opt{color:var(--faint);font-size:.7rem;letter-spacing:.14em;margin-left:.4rem}
+.went .ev{margin:0}
+
+.field{display:block;margin:.6rem 0}
+.field>span{display:block;font:600 .72rem var(--disp);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}
+.field.inline{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.field.inline>span{margin:0}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.went input[type=text],.went input[type=date],.went textarea,.went select{
+  font:1rem/1.5 var(--body);color:var(--ink);background:var(--card);
+  border:1px solid var(--edge);border-radius:8px;padding:.65rem .8rem;width:100%;max-width:38rem}
+.went select{width:auto;font-family:var(--disp);font-size:.9rem}
+.went input:focus,.went textarea:focus,.went select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.went textarea{resize:vertical;min-height:6rem}
+.count{font:.75rem var(--mono);color:var(--faint);margin:.2rem 0 0;max-width:38rem;text-align:right}
+.count.over{color:var(--listen)}
+.hint{font-size:.92rem;color:var(--faint);max-width:38rem;margin:.5rem 0 .9rem}
+.went-error{color:var(--listen);font-size:.95rem;max-width:38rem}
+
+.who{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:.3rem 0}
+.who img{width:2.2rem;height:2.2rem;border-radius:50%;object-fit:cover}
+button.link{background:none;border:0;padding:0;font:inherit;font-size:.88rem;
+  color:var(--accent);text-decoration:underline;cursor:pointer}
+
+.cta{border:0;cursor:pointer;min-height:2.8rem}
+.cta.quiet{background:var(--ink)}
+.cta[disabled]{opacity:.55;cursor:progress}
+
+.public-note{background:var(--wash);border:1px solid var(--edge);border-radius:8px;
+  padding:.8rem 1rem;max-width:38rem;font-size:.95rem}
+.bead-preview{display:grid;grid-template-columns:7rem 1fr;gap:.35rem 1rem;
+  max-width:38rem;font-size:.95rem;margin:1rem 0}
+.bead-preview dt{font:600 .7rem var(--disp);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);padding-top:.25rem}
+.bead-preview dd{margin:0;overflow-wrap:anywhere}
+.check{display:flex;align-items:center;gap:.6rem;font:600 .95rem var(--disp);
+  letter-spacing:.02em;margin:1.2rem 0 .4rem;cursor:pointer}
+.check input{width:1.2rem;height:1.2rem;accent-color:var(--accent)}
+
+.chip[role=radio][aria-checked="true"]{background:var(--ink);color:var(--plaster);border-color:var(--ink)}
+
+.went-done h2{font:600 clamp(1.6rem,4vw,2.2rem)/1.2 var(--disp);margin:1rem 0 .6rem}
+.went-done p{max-width:38rem}
+.went-done .links{font:.85rem var(--mono);margin:1rem 0;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+
+@media (max-width:40rem){
+  .went .chips{flex-wrap:wrap;margin:0;padding:0}
+  .bead-preview{grid-template-columns:1fr;gap:.1rem}
+  .bead-preview dd{margin-bottom:.5rem}
+  .cta{width:100%;text-align:center}
+}

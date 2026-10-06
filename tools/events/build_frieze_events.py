@@ -252,9 +252,26 @@ for i, e in enumerate(E):
 assert len({o["slug"] for o in out}) == len(out)
 assert len({o["rkey"] for o in out}) == len(out)
 
+# Keep what publishing learned: a DID-based URI always, and the CID while
+# the record is unchanged (a changed record has a new CID once republished).
+did = None
+if OUT.exists():
+    prev = json.loads(OUT.read_text(encoding="utf-8"))
+    did = prev.get("meta", {}).get("did")
+    old = {e["rkey"]: e for e in prev.get("records", [])}
+    for o in out:
+        p = old.get(o["rkey"])
+        if p and str(p.get("atUri", "")).startswith("at://did:"):
+            o["atUri"] = p["atUri"]
+            if p.get("cid") and p.get("record") == o["record"]:
+                o["cid"] = p["cid"]
+
 doc = {
   "meta": {
     "title": "Frieze Week London 2026 — CultureBlocs event dataset",
+    "name": "Frieze Week London 2026",
+    "directory": "frieze-week-london",
+    "tag": "frieze-week-london-2026",
     "repo": REPO,
     "collection": COLL,
     "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
@@ -265,6 +282,7 @@ doc = {
     "omitted": "Christie's/Sotheby's/Phillips Frieze Week evening sales — 2026 dates not confirmed at time of build.",
     "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Frieze or any listed organiser.",
     "count": len(out),
+    **({"did": did} if did else {}),
   },
   "records": out,
 }

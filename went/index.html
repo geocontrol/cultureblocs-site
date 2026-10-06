@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I went — CultureBlocs</title>
+<meta name="description" content="Say you were there: record a visit to a cultural event as a small note in your own Atmosphere account (Bluesky, Blacksky and others).">
+<link rel="atproto-client" href="https://www.cultureblocs.com/went/client-metadata.json">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/events/events.css">
+<link rel="stylesheet" href="/went/went.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/" aria-current="page">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <p class="ev-meta" id="crumbs"><a href="/events/">Events</a> / I went</p>
+  <div class="hero"><h1>I went.</h1>
+  <p class="lede">Say you were there. Your note becomes a <b>bead</b> — a small
+  record of a cultural moment — kept in your own Atmosphere account
+  (Bluesky, Blacksky and the rest), not on this website.</p></div>
+
+  <noscript><p class="ev-intro">This page signs you in to your own account
+  and writes to it from your browser, so it needs JavaScript.</p></noscript>
+
+  <div id="status" class="went-status" role="status" aria-live="polite">Loading the event…</div>
+
+  <form id="compose" class="went" hidden novalidate>
+    <section class="step">
+      <h2 class="sec"><span class="n">1</span> The event</h2>
+      <div id="event-card"></div>
+    </section>
+
+    <section class="step">
+      <h2 class="sec"><span class="n">2</span> Which day</h2>
+      <div id="day-chips" class="chips" role="radiogroup" aria-label="Day you went"></div>
+      <label class="field" id="day-picker" hidden>
+        <span>The day you went</span>
+        <input type="date" id="day-input">
+      </label>
+    </section>
+
+    <section class="step">
+      <h2 class="sec"><span class="n">3</span> A few words <span class="opt">optional</span></h2>
+      <label class="field">
+        <span class="sr">Your note</span>
+        <textarea id="note" rows="4" placeholder="What stayed with you? A work, a conversation, a feeling…"></textarea>
+      </label>
+      <p class="count" id="note-count"></p>
+      <label class="field inline">
+        <span>Recorded as</span>
+        <select id="kind"></select>
+      </label>
+    </section>
+
+    <section class="step">
+      <h2 class="sec"><span class="n">4</span> Your account</h2>
+      <div id="who-signed" hidden>
+        <p class="who"><img id="who-avatar" alt="" hidden><span>Signed in as <b id="who-handle"></b></span>
+          <button type="button" class="link" id="sign-out">Not you? Sign out</button></p>
+      </div>
+      <div id="who-ask">
+        <label class="field">
+          <span>Your handle</span>
+          <input id="handle" type="text" inputmode="email" autocomplete="username"
+            autocapitalize="none" spellcheck="false" placeholder="you.bsky.social">
+        </label>
+        <p class="hint">New to all this? <a href="https://bsky.app" rel="noopener">Create a free
+        Bluesky account</a>, then come back — your draft will be here.</p>
+        <button type="button" class="cta quiet" id="find">Continue</button>
+      </div>
+      <p class="went-error" id="who-error" hidden></p>
+    </section>
+
+    <section class="step" id="preview" hidden>
+      <h2 class="sec"><span class="n">5</span> Before you publish</h2>
+      <p class="public-note"><b>This will be public.</b> Your bead is written to
+      your own account, where anyone can read it — like a post. It holds the
+      event, the day and your note: no location, no time of day, nothing about
+      your device.</p>
+      <dl class="bead-preview" id="bead-preview"></dl>
+      <p class="hint" id="dupe" hidden></p>
+
+      <div id="bsky" hidden>
+        <label class="check"><input type="checkbox" id="post"> Also post this to Bluesky</label>
+        <div id="post-box" hidden>
+          <label class="field">
+            <span class="sr">Post text</span>
+            <textarea id="post-text" rows="3"></textarea>
+          </label>
+          <p class="count" id="post-count"></p>
+          <p class="hint">Shown with a link card to the event. Deleting the bead
+          later won't delete the post.</p>
+        </div>
+      </div>
+
+      <p class="hint" id="perm-note"></p>
+      <button type="submit" class="cta" id="publish">Sign in &amp; publish</button>
+      <p class="went-error" id="pub-error" hidden></p>
+    </section>
+  </form>
+
+  <section id="done" class="went-done" hidden></section>
+
+  <section>
+    <h2 class="sec">What's a bead?</h2>
+    <div class="cards">
+      <div class="card"><h3>A moment, kept</h3>
+        <p>A bead marks one cultural moment: a visit, a talk, a film. String
+        them together and they become a day's <em>strand</em> — a diary of
+        culture you actually lived.</p></div>
+      <div class="card"><h3>Yours, not ours</h3>
+        <p>It lives in your account's repository, beside your posts. CultureBlocs
+        keeps nothing: no server, no copy. Delete it any time.</p>
+        <div class="links"><a href="/privacy.html">privacy →</a></div></div>
+      <div class="card"><h3>Grows with you</h3>
+        <p>If you take up <a href="/apps.html">Loom</a>, the CultureBlocs desk,
+        it brings these beads home so you can add to them, attach photos and
+        tell the whole day.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+<script type="module" src="/went/went.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — CultureBlocs</title>
+<meta name="description" content="What CultureBlocs apps do with your data: nothing is stored by us. Records you publish live in your own Atmosphere account.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <div class="hero"><h1>Privacy.</h1>
+  <p class="lede">The short version: <b>we don’t keep your data.</b> The apps on
+  this site run in your browser and write to your own account. There is no
+  CultureBlocs server holding a copy, and no account with us to delete.</p></div>
+
+  <p class="meetup-meta">Applies to: I went · Pocket Totem · Easel · the wall, catalogue and event pages · last updated 6 October 2026</p>
+
+  <section>
+    <h2 class="sec">When you sign in</h2>
+    <p>Signing in uses ATProto OAuth with your own account provider — Bluesky,
+    Blacksky, Eurosky, a server you run, or any other. You type your password on
+    <em>their</em> page, never ours. They give your browser a token that lets
+    the app write to your account; what it may write is shown on their approval
+    screen. <b>I went</b> asks only to write beads, plus one post and an image
+    for its link card if you choose to post to Bluesky. Some account providers
+    don’t yet support permissions that narrow, and then ask for general access
+    instead — the app still only writes what you see it write.</p>
+    <p>The token, and the key it is bound to, are kept in your browser’s own
+    storage on this device. They are never sent to us. Signing out (or clearing
+    this site’s data in your browser) removes them; you can also revoke access
+    from your account provider’s settings at any time.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">What gets published</h2>
+    <p>When you press publish, a record is written to your account’s repository.
+    <b>Records in an ATProto repository are public</b>: anyone can read them, as
+    with a post. A bead from I went holds the event it points at, the day you
+    chose, the kind of moment and your note. It does not hold your location, the
+    time of day, or anything about your device. If you also post to Bluesky,
+    that post is public in the usual way.</p>
+    <p>Your records are yours. You can delete them with any ATProto tool, or with
+    <a href="/apps.html">Loom</a>. Deleting a bead does not delete a post you
+    made alongside it — remove that from Bluesky as normal.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">What we see</h2>
+    <p>Nothing about you, by design. Pages read public records straight from the
+    network in your browser. We use no analytics, no advertising and no
+    tracking cookies. The site is hosted on Vercel, which, like any web host, may
+    keep short-lived technical request logs (such as IP addresses) to run and
+    protect the service.</p>
+    <p>Pages that show published records — an event’s page, someone’s wall — only
+    ever show what was already public in that person’s repository.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Questions</h2>
+    <p>CultureBlocs is a <a href="https://geekyoto.com">geekyoto</a> project. Get
+    in touch through <a href="https://geekyoto.com">geekyoto.com</a> or
+    <a href="https://github.com/Geocontrol">GitHub</a>.</p>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+</div></footer>
+</body>
+</html>
