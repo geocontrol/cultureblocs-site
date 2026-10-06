@@ -1,0 +1,20 @@
+{
+  "_about": "Bluesky custom feeds served from cultureblocs.com. Each entry becomes an app.bsky.feed.generator record in the publisher's repository (tools/feeds/publish_feeds.py) and is answered by api/xrpc/getFeedSkeleton.js. To add a feed: add an entry, publish, deploy.",
+  "service": "did:web:www.cultureblocs.com",
+  "endpoint": "https://www.cultureblocs.com",
+  "publisher": "did:plc:l3726um33xesakwqhjkkpoet",
+  "publisherHandle": "cultureblocs.com",
+  "feeds": [
+    {
+      "rkey": "frieze-week",
+      "displayName": "Frieze Week London",
+      "description": "Posts from people at Frieze London, Frieze Masters and the week around them (13–18 Oct 2026) — shared from cultureblocs.com/events/frieze-week-london with “I went”, or tagged #CultureBlocs and Frieze. An independent feed, not affiliated with Frieze.",
+      "avatar": "feeds/avatars/frieze-week.png",
+      "sources": {
+        "directory": "frieze-week-london",
+        "tags": ["frieze-week-london-2026"],
+        "queries": ["#CultureBlocs frieze"]
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
-  "_about": "Beads or people this site won't show in who-went lists. Hiding only affects cultureblocs.com; the records themselves are untouched. Add a bead's at:// URI to beads, or a DID to dids.",
+  "_about": "Beads, posts or people this site won't show — in who-went lists and in the Bluesky feeds. Hiding only affects cultureblocs.com; the records themselves are untouched. Add a bead's at:// URI to beads, a post's at:// URI to posts, or a DID to dids.",
   "beads": [],
-  "dids": []
+  "dids": [],
+  "posts": []
 }
