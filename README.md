@@ -40,6 +40,11 @@ apps built on it, and the London meetup.
                                            Constellation + Bluesky search, merges, pages.
     .well-known/did.json                   did:web:www.cultureblocs.com, the feed service's
                                            identity (must match feeds.json; a test checks)
+    week/                                  "My week": one person's beads for a directory
+                                           (?dir=&who=), publishable as a strand. Its own
+                                           OAuth client (week/client-metadata.json).
+    events/<dir>/report/ + events/report.js live report: people, beads, per event/day,
+                                           pairs, notes, + the how-it-was-built case study
     privacy.html                           the policy every OAuth client here points at
     tools/events/                          build + publish scripts for the Frieze Week
                                            records (see "Event directories" below)
@@ -96,7 +101,7 @@ data-dir on the page, run build_event_pages.py --dir <name>, add a card to
 events/index.html and a redirect for /events/<name> in vercel.json. "I went"
 works for it with no further change.
 
-    node --test 'events/test/*.test.mjs' 'went/test/*.test.mjs'
+    node --test 'events/test/*.test.mjs' 'went/test/*.test.mjs' 'week/test/*.test.mjs' 'feeds/test/*.test.mjs'
     node --input-type=module --check < events/events.js
     node --input-type=module --check < went/went.js
 

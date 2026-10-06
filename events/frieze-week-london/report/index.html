@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frieze Week London 2026, in beads — CultureBlocs</title>
+<meta name="description" content="Who went where during Frieze Week London 2026, told in beads people kept in their own accounts — and how it was built on ATProto with no server of our own.">
+<link rel="canonical" href="https://www.cultureblocs.com/events/frieze-week-london/report/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CultureBlocs">
+<meta property="og:title" content="Frieze Week London 2026, in beads">
+<meta property="og:description" content="A live report from beads people kept in their own accounts — and how it was built on ATProto with no server of our own.">
+<meta property="og:url" content="https://www.cultureblocs.com/events/frieze-week-london/report/">
+<meta property="og:image" content="https://www.cultureblocs.com/events/frieze-week-london/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/events/events.css">
+<link rel="stylesheet" href="/events/report.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/" aria-current="page">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main id="report" data-dir="frieze-week-london">
+  <p class="ev-meta"><a href="/events/">Events</a> / <a href="/events/frieze-week-london/">Frieze Week London</a> / Report</p>
+  <div class="hero"><h1>Frieze Week, in beads.</h1>
+  <p class="lede">What people chose to remember of Frieze Week London 2026 —
+  each visit a <b>bead</b> kept in the visitor’s own account, pointing at an
+  open event record. Nothing here was collected by us: this page asks the
+  network as it loads.</p></div>
+
+  <p class="ev-meta" id="rp-status" role="status" aria-live="polite">Asking the network…</p>
+  <div id="rp-tiles"></div>
+
+  <section>
+    <h2 class="sec">Where people went</h2>
+    <p class="ev-intro">People who recorded each event — counted once, however many days they went.</p>
+    <div id="rp-events"></div>
+  </section>
+
+  <section>
+    <h2 class="sec">When</h2>
+    <p class="ev-intro">Beads by the day they were for.</p>
+    <div id="rp-days"></div>
+  </section>
+
+  <section>
+    <h2 class="sec">What went together</h2>
+    <p class="ev-intro">Events the same people recorded — the shape of a week that no single organiser sees.</p>
+    <div id="rp-pairs"></div>
+  </section>
+
+  <section>
+    <h2 class="sec">In their words</h2>
+    <div id="rp-notes"></div>
+  </section>
+
+  <div id="rp-tables"></div>
+  <p class="rp-actions"><a id="rp-download" class="cta quiet" hidden>Download the data (JSON)</a>
+    <a class="cta" href="/week/?dir=frieze-week-london">See your own week</a>
+    <a id="rp-feed" href="https://bsky.app/profile/cultureblocs.com/feed/frieze-week" rel="noopener">the Bluesky feed →</a></p>
+
+  <section id="how">
+    <h2 class="sec">How this was made</h2>
+    <p class="rp-prose">A week-long programme across thirty venues, a way for anyone
+    there to say “I went”, and a live picture of the week — built on the
+    <a href="https://atproto.com">AT Protocol</a> without a database or a server
+    process of our own. The parts:</p>
+
+    <figure class="rp-diagram">
+      <svg viewBox="0 0 760 330" role="img" aria-labelledby="dg-title dg-desc">
+        <title id="dg-title">Where everything lives</title>
+        <desc id="dg-desc">Event records live in the cultureblocs.com repository. Beads, strands and posts live in each visitor's own repository. Constellation and Bluesky search index the network. The cultureblocs.com pages and the feed function only read.</desc>
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8A8880"/></marker></defs>
+        <g font-family="Futura, 'Avenir Next', sans-serif" font-size="13" fill="#1B1D22">
+          <rect x="20" y="20" width="220" height="86" rx="8" fill="#fff" stroke="#E4E2DB"/>
+          <rect x="20" y="20" width="4" height="86" fill="#2B4BC7"/>
+          <text x="36" y="44" font-weight="600">@cultureblocs.com repo</text>
+          <text x="36" y="66" fill="#4A4741" font-size="12">30 calendar event records</text>
+          <text x="36" y="84" fill="#4A4741" font-size="12">+ the feed record</text>
+
+          <rect x="20" y="214" width="220" height="96" rx="8" fill="#fff" stroke="#E4E2DB"/>
+          <rect x="20" y="214" width="4" height="96" fill="#B0326E"/>
+          <text x="36" y="238" font-weight="600">Each visitor’s own repo</text>
+          <text x="36" y="260" fill="#4A4741" font-size="12">beads → point at an event</text>
+          <text x="36" y="278" fill="#4A4741" font-size="12">strands → point at beads</text>
+          <text x="36" y="296" fill="#4A4741" font-size="12">posts → link to the pages</text>
+
+          <rect x="290" y="117" width="180" height="96" rx="8" fill="#F2F1EC" stroke="#E4E2DB"/>
+          <text x="306" y="141" font-weight="600">The open network</text>
+          <text x="306" y="163" fill="#4A4741" font-size="12">Constellation: who links</text>
+          <text x="306" y="179" fill="#4A4741" font-size="12">to what</text>
+          <text x="306" y="197" fill="#4A4741" font-size="12">Bluesky search: tags</text>
+
+          <rect x="520" y="20" width="220" height="86" rx="8" fill="#fff" stroke="#E4E2DB"/>
+          <rect x="520" y="20" width="4" height="86" fill="#2E7A4F"/>
+          <text x="536" y="44" font-weight="600">cultureblocs.com pages</text>
+          <text x="536" y="66" fill="#4A4741" font-size="12">static files; read in</text>
+          <text x="536" y="84" fill="#4A4741" font-size="12">your browser, write nothing</text>
+
+          <rect x="520" y="214" width="220" height="96" rx="8" fill="#fff" stroke="#E4E2DB"/>
+          <rect x="520" y="214" width="4" height="96" fill="#C7860F"/>
+          <text x="536" y="238" font-weight="600">“I went” &amp; “My week”</text>
+          <text x="536" y="260" fill="#4A4741" font-size="12">sign in with your account,</text>
+          <text x="536" y="278" fill="#4A4741" font-size="12">write to your own repo</text>
+          <text x="536" y="296" fill="#4A4741" font-size="12">+ one feed function</text>
+        </g>
+        <g stroke="#8A8880" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+          <path d="M130 214 V112"/>
+          <path d="M240 240 L288 200"/>
+          <path d="M240 80 L288 130"/>
+          <path d="M472 140 L518 80"/>
+          <path d="M520 262 H244"/>
+        </g>
+        <g font-family="ui-monospace, Menlo, monospace" font-size="10.5" fill="#8A8880">
+          <text x="138" y="168">points at</text>
+          <text x="246" y="236" transform="rotate(-38 246 236)">indexed</text>
+          <text x="476" y="122" transform="rotate(-52 476 122)">read</text>
+          <text x="330" y="256">writes (OAuth)</text>
+        </g>
+      </svg>
+      <figcaption>Every arrow is a public read, except the one write: a visitor’s own app writing to their own repository.</figcaption>
+    </figure>
+
+    <div class="cards">
+      <div class="card"><h3>Events are shared records</h3>
+        <p>The programme is published once, as <code>community.lexicon.calendar.event</code>
+        records — the open calendar schema, not a CultureBlocs one — so any calendar
+        app on the network can read it. Each event has a permanent <code>at://</code>
+        address that anything can point at.</p></div>
+      <div class="card"><h3>Visits belong to visitors</h3>
+        <p>“I went” signs a visitor in with their own account (ATProto OAuth, narrow
+        permissions) and writes a <code>com.cultureblocs.bead</code> to <em>their</em>
+        repository, its <code>subject</code> a strong reference to the event. We never
+        hold it; they can edit or delete it, and every view here follows.</p></div>
+      <div class="card"><h3>Aggregation without a database</h3>
+        <p>Who went where is a backlink question — which beads point at this event? —
+        and <a href="https://constellation.microcosm.blue">Constellation</a> already
+        indexes every link on the network. Pages ask it, then read each bead from its
+        author’s own server.</p></div>
+      <div class="card"><h3>A feed with no firehose</h3>
+        <p>The Bluesky feed is one stateless edge function: it asks Constellation for
+        posts whose link card points at these pages, and Bluesky search for the tags,
+        merges and pages them. No stream to consume, no store to keep.</p></div>
+      <div class="card"><h3>From visit to story</h3>
+        <p>A visitor can gather their beads into a <code>com.cultureblocs.strand</code>
+        — the week, told their way — which renders on their
+        <a href="/wall/">wall</a>. If they later take up Loom, the CultureBlocs desk,
+        it brings these born-public records home to be added to.</p></div>
+      <div class="card"><h3>Paper to protocol</h3>
+        <p>Printed cards carry short links (<code>cultureblocs.com/w/fwl/…</code>) that
+        open “I went” on one event: about 45 characters, so the QR codes stay simple
+        enough to scan in a dim hall.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Method and limits</h2>
+    <ul class="rp-prose">
+      <li>Counts only what people chose to publish. It is a record of remembering, not
+      of attendance, and is not comparable to ticket or footfall figures.</li>
+      <li>People are counted by account (DID): one person recording three days is one
+      person. Beads edited to point elsewhere, deleted, or on the site’s hide list are
+      excluded.</li>
+      <li>Relies on Constellation’s index and each author’s server being reachable at
+      the moment the page loads; the status line says if anything couldn’t be checked.</li>
+      <li>Days are the day a person said they went, in London time.</li>
+      <li>An independent project, not affiliated with Frieze or any organiser listed.</li>
+    </ul>
+    <p class="rp-prose">Code: <a href="https://github.com/geocontrol/cultureblocs-site">github.com/geocontrol/cultureblocs-site</a>
+    · Schemas: <a href="/lexicons.html">com.cultureblocs.*</a> · Privacy: <a href="/privacy.html">what we keep (nothing)</a></p>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+<script type="module" src="/events/report.js"></script>
+</body>
+</html>
