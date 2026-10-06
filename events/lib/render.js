@@ -34,8 +34,18 @@ const STATUS_NOTE = {
   cancelled: 'cancelled', postponed: 'postponed', rescheduled: 'rescheduled', planned: 'dates tbc',
 };
 
-function eventHtml({ ev, when }, idSuffix) {
+/* Where an event's own page is, and where "I went" goes. `dir` is the
+ * directory's folder name; without it, events link nowhere new. */
+export function eventLinks(ev, dir) {
+  if (!dir) return { page: null, went: null };
+  const page = `/events/${encodeURIComponent(dir)}/${encodeURIComponent(ev.slug)}/`;
+  const went = `/went/?dir=${encodeURIComponent(dir)}&event=${encodeURIComponent(ev.uri)}`;
+  return { page, went };
+}
+
+function eventHtml({ ev, when }, idSuffix, dir) {
   const r = ev.record || {};
+  const { page, went } = eventLinks(ev, dir);
   const where = place(r);
   const status = STATUS_NOTE[statusOf(r)];
   const links = (r.uris || [])
@@ -46,8 +56,10 @@ function eventHtml({ ev, when }, idSuffix) {
   return `<article class="ev ev-${esc(ev.group)}${status ? ' ev-flag' : ''}" data-group="${esc(ev.group)}" id="${esc(ev.slug)}${idSuffix}">
   <div class="ev-when">${esc(when)}</div>
   <div class="ev-body">
-    <h3>${esc(r.name)}${status ? ` <span class="status prototype">${esc(status)}</span>` : ''}</h3>
+    <h3>${page ? `<a href="${esc(page)}">${esc(r.name)}</a>` : esc(r.name)}${status ? ` <span class="status prototype">${esc(status)}</span>` : ''}</h3>
     ${where ? `<p class="ev-where"><a href="${esc(where.map)}" rel="noopener">${esc(where.name)}</a></p>` : ''}
+    <div class="ev-actions">
+    ${went ? `<a class="went-btn" href="${esc(went)}">I went</a>` : ''}
     <details>
       <summary>Details</summary>
       ${r.description ? `<p>${esc(r.description)}</p>` : ''}
@@ -56,14 +68,15 @@ function eventHtml({ ev, when }, idSuffix) {
         <code>${esc(ev.uri)}</code>
         <button type="button" class="copy" data-copy="${esc(ev.uri)}">Copy</button></p>
     </details>
+    </div>
   </div>
 </article>`;
 }
 
-function dayHtml(day, today) {
+function dayHtml(day, today, dir) {
   const isToday = day.date === today;
-  const timed = day.timed.map(x => eventHtml(x, `--${day.date}`)).join('\n');
-  const open = day.open.map(x => eventHtml(x, `--${day.date}`)).join('\n');
+  const timed = day.timed.map(x => eventHtml(x, `--${day.date}`, dir)).join('\n');
+  const open = day.open.map(x => eventHtml(x, `--${day.date}`, dir)).join('\n');
   return `<section class="day" id="d-${esc(day.date)}" data-day="${esc(day.date)}">
   <h2 class="sec">${esc(dayLabel(day.date))}${isToday ? ' <span class="status working">today</span>' : ''}</h2>
   ${timed ? `<div class="ev-group" data-kind="timed">${timed}</div>` : ''}
@@ -71,14 +84,14 @@ function dayHtml(day, today) {
 </section>`;
 }
 
-function runningHtml(running, weekEnd) {
+function runningHtml(running, weekEnd, dir) {
   if (!running.length) return '';
   const items = running.map(({ ev, sh }) => {
     const closing = sh.endDate <= weekEnd;
     const when = closing
       ? `Closes ${dayLabel(sh.endDate)}`
       : `Until ${dateLabel(sh.endDate)}`;
-    return eventHtml({ ev, when }, '');
+    return eventHtml({ ev, when }, '', dir);
   });
   return `<section class="day" id="running" data-day="running">
   <h2 class="sec">On throughout the week</h2>
@@ -100,7 +113,7 @@ export function sourceLine({ actor, live, total, error }) {
 }
 
 /* The whole schedule. `today` is a London date string or null. */
-export function renderDirectory({ events, today = null }) {
+export function renderDirectory({ events, today = null, dir = null }) {
   const { days, running } = arrange(events);
   const weekEnd = days.length ? days[days.length - 1].date : '';
   const groups = new Set(events.map(e => e.group).filter(Boolean));
@@ -116,6 +129,6 @@ export function renderDirectory({ events, today = null }) {
   <div class="chips" role="group" aria-label="Show">${filters}</div>
   <div class="jump" role="navigation" aria-label="Days">${jump}</div>
 </div>
-${days.map(d => dayHtml(d, today)).join('\n')}
-${runningHtml(running, weekEnd)}`;
+${days.map(d => dayHtml(d, today, dir)).join('\n')}
+${runningHtml(running, weekEnd, dir)}`;
 }

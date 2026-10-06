@@ -44,7 +44,7 @@ function applyFilter() {
 function draw(events) {
   const open = new Set([...root.querySelectorAll('details[open]')]
     .map(d => d.closest('.ev')?.id).filter(Boolean));
-  root.innerHTML = renderDirectory({ events, today });
+  root.innerHTML = renderDirectory({ events, today, dir: root.dataset.dir || null });
   open.forEach(id => document.getElementById(id)?.querySelector('details')?.setAttribute('open', ''));
   applyFilter();
 }

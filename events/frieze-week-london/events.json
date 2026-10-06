@@ -1,6 +1,9 @@
 {
   "meta": {
     "title": "Frieze Week London 2026 — CultureBlocs event dataset",
+    "name": "Frieze Week London 2026",
+    "directory": "frieze-week-london",
+    "tag": "frieze-week-london-2026",
     "repo": "cultureblocs.com",
     "collection": "community.lexicon.calendar.event",
     "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
@@ -10,14 +13,15 @@
     "timezone": "Times are Europe/London; BST (+01:00) until 25 Oct 2026, GMT (+00:00) after. All-day/date-only events use 00:00–23:59 because the lexicon has no all-day flag.",
     "omitted": "Christie's/Sotheby's/Phillips Frieze Week evening sales — 2026 dates not confirmed at time of build.",
     "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Frieze or any listed organiser.",
-    "count": 31
+    "count": 31,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
   },
   "records": [
     {
       "slug": "frieze-week-london-2026",
       "category": "umbrella",
       "rkey": "3mx5noaobk2bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaobk2bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaobk2bn",
       "sources": [
         "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
         "https://artlyst.com/london-art-fair-guide-autumn-2026/"
@@ -38,13 +42,14 @@
           }
         ]
       },
-      "notes": "Unofficial umbrella record; not published by Frieze."
+      "notes": "Unofficial umbrella record; not published by Frieze.",
+      "cid": "bafyreih6guwku2moa2vztu2zlmsws5rzlod5wnitbtrt7elw7ctesiwbpa"
     },
     {
       "slug": "frieze-london-2026",
       "category": "fair",
       "rkey": "3mx5noaocjcbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaocjcbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaocjcbn",
       "sources": [
         "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
         "https://fadmagazine.com/2026/09/15/frieze-london-2026-frieze-masters-highlights/"
@@ -78,13 +83,14 @@
             "name": "Tickets"
           }
         ]
-      }
+      },
+      "cid": "bafyreid7bp6kejbki25spr72rbv3y3q6c6i53ruonq3rbxcu77pzrk2pma"
     },
     {
       "slug": "frieze-masters-2026",
       "category": "fair",
       "rkey": "3mx5noaodikbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaodikbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaodikbn",
       "sources": [
         "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
         "https://fadmagazine.com/2026/09/15/frieze-london-2026-frieze-masters-highlights/"
@@ -118,13 +124,14 @@
             "name": "Tickets"
           }
         ]
-      }
+      },
+      "cid": "bafyreianybu5fbqedw6eanf6ukkb3cfdkcuk3agpkg3cb5d5zteon2tjsm"
     },
     {
       "slug": "frieze-sculpture-2026",
       "category": "exhibition",
       "rkey": "3mx5noaoehsbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoehsbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoehsbn",
       "sources": [
         "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
         "https://londonsociety.uk/frieze-london-2026.html"
@@ -153,13 +160,14 @@
           }
         ]
       },
-      "notes": "Dates only; daily park opening hours not stated in sources. End is after the BST→GMT change (25 Oct), hence +00:00."
+      "notes": "Dates only; daily park opening hours not stated in sources. End is after the BST→GMT change (25 Oct), hence +00:00.",
+      "cid": "bafyreiev726gksypel563dye66tndzqqu45txlu6d2a67snk2k53u5ebry"
     },
     {
       "slug": "no9-cork-street-ppow-robin-f-williams",
       "category": "exhibition",
       "rkey": "3mx5noaofh2bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaofh2bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaofh2bn",
       "sources": [
         "https://www.frieze.com/gallery/no-9-cork-street-frieze"
       ],
@@ -188,13 +196,14 @@
             "name": "No.9 Cork Street"
           }
         ]
-      }
+      },
+      "cid": "bafyreicxe2cqgaenohnvjblxogruzlbgfonhzjvmjf6q52gfybzwgmk6rm"
     },
     {
       "slug": "no9-cork-street-third-line-jordan-nassar",
       "category": "exhibition",
       "rkey": "3mx5noaoggcbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoggcbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoggcbn",
       "sources": [
         "https://www.frieze.com/gallery/no-9-cork-street-frieze"
       ],
@@ -223,13 +232,14 @@
             "name": "No.9 Cork Street"
           }
         ]
-      }
+      },
+      "cid": "bafyreiemkf55nya3clwwskhxk6xyj2bm5gam43esqwy2inpaz2mi2dkxoy"
     },
     {
       "slug": "frieze-masters-talks-2026",
       "category": "talks",
       "rkey": "3mx5noaohfkbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaohfkbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaohfkbn",
       "sources": [
         "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
         "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
@@ -261,13 +271,14 @@
           }
         ]
       },
-      "notes": "Series umbrella; daily start/end times not in sources."
+      "notes": "Series umbrella; daily start/end times not in sources.",
+      "cid": "bafyreiaasxpbkuqvfhj52haymu5c2yrtpyaejzrv77anx52lxoetblcome"
     },
     {
       "slug": "frieze-masters-talk-es-devlin-tim-marlow",
       "category": "talk",
       "rkey": "3mx5noaoiesbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoiesbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoiesbn",
       "sources": [
         "https://londonsociety.uk/frieze-london-2026.html"
       ],
@@ -296,13 +307,14 @@
           }
         ]
       },
-      "notes": "End time not published."
+      "notes": "End time not published.",
+      "cid": "bafyreighek2huisufykcbjjsuubjl2swjhy3ha2xgwjd7mwxxp7lwnjemi"
     },
     {
       "slug": "frieze-masters-talk-grayson-perry-iris-moon",
       "category": "talk",
       "rkey": "3mx5noaoje2bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoje2bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoje2bn",
       "sources": [
         "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
         "https://londonsociety.uk/frieze-london-2026.html"
@@ -332,13 +344,14 @@
           }
         ]
       },
-      "notes": "End time not published."
+      "notes": "End time not published.",
+      "cid": "bafyreif2ehenklyswklxymxd33xl6lkwmwct7vh2hz5xjqqzn6t3vnf4sm"
     },
     {
       "slug": "frieze-london-gray-wielebinski-production",
       "category": "commission",
       "rkey": "3mx5noaokdcbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaokdcbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaokdcbn",
       "sources": [
         "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
       ],
@@ -367,13 +380,14 @@
             "name": "Frieze 2026 programme"
           }
         ]
-      }
+      },
+      "cid": "bafyreic23qggqhuafkooeztpzobfjd5a6xb4rpfb3xiak3wupbx6r3qcju"
     },
     {
       "slug": "frieze-ica-artists-film-programme-2026",
       "category": "screening",
       "rkey": "3mx5noaolckbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaolckbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaolckbn",
       "sources": [
         "https://www.ica.art/exhibitions/frieze-x-ica-artists-film-programme-2026",
         "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
@@ -408,13 +422,14 @@
           }
         ]
       },
-      "notes": "Dates confirmed by ICA (12-18 Oct); daily hours not published."
+      "notes": "Dates confirmed by ICA (12-18 Oct); daily hours not published.",
+      "cid": "bafyreibjx23pqahji4eecejsk7e6zf6bsdbugmsb2yjoeefadceqocvz2a"
     },
     {
       "slug": "frieze-gallery-moments-bloomsbury-afternoon",
       "category": "gallery-day",
       "rkey": "3mx5noaombsbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaombsbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaombsbn",
       "sources": [
         "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
       ],
@@ -441,13 +456,14 @@
             "name": "Frieze 2026 programme"
           }
         ]
-      }
+      },
+      "cid": "bafyreiatipnvy47fmq57w5c3fy3rrmlsudlc4ew6zpscu6giznl5v5ydfe"
     },
     {
       "slug": "frieze-gallery-moments-east-end-day",
       "category": "gallery-day",
       "rkey": "3mx5noaonb2bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaonb2bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaonb2bn",
       "sources": [
         "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
       ],
@@ -474,13 +490,14 @@
             "name": "Frieze 2026 programme"
           }
         ]
-      }
+      },
+      "cid": "bafyreieihc6mtbla7muvcx6kyi4tuxvin7tk6frwg37fmrerzlriav4jki"
     },
     {
       "slug": "frieze-gallery-moments-west-end-day",
       "category": "gallery-day",
       "rkey": "3mx5noaooacbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaooacbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaooacbn",
       "sources": [
         "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
       ],
@@ -507,13 +524,14 @@
             "name": "Frieze 2026 programme"
           }
         ]
-      }
+      },
+      "cid": "bafyreihxfuq5fjiabywuxftr2dokoj4rmgm247mxwzhzclt3gx6nkk7me4"
     },
     {
       "slug": "pad-london-2026",
       "category": "fair",
       "rkey": "3mx5noaop7kbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaop7kbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaop7kbn",
       "sources": [
         "https://www.padesignart.com/en/london/information/"
       ],
@@ -542,13 +560,14 @@
             "name": "PAD London"
           }
         ]
-      }
+      },
+      "cid": "bafyreicp6sizuhuxs6q3od54a54hswchk3q3vt7i6fw556l7vydbd6ww3y"
     },
     {
       "slug": "1-54-london-2026",
       "category": "fair",
       "rkey": "3mx5noaoq6sbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoq6sbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoq6sbn",
       "sources": [
         "https://www.1-54.com/london/",
         "https://www.somersethouse.org.uk/"
@@ -578,13 +597,14 @@
             "name": "1-54 London"
           }
         ]
-      }
+      },
+      "cid": "bafyreigm3efptgysvwcjat56tbafep27basbrvnbnhvi2eao5egxdssure"
     },
     {
       "slug": "minor-attractions-2026",
       "category": "fair",
       "rkey": "3mx5noaor62bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaor62bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaor62bn",
       "sources": [
         "https://minorattractions.com/editions/minor-attractions-2026",
         "https://minorattractions.substack.com/p/minor-attractions-programme-2026",
@@ -619,13 +639,14 @@
           }
         ]
       },
-      "notes": "Venue confirmed as The Newman on the official edition page; daily opening hours not published."
+      "notes": "Venue confirmed as The Newman on the official edition page; daily opening hours not published.",
+      "cid": "bafyreiemitfqi4hco3hntcaujhvw5rbztzcld5q4qujq7x3vaah3nqg5im"
     },
     {
       "slug": "minor-attractions-2026-the-hang",
       "category": "party",
       "rkey": "3mx5noaos5cbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaos5cbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaos5cbn",
       "sources": [
         "https://minorattractions.substack.com/p/minor-attractions-programme-2026"
       ],
@@ -654,13 +675,14 @@
             "name": "Minor Attractions programme"
           }
         ]
-      }
+      },
+      "cid": "bafyreie6gfx5p57uxu5gsgk6e55ti57eat7nnfdv5rzdj2tbf7jftzr4ii"
     },
     {
       "slug": "london-invitational-2026",
       "category": "fair",
       "rkey": "3mx5noaot4kbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaot4kbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaot4kbn",
       "sources": [
         "https://fadmagazine.com/2026/09/22/london-invitational-art-fair-frieze-week-2026-2/"
       ],
@@ -689,13 +711,14 @@
           }
         ]
       },
-      "notes": "Thu 15 appears to be invitation-only; hours for that day not published."
+      "notes": "Thu 15 appears to be invitation-only; hours for that day not published.",
+      "cid": "bafyreihhjsvo5jsxitbvisllvbvx4e3buu4o6y4dlcsxua7yunbe2672kq"
     },
     {
       "slug": "fair-play-2026",
       "category": "fair",
       "rkey": "3mx5noaou3sbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaou3sbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaou3sbn",
       "sources": [
         "https://fadmagazine.com/2026/05/14/fair-play-art-fair-london-2026/",
         "https://artlyst.com/london-art-fair-guide-autumn-2026/"
@@ -726,13 +749,14 @@
           }
         ]
       },
-      "notes": "Daily opening hours not in sources."
+      "notes": "Daily opening hours not in sources.",
+      "cid": "bafyreigz4vylv263ksk46wkr243q463vu7qwr7qx2y23hemampigmze2kq"
     },
     {
       "slug": "affordable-art-fair-battersea-autumn-2026",
       "category": "fair",
       "rkey": "3mx5noaov32bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaov32bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaov32bn",
       "sources": [
         "https://affordableartfair.com/fairs/london-battersea-autumn/",
         "https://artlyst.com/london-art-fair-guide-autumn-2026/"
@@ -760,13 +784,14 @@
             "name": "Affordable Art Fair Battersea"
           }
         ]
-      }
+      },
+      "cid": "bafyreicvwb5ercj6o4vk6inlv52aq5s6uhjhbippxo6ufjeevwadthgibu"
     },
     {
       "slug": "somerset-house-3-evenings-2026",
       "category": "performance",
       "rkey": "3mx5noaow2cbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaow2cbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaow2cbn",
       "sources": [
         "https://www.somersethouse.org.uk/"
       ],
@@ -796,13 +821,14 @@
           }
         ]
       },
-      "notes": "Evening start times not in sources."
+      "notes": "Evening start times not in sources.",
+      "cid": "bafyreieymixtavburghgg7vr24xtyhdz2dbo2y4m3vhkf5ef4fivd77kn4"
     },
     {
       "slug": "tate-modern-hyundai-commission-tarek-atoui",
       "category": "exhibition",
       "rkey": "3mx5noaowzkbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaowzkbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaowzkbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -831,13 +857,14 @@
             "name": "Tate Modern"
           }
         ]
-      }
+      },
+      "cid": "bafyreicbbbdveinakmvqmwlrur2vwr6we5xnzcsw6gpaphexelnk66eize"
     },
     {
       "slug": "barbican-robert-ryman-the-real-thing",
       "category": "exhibition",
       "rkey": "3mx5noaoxysbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoxysbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoxysbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -866,13 +893,14 @@
             "name": "Barbican"
           }
         ]
-      }
+      },
+      "cid": "bafyreiftiyrffbz3bapkwdaezr54uwqyijupsa2jevlumgpkhcpa4lwfnm"
     },
     {
       "slug": "whitechapel-cecilia-vicuna",
       "category": "exhibition",
       "rkey": "3mx5noaoyy2bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoyy2bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaoyy2bn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -901,13 +929,14 @@
             "name": "Whitechapel Gallery"
           }
         ]
-      }
+      },
+      "cid": "bafyreibpqgx4lg5u47vtci463g5lcxxhxkotefrgx2uxkxxeg3j4xg5cba"
     },
     {
       "slug": "serpentine-north-amar-kanwar",
       "category": "exhibition",
       "rkey": "3mx5noaozxcbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaozxcbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noaozxcbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -935,13 +964,14 @@
             "name": "Serpentine"
           }
         ]
-      }
+      },
+      "cid": "bafyreieg6w33vxqjunf22qql3v66lpkcz53ip6hv3hhoa7hj7rdemk42ja"
     },
     {
       "slug": "national-gallery-renoir-and-love",
       "category": "exhibition",
       "rkey": "3mx5noap2wkbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap2wkbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noap2wkbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -970,13 +1000,14 @@
             "name": "National Gallery"
           }
         ]
-      }
+      },
+      "cid": "bafyreievb4rrhntpdzfsgo3qyqi5puoucy3e34rl2ezvebgkj3zwdoqui4"
     },
     {
       "slug": "hayward-anish-kapoor",
       "category": "exhibition",
       "rkey": "3mx5noap3vsbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap3vsbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noap3vsbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -1005,13 +1036,14 @@
             "name": "Southbank Centre"
           }
         ]
-      }
+      },
+      "cid": "bafyreieh6l2bhojwxzwn6wqltrpc24hqhbbd2dst24wuopgnsekpmzkevy"
     },
     {
       "slug": "british-museum-bayeux-tapestry",
       "category": "exhibition",
       "rkey": "3mx5noap4v2bn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap4v2bn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noap4v2bn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -1040,13 +1072,14 @@
             "name": "British Museum"
           }
         ]
-      }
+      },
+      "cid": "bafyreie2garlkwwww4slntgt5eqlvnv4myvttpogm3jeqd6glksgk5ntlm"
     },
     {
       "slug": "slg-monika-sosnowska",
       "category": "exhibition",
       "rkey": "3mx5noap5ucbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap5ucbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noap5ucbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -1075,13 +1108,14 @@
             "name": "South London Gallery"
           }
         ]
-      }
+      },
+      "cid": "bafyreih6asq7grbv3fb4qnsjy6wvow56yk2dbbfdn3ypqvfb2ypvwsvxza"
     },
     {
       "slug": "gasworks-paloma-contreras-lomas",
       "category": "exhibition",
       "rkey": "3mx5noap6tkbn",
-      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap6tkbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noap6tkbn",
       "sources": [
         "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
       ],
@@ -1110,7 +1144,8 @@
             "name": "Gasworks"
           }
         ]
-      }
+      },
+      "cid": "bafyreigbrpavgu6mwl5d546tokl7g56hriqe2o2deaqbqguxra6nmwbmua"
     }
   ]
 }
