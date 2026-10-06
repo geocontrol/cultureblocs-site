@@ -27,6 +27,10 @@ apps built on it, and the London meetup.
                                            your own repo, optionally with a Bluesky post.
                                            Own client-metadata.json, so it must stay at
                                            https://www.cultureblocs.com/went/ (see pocket/README).
+    events/who.js, events/lib/went.js      "who went": beads pointing at an event, found via
+                                           Constellation's public backlink index and read
+                                           from each author's own PDS. No server of ours.
+    events/hidden.json                     beads (at:// URIs) or DIDs the site won't list
     privacy.html                           the policy every OAuth client here points at
     tools/events/                          build + publish scripts for the Frieze Week
                                            records (see "Event directories" below)

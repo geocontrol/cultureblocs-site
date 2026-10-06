@@ -152,6 +152,10 @@ def page(entry, meta, d, has_image):
     your Atmosphere account (Bluesky, Blacksky…), pointing at this event.</p>
     {f'<section><h2 class="sec">About</h2><p class="ev-desc">{E(rec["description"])}</p></section>' if rec.get("description") else ""}
     {f'<p class="ev-links">{links}</p>' if links else ""}
+    <section id="who-went" class="who" data-event="{E(entry["atUri"])}" data-went="{E(went)}">
+      <h2 class="sec">Who went</h2>
+      <div id="who-items"><p class="ev-intro">Looking for beads…</p></div>
+    </section>
     <section>
       <h2 class="sec">This event as a record</h2>
       <p class="ev-ref">Published as an open calendar record by
@@ -163,6 +167,7 @@ def page(entry, meta, d, has_image):
   </article>
 </main>
 {FOOTER}
+<script type="module" src="/events/who.js"></script>
 </body>
 </html>
 """
