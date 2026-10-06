@@ -60,6 +60,24 @@
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data:; connect-src https:"
         }
       ]
+    },
+    {
+      "source": "/events/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data:; connect-src 'self' https:"
+        }
+      ]
+    },
+    {
+      "source": "/events/(.*)/events.json",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -82,12 +100,34 @@
       "source": "/wall",
       "destination": "/wall/",
       "permanent": false
+    },
+    {
+      "source": "/events",
+      "destination": "/events/",
+      "permanent": false
+    },
+    {
+      "source": "/events/frieze-week-london",
+      "destination": "/events/frieze-week-london/",
+      "permanent": false
     }
   ],
   "rewrites": [
-    { "source": "/wall/:actor/:rkey", "destination": "/wall/index.html" },
-    { "source": "/wall/:actor/:rkey/", "destination": "/wall/index.html" },
-    { "source": "/wall/:actor/", "destination": "/wall/index.html" },
-    { "source": "/wall/:actor", "destination": "/wall/index.html" }
+    {
+      "source": "/wall/:actor/:rkey",
+      "destination": "/wall/index.html"
+    },
+    {
+      "source": "/wall/:actor/:rkey/",
+      "destination": "/wall/index.html"
+    },
+    {
+      "source": "/wall/:actor/",
+      "destination": "/wall/index.html"
+    },
+    {
+      "source": "/wall/:actor",
+      "destination": "/wall/index.html"
+    }
   ]
 }

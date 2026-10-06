@@ -1,0 +1,1116 @@
+{
+  "meta": {
+    "title": "Frieze Week London 2026 — CultureBlocs event dataset",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "generated": "2026-10-06",
+    "status": "draft — review flagged notes before publishing",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published. `atUri` uses the handle; swap in the DID once known.",
+    "timezone": "Times are Europe/London; BST (+01:00) until 25 Oct 2026, GMT (+00:00) after. All-day/date-only events use 00:00–23:59 because the lexicon has no all-day flag.",
+    "omitted": "Christie's/Sotheby's/Phillips Frieze Week evening sales — 2026 dates not confirmed at time of build.",
+    "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Frieze or any listed organiser.",
+    "count": 31
+  },
+  "records": [
+    {
+      "slug": "frieze-week-london-2026",
+      "category": "umbrella",
+      "rkey": "3mx5noaobk2bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaobk2bn",
+      "sources": [
+        "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
+        "https://artlyst.com/london-art-fair-guide-autumn-2026/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze Week London 2026",
+        "description": "The week of art fairs, talks, gallery openings, museum launches and auctions around Frieze London and Frieze Masters in The Regent's Park. Umbrella record: individual events in this collection reference the same week.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-13T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T23:59:00+01:00",
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/fairs/frieze-london-frieze-masters",
+            "name": "Frieze London & Frieze Masters"
+          }
+        ]
+      },
+      "notes": "Unofficial umbrella record; not published by Frieze."
+    },
+    {
+      "slug": "frieze-london-2026",
+      "category": "fair",
+      "rkey": "3mx5noaocjcbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaocjcbn",
+      "sources": [
+        "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
+        "https://fadmagazine.com/2026/09/15/frieze-london-2026-frieze-masters-highlights/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze London 2026",
+        "description": "Contemporary art fair with 176 galleries from 43 countries and regions. Sections: Galleries, Focus, Artist-to-Artist, Editions and the new The Code Universe (curated by Carol Yinghua Lu). Wed 14 invitation only; Thu 15 members/invitation 11:00-13:00 then general admission 13:00-17:00; Fri-Sat 11:00-19:00; Sun 11:00-18:00. Ticketed.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-14T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Frieze London, The Regent's Park",
+            "street": "Park Square West",
+            "postalCode": "NW1 4LL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/fairs/frieze-london",
+            "name": "Frieze London"
+          },
+          {
+            "uri": "https://www.frieze.com/fairs/frieze-london-frieze-masters/tickets",
+            "name": "Tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frieze-masters-2026",
+      "category": "fair",
+      "rkey": "3mx5noaodikbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaodikbn",
+      "sources": [
+        "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
+        "https://fadmagazine.com/2026/09/15/frieze-london-2026-frieze-masters-highlights/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze Masters 2026",
+        "description": "Historical art fair with 142 galleries from 33 countries: ancient art, old masters, decorative arts, works on paper and 20th-century art. New curatorial thread 'Queering Modernism' by Anke Kempkes; Spotlight section curated by Devika Singh and Sofia Gotti. Wed 14 invitation only; Thu 15 members/invitation 11:00-13:00 then general admission 13:00-19:00; Fri-Sat 11:00-19:00; Sun 11:00-18:00. Ticketed.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-14T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Frieze Masters, Gloucester Green, The Regent's Park",
+            "street": "Gloucester Green",
+            "postalCode": "NW1 4HA"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/fairs/frieze-masters",
+            "name": "Frieze Masters"
+          },
+          {
+            "uri": "https://www.frieze.com/fairs/frieze-london-frieze-masters/tickets",
+            "name": "Tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frieze-sculpture-2026",
+      "category": "exhibition",
+      "rkey": "3mx5noaoehsbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoehsbn",
+      "sources": [
+        "https://www.frieze.com/fairs/frieze-london-frieze-masters/visitor-information",
+        "https://londonsociety.uk/frieze-london-2026.html"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze Sculpture 2026",
+        "description": "Free outdoor exhibition of large-scale sculpture by 11 international artists in the English Gardens of The Regent's Park, curated by Fatoş Üstek.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-09-16T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "English Gardens, The Regent's Park"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/fairs/frieze-london-frieze-masters",
+            "name": "Frieze"
+          }
+        ]
+      },
+      "notes": "Dates only; daily park opening hours not stated in sources. End is after the BST→GMT change (25 Oct), hence +00:00."
+    },
+    {
+      "slug": "no9-cork-street-ppow-robin-f-williams",
+      "category": "exhibition",
+      "rkey": "3mx5noaofh2bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaofh2bn",
+      "sources": [
+        "https://www.frieze.com/gallery/no-9-cork-street-frieze"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "P·P·O·W: Robin F. Williams, 'Act Natural' at No.9 Cork Street",
+        "description": "Solo presentation by Robin F. Williams with P·P·O·W at Frieze's Mayfair gallery space. Free. Tue-Sat 10:00-18:00.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-09T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "No.9 Cork Street",
+            "street": "9 Cork Street",
+            "postalCode": "W1S 3LL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/gallery/no-9-cork-street-frieze",
+            "name": "No.9 Cork Street"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "no9-cork-street-third-line-jordan-nassar",
+      "category": "exhibition",
+      "rkey": "3mx5noaoggcbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoggcbn",
+      "sources": [
+        "https://www.frieze.com/gallery/no-9-cork-street-frieze"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "The Third Line: Jordan Nassar, 'No History of Shapes' at No.9 Cork Street",
+        "description": "Solo presentation by Jordan Nassar with The Third Line at Frieze's Mayfair gallery space. Free. Tue-Sat 10:00-18:00.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-09T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "No.9 Cork Street",
+            "street": "9 Cork Street",
+            "postalCode": "W1S 3LL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/gallery/no-9-cork-street-frieze",
+            "name": "No.9 Cork Street"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frieze-masters-talks-2026",
+      "category": "talks",
+      "rkey": "3mx5noaohfkbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaohfkbn",
+      "sources": [
+        "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
+        "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
+        "https://londonsociety.uk/frieze-london-2026.html"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze Masters Talks 2026: 'Breaking the Mould'",
+        "description": "Talks series presented with dunhill and curated by Arturo Galansino (Fondazione Palazzo Strozzi), on ceramics, expanding the art-historical canon and the future of museum displays. Speakers include Sheila Barker, Es Devlin, Lina Ghotmeh, Tim Marlow, Iris Moon, Peter Parker, Grayson Perry, Paul Pfeiffer, Luke Syson, Danh Vō and Kulapat Yantrasast. Recorded as a podcast.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-14T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-16T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Frieze Masters, Gloucester Green, The Regent's Park",
+            "street": "Gloucester Green",
+            "postalCode": "NW1 4HA"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
+            "name": "Frieze Masters Talks 2026"
+          }
+        ]
+      },
+      "notes": "Series umbrella; daily start/end times not in sources."
+    },
+    {
+      "slug": "frieze-masters-talk-es-devlin-tim-marlow",
+      "category": "talk",
+      "rkey": "3mx5noaoiesbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoiesbn",
+      "sources": [
+        "https://londonsociety.uk/frieze-london-2026.html"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze Masters Talks: Es Devlin in conversation with Tim Marlow",
+        "description": "Part of 'Breaking the Mould'. Falls on the invitation-only preview day.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-14T17:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Frieze Masters, Gloucester Green, The Regent's Park",
+            "street": "Gloucester Green",
+            "postalCode": "NW1 4HA"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
+            "name": "Frieze Masters Talks 2026"
+          }
+        ]
+      },
+      "notes": "End time not published."
+    },
+    {
+      "slug": "frieze-masters-talk-grayson-perry-iris-moon",
+      "category": "talk",
+      "rkey": "3mx5noaoje2bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoje2bn",
+      "sources": [
+        "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
+        "https://londonsociety.uk/frieze-london-2026.html"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze Masters Talks: 'Ceramics Past and Present' with Grayson Perry and Iris Moon",
+        "description": "Grayson Perry and Iris Moon in conversation, moderated by Xavier Bray. Part of 'Breaking the Mould'.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-15T12:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Frieze Masters, Gloucester Green, The Regent's Park",
+            "street": "Gloucester Green",
+            "postalCode": "NW1 4HA"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-masters-2026-talks-programme",
+            "name": "Frieze Masters Talks 2026"
+          }
+        ]
+      },
+      "notes": "End time not published."
+    },
+    {
+      "slug": "frieze-london-gray-wielebinski-production",
+      "category": "commission",
+      "rkey": "3mx5noaokdcbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaokdcbn",
+      "sources": [
+        "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Gray Wielebinski, 'Production' (2026)",
+        "description": "Site-specific commission at Frieze London, produced by Dean's Bottom: scent-diffusing sculptural urinal cakes and toilet-rim blocks installed across the fair's lavatories.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-14T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Frieze London, The Regent's Park",
+            "street": "Park Square West",
+            "postalCode": "NW1 4LL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
+            "name": "Frieze 2026 programme"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frieze-ica-artists-film-programme-2026",
+      "category": "screening",
+      "rkey": "3mx5noaolckbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaolckbn",
+      "sources": [
+        "https://www.ica.art/exhibitions/frieze-x-ica-artists-film-programme-2026",
+        "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Frieze x ICA Artists' Film Programme 2026",
+        "description": "Continuous-loop programme of artists' film and moving image by early-career and under-exposed artists (works from the last five years), at the ICA and online at ica.art.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-12T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Institute of Contemporary Arts (ICA)",
+            "street": "The Mall",
+            "postalCode": "SW1Y 5AH"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.ica.art/exhibitions/frieze-x-ica-artists-film-programme-2026",
+            "name": "ICA: Frieze x ICA Artists' Film Programme 2026"
+          },
+          {
+            "uri": "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
+            "name": "Frieze 2026 programme"
+          }
+        ]
+      },
+      "notes": "Dates confirmed by ICA (12-18 Oct); daily hours not published."
+    },
+    {
+      "slug": "frieze-gallery-moments-bloomsbury-afternoon",
+      "category": "gallery-day",
+      "rkey": "3mx5noaombsbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaombsbn",
+      "sources": [
+        "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "London Gallery Moments: Bloomsbury Afternoon",
+        "description": "Frieze neighbourhood gallery event across Bloomsbury galleries.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-09T16:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-09T20:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Bloomsbury galleries"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
+            "name": "Frieze 2026 programme"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frieze-gallery-moments-east-end-day",
+      "category": "gallery-day",
+      "rkey": "3mx5noaonb2bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaonb2bn",
+      "sources": [
+        "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "London Gallery Moments: East End Day",
+        "description": "Frieze neighbourhood gallery event across East End galleries.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-11T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-11T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "East End galleries"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
+            "name": "Frieze 2026 programme"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frieze-gallery-moments-west-end-day",
+      "category": "gallery-day",
+      "rkey": "3mx5noaooacbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaooacbn",
+      "sources": [
+        "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "London Gallery Moments: West End Day",
+        "description": "Frieze neighbourhood gallery event across Mayfair and West End galleries.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-17T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-17T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "West End galleries"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.frieze.com/article/frieze-london-masters-2026-programming-announcement",
+            "name": "Frieze 2026 programme"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pad-london-2026",
+      "category": "fair",
+      "rkey": "3mx5noaop7kbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaop7kbn",
+      "sources": [
+        "https://www.padesignart.com/en/london/information/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "PAD London 2026",
+        "description": "Fair dedicated to historical and contemporary design and art. Collectors Preview Tue 13 11:00-20:00; VIP Opening Wed 14 11:00-20:00; public Thu-Sat 11:00-19:00, Sun 11:00-18:00. Ticketed.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-13T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "PAD London, Berkeley Square",
+            "street": "Berkeley Square",
+            "postalCode": "W1J 6EN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.padesignart.com/en/london/information/",
+            "name": "PAD London"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "1-54-london-2026",
+      "category": "fair",
+      "rkey": "3mx5noaoq6sbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoq6sbn",
+      "sources": [
+        "https://www.1-54.com/london/",
+        "https://www.somersethouse.org.uk/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "1-54 Contemporary African Art Fair London 2026",
+        "description": "14th London edition of the fair for contemporary art from Africa and its diaspora. VIP and press preview Thu 15 11:00-19:00; public Fri-Sat 11:00-19:00, Sun 11:00-18:00.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-15T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Somerset House",
+            "street": "Strand",
+            "postalCode": "WC2R 1LA"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.1-54.com/london/",
+            "name": "1-54 London"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "minor-attractions-2026",
+      "category": "fair",
+      "rkey": "3mx5noaor62bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaor62bn",
+      "sources": [
+        "https://minorattractions.com/editions/minor-attractions-2026",
+        "https://minorattractions.substack.com/p/minor-attractions-programme-2026",
+        "https://artlyst.com/london-art-fair-guide-autumn-2026/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Minor Attractions 2026",
+        "description": "Fourth edition of the art fair that blends art, performance and nightlife; 75+ galleries and not-for-profit spaces across 16 rooms on the first floor of The Newman, plus a city-wide events programme.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-13T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-17T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Newman, Fitzrovia",
+            "postalCode": "W1T 3EB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://minorattractions.com/editions/minor-attractions-2026",
+            "name": "Minor Attractions 2026"
+          },
+          {
+            "uri": "https://minorattractions.substack.com/p/minor-attractions-programme-2026",
+            "name": "2026 programme"
+          }
+        ]
+      },
+      "notes": "Venue confirmed as The Newman on the official edition page; daily opening hours not published."
+    },
+    {
+      "slug": "minor-attractions-2026-the-hang",
+      "category": "party",
+      "rkey": "3mx5noaos5cbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaos5cbn",
+      "sources": [
+        "https://minorattractions.substack.com/p/minor-attractions-programme-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "THE HANG: Minor Attractions Opening Party",
+        "description": "Opening party for Minor Attractions 2026.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-13T20:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-14T03:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Electrowerkz",
+            "street": "7 Torrens Street",
+            "postalCode": "EC1V 1NQ"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://minorattractions.substack.com/p/minor-attractions-programme-2026",
+            "name": "Minor Attractions programme"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "london-invitational-2026",
+      "category": "fair",
+      "rkey": "3mx5noaot4kbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaot4kbn",
+      "sources": [
+        "https://fadmagazine.com/2026/09/22/london-invitational-art-fair-frieze-week-2026-2/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "London Invitational 2026",
+        "description": "European debut of the boutique fair founded in Dallas by James Cope: 12 galleries from London and the US on one floor of The Chancery Rosewood. Public Fri-Sat 11:00-18:00, Sun 12:00-16:00.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-15T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T16:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Chancery Rosewood (former US Embassy)",
+            "street": "Grosvenor Square"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://fadmagazine.com/2026/09/22/london-invitational-art-fair-frieze-week-2026-2/",
+            "name": "FAD Magazine: London Invitational"
+          }
+        ]
+      },
+      "notes": "Thu 15 appears to be invitation-only; hours for that day not published."
+    },
+    {
+      "slug": "fair-play-2026",
+      "category": "fair",
+      "rkey": "3mx5noaou3sbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaou3sbn",
+      "sources": [
+        "https://fadmagazine.com/2026/05/14/fair-play-art-fair-london-2026/",
+        "https://artlyst.com/london-art-fair-guide-autumn-2026/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Fair Play Art Fair 2026",
+        "description": "Inaugural artist-led fair: around 65-70 independent artists chosen by a selection committee and given free stands on a commission model, with installations, sound art, dining and live performance.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-15T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "One Marylebone",
+            "street": "1 Marylebone Road",
+            "postalCode": "NW1 4AQ"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://fadmagazine.com/2026/05/14/fair-play-art-fair-london-2026/",
+            "name": "FAD Magazine: Fair Play"
+          }
+        ]
+      },
+      "notes": "Daily opening hours not in sources."
+    },
+    {
+      "slug": "affordable-art-fair-battersea-autumn-2026",
+      "category": "fair",
+      "rkey": "3mx5noaov32bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaov32bn",
+      "sources": [
+        "https://affordableartfair.com/fairs/london-battersea-autumn/",
+        "https://artlyst.com/london-art-fair-guide-autumn-2026/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Affordable Art Fair Battersea (Autumn 2026)",
+        "description": "Autumn edition of the Affordable Art Fair in Battersea Park. Wed 14 Private View 17:00-21:00; Thu 15 and Fri 16 general admission 11:00-17:00, then Art After Dark late 17:00-21:00 (18+); Sat 17 and Sun 18 general admission 10:00-18:00, with Family Morning 10:00-12:00. Last entry 20:30 on weekdays, 17:30 at weekends. Ticketed.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-14T17:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Battersea Park"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://affordableartfair.com/fairs/london-battersea-autumn/",
+            "name": "Affordable Art Fair Battersea"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "somerset-house-3-evenings-2026",
+      "category": "performance",
+      "rkey": "3mx5noaow2cbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaow2cbn",
+      "sources": [
+        "https://www.somersethouse.org.uk/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "3 Evenings: Somerset House Studios at 10",
+        "description": "Three nights of experiments in performance and technology marking ten years of Somerset House Studios, a reimagining of the 1966 '9 Evenings: Theatre and Engineering'.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-16T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Somerset House",
+            "street": "Strand",
+            "postalCode": "WC2R 1LA"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.somersethouse.org.uk/",
+            "name": "Somerset House"
+          }
+        ]
+      },
+      "notes": "Evening start times not in sources."
+    },
+    {
+      "slug": "tate-modern-hyundai-commission-tarek-atoui",
+      "category": "exhibition",
+      "rkey": "3mx5noaowzkbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaowzkbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Hyundai Commission: Tarek Atoui, Tate Modern Turbine Hall",
+        "description": "Turbine Hall commission by the French-Lebanese artist and composer, whose practice builds new sculptural instruments and uses sound in performance and installation.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-13T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-04-11T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Tate Modern, Turbine Hall",
+            "street": "Bankside",
+            "postalCode": "SE1 9TG"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tate.org.uk/",
+            "name": "Tate Modern"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "barbican-robert-ryman-the-real-thing",
+      "category": "exhibition",
+      "rkey": "3mx5noaoxysbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoxysbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Robert Ryman: The Real Thing",
+        "description": "Sixty works from six decades; the first major UK exhibition of Ryman's paintings in over 30 years.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-08T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-28T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Barbican Art Gallery",
+            "street": "Silk Street",
+            "postalCode": "EC2Y 8DS"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.barbican.org.uk/",
+            "name": "Barbican"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "whitechapel-cecilia-vicuna",
+      "category": "exhibition",
+      "rkey": "3mx5noaoyy2bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaoyy2bn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Cecilia Vicuña",
+        "description": "Six-decade survey of the Chilean poet and artist, including 'Quipu Menstrual'.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-07T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-14T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Whitechapel Gallery",
+            "street": "77-82 Whitechapel High Street",
+            "postalCode": "E1 7QX"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.whitechapelgallery.org/",
+            "name": "Whitechapel Gallery"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "serpentine-north-amar-kanwar",
+      "category": "exhibition",
+      "rkey": "3mx5noaozxcbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noaozxcbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Amar Kanwar",
+        "description": "Includes the premiere of the seven-screen installation 'The Charcoal Man' (2026), alongside 'Such a Morning' and 'The Peacock's Graveyard'.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-09-23T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-31T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine North, Kensington Gardens",
+            "postalCode": "W2 2AR"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/",
+            "name": "Serpentine"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "national-gallery-renoir-and-love",
+      "category": "exhibition",
+      "rkey": "3mx5noap2wkbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap2wkbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Renoir and Love",
+        "description": "Major Renoir survey with the Musée d'Orsay and MFA Boston; the first UK survey since 2007.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-03T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-31T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "National Gallery",
+            "street": "Trafalgar Square",
+            "postalCode": "WC2N 5DN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.nationalgallery.org.uk/",
+            "name": "National Gallery"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "hayward-anish-kapoor",
+      "category": "exhibition",
+      "rkey": "3mx5noap3vsbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap3vsbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Anish Kapoor",
+        "description": "Whole-building survey curated by Ralph Rugoff, his last as Hayward director. Final days during Frieze Week.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-06-16T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-18T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Hayward Gallery, Southbank Centre",
+            "street": "Belvedere Road",
+            "postalCode": "SE1 8XX"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.southbankcentre.co.uk/",
+            "name": "Southbank Centre"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "british-museum-bayeux-tapestry",
+      "category": "exhibition",
+      "rkey": "3mx5noap4v2bn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap4v2bn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "The Bayeux Tapestry",
+        "description": "The tapestry's first showing in the UK in nearly 1,000 years.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-09-10T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-07-11T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "British Museum",
+            "street": "Great Russell Street",
+            "postalCode": "WC1B 3DG"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.britishmuseum.org/",
+            "name": "British Museum"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "slg-monika-sosnowska",
+      "category": "exhibition",
+      "rkey": "3mx5noap5ucbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap5ucbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Monika Sosnowska",
+        "description": "Major show of the Polish sculptor across the Main Gallery and Fire Station, part of SLG's 135th anniversary year.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-09-10T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-22T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "South London Gallery",
+            "street": "65-67 Peckham Road",
+            "postalCode": "SE5 8UH"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.southlondongallery.org/",
+            "name": "South London Gallery"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "gasworks-paloma-contreras-lomas",
+      "category": "exhibition",
+      "rkey": "3mx5noap6tkbn",
+      "atUri": "at://cultureblocs.com/community.lexicon.calendar.event/3mx5noap6tkbn",
+      "sources": [
+        "https://www.frieze.com/article/shows-see-during-frieze-london-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Paloma Contreras Lomas",
+        "description": "Culmination of the Mexican artist's 2026 Gasworks residency: an 'installation-underworld'.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-01T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-12-13T23:59:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Gasworks",
+            "street": "155 Vauxhall Street",
+            "postalCode": "SE11 5RH"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.gasworks.org.uk/",
+            "name": "Gasworks"
+          }
+        ]
+      }
+    }
+  ]
+}
