@@ -141,6 +141,16 @@
       "source": "/went",
       "destination": "/went/",
       "permanent": false
+    },
+    {
+      "source": "/w/fwl",
+      "destination": "/events/frieze-week-london/",
+      "permanent": false
+    },
+    {
+      "source": "/w/fwl/:key",
+      "destination": "/went/?dir=frieze-week-london&e=:key",
+      "permanent": false
     }
   ],
   "rewrites": [
