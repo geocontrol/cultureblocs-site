@@ -28,7 +28,7 @@ const ui = {
   kind: $('kind'), signed: $('who-signed'), ask: $('who-ask'), handle: $('handle'),
   find: $('find'), whoError: $('who-error'), whoHandle: $('who-handle'), whoAvatar: $('who-avatar'),
   preview: $('preview'), beadPreview: $('bead-preview'), dupe: $('dupe'), bsky: $('bsky'),
-  post: $('post'), postBox: $('post-box'), postText: $('post-text'), postCount: $('post-count'),
+  post: $('post'), postDupe: $('post-dupe'), postBox: $('post-box'), postText: $('post-text'), postCount: $('post-count'),
   perm: $('perm-note'), publish: $('publish'), pubError: $('pub-error'), done: $('done'),
   crumbs: $('crumbs'),
 };
@@ -39,6 +39,8 @@ const st = {
   day: null,
   acct: null,         // { did, pds, handle, hasBsky, beads, profile }
   postEdited: false,
+  dupKey: null,       // the existing bead this publish would update, if any
+  postChoiceFor: null, // which dupKey the post box was last set for ('*' = a restored draft: always honour)
 };
 
 const show = (el, on = true) => { el.hidden = !on; };
@@ -158,7 +160,7 @@ ui.note.addEventListener('input', () => {
 });
 ui.kind.addEventListener('change', refresh);
 ui.postText.addEventListener('input', () => { st.postEdited = true; refresh(); });
-ui.post.addEventListener('change', () => { show(ui.postBox, ui.post.checked); refresh(); });
+ui.post.addEventListener('change', () => { st.postChoiceFor = st.dupKey; show(ui.postBox, ui.post.checked); refresh(); });
 
 /* ---------- the account ---------- */
 async function lookUp(handleOrDid) {
@@ -218,8 +220,6 @@ $('sign-out').addEventListener('click', async () => {
 function refresh() {
   if (!st.ctx) return;
   const noteOk = counter(ui.noteCount, ui.note.value, NOTE_MAX);
-  const postOk = !ui.post.checked || (counter(ui.postCount, ui.postText.value, POST_MAX)
-    && ui.postText.value.trim().length > 0);
   const kindLabel = (KINDS.find(k => k[0] === ui.kind.value) || KINDS[0])[1];
   const note = ui.note.value.trim();
   ui.beadPreview.innerHTML = `
@@ -236,7 +236,18 @@ function refresh() {
     ? `You already recorded this event on ${dayLabel(st.day)} — publishing will update that bead rather than add a second.`
     : '';
   show(ui.dupe, Boolean(dup));
+  // Updating a bead must not quietly post a second time: whenever the
+  // publish turns into an update of a bead they haven't chosen for, untick,
+  // say why, and leave the choice to them.
+  st.dupKey = dup ? `${dup.rkey}` : null;
+  if (dup && ui.post.checked && st.postChoiceFor !== st.dupKey && st.postChoiceFor !== '*') {
+    ui.post.checked = false;
+    show(ui.postBox, false);
+  }
+  show(ui.postDupe, Boolean(dup));
 
+  const postOk = !ui.post.checked || (counter(ui.postCount, ui.postText.value, POST_MAX)
+    && ui.postText.value.trim().length > 0);
   const s = oauth.session();
   const ready = Boolean(st.acct && s && s.did === st.acct.did && covers(s.scope, { post: ui.post.checked }));
   ui.publish.textContent = dup ? (ready ? 'Update' : 'Sign in & update') : (ready ? 'Publish' : 'Sign in & publish');
@@ -262,6 +273,7 @@ function fillForm(d) {
   ui.note.value = d.note || '';
   if (d.kind) ui.kind.value = d.kind;
   ui.post.checked = Boolean(d.post);
+  if (d.post !== undefined) st.postChoiceFor = '*';
   st.postEdited = Boolean(d.postEdited);
   ui.postText.value = d.postText || defaultPostText({ name: st.ctx.event.value.name, note: d.note });
 }
