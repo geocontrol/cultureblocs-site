@@ -104,6 +104,23 @@
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'"
         }
       ]
+    },
+    {
+      "source": "/.well-known/did.json",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -169,6 +186,14 @@
     {
       "source": "/wall/:actor",
       "destination": "/wall/index.html"
+    },
+    {
+      "source": "/xrpc/app.bsky.feed.getFeedSkeleton",
+      "destination": "/api/xrpc/getFeedSkeleton"
+    },
+    {
+      "source": "/xrpc/app.bsky.feed.describeFeedGenerator",
+      "destination": "/api/xrpc/describeFeedGenerator"
     }
   ]
 }

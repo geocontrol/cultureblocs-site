@@ -30,7 +30,16 @@ apps built on it, and the London meetup.
     events/who.js, events/lib/went.js      "who went": beads pointing at an event, found via
                                            Constellation's public backlink index and read
                                            from each author's own PDS. No server of ours.
-    events/hidden.json                     beads (at:// URIs) or DIDs the site won't list
+    events/hidden.json                     beads, posts (at:// URIs) or DIDs the site and
+                                           feeds won't show
+    feeds/feeds.json                       Bluesky custom feeds served from this site — one
+                                           entry per feed (Frieze Week first)
+    api/xrpc/*.js                          the feed service: Vercel edge functions for
+                                           getFeedSkeleton / describeFeedGenerator, reached
+                                           at /xrpc/... via rewrites. Stateless: asks
+                                           Constellation + Bluesky search, merges, pages.
+    .well-known/did.json                   did:web:www.cultureblocs.com, the feed service's
+                                           identity (must match feeds.json; a test checks)
     privacy.html                           the policy every OAuth client here points at
     tools/events/                          build + publish scripts for the Frieze Week
                                            records (see "Event directories" below)
@@ -90,3 +99,18 @@ works for it with no further change.
     node --test 'events/test/*.test.mjs' 'went/test/*.test.mjs'
     node --input-type=module --check < events/events.js
     node --input-type=module --check < went/went.js
+
+Bluesky feeds:
+
+    # 1. deploy (merge to main), then check:
+    curl https://www.cultureblocs.com/.well-known/did.json
+    curl https://www.cultureblocs.com/xrpc/app.bsky.feed.describeFeedGenerator
+    # 2. publish the feed record(s) to @cultureblocs.com (needs an app password):
+    python3 tools/feeds/publish_feeds.py            # dry run
+    python3 tools/feeds/publish_feeds.py --apply
+
+A new feed: add an entry to feeds/feeds.json (rkey, displayName ≤24 chars,
+description ≤300, avatar, and sources: directory / tags / queries), deploy,
+publish. No code changes.
+
+    node --test 'feeds/test/*.test.mjs'
