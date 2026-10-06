@@ -60,6 +60,7 @@ function eventHtml({ ev, when }, idSuffix, dir) {
     ${where ? `<p class="ev-where"><a href="${esc(where.map)}" rel="noopener">${esc(where.name)}</a></p>` : ''}
     <div class="ev-actions">
     ${went ? `<a class="went-btn" href="${esc(went)}">I went</a>` : ''}
+    <span class="went-count" data-uri="${esc(ev.uri)}"></span>
     <details>
       <summary>Details</summary>
       ${r.description ? `<p>${esc(r.description)}</p>` : ''}
