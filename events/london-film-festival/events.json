@@ -50,7 +50,8 @@
           }
         ]
       },
-      "notes": "Unofficial umbrella record; not published by the BFI."
+      "notes": "Unofficial umbrella record; not published by the BFI.",
+      "cid": "bafyreifhkuzufkromv2zokkhzk2uer3borafd3jzdtirlltuwfkjl2647u"
     },
     {
       "slug": "14th",
@@ -126,7 +127,8 @@
           "start": "2026-10-18T20:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreiaxwvnvnwbpfffe5tji5qtn4tlz7i6ouhq6mdyf5ldg73h7el63am"
     },
     {
       "slug": "7-miles-out",
@@ -191,7 +193,8 @@
           "start": "2026-10-18T12:15:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreicisqu6pbo5rm2w2rzabt6fhu4xlm5f5mze5ogryfxpgihkoqcera"
     },
     {
       "slug": "9-temples-to-heaven",
@@ -268,7 +271,8 @@
           "start": "2026-10-12T18:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreicdiredfvahie3a5brikfwqtlxoyqli6m3jwol7on7st54xj675aq"
     },
     {
       "slug": "act-3",
@@ -332,7 +336,8 @@
           "start": "2026-10-17T20:40:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiejwjvpvjhwmdohcrdvd7fujuvft3rdcvzvugjhcxrlp3lwi3e5he"
     },
     {
       "slug": "agnes",
@@ -397,7 +402,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiad7jleqw6qvlcst6umwj2tb3fsrfksnlfwioy3qq5n6djug5lir4"
     },
     {
       "slug": "all-about-the-money",
@@ -461,7 +467,8 @@
           "start": "2026-10-18T16:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiambub22papjo2us43psiqhz7yhdddoi6dd2k5tiweqi23q4njjb4"
     },
     {
       "slug": "all-change",
@@ -526,7 +533,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreifpo4zifncygsaugrzgay37moonkdvaayhb2oqiiuozsqfig2ap7e"
     },
     {
       "slug": "all-of-a-sudden",
@@ -591,7 +599,8 @@
           "start": "2026-10-18T14:15:00+01:00",
           "venue": "Southbank Centre, Royal Festival Hall"
         }
-      ]
+      ],
+      "cid": "bafyreigdqpqhqbjbuuwc34h46oyze6n6qclp2wppyencatoopcij4n4z7q"
     },
     {
       "slug": "all-that-appears-solid-is-built-on-blood",
@@ -645,7 +654,8 @@
           "start": "2026-10-17T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigzy4tvz7hpvglb5i2lpsnx6sqpoxqghfomuqmgk6nbd5dzzakk7e"
     },
     {
       "slug": "all-yours",
@@ -710,7 +720,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreicvwg4thkahrshzqfrsph3nuzish2h2xmrkzgb3euttjkijziroua"
     },
     {
       "slug": "aller-and-retour",
@@ -764,7 +775,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreiaejl7sdh5p4smmfhxm5h75yiy3b7wox24gbr73iqn6mz4e3exmbu"
     },
     {
       "slug": "aman",
@@ -829,7 +841,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreieexix7ckvgc33xchedbfv5fdq3zynm252xraldl6km5ursq37bei"
     },
     {
       "slug": "amazomania",
@@ -905,7 +918,8 @@
           "start": "2026-10-18T15:45:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreieee5v4ro2j2zig3snpdbcn2syev3vm62zhrenlbonkq35gi6b3x4"
     },
     {
       "slug": "ana-en-passant",
@@ -970,7 +984,8 @@
           "start": "2026-10-14T16:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreifumg5gzrhsyjtwj37ocwd5mdxag7t7dww2sk74izfypsdjiwv5ze"
     },
     {
       "slug": "and-roger",
@@ -1014,7 +1029,8 @@
         "directors": [
           "TearyHand Studio"
         ]
-      }
+      },
+      "cid": "bafyreihyqahkbcz23dwpnudtsqpfmo3s74nap2jnfqnhhgiiw7kydgywtm"
     },
     {
       "slug": "the-animals",
@@ -1079,7 +1095,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiex3kd2dieb2vop5b2pojmxgxikgitxranqat7yefxvdupryunate"
     },
     {
       "slug": "animol",
@@ -1156,7 +1173,8 @@
           "start": "2026-10-18T21:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreihnasbnc5u4qgsml3oalpxbzb4wg4nc6i63msvm3wku5xdjtg7djq"
     },
     {
       "slug": "artificial",
@@ -1225,7 +1243,8 @@
           "start": "2026-10-16T11:30:00+01:00",
           "venue": "Southbank Centre, Royal Festival Hall"
         }
-      ]
+      ],
+      "cid": "bafyreiegqeaou6bzwbnnwnchraylh4ncr256tfgraptmy2qyaaudy667di"
     },
     {
       "slug": "at-night",
@@ -1290,7 +1309,8 @@
           "start": "2026-10-13T16:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreicwoxmwp6sclfrivt4kgwiznjnszysjdlwiefillewxyrghngvtq4"
     },
     {
       "slug": "atlantic-rhapsody",
@@ -1367,7 +1387,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreig4nnyrqs3d7px6jfhabbbj2xl47s6xm3y3hhrnliu6h3xjk73lqa"
     },
     {
       "slug": "az-zeeb",
@@ -1431,7 +1452,8 @@
           "start": "2026-10-15T16:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreidel4xtasupzoirh4rffwin6mc3hlcghduebtb3j6swzrvu4gcl3q"
     },
     {
       "slug": "bas-book",
@@ -1508,7 +1530,8 @@
           "start": "2026-10-09T15:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreicqnya3v7jerqebcxsb2bse3d66dauh4zdeheob6a75dpqtwvvg6m"
     },
     {
       "slug": "babyface",
@@ -1573,7 +1596,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreic7ikigwas27zmz6a7urae276t35kciqxqvs6fu7yg2vcfqi44vwi"
     },
     {
       "slug": "badak",
@@ -1626,7 +1650,8 @@
           "start": "2026-10-15T20:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiefa5mtpwctust6hti3mll4va44joadocqlshosxdo5rnfuewvavi"
     },
     {
       "slug": "banning-curse",
@@ -1703,7 +1728,8 @@
           "start": "2026-10-15T16:00:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigdkhr7o6duribceagh6rqcs6e4nt7iuedcncm7ci7xofw5pdqkvq"
     },
     {
       "slug": "bats-and-bugs",
@@ -1756,7 +1782,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreiao6ahqlfqlevsf4ug3k662d6d5vexw2u2damsc3tzmxibp2ymywe"
     },
     {
       "slug": "behemoth",
@@ -1825,7 +1852,8 @@
           "start": "2026-10-16T15:20:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreidqbi2xhgcgzl4xgimghjcjr2l34stjy5tvr3hyuzgvsex4lchrym"
     },
     {
       "slug": "being-heumann",
@@ -1894,7 +1922,8 @@
           "start": "2026-10-16T14:50:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreids2soy32rc42a6r7xn626vop3tz3usyzffmzxichmc3wmf6pd7zq"
     },
     {
       "slug": "beloved",
@@ -1971,7 +2000,8 @@
           "start": "2026-10-15T12:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiaadb5obvr27oljosgvovigmztjqh6jaylouxaopqfcwjfeaoftoa"
     },
     {
       "slug": "benimana",
@@ -2036,7 +2066,8 @@
           "start": "2026-10-13T15:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreid6q5ixhrvdnsri6y2iolhqlxy4zgt6x7szg7n6mjzhm22oy3qviq"
     },
     {
       "slug": "bermuda-riots-are-different",
@@ -2102,7 +2133,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreigmtcssxkue5gwk7zpp3hbsii4bx33cuq55b722j6ovi34xenkfmq"
     },
     {
       "slug": "between-us-and-the-world",
@@ -2155,7 +2187,8 @@
           "start": "2026-10-17T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreicjryyctmqcm4iez53votc5drb2jxf6vwme4wf6lapppfijd5smke"
     },
     {
       "slug": "the-birds-placebo",
@@ -2220,7 +2253,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreidm3m6c6ylcgiqvcyvreqsnxijbyonjar6fuw4xxthkvaf2nzkotu"
     },
     {
       "slug": "bit-of-light",
@@ -2285,7 +2319,8 @@
           "start": "2026-10-18T14:05:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiccw2sv35z2av4ulwhupk4tf4le7ijbnancjju4zmo4xuud4ropoi"
     },
     {
       "slug": "black-church-bay",
@@ -2354,7 +2389,8 @@
           "start": "2026-10-18T12:20:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreigehlmvnxs5jkyizhwmsauybxxfu75wtiwai5akfnvb3gf6j44kfm"
     },
     {
       "slug": "blood-countess",
@@ -2443,7 +2479,8 @@
           "start": "2026-10-18T18:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreiat74r7ofasm7kuyji2w24bynexmz3qliqzvhnnl6uy7cuxgaoqyu"
     },
     {
       "slug": "bola-negra",
@@ -2525,7 +2562,8 @@
           "start": "2026-10-15T20:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreicd6zbvahhbk6t4wd6lrgecp3ci3fwfcsz3rsvxhclxvxl72qcyka"
     },
     {
       "slug": "buckskin",
@@ -2578,7 +2616,8 @@
           "start": "2026-10-17T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreihe437cp5ahqgffhwzdrzvobsxlzgbaegdvvszzs534ec2wtbrnsi"
     },
     {
       "slug": "bundle",
@@ -2643,7 +2682,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreigrwwae4tvre5qzos6uzk5zwrosvmxaxeri2gylkol4e6g2ybhyya"
     },
     {
       "slug": "bunker",
@@ -2712,7 +2752,8 @@
           "start": "2026-10-15T12:50:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreighffiohapcqskhsmyoaqsp77hkhiu6w2z5cdftvmj2xf5lszsii4"
     },
     {
       "slug": "calf-doll",
@@ -2789,7 +2830,8 @@
           "start": "2026-10-09T18:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreifv5uln2phti55nlrdh3y3mvt4dryh5dfenmsnpuy4qtgryglri5i"
     },
     {
       "slug": "cameron-winter-at-carnegie-hall",
@@ -2866,7 +2908,8 @@
           "start": "2026-10-15T21:00:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreibzermb6kkpd7m7atvxnx3zflbmq3qlul6au4dndczgy6um443jfy"
     },
     {
       "slug": "carl-sagan-we-are-made-of-star-stuff",
@@ -2930,7 +2973,8 @@
           "start": "2026-10-16T21:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreihkxwkn5ittmnf3yxf7hykgmbccaqypf5suid6zoe2m4yscyoe2ju"
     },
     {
       "slug": "the-centre-cannot-hold",
@@ -2983,7 +3027,8 @@
           "start": "2026-10-15T18:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiaxsuqhkfi4wrkffmrcoiz45onzxybvra32hdqc7ktsmj33rrelsu"
     },
     {
       "slug": "chronicles-from-the-siege",
@@ -3060,7 +3105,8 @@
           "start": "2026-10-14T18:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreih6qxkxxurcsfet6hdq3umia33boz2hsaef7mlhxic2csxj4m5aza"
     },
     {
       "slug": "chronovisor",
@@ -3126,7 +3172,8 @@
           "start": "2026-10-11T12:50:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiclknq5d2cjja422ktyjhtqiscfuoft6hiqgfwvfznbxdh6s27qha"
     },
     {
       "slug": "clarissa",
@@ -3204,7 +3251,8 @@
           "start": "2026-10-17T20:10:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiczgwief45dwcsuli5ehaat2arwmjowincgltafhi7ylq4g63ob6m"
     },
     {
       "slug": "the-clouds-of-odessa",
@@ -3269,7 +3317,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreibkgxcs2au67c3oxeacv3lx6aw6dlh6mvm6ztbmsghpkbhhp64prq"
     },
     {
       "slug": "club-kid",
@@ -3338,7 +3387,8 @@
           "start": "2026-10-18T17:50:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreibm7s6lybjx4ycgeujbf6tsbahubm6lql34k4wwush76bl3cxjhb4"
     },
     {
       "slug": "common-story",
@@ -3403,7 +3453,8 @@
           "start": "2026-10-12T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreics4eifhtmuqsfeuffdtvme3qxdej7ds2clueptztz5truksrfvuu"
     },
     {
       "slug": "concrete-land",
@@ -3467,7 +3518,8 @@
           "start": "2026-10-10T13:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreigpbmfdykezw3jovmljvm3sysaa22s35ypxxj42z3cacxbikpyokq"
     },
     {
       "slug": "concrete-turned-to-sand",
@@ -3532,7 +3584,8 @@
           "start": "2026-10-13T14:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibxtypyaqbzorqikhryfraurrb35w7xfurjnx6od6svophs56crke"
     },
     {
       "slug": "congo-boy",
@@ -3597,7 +3650,8 @@
           "start": "2026-10-12T14:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreifp6jlb7bnjz5jkf2e7wmsblf3eel7od2zxpyekxru3h4sn56kjie"
     },
     {
       "slug": "coward",
@@ -3662,7 +3716,8 @@
           "start": "2026-10-18T15:25:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreif76fq5rvonmtfjleojtowsin5h3lmg466qrxbska6rlbcz45h6dq"
     },
     {
       "slug": "dance-of-the-spirits",
@@ -3727,7 +3782,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreiexv2hxu3axxr4cacga44jk3zsrnwbqsnipcxqwydjmnu7b53gbay"
     },
     {
       "slug": "dao",
@@ -3792,7 +3848,8 @@
           "start": "2026-10-16T14:50:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigg3kar4mlx753gzs2mtj3rqzz3zgomkramtnrsmzmqypfuetoi3m"
     },
     {
       "slug": "date-night",
@@ -3857,7 +3914,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiemwpynkpjdrlv6siofvazmukchudm4ytichhcdo3irfzlojcqaxe"
     },
     {
       "slug": "daughters-of-the-late-colonel",
@@ -3922,7 +3980,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreiaor547rxmz3bhhjqklentf7rcqghb2h6ypeqjkcoube5ukiohcxe"
     },
     {
       "slug": "the-day-i-became-a-bird",
@@ -3966,7 +4025,8 @@
         "directors": [
           "Passion Pictures and Hyper Luminal Games"
         ]
-      }
+      },
+      "cid": "bafyreibqdtku5qpw5fftvnzjlrkjk73bhkcv3lyydqxftqfswvlcjjpxca"
     },
     {
       "slug": "day-in-the-life-of-jo",
@@ -4031,7 +4091,8 @@
           "start": "2026-10-18T17:45:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreifqd3ignx6bpg5cylv7x74i2lmed53rfi34ypsgwc6z7nmnxgfk5u"
     },
     {
       "slug": "debut",
@@ -4108,7 +4169,8 @@
           "start": "2026-10-18T20:45:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreie7s5xwsuq7xiqkspftgnlhsltjiw36ypix5d7osuqc4d4qjqicl4"
     },
     {
       "slug": "dependence",
@@ -4172,7 +4234,8 @@
           "start": "2026-10-12T20:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreicgrh22gh3nh625i7b7cgfegh3uzqkzbtlqob7pk37st3s34ls3yi"
     },
     {
       "slug": "derive",
@@ -4225,7 +4288,8 @@
           "start": "2026-10-15T20:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreidxmonbmfxkl3i6j3scckikdfrcwku4m63z23qxlxikufjeufhqdm"
     },
     {
       "slug": "the-devil-is-in-me",
@@ -4290,7 +4354,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreihr6hkbpfvow26gb32zb43t6g5fnnxeqospclqsif72qnp7l66pqe"
     },
     {
       "slug": "difficult-bride",
@@ -4355,7 +4420,8 @@
           "start": "2026-10-12T13:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiagzgareutlukcckjir2gegr5baycwibn6nijx2srhh7uxxabkh6e"
     },
     {
       "slug": "dreamed-adventure",
@@ -4420,7 +4486,8 @@
           "start": "2026-10-11T14:35:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiblx4gmnmqjnwpi3mc2kplb7ychvbgxiwp2x3s5wnjewl33umu34y"
     },
     {
       "slug": "easter",
@@ -4485,7 +4552,8 @@
           "start": "2026-10-14T18:50:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreicsst4ht4522ibkqzszragwvmso3ztnci4skxrlvzxbcdbof4deya"
     },
     {
       "slug": "echo-chamber",
@@ -4550,7 +4618,8 @@
           "start": "2026-10-18T15:10:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreifcvttivb34jzbnk5bx72wl7qyfrbsg6az7aocn33bohqokv5lqz4"
     },
     {
       "slug": "elephants-in-the-fog",
@@ -4615,7 +4684,8 @@
           "start": "2026-10-18T18:40:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreidnqlkjuypiwodovsw7tz2s5h5ga5qd4lndh433edffkgwfeppzie"
     },
     {
       "slug": "elsinore",
@@ -4684,7 +4754,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreid5a7bozja526jgw2daskjw5nhsakbhg3obqs6sy6gwkbou6frdwa"
     },
     {
       "slug": "endless-sunlight",
@@ -4737,7 +4808,8 @@
           "start": "2026-10-15T18:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreig5uvakbzwf2ui6ruuxfdleeirlnht74hir2uar3l5tgeu7sg3szi"
     },
     {
       "slug": "everest-the-other-side",
@@ -4803,7 +4875,8 @@
           "start": "2026-10-13T18:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreibhjdzuv2ve5lducynnq3uxhgmlvxoz3m3prrqvexnstagzgaeueu"
     },
     {
       "slug": "everytime",
@@ -4868,7 +4941,8 @@
           "start": "2026-10-17T13:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreigqzpxvtkep5yw53lsdvuqcqlcaqg5qfq3ehkpqsylj3ibs36ymxm"
     },
     {
       "slug": "eyeliner",
@@ -4933,7 +5007,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreia4yo3mg5ejk3gfeen4xkqlgcpt222zfj5ak7s5eme6w2446gtv6a"
     },
     {
       "slug": "face-of-horror",
@@ -4990,7 +5065,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreibiy4ci6r5anlql3baug4bhnuyyokfw3haa6o5ta5lmt6fegcaboe"
     },
     {
       "slug": "failing-to-make-a-documentary-about-my-sudanese-family",
@@ -5055,7 +5131,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiaswx56trehdhbcreee5t4t43xkf7qbrujpvpzpua7poojhe72r4m"
     },
     {
       "slug": "fantasies-of-a-rescue-dummy",
@@ -5120,7 +5197,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreicwnmidpnom6t6rpoj2nbnqhfa7cl56u3deps5xl37ktmi2ti6qmm"
     },
     {
       "slug": "fareye",
@@ -5185,7 +5263,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreihod6r2uhvkp33bhivlbevr5rflbkjfnymu3e34ac4b42ws3wa72e"
     },
     {
       "slug": "fatherland",
@@ -5254,7 +5333,8 @@
           "start": "2026-10-18T13:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreicrtl34ytlltardmrc3urtwnlvkzwfmrg3ynusigu5ycf27nggnxy"
     },
     {
       "slug": "filipinana",
@@ -5331,7 +5411,8 @@
           "start": "2026-10-18T20:45:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreignqgglvdx5h4t5svru7jgjhddhyfljbxioagjvv7e56b4cvy745a"
     },
     {
       "slug": "film-film",
@@ -5396,7 +5477,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreidoovmckd24hqdznu4ynfe4bkd5yaodnpt3rf4ua6humcuzee5ede"
     },
     {
       "slug": "fishbrain",
@@ -5461,7 +5543,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreig7sflhiomnaozk2zwdqqaoognbtje3won5kbo5eqww7y7okg47uu"
     },
     {
       "slug": "fjord",
@@ -5526,7 +5609,8 @@
           "start": "2026-10-18T17:50:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreifjue4vmk2zkybmtktyteqvd4yanz5xx7skvfojpi5hcu6celt4xe"
     },
     {
       "slug": "flies",
@@ -5603,7 +5687,8 @@
           "start": "2026-10-13T18:30:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreibnzzmjk7uzqpki3vrekshvaedxfsoywgecvbhhyf5catgrnha4f4"
     },
     {
       "slug": "florid",
@@ -5668,7 +5753,8 @@
           "start": "2026-10-12T16:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreicve4ma7lrnahlrsqczoiqavqx6cjuitxfrewfun77etrofmsbwwu"
     },
     {
       "slug": "forest-high",
@@ -5745,7 +5831,8 @@
           "start": "2026-10-13T13:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreifxhvewngrg23choiqlq2zkhfcifqzqfikpfbn2di3dxkc42hn2t4"
     },
     {
       "slug": "forgotten-spaceman",
@@ -5810,7 +5897,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibqnnccsibjvks7t5wkozxemk3273plh442jr6isyftekytqaj6hi"
     },
     {
       "slug": "fox",
@@ -5879,7 +5967,8 @@
           "start": "2026-10-18T21:00:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreig5mrrtmtk5se5u7eqx6cumzb7ktgigxry53mqu7i7brnllwqht6m"
     },
     {
       "slug": "frank-and-percy",
@@ -5944,7 +6033,8 @@
           "start": "2026-10-17T15:00:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreick6qkejnlh523mumzwkqsffrsgjni2witjl2ntf35tmb5nsrpxg4"
     },
     {
       "slug": "free-eliza-notes-on-an-anatomical-imperfection",
@@ -6009,7 +6099,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiewpy3nxz43ajjzue7pztx3ofaiee74cjefavg6e3xscilcicta4y"
     },
     {
       "slug": "french-girls",
@@ -6086,7 +6177,8 @@
           "start": "2026-10-13T21:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreifqyi24bnvtspztlapscerapo5w4zanvhqilv2ionolwyfxk33n44"
     },
     {
       "slug": "friends-house-is-here",
@@ -6152,7 +6244,8 @@
           "start": "2026-10-13T18:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreidqdy6dblsb2kvlq74lj7qff6f6fxdyayzwydrl42t73xm4vsrege"
     },
     {
       "slug": "fruit-gathering",
@@ -6217,7 +6310,8 @@
           "start": "2026-10-15T15:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiadlcjqwg7q6nm3bbnoe7bhmc5igcvajsa2vgk4ejmf2p5fuxenm4"
     },
     {
       "slug": "furies",
@@ -6294,7 +6388,8 @@
           "start": "2026-10-11T13:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreib3sn3kdrl4cxtzovmjswgsi42izrrvqv2f3v5wnyduhlhxclec4i"
     },
     {
       "slug": "gentle-monster",
@@ -6359,7 +6454,8 @@
           "start": "2026-10-12T14:45:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiatobyznfka5nmhr5vjxybqtzqdwfukgvehijymenv56itz5slsze"
     },
     {
       "slug": "geronto",
@@ -6424,7 +6520,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreidfed64nnmolxvfrnxbdzszlclpiuty663ujdyr63wfxzcmvgzzia"
     },
     {
       "slug": "gestures-to-break-an-image",
@@ -6477,7 +6574,8 @@
           "start": "2026-10-13T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreihqy6643l4c3uqofolhooxia7jmh3swplxi76vzn7vz3ze36kwe6q"
     },
     {
       "slug": "girl-unknown",
@@ -6542,7 +6640,8 @@
           "start": "2026-10-11T10:40:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiffhiplc5xqxziwk32jzucqvafl25uqbofs6o6yzofwv3ohpqclxy"
     },
     {
       "slug": "glaxo",
@@ -6607,7 +6706,8 @@
           "start": "2026-10-15T11:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreiaapogkp3wnyfovs6kzpu472a64vlkoyhjrc5ywtitgescnzgye5e"
     },
     {
       "slug": "godzilla-minus-zero",
@@ -6672,7 +6772,8 @@
           "start": "2026-10-16T17:30:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreiggszl2jivfazfqnhn6b3t23kws2divjqzf3xjkb5axycsagfpqsy"
     },
     {
       "slug": "going-home",
@@ -6725,7 +6826,8 @@
           "start": "2026-10-13T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreidglvguxryn4iqgyoaboslhxg56g6xnozax2v3np2oxh7ivkst5li"
     },
     {
       "slug": "gone-to-earth",
@@ -6779,7 +6881,8 @@
           "start": "2026-10-07T18:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreifh3bcrcegbphd6mky3wwaolbe64xqbp3ujpzygmk4jig4hit4zm4"
     },
     {
       "slug": "good-little-soldier",
@@ -6856,7 +6959,8 @@
           "start": "2026-10-17T18:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreifkt3k7h2bchxzeye7opp5gju4u3yliefzwe4yuc4wgiupgqidfue"
     },
     {
       "slug": "gradiva",
@@ -6921,7 +7025,8 @@
           "start": "2026-10-11T15:05:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiezb6nyngkauasew3r3z7n6agqk7q7n56xl2kyq345zlsy6iaizea"
     },
     {
       "slug": "a-grief-encounter",
@@ -6986,7 +7091,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreigrcxtub2fxclbsrt75ssmd4jladtjqtti5xgelawztgmtngx3miy"
     },
     {
       "slug": "grounded",
@@ -7039,7 +7145,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreicmbzhgq5ssqxosivy6vmr3ijh5atsg72nxyzwjmz56js6qbsq4wm"
     },
     {
       "slug": "guided-tour",
@@ -7092,7 +7199,8 @@
           "start": "2026-10-15T20:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiceaxly4lxcfeacut65o5odid27g3xchzmahvqzrhw525e56dfinu"
     },
     {
       "slug": "ha-chan-shake-your-booty",
@@ -7157,7 +7265,8 @@
           "start": "2026-10-11T20:30:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreigcrx7twz6tjrldv6ijonm7m3zgo673s46qjxmzkyt6i57mcsooyq"
     },
     {
       "slug": "hanabi",
@@ -7221,7 +7330,8 @@
           "start": "2026-10-18T17:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiclzyn6rluwfayhxkhqpen3inscvgl74lo5hl23oszf55w2pbweay"
     },
     {
       "slug": "hearing",
@@ -7298,7 +7408,8 @@
           "start": "2026-10-15T17:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreiffw7c6rm6663igh5fzfjqmbchecupwr4guwger7k736mf64k2aae"
     },
     {
       "slug": "heysel-85",
@@ -7375,7 +7486,8 @@
           "start": "2026-10-17T12:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreifgqnqgywaffwkbz7kcahvfau2z5ri3yz2xmekaasiiubif5qufua"
     },
     {
       "slug": "hindsight",
@@ -7440,7 +7552,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreieke427h6ggixsuwgi3qgtxv2ijnhnbxuzp3c52jwxpvh7y4j575m"
     },
     {
       "slug": "history-of-concrete",
@@ -7508,7 +7621,8 @@
           "start": "2026-10-17T15:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreidqwjuj5v34ukklae2zraktvjfbubusyckkzniixsb3ntz5tcuwnu"
     },
     {
       "slug": "hot-spot",
@@ -7585,7 +7699,8 @@
           "start": "2026-10-15T13:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiecsi6ger3zxf227xa3chehbrgnf6hnook74zxg5sblnb5lmmzjea"
     },
     {
       "slug": "hot-water",
@@ -7650,7 +7765,8 @@
           "start": "2026-10-09T20:55:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreib6jquqkexb3ss76khfybxeoaaxquuqkofrtcmfkf3sad4f2rjlzu"
     },
     {
       "slug": "house-of-the-wind",
@@ -7727,7 +7843,8 @@
           "start": "2026-10-09T20:30:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreierpuxps44zvf6fgm35crbuk3ly7ktzydi3jsajorasnksyw3ez4u"
     },
     {
       "slug": "how-to-hide-it",
@@ -7793,7 +7910,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreia5ekezsow2iabhf2677jgf2qrx3xwxiveiwnd2gljkqnph3lfeay"
     },
     {
       "slug": "i-love-boosters",
@@ -7870,7 +7988,8 @@
           "start": "2026-10-17T20:45:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreidu7z52hascvcdnszw5drycdaoijvvpxpsapopilkaaqbaonnx42a"
     },
     {
       "slug": "i-plant-my-hand-in-the-garden",
@@ -7936,7 +8055,8 @@
           "start": "2026-10-11T16:25:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreid7pfh2kyecgf5yjbgyhjehvrijh7vuyvnxqp4rwhiixhywasgazm"
     },
     {
       "slug": "i-see-buildings-fall-like-lightning",
@@ -8013,7 +8133,8 @@
           "start": "2026-10-18T12:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigijqfihj6udi55we6sq3jl5p6ekmqve67bdx2o43iv4mf2kjkcmi"
     },
     {
       "slug": "i-was-kidnapped",
@@ -8078,7 +8199,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreifvniffkyfxxfxltlckonrgkxoddbi5ewjakelqvgddksjkgz7nqy"
     },
     {
       "slug": "idiots",
@@ -8156,7 +8278,8 @@
           "start": "2026-10-18T12:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreihscxcejshfj5n3haiuawozqpym4t3wwof4dyumwgm4it6rr5xevi"
     },
     {
       "slug": "imperium",
@@ -8220,7 +8343,8 @@
           "start": "2026-10-13T14:40:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreic2lbmcg76oaygkkorzcs75asuyfs4jc6klepoaf3pizaw5vjdrju"
     },
     {
       "slug": "in-a-whisper",
@@ -8285,7 +8409,8 @@
           "start": "2026-10-16T16:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreih2n6svcsc6tpqor7culdjvq6xibabry5rolqdkh6oll4d4ozp7hu"
     },
     {
       "slug": "in-dreaming",
@@ -8350,7 +8475,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreicowwhcwck6ibkt6gjefoxfj6ikicw3qkrh7nprdxpld6pswtp63e"
     },
     {
       "slug": "in-the-morning-sun",
@@ -8415,7 +8541,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreig2wtgel5rygwnjvmenon3a52bws2ct2mtt53dyzjkcno2rripbey"
     },
     {
       "slug": "in-the-shadows",
@@ -8484,7 +8611,8 @@
           "start": "2026-10-16T14:45:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiekza53ionvje3kjyol3jl6t6kykzjciybhehuihyq75fidsag4pa"
     },
     {
       "slug": "inherit",
@@ -8549,7 +8677,8 @@
           "start": "2026-10-10T11:10:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreialvfcmvwqe3gmt2zznve224lpsmf7akezj52c7dru7fmsht7ogz4"
     },
     {
       "slug": "ink",
@@ -8618,7 +8747,8 @@
           "start": "2026-10-18T10:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreidjflkpvtpq6dlayzdwflwgmucy3gohjhlyghoixbji3tf53e6zqi"
     },
     {
       "slug": "into-the-forest",
@@ -8671,7 +8801,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreid4i62qpxu6rmm6q4ckpnqo6rg7dbh3grhikxzsr3v4jxgz6mlbnm"
     },
     {
       "slug": "iron-boy",
@@ -8736,7 +8867,8 @@
           "start": "2026-10-16T13:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibkrburcvrvxumv7dtyedsqmilbrvdgwenj6v2yn626idyaonik5q"
     },
     {
       "slug": "isabel",
@@ -8801,7 +8933,8 @@
           "start": "2026-10-11T18:40:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreifsb6mcadlvft7647i3sg35zfcvt65vg73gah6bphcs77m5osbj6e"
     },
     {
       "slug": "it-gets-worse",
@@ -8867,7 +9000,8 @@
           "start": "2026-10-18T18:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreifr6aiq723c6gjv4oxv3biro7itxamjsqgtvbb44kpcth2kcb66n4"
     },
     {
       "slug": "it-will-happen-tonight",
@@ -8932,7 +9066,8 @@
           "start": "2026-10-16T15:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreif34mae7os5nhl4zaiyebxikdcvzkes7zbuqtbr5nxk242kv5veoa"
     },
     {
       "slug": "ivan-and-hadoum",
@@ -9009,7 +9144,8 @@
           "start": "2026-10-11T17:45:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreifwkmnoo2do63uhtkrltz44xeugfm725vwojmsfxm7qav5rhmkj44"
     },
     {
       "slug": "josephine",
@@ -9086,7 +9222,8 @@
           "start": "2026-10-17T13:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigvhhezmdxg7oirlp6dckkcx4d24gmw5ggrwk6iq4w7pnjuhqqhom"
     },
     {
       "slug": "joy-of-joys",
@@ -9139,7 +9276,8 @@
           "start": "2026-10-11T13:45:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreidjkq4zjdz65etuceyxd3zim4ba26ua3giirvl4t6bal7tdxzqzlu"
     },
     {
       "slug": "julian",
@@ -9204,7 +9342,8 @@
           "start": "2026-10-14T14:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreicw37mgpn6wo26lqllnqcavwqtqbicwoefxrdgc24fr47foapaghm"
     },
     {
       "slug": "devils",
@@ -9269,7 +9408,8 @@
           "start": "2026-10-12T18:00:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreigjgfch4dxkx4jacrlqv66342p5cwhoxcvwhowmato723mbcnitgq"
     },
     {
       "slug": "kettice",
@@ -9346,7 +9486,8 @@
           "start": "2026-10-10T15:30:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreibayp3ajv7mvcuer7crrxebhnobjmvo6ckwuqijxa6ceurimmn5mi"
     },
     {
       "slug": "a-kind-of-purity",
@@ -9411,7 +9552,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreibqlnlm2z5thofjxyrt7lll4mqsis3gfmpbvgao2wpxwxnvi7j3na"
     },
     {
       "slug": "klara-and-the-sun",
@@ -9480,7 +9622,8 @@
           "start": "2026-10-17T15:20:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreiccai7nbowuvvhho7ikvhlzff3ip3k6of5m7whbohgulzxfnqlec4"
     },
     {
       "slug": "koschka",
@@ -9533,7 +9676,8 @@
           "start": "2026-10-18T15:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreictzj5ta2hozgzhbjgwbxnfa34zkypdig2pewfja6cdcvh4u4vjhi"
     },
     {
       "slug": "lady",
@@ -9598,7 +9742,8 @@
           "start": "2026-10-13T12:10:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreifsanoeji7zqvjsfgz2ctsr3ztjfcndohvgvy52o4lvuzga5j6qce"
     },
     {
       "slug": "lali",
@@ -9663,7 +9808,8 @@
           "start": "2026-10-08T18:10:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibkuh4lketsznzzgkcs35ugnxuibjv6tikndhjqv7lyy33mr3or6y"
     },
     {
       "slug": "landscapes-of-shame",
@@ -9716,7 +9862,8 @@
           "start": "2026-10-15T20:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigmqvtmcxzaq4vgqx5xq6ypbepzxukuglw55qt4xhkjfalajhyzqa"
     },
     {
       "slug": "last-day",
@@ -9781,7 +9928,8 @@
           "start": "2026-10-09T18:00:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreieks5jrzo7syrsoc6llfiuifuycgxktdxtkvavqseujme2ycwlua4"
     },
     {
       "slug": "last-minute",
@@ -9846,7 +9994,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreib5yiscrkx5wzdcjtcdkohrmc7yhimgwbcttzurkri563gopr7gk4"
     },
     {
       "slug": "the-last-snow",
@@ -9911,7 +10060,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiec7f5pbvuaoiixrs6azbuzyzux67tt2jefjam4a4osgbjil32quy"
     },
     {
       "slug": "laundreams",
@@ -9977,7 +10127,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreicgu6pkl4kwuyopj7pwsjf4hd3n6xtdwpcy2bx562jatqqvdlsfoe"
     },
     {
       "slug": "lemonade",
@@ -10046,7 +10197,8 @@
           "start": "2026-10-14T13:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiblxbdzasop2nlqj2gqykvyvcugc5fhpnyg2isrcox5bsdupxr72e"
     },
     {
       "slug": "let-them-be-seen",
@@ -10110,7 +10262,8 @@
           "start": "2026-10-17T12:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreid43ffwjwwlondhdp22iye7jawemacbhc6ev55jr7lzxnwpcspsju"
     },
     {
       "slug": "liberation",
@@ -10175,7 +10328,8 @@
           "start": "2026-10-11T17:45:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreiebuny2ng747itz4kdxhicq5gbd5s7fi7k37zp3hsixxbm6c73i5u"
     },
     {
       "slug": "life-of-jorge-luis-borges",
@@ -10240,7 +10394,8 @@
           "start": "2026-10-13T16:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT4"
         }
-      ]
+      ],
+      "cid": "bafyreicwcypu5dprslgkpzcmyphsxkbztsyxe2agup6knytazivzc3ysv4"
     },
     {
       "slug": "listen",
@@ -10305,7 +10460,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreihyjhxywvz7yzspjgkhoqgtylhm7c7ih3t2gmgomri2darthtghjm"
     },
     {
       "slug": "local-sensations",
@@ -10358,7 +10514,8 @@
           "start": "2026-10-18T15:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreihvocac5jqndqk4wdnlt437wcwu4iclwpvcfp3wbk56ybzetotfbu"
     },
     {
       "slug": "lofsong",
@@ -10402,7 +10559,8 @@
         "directors": [
           "Unrelated Studio"
         ]
-      }
+      },
+      "cid": "bafyreidh6izifcaaruppaokor3iezmynwbe4mpcqxasbsl2i55eiatfu5a"
     },
     {
       "slug": "long-winter",
@@ -10483,7 +10641,8 @@
           "start": "2026-10-17T14:45:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreiao2hyyli6vinaqf6ihpourhjimpzj7tof7kyhyw4tcybv66pcjza"
     },
     {
       "slug": "look-back",
@@ -10560,7 +10719,8 @@
           "start": "2026-10-17T17:40:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreiay3q4rv4kfqo3ivohfv3vcdugifv4koapcnlyxon6ulcbggldywq"
     },
     {
       "slug": "loulou",
@@ -10613,7 +10773,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreiebzae757kt7rce3uztv4ywz4hq5vo3cz2pf74ephvb3e3sdkircy"
     },
     {
       "slug": "love-eternal",
@@ -10657,7 +10818,8 @@
         "directors": [
           "brlka"
         ]
-      }
+      },
+      "cid": "bafyreietpizpxfw4whwdmkg46cpl32unbbw57vxi37onq2nczcixsfqw3q"
     },
     {
       "slug": "maebee-the-camping-trap",
@@ -10711,7 +10873,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreicw7zeumvqmmsg7amtqwvubuvptcel6wizphfc33k2p3rykd5urby"
     },
     {
       "slug": "making-marie-antoinette",
@@ -10799,7 +10962,8 @@
           "start": "2026-10-10T18:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreihqarecpcorwhrqyhtdfnzjibjzfbiihagktdfj3ldqhs2geenzye"
     },
     {
       "slug": "man-eating-pussy",
@@ -10864,7 +11028,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibl5z7e4whkdnkxy53eimbipis2wo6jbj5rp57ei3ux7wbmegd3sy"
     },
     {
       "slug": "man-i-love",
@@ -10929,7 +11094,8 @@
           "start": "2026-10-09T12:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreiaexypmvoi7u5u5dbyxclwqe7pcgtrynwsgekwiiiavpjlaouulzy"
     },
     {
       "slug": "man-of-his-time",
@@ -11006,7 +11172,8 @@
           "start": "2026-10-11T14:20:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreidedqjusn5wdrdldofnec4e6cdcuy7mttkc2x3g4sap4rxn6ga33q"
     },
     {
       "slug": "marie-madeleine",
@@ -11083,7 +11250,8 @@
           "start": "2026-10-11T20:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreigqmbme5xijtu3ejnmihxp5iiotl33p4ucuzzt2siqfetb6am5fgq"
     },
     {
       "slug": "mariinka",
@@ -11171,7 +11339,8 @@
           "start": "2026-10-17T19:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT4"
         }
-      ]
+      ],
+      "cid": "bafyreig5j6pky42urwlqjfu43srgfbe4tnbgwzqtqjlyrqirlo4gnxfrfe"
     },
     {
       "slug": "masao-adachi-takes-a-passport-photo",
@@ -11224,7 +11393,8 @@
           "start": "2026-10-13T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreicmdf4efndumofk4xsavoba376wpp5oetb5pdfr3jy6lqfkmkfyn4"
     },
     {
       "slug": "masc",
@@ -11305,7 +11475,8 @@
           "start": "2026-10-18T15:30:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreidegdtsrevgo3vxfogx2ntlk6uv7hnsay3wppfxmvdljai3k27viy"
     },
     {
       "slug": "match",
@@ -11383,7 +11554,8 @@
           "start": "2026-10-14T20:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreib6mq4nco64rdcpcgeoioijha6mm2beeyc7wkhk4qgkn46tmnslly"
     },
     {
       "slug": "meatmylk",
@@ -11448,7 +11620,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiggw4zyo5jhx53yi6z6ianx7gcuh7utjqymuvisxhf3icwo4cimmi"
     },
     {
       "slug": "meltdown",
@@ -11513,7 +11686,8 @@
           "start": "2026-10-14T17:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreid6ysmunv7ncukflnakftcswxurjmscx3o5edqbj4pbz3jcwxvtdy"
     },
     {
       "slug": "micro-bangs",
@@ -11578,7 +11752,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreid5dniy4jej6n4ps2y4jljsxyq6akqtwg2deg2pkcuypzrxv5yjt4"
     },
     {
       "slug": "mighty-adventure",
@@ -11630,7 +11805,8 @@
           "start": "2026-10-10T11:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiclvahvtkzx22ltnngth2zvw4cz3tmo7amz6juaqfpfqkjcw2ohki"
     },
     {
       "slug": "minotaur",
@@ -11707,7 +11883,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiczi4mgelxi6x6vfbtmphklz2iaqiqdy4vxeavz5o3mhmzkcnjvvy"
     },
     {
       "slug": "misty-green",
@@ -11772,7 +11949,8 @@
           "start": "2026-10-18T18:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreigynacvdh4rbojyhc7vxl6cowuhaog7k3lypbpihi235c6xo5m37a"
     },
     {
       "slug": "mixtape",
@@ -11816,7 +11994,8 @@
         "directors": [
           "Beethoven and Dinosaur"
         ]
-      }
+      },
+      "cid": "bafyreib7puw2chsfnjncgmfrko7aiqly3bnfiyl5anljjh6icuz742g4jq"
     },
     {
       "slug": "mon-taxi",
@@ -11881,7 +12060,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiesacteskfn6xi5wb6w4d5oldx22ck3xzunqmutzczywnttvoe6li"
     },
     {
       "slug": "moonglow",
@@ -11946,7 +12126,8 @@
           "start": "2026-10-16T15:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibpusmyq4dpv6lrtkbckka6gwb4n4rb4aahc36audj5vu7dck3zlu"
     },
     {
       "slug": "mouse",
@@ -12012,7 +12193,8 @@
           "start": "2026-10-16T14:45:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreia2bjupk45snwzqp2j6oxytg67lnmtut6slf2fmrtvx575kydrjsm"
     },
     {
       "slug": "the-muscles-are-tense",
@@ -12065,7 +12247,8 @@
           "start": "2026-10-17T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreif5y4afm6tzgstf63vljzpurafzspiq2exupf5tb32ej34m2vmqwy"
     },
     {
       "slug": "musk",
@@ -12129,7 +12312,8 @@
           "start": "2026-10-10T14:05:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreieaytgfgmxvny7bzzuq75tvrfpzdcnl7hib2llqd7ptvbuo5b4rva"
     },
     {
       "slug": "my-friend-the-sun",
@@ -12182,7 +12366,8 @@
           "start": "2026-10-17T10:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreia6rijpjxtecehnfmni3itd6r26nrjzdxenp362sq3btklytfnlgm"
     },
     {
       "slug": "my-notes-on-mars",
@@ -12247,7 +12432,8 @@
           "start": "2026-10-18T14:30:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreibyxe3spqgrz2yasbrxohtjgovhvwq4k5ks26km4zfim5mjuiktny"
     },
     {
       "slug": "my-undesirable-friends-part-ii",
@@ -12311,7 +12497,8 @@
           "start": "2026-10-15T12:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT4"
         }
-      ]
+      ],
+      "cid": "bafyreif54dh5rhxix6lbp36uphrm7chro7gshuu5spmnt62dmds43y5owa"
     },
     {
       "slug": "my-wife-cries",
@@ -12368,7 +12555,8 @@
           "start": "2026-10-12T18:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreiawnppke5xdwvy4caiqpshbcl2cgdt4bfvll4xougeo7luve7fvz4"
     },
     {
       "slug": "nightborn",
@@ -12445,7 +12633,8 @@
           "start": "2026-10-14T18:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreih6zprpjoyro3cbdjcpc4mwf6wh5go4wyjimkwsk4jrvpgboc5u44"
     },
     {
       "slug": "no-archive-can-restore-this-chorus-of-diasporic-shame",
@@ -12498,7 +12687,8 @@
           "start": "2026-10-17T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiaomzluxfqulxspxexj3hdxijuoyy5ui7sln7xeiuhbyh7lbwduie"
     },
     {
       "slug": "no-good-men",
@@ -12563,7 +12753,8 @@
           "start": "2026-10-10T15:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiedp7lrwmlcpdkvnhap7zhqcogztoqct6vkip6t3ucqhbviqbvmnu"
     },
     {
       "slug": "o-river-we-forced-you-to-chew-up-their-crops",
@@ -12616,7 +12807,8 @@
           "start": "2026-10-15T18:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreibt4twskluzu6gdzt27soyid7yw6sktbiec2rirxa64rwbf6gumcu"
     },
     {
       "slug": "once-upon-a-time-in-harlem-film",
@@ -12681,7 +12873,8 @@
           "start": "2026-10-11T18:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiffhdxv2gtlrufo7sruxjkapqphpt477v2idyqrf5yd54shs2qkra"
     },
     {
       "slug": "our-share-of-sand",
@@ -12757,7 +12950,8 @@
           "start": "2026-10-11T12:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreifboubb3tqwk7236zcr4iucbtk63mk2bteejidiykuru6qgn4ypva"
     },
     {
       "slug": "pakeezah",
@@ -12810,7 +13004,8 @@
           "start": "2026-10-18T10:45:00+01:00",
           "venue": "BFI IMAX, Waterloo"
         }
-      ]
+      ],
+      "cid": "bafyreidlhnxwfrub3oiiatjz4rjygys7azad4opavl45tfuhdxecctmy3q"
     },
     {
       "slug": "panelstory",
@@ -12863,7 +13058,8 @@
           "start": "2026-10-16T18:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreigy566uq737vn3cb4e4lrjg5fmxc6ooh37x3ebc3myk7mz2ydxaqi"
     },
     {
       "slug": "paper-plane",
@@ -12925,7 +13121,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreidoxfdhrybhufkalkygxxisbtimf2utvgstbynxi3u6dn25yg4ili"
     },
     {
       "slug": "paper-tiger",
@@ -12994,7 +13191,8 @@
           "start": "2026-10-17T15:00:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreifzdeuw2srlqdnaj37h4mvtpzofubl4crd2uhxpshmiks4am4633u"
     },
     {
       "slug": "perfect-road",
@@ -13072,7 +13270,8 @@
           "start": "2026-10-17T17:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreigdpa3ia4jidpx4hj7gejll52vxjmob62wa7apebg76orgo7flbl4"
     },
     {
       "slug": "perra",
@@ -13137,7 +13336,8 @@
           "start": "2026-10-08T15:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreig7migtqcm3dafx7xa2wrtdamnjkfc6ib7lqrota5cptlq2w6l7s4"
     },
     {
       "slug": "petrolheads",
@@ -13213,7 +13413,8 @@
           "start": "2026-10-08T16:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreigrxcnfudszj4pnjqpoihyhgphm6i5uzoavidb6jfeysznoesnjr4"
     },
     {
       "slug": "piccolo-piccolo",
@@ -13266,7 +13467,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreig6jb7nu5gbzgsglmw67flpiqs3uoio4m23vwvoubuoekpwwa2sna"
     },
     {
       "slug": "place-to-heal",
@@ -13331,7 +13533,8 @@
           "start": "2026-10-18T20:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiflzzx77xggtccvrzdyrznib7r3ki2tlrw6limw4bchnjxtdfwzhq"
     },
     {
       "slug": "please",
@@ -13396,7 +13599,8 @@
           "start": "2026-10-16T12:30:00+01:00",
           "venue": "Vue West End, EPIC 1"
         }
-      ]
+      ],
+      "cid": "bafyreihptt5x5q35eemecl4ontxd5v3pxqlda2uabcrxsiybd4cqayn3e4"
     },
     {
       "slug": "possible-love",
@@ -13465,7 +13669,8 @@
           "start": "2026-10-18T12:00:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreickkqq24wxzaffmxdyhqitcxqneluwdlrjikd6nf6j3rskqyd7zxq"
     },
     {
       "slug": "prima-facie",
@@ -13534,7 +13739,8 @@
           "start": "2026-10-17T11:00:00+01:00",
           "venue": "Southbank Centre, Royal Festival Hall"
         }
-      ]
+      ],
+      "cid": "bafyreieg7vkhiflgulgt2fnltwrrnu4wg62ichv4nuyxqawgstplksh7li"
     },
     {
       "slug": "primetime",
@@ -13587,7 +13793,8 @@
           "start": "2026-10-11T18:00:00+01:00",
           "venue": "BFI IMAX, Waterloo"
         }
-      ]
+      ],
+      "cid": "bafyreiejapwpjxfznd6rd4gdvovt3so75dua5xixmazuco3h355ajwqsd4"
     },
     {
       "slug": "prince",
@@ -13652,7 +13859,8 @@
           "start": "2026-10-09T13:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreiger4hogesowpj3xpucgk6atzjd7ludej335og4juoqtbbazlbxlq"
     },
     {
       "slug": "queer-edward-ii",
@@ -13728,7 +13936,8 @@
           "start": "2026-10-18T19:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT4"
         }
-      ]
+      ],
+      "cid": "bafyreifzmcoquupgfwfba5g4fkw2olhjqi5jaibpoietq37u53duatuw4u"
     },
     {
       "slug": "ray-gunn",
@@ -13793,7 +14002,8 @@
           "start": "2026-10-17T11:00:00+01:00",
           "venue": "BFI IMAX, Waterloo"
         }
-      ]
+      ],
+      "cid": "bafyreiab3z47vt5j62jja3sneeurlhdx2hw52bhy3q2sucjwrbtqu5otmq"
     },
     {
       "slug": "rebellion",
@@ -13858,7 +14068,8 @@
           "start": "2026-10-15T13:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreig2q3q4ggjxljzx62kcvcj4oqcrxxqyehp7k7yczcbxycefezafje"
     },
     {
       "slug": "red-the-ocean-around-u",
@@ -13903,7 +14114,8 @@
         ],
         "country": "Germany",
         "year": "2024"
-      }
+      },
+      "cid": "bafyreiekxjuz6ub3o4kiqr75mn6z464sxdy2us2rk3m7iavjlrcsoeeyva"
     },
     {
       "slug": "revolutionaries-never-die",
@@ -13967,7 +14179,8 @@
           "start": "2026-10-12T20:45:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreid7x44hydhg2n4qlpwkoaybowjmou7xvnghl6cjxr5dnsw4jpc66e"
     },
     {
       "slug": "rogue-trooper",
@@ -14044,7 +14257,8 @@
           "start": "2026-10-16T12:00:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreieyedtsvznngj5ydmyvfpqm3obilequncl5omg6wfzy2diz7kduyq"
     },
     {
       "slug": "rose",
@@ -14109,7 +14323,8 @@
           "start": "2026-10-15T15:10:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreic5wupxm6jm5y3ao2b7wpzcqjoyquxg46pnzknxx5io4qyw6ybnha"
     },
     {
       "slug": "rw-lo",
@@ -14162,7 +14377,8 @@
           "start": "2026-10-18T15:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreidp5p4rqgdnhds4yg6miu5kptkpnizzp63dd6zvdktqpglbnojm7a"
     },
     {
       "slug": "secret-lives-of-baba-segis-wives",
@@ -14227,7 +14443,8 @@
           "start": "2026-10-15T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreigbumxsi4iwzpksfa4fgerjx4efllvwukr73567birfvmj4z7cgfi"
     },
     {
       "slug": "shab-nameh-women-of-irans-forgotten-left",
@@ -14279,7 +14496,8 @@
           "start": "2026-10-17T16:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiaxdpvbgcsfttfglk3aknpbf5qhehgxc7a6bau4av4qor564ha5ye"
     },
     {
       "slug": "sitrep",
@@ -14332,7 +14550,8 @@
           "start": "2026-10-13T18:20:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreieutovj46n3fjg7m4cgrbsiuexh4oqfoctazsg2tmx53555dsyupa"
     },
     {
       "slug": "slightest-touch",
@@ -14396,7 +14615,8 @@
           "start": "2026-10-15T16:00:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreigkdokxepkguch3brfqybl46ah3jwthple7c2unadbh2rgetx5uha"
     },
     {
       "slug": "solwata",
@@ -14444,7 +14664,8 @@
         "country": "UK",
         "year": "2026",
         "runtime": 25
-      }
+      },
+      "cid": "bafyreiak34uamvcohdpwp5vp2au4dywoi24gp3ytak2coubfmg537qvpie"
     },
     {
       "slug": "the-sorrows-of-young-charlotte",
@@ -14509,7 +14730,8 @@
           "start": "2026-10-18T20:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreif42zrd55vccd2z6xtmujg2ltelqy7a63c7fdsugejllahfav4v3q"
     },
     {
       "slug": "sphinx-albertas-smile",
@@ -14562,7 +14784,8 @@
           "start": "2026-10-17T10:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreicj5deh323v65izijuw7wd6svj43k73nxcdqqwd2ro7mtbhk6gugy"
     },
     {
       "slug": "station",
@@ -14639,7 +14862,8 @@
           "start": "2026-10-10T20:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreidpgr6zmqu7mf3ac67xy5qr5l47pizfq35i3ziabl5sbfobhlexm4"
     },
     {
       "slug": "stolen-memories",
@@ -14704,7 +14928,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreifctjhchhkikdwd4egsiw634sk4kbn6y5imqa6ad5osuo4tbm2vhe"
     },
     {
       "slug": "story-of-documentary-film",
@@ -14768,7 +14993,8 @@
           "start": "2026-10-15T12:10:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreiepdf4xky36ae3xuqedeuzq5jexbksnumapu7un4qavu6andu533e"
     },
     {
       "slug": "sumo-spirit-weighs-nothing",
@@ -14844,7 +15070,8 @@
           "start": "2026-10-16T18:15:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreib7rzux437yvkok5ddua2iup7cybrrclqb2bh5xhderdmackaobgm"
     },
     {
       "slug": "supporting-role",
@@ -14909,7 +15136,8 @@
           "start": "2026-10-09T12:40:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreibf577oqjf3ufnhq4hzuasm6aa7n7ux4tbcs62zfmdikyz3cnrvaq"
     },
     {
       "slug": "surprise-film",
@@ -14955,7 +15183,8 @@
           "start": "2026-10-16T21:15:00+01:00",
           "venue": "Southbank Centre, Royal Festival Hall"
         }
-      ]
+      ],
+      "cid": "bafyreie4ql647j6pcwlh74l2tdy5adcuvh6u3yeczcvwkr3pgltiun2sb4"
     },
     {
       "slug": "sweet-bitter-sweet",
@@ -15020,7 +15249,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreierbhw2uyavofwbjb2udrzuuzitfmias3ux2aft5wfzgnnq6syrmq"
     },
     {
       "slug": "sweet-milk-lake",
@@ -15085,7 +15315,8 @@
           "start": "2026-10-17T18:10:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreic6v3rdq6noxouqhdjdnori45l5rgcsc7jxupdxain5vqvtkxeaky"
     },
     {
       "slug": "tender-loving-care",
@@ -15174,7 +15405,8 @@
           "start": "2026-10-18T13:05:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 3"
         }
-      ]
+      ],
+      "cid": "bafyreidygdaikd7bpvmqsil7grtvu4ltvi7ypflwhitp4xli4rl7tqe33q"
     },
     {
       "slug": "the-thought-of-the-innermost-being",
@@ -15227,7 +15459,8 @@
           "start": "2026-10-18T15:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiajxfq6afneksrwjui2jzaboku7j2xkcqorrcgbo3ddhwiyvvzmg4"
     },
     {
       "slug": "title",
@@ -15280,7 +15513,8 @@
           "start": "2026-10-18T15:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreigesirg6nsjifs7q3rcuioy5o5466hoajj4cuu6l2jpqjkafa6ary"
     },
     {
       "slug": "to-hold-a-mountain",
@@ -15345,7 +15579,8 @@
           "start": "2026-10-10T12:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreihxg2lv2kif52k45mczbwpbzkshjobpeyfpwnzzc6372y4usyswni"
     },
     {
       "slug": "to-the-north",
@@ -15410,7 +15645,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreig5qbit4iuickv62dhw7midf3xhdl2lbm5cp4ctgpj3cw3s6hfine"
     },
     {
       "slug": "too-many-beasts",
@@ -15475,7 +15711,8 @@
           "start": "2026-10-16T12:25:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreidwysoij7eaxqgeoqfsgsgiuozwuz6bcidbizlj4lehz5k5chgmhm"
     },
     {
       "slug": "treasure-island",
@@ -15540,7 +15777,8 @@
           "start": "2026-10-17T20:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreibikgomz2luv7bqztrwu2dwdyf4pxulwnrdatlrmmda2lqdlk6zbu"
     },
     {
       "slug": "trip-to-the-northern-lights",
@@ -15593,7 +15831,8 @@
           "start": "2026-10-17T21:10:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreidhj3ppxhyoj2sg5wxwaypmzts6lhpcw47pxueb3j2yrrlypcsry4"
     },
     {
       "slug": "tropical-fractals",
@@ -15646,7 +15885,8 @@
           "start": "2026-10-12T18:40:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiafhm5l3zlbriubxpnmkmagqu6y2ljzmu37zmva3avcjrxnp2nluy"
     },
     {
       "slug": "tutu",
@@ -15710,7 +15950,8 @@
           "start": "2026-10-13T21:00:00+01:00",
           "venue": "Vue West End, EPIC 2"
         }
-      ]
+      ],
+      "cid": "bafyreihqdo676copwavht273hdjfrt3d7ouz5zvhxrj5npjzdhmfgfh67m"
     },
     {
       "slug": "a-twist-of-hate",
@@ -15775,7 +16016,8 @@
           "start": "2026-10-11T12:45:00+01:00",
           "venue": "BFI Southbank, Screen NFT3"
         }
-      ]
+      ],
+      "cid": "bafyreif6ip64o25yp43oyains2sof3tds4yafq6d4h4trxh3eaz6bz2u34"
     },
     {
       "slug": "an-unimaginable-leap",
@@ -15828,7 +16070,8 @@
           "start": "2026-10-15T20:30:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiethth7jttqe25z2ezt7h2fnpah7v5l6lkh3n6k25q7g5r666xqyy"
     },
     {
       "slug": "unknown",
@@ -15893,7 +16136,8 @@
           "start": "2026-10-15T14:55:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreigyxfowk2n64weuwgde2wra43cbkxekbcrynisxpyaz26mvnpyxy4"
     },
     {
       "slug": "untitled-woman",
@@ -15958,7 +16202,8 @@
           "start": "2026-10-14T15:35:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreifkouhzagmlxjiaoqws567ghloq4hhf3x4j46t2y72h3ggt4p4a6a"
     },
     {
       "slug": "variations-on-a-theme",
@@ -16024,7 +16269,8 @@
           "start": "2026-10-10T14:15:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreifzeheju5zgmp7f4pri2qy6xc4j7ceroycfvpjlbnsguwhklqbgbi"
     },
     {
       "slug": "visionquest",
@@ -16080,7 +16326,8 @@
           "start": "2026-10-12T18:00:00+01:00",
           "venue": "BFI IMAX, Waterloo"
         }
-      ]
+      ],
+      "cid": "bafyreicsclu2mn2ghvcyb7fp2oxkwhrsz2pq3tsv7lrt2stzyt7dikcryy"
     },
     {
       "slug": "wales-visitation",
@@ -16133,7 +16380,8 @@
           "start": "2026-10-18T15:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreidxweq3rhyuervuopqxu5kk6xvusntg7p2xuvezuufamoretwibru"
     },
     {
       "slug": "water-body",
@@ -16182,7 +16430,8 @@
         "country": "UK",
         "year": "2026",
         "runtime": 30
-      }
+      },
+      "cid": "bafyreid74hfczbc6fbq753ydeican4cqmvdagaojdjm3k5upebikg5u7cu"
     },
     {
       "slug": "whisper-of-sunlight",
@@ -16246,7 +16495,8 @@
           "start": "2026-10-12T16:20:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreidqf57lt2thqb6yh7h53tzgahgdmwfptecwkzvthd7xosga7jrnia"
     },
     {
       "slug": "white-musk",
@@ -16311,7 +16561,8 @@
           "start": "2026-10-17T14:50:00+01:00",
           "venue": "BFI Southbank, Screen NFT2"
         }
-      ]
+      ],
+      "cid": "bafyreidbn3xtbzjfwm7vlqps5ylzogt7vfkpdgii3for3dkjpal5csl4ze"
     },
     {
       "slug": "wicker",
@@ -16381,7 +16632,8 @@
           "start": "2026-10-14T15:00:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreichgewipaa7nnd4wrzsu5hk4gmml53igzcubebfocimfefxzmrzdi"
     },
     {
       "slug": "wild-horse-nine",
@@ -16450,7 +16702,8 @@
           "start": "2026-10-11T15:00:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreibwaso4rc2ncx5bieydcly33bqulalnxpxayypcjlpd7xcw5hzscq"
     },
     {
       "slug": "wildwood",
@@ -16515,7 +16768,8 @@
           "start": "2026-10-17T11:45:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreiglk3g2nl3sfciuqaefciwim5j2gqyplti7dxvll6axlkqxmk5nzi"
     },
     {
       "slug": "woman-unknown",
@@ -16580,7 +16834,8 @@
           "start": "2026-10-18T17:30:00+01:00",
           "venue": "Curzon Soho Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreiftsbanca4uzcrsyosuqforuz3eaprppr3srqtfs2ipjitdraqafq"
     },
     {
       "slug": "world-came-flooding-in",
@@ -16627,7 +16882,8 @@
         "country": "Australia",
         "year": "2025",
         "runtime": 25
-      }
+      },
+      "cid": "bafyreie4r5u6u6k3vglhowz5tdgmz377b7ptkml2xmuaamsxzg4tyaqxcm"
     },
     {
       "slug": "you-dreamt-you-saw-yourself-but-couldnt-see-your-face",
@@ -16680,7 +16936,8 @@
           "start": "2026-10-15T18:15:00+01:00",
           "venue": "ICA Cinema, Screen 1"
         }
-      ]
+      ],
+      "cid": "bafyreifdzwgjckyiz44uawspltj73at4blhtxgjsitdfqv4qqc4mjk6n4e"
     },
     {
       "slug": "your-mother-your-mother-your-mother",
@@ -16745,7 +17002,8 @@
           "start": "2026-10-18T15:00:00+01:00",
           "venue": "Prince Charles Cinema, Downstairs Screen"
         }
-      ]
+      ],
+      "cid": "bafyreihhbvolmqkprjuu6bob35md5tpc6lztfqsyvkxqsscn5w37j6nnwm"
     },
     {
       "slug": "zero-intention-of-living-quietly",
@@ -16809,7 +17067,8 @@
           "start": "2026-10-14T12:30:00+01:00",
           "venue": "BFI Southbank, Screen NFT1"
         }
-      ]
+      ],
+      "cid": "bafyreicbzsed62qr5ntn5sgpzxlwv2mhglog7xcsgdqsrddtpzz2rx6gce"
     }
   ]
 }
