@@ -15,9 +15,10 @@
     "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published.",
     "timezone": "Times are Europe/Paris; CEST (+02:00) until 03:00 on 25 Oct 2026, CET (+01:00) after — so the fair's last day, Sunday 25 October, is +01:00. All-day/date-only events use 00:00–23:59 because the lexicon has no all-day flag.",
     "checked": "Dates checked on each organiser's own website on 7 October 2026. Entries with `notes` rely partly on secondary sources or have open questions.",
-    "omitted": "7 Rue Froissart, Place des Vosges and Upstairs Art Fair (no 2026 edition confirmed on their sites); Art Basel Paris Conversations sessions (line-up not yet announced); auction-house sales (Sotheby's 'Modernités' 23 Oct, Phillips 21 Oct, Artcurial 24 Oct; Christie's dates not found).",
+    "prices": "No prices are given: sources disagreed too often. Free entry is stated only where the organiser's own site says so.",
+    "omitted": "Kutluğ Ataman at the Chapelle des Petits-Augustins (secondary source only, likely wrong); 7 Rue Froissart, Place des Vosges and Upstairs Art Fair (no 2026 edition confirmed on their sites); Art Basel Paris Conversations sessions (line-up not yet announced); auction-house sales (Sotheby's 'Modernités' 23 Oct, Phillips 21 Oct, Artcurial 24 Oct; Christie's dates not found).",
     "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Art Basel or any listed organiser.",
-    "count": 34,
+    "count": 33,
     "did": "did:plc:l3726um33xesakwqhjkkpoet"
   },
   "records": [
@@ -88,7 +89,7 @@
           }
         ]
       },
-      "notes": "Ticket prices not confirmed on artbasel.com (secondary listings give €47 day / €30 reduced), so left out. Oh La La! 2026 lead reported as Philippine Leroy-Beaulieu (Ocula, The Art Newspaper) but not yet named by Art Basel — left out. The 2025 names (Loïc Prigent, Edward Enninful) do not apply to 2026."
+      "notes": "Oh La La! 2026 lead reported as Philippine Leroy-Beaulieu (Ocula, The Art Newspaper) but not yet named by Art Basel — left out. The 2025 names (Loïc Prigent, Edward Enninful) do not apply to 2026."
     },
     {
       "slug": "art-basel-paris-conversations-2026",
@@ -103,7 +104,7 @@
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Art Basel Paris Conversations 2026",
-        "description": "The fair's talks programme, moved this year to the Grand Palais auditorium. Free to attend; booking advised. Art Basel has said the full line-up is still to be announced.",
+        "description": "The fair's talks programme, moved this year to the Grand Palais auditorium. Free to attend. Art Basel has said the full line-up is still to be announced.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-22T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -199,7 +200,7 @@
           }
         ]
       },
-      "notes": "Some listings give 22–26 October; the fair's own site gives 20–24. Price not shown on the official ticket page."
+      "notes": "Some listings give 22–26 October; the fair's own site gives 20–24, used here."
     },
     {
       "slug": "design-miami-paris-2026",
@@ -235,7 +236,7 @@
           }
         ]
       },
-      "notes": "Some listings give 22–26 October; the fair's own site gives 20–25 with the 20th as preview. No ticket price published."
+      "notes": "Some listings give 22–26 October; the fair's own site gives 20–25 with the 20th as preview, used here."
     },
     {
       "slug": "akaa-2026",
@@ -249,7 +250,7 @@
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "AKAA – Also Known As Africa 2026",
-        "description": "11th edition of the art and design fair centred on Africa and its diasporas. Preview Thu 22 (invitation). Fri 23–Sat 24 12:00–20:00, Sun 25 12:00–18:00. €16, reduced €11, under-12s free.",
+        "description": "11th edition of the art and design fair centred on Africa and its diasporas. Preview Thu 22 (invitation). Fri 23–Sat 24 12:00–20:00, Sun 25 12:00–18:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-23T12:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -284,7 +285,7 @@
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "OFFSCREEN Paris 2026",
-        "description": "Fifth edition of the fair for photography and the moving image, with about 30 artists in a 17th-century chapel at the Salpêtrière. Preview Mon 19 (invitation). Tue–Sat 11:00–19:00, Sun 11:00–18:00. €12, students €8 (free on Wed 21), under-12s free.",
+        "description": "Fifth edition of the fair for photography and the moving image, with about 30 artists in a 17th-century chapel at the Salpêtrière. Preview Mon 19 (invitation). Tue–Sat 11:00–19:00, Sun 11:00–18:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-20T11:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -341,8 +342,7 @@
             "name": "Ceramic Art Fair"
           }
         ]
-      },
-      "notes": "No ticket price published."
+      }
     },
     {
       "slug": "outsider-paris-2026",
@@ -412,8 +412,7 @@
             "name": "Moderne Art Fair"
           }
         ]
-      },
-      "notes": "Ticket page mixes 2025 and 2026 content (€25 / €15 students), so prices are left out."
+      }
     },
     {
       "slug": "menart-fair-2026",
@@ -426,7 +425,7 @@
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Menart Fair 2026",
-        "description": "Seventh edition of the fair for art from the Middle East and North Africa and its diasporas, about 40 galleries, themed 'Where is Home?'. Preview Thu 22. Fri–Sat 12:00–20:00, Sun 12:00–19:00. €16, reduced €11.",
+        "description": "Seventh edition of the fair for art from the Middle East and North Africa and its diasporas, about 40 galleries, themed 'Where is Home?'. Preview Thu 22. Fri–Sat 12:00–20:00, Sun 12:00–19:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-23T12:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -666,46 +665,10 @@
       "notes": "2026 artist list not confirmed: the official page still shows the 2025 line-up. Press reports name works by Niki de Saint Phalle and Marcello Maloberti among others. Add names when artbasel.com updates."
     },
     {
-      "slug": "beaux-arts-kutlug-ataman",
+      "slug": "palais-iena-miu-miu-alice-diop",
       "category": "commission",
       "rkey": "3mxbs456gmkxh",
       "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456gmkxh",
-      "sources": [
-        "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/283304-art-basel-paris-2026-an-installation-exploring-memory-at-the-chapelle-des-petits-augustins"
-      ],
-      "record": {
-        "$type": "community.lexicon.calendar.event",
-        "name": "Kutluğ Ataman at the Chapelle des Petits-Augustins",
-        "description": "Shown during Art Basel Paris week: a video installation of some forty screens carrying portraits and testimony from Küba, a vanished community near Istanbul. Free. 10:00–19:00.",
-        "createdAt": "2026-10-07T12:00:00.000Z",
-        "startsAt": "2026-10-20T10:00:00+02:00",
-        "mode": "community.lexicon.calendar.event#inperson",
-        "status": "community.lexicon.calendar.event#scheduled",
-        "endsAt": "2026-10-25T19:00:00+01:00",
-        "locations": [
-          {
-            "$type": "community.lexicon.location.address",
-            "country": "FR",
-            "locality": "Paris",
-            "name": "Chapelle des Petits-Augustins, Beaux-Arts de Paris",
-            "street": "14 rue Bonaparte",
-            "postalCode": "75006"
-          }
-        ],
-        "uris": [
-          {
-            "uri": "https://beauxartsparis.fr",
-            "name": "Beaux-Arts de Paris"
-          }
-        ]
-      },
-      "notes": "Secondary source only (Sortiraparis); no artbasel.com page found and no work title published. Check before publishing."
-    },
-    {
-      "slug": "palais-iena-miu-miu-alice-diop",
-      "category": "commission",
-      "rkey": "3mxbs456hlsxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456hlsxh",
       "sources": [
         "https://www.artbasel.com/paris/public-program/palais-iena",
         "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/283340-art-basel-paris-2026-cinema-dance-and-sculpture-as-alice-diop-and-miu-miu-take-over-the-palais-d-iena",
@@ -714,7 +677,7 @@
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Miu Miu presents Alice Diop: 'Geste de Consolation'",
-        "description": "Art Basel Paris Public Program, with Miu Miu: the film-maker Alice Diop's first exhibition, on how Black women are represented, with works by Zanele Muholi, Simone Leigh and Mary Lee Bendolph, choreography by Nadia Beugré, readings and music. Free; guided tours bookable on miumiu.com from 8 October.",
+        "description": "Art Basel Paris Public Program, with Miu Miu as partner: an exhibition by the film-maker Alice Diop at the Palais d'Iéna.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-21T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -741,22 +704,21 @@
           }
         ]
       },
-      "notes": "The official page names Alice Diop but gave no details; content from Sortiraparis and NSS. Opening hours and performance times not yet published."
+      "notes": "Kept to what artbasel.com confirms (Alice Diop, Miu Miu, Palais d'Iéna). Dates 21–25 Oct are from press reports, as are the artists, performances and free entry — add once official. Opening hours not yet published."
     },
     {
       "slug": "cite-architecture-kennedy-yanko",
       "category": "commission",
-      "rkey": "3mxbs456il2xh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456il2xh",
+      "rkey": "3mxbs456hlsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456hlsxh",
       "sources": [
         "https://www.artbasel.com/stories/kennedy-yanko-art-basel-paris-2026-mary-magdalene",
-        "https://www.citedelarchitecture.fr/en?page=361",
-        "https://75.agendaculturel.fr/exposition/exposition-kennedy-yanco-1.html"
+        "https://www.citedelarchitecture.fr/en?page=361"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Kennedy Yanko: 'Ce qui nous rassemble'",
-        "description": "Art Basel Paris Public Program: Kennedy Yanko's sculptures shown among the museum's plaster casts of French monuments. Included in the museum ticket. 11:00–19:00, until 21:00 on Thursdays, closed Tuesdays.",
+        "description": "Art Basel Paris Public Program: Kennedy Yanko's sculptures shown among the museum's plaster casts of French monuments.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-16T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -779,20 +741,20 @@
           }
         ]
       },
-      "notes": "Part of the Public Program per artbasel.com; hours and price from a secondary listing. Unlike the rest of the programme, this one is paid."
+      "notes": "Hours and admission not given on the official pages; check the museum's site."
     },
     {
       "slug": "grand-palais-cezanne-et-nous",
       "category": "exhibition",
-      "rkey": "3mxbs456jkcxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456jkcxh",
+      "rkey": "3mxbs456il2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456il2xh",
       "sources": [
         "https://www.grandpalais.fr/fr/programme/cezanne-et-nous"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Cézanne et nous / Cézanne and Us",
-        "description": "About 180 works tracing how Cézanne was taken up by later artists, from Gauguin, Matisse, Picasso and Mondrian to Joan Mitchell, Bridget Riley and Peter Doig — in the same building as the fair. €19, reduced €16.",
+        "description": "About 180 works tracing how Cézanne was taken up by later artists, from Gauguin, Matisse, Picasso and Mondrian to Joan Mitchell, Bridget Riley and Peter Doig — in the same building as the fair.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-09-23T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -820,8 +782,8 @@
     {
       "slug": "flv-gustave-fayet",
       "category": "exhibition",
-      "rkey": "3mxbs456kjkxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456kjkxh",
+      "rkey": "3mxbs456jkcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456jkcxh",
       "sources": [
         "https://www.fondationlouisvuitton.fr/fr/evenements/gustave-fayet-collectionneur-createur"
       ],
@@ -855,8 +817,8 @@
     {
       "slug": "bourse-de-commerce-remember-me",
       "category": "exhibition",
-      "rkey": "3mxbs456lisxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456lisxh",
+      "rkey": "3mxbs456kjkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456kjkxh",
       "sources": [
         "https://www.pinaultcollection.com/en/node/2174",
         "https://www.pinaultcollection.com/en/press"
@@ -864,7 +826,7 @@
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Remember Me",
-        "description": "Photography's bicentenary from the Pinault Collection: about 700 works by more than 70 photographers, from Le Gray and Man Ray to Cindy Sherman and Wolfgang Tillmans, hung across eras. Barbara Kruger takes over the Rotunda alongside. €15, reduced €10; closed Tuesdays; Fridays until 21:00.",
+        "description": "Photography's bicentenary from the Pinault Collection: about 700 works by more than 70 photographers, from Le Gray and Man Ray to Cindy Sherman and Wolfgang Tillmans, hung across eras. Barbara Kruger takes over the Rotunda alongside. Closed Tuesdays; Fridays until 21:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-07T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -891,15 +853,15 @@
     {
       "slug": "picasso-kurt-schwitters",
       "category": "exhibition",
-      "rkey": "3mxbs456mi2xh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456mi2xh",
+      "rkey": "3mxbs456lisxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456lisxh",
       "sources": [
         "https://www.museepicassoparis.fr/fr/agenda/kurt-schwitters-le-chaos-monde-1918-1948/"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Kurt Schwitters. Le chaos-monde 1918–1948",
-        "description": "Retrospective of more than 300 works by Schwitters — painter, poet, typographer and collagist — set against Picasso. Tue–Sun 9:30–18:00. €16, reduced €12.",
+        "description": "Retrospective of more than 300 works by Schwitters — painter, poet, typographer and collagist — set against Picasso. Tue–Sun 9:30–18:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-06T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -926,15 +888,15 @@
     {
       "slug": "jeu-de-paume-stan-douglas",
       "category": "exhibition",
-      "rkey": "3mxbs456nhcxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456nhcxh",
+      "rkey": "3mxbs456mi2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456mi2xh",
       "sources": [
         "https://jeudepaume.org/en/evenement/35043/"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Stan Douglas. Parallax",
-        "description": "Retrospective of about 40 films, video installations and photographs since the late 1980s, on how technology shapes images and memory. Opens on the first day of the week. €14.",
+        "description": "Retrospective of about 40 films, video installations and photographs since the late 1980s, on how technology shapes images and memory. Opens on the first day of the week.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-20T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -962,15 +924,15 @@
     {
       "slug": "mep-penn-fashion",
       "category": "exhibition",
-      "rkey": "3mxbs456ogkxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456ogkxh",
+      "rkey": "3mxbs456nhcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456nhcxh",
       "sources": [
         "https://www.mep-fr.org/wp-content/uploads/2026/07/cp_pennfashion_eng_mep.pdf"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Penn & Fashion",
-        "description": "Irving Penn's fashion photography from 1947 to 2008, much of it for Vogue, including his work with Issey Miyake. Wed–Sun; closed Mon–Tue. €13, reduced €8.",
+        "description": "Irving Penn's fashion photography from 1947 to 2008, much of it for Vogue, including his work with Issey Miyake. Wed–Sun; closed Mon–Tue.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-09-30T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -997,8 +959,8 @@
     {
       "slug": "palais-de-tokyo-toi-et-ta-bande",
       "category": "exhibition",
-      "rkey": "3mxbs456pfsxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456pfsxh",
+      "rkey": "3mxbs456ogkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456ogkxh",
       "sources": [
         "https://www.paris.fr/evenements/toi-et-ta-bande-exposition-collective-117953"
       ],
@@ -1033,15 +995,15 @@
     {
       "slug": "mam-kerry-james-marshall",
       "category": "exhibition",
-      "rkey": "3mxbs456qf2xh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456qf2xh",
+      "rkey": "3mxbs456pfsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456pfsxh",
       "sources": [
         "https://www.mam.paris.fr/fr/expositions-en-cours"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Kerry James Marshall: The Histories",
-        "description": "Marshall's first exhibition in France: about 70 works across four decades. Tue–Sun 10:00–18:00, Thursdays until 21:30. €17, reduced €15.",
+        "description": "Marshall's first exhibition in France: about 70 works across four decades. Tue–Sun 10:00–18:00, Thursdays until 21:30.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-09-18T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -1068,8 +1030,8 @@
     {
       "slug": "mam-prix-marcel-duchamp-2026",
       "category": "exhibition",
-      "rkey": "3mxbs456recxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456recxh",
+      "rkey": "3mxbs456qf2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456qf2xh",
       "sources": [
         "https://www.mam.paris.fr/fr/expositions-en-cours"
       ],
@@ -1098,14 +1060,13 @@
             "name": "Musée d'Art Moderne de Paris"
           }
         ]
-      },
-      "notes": "Price not confirmed."
+      }
     },
     {
       "slug": "lafayette-anticipations-autumn-2026",
       "category": "exhibition",
-      "rkey": "3mxbs456sdkxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456sdkxh",
+      "rkey": "3mxbs456recxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456recxh",
       "sources": [
         "https://www.lafayetteanticipations.com/fr/exposition/yu-nishimura",
         "https://www.lafayetteanticipations.com/fr/exposition/helene-fauquet"
@@ -1140,15 +1101,15 @@
     {
       "slug": "fondation-cartier-ibrahim-mahama",
       "category": "exhibition",
-      "rkey": "3mxbs456tcsxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456tcsxh",
+      "rkey": "3mxbs456sdkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456sdkxh",
       "sources": [
         "https://www.fondationcartier.com/programme/exposition/le-temps-des-recoltes-ibrahim-mahama"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Ibrahim Mahama: Le Temps des récoltes",
-        "description": "Ibrahim Mahama and nine collaborators, including his 'Parliament of Ghosts', in the Fondation's new Palais-Royal building. Opens Thursday 22 October. Tue–Sun 11:00–19:00, Fridays until 22:00. €15, reduced €10.",
+        "description": "Ibrahim Mahama and nine collaborators, including his 'Parliament of Ghosts', in the Fondation's new Palais-Royal building. Opens Thursday 22 October. Tue–Sun 11:00–19:00, Fridays until 22:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-22T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -1175,15 +1136,15 @@
     {
       "slug": "pantheon-vies-minuscules",
       "category": "exhibition",
-      "rkey": "3mxbs456uc2xh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456uc2xh",
+      "rkey": "3mxbs456tcsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456tcsxh",
       "sources": [
         "https://www.centrepompidou.fr/fr/programme/agenda/evenement/zfJ5Enx"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Vies minuscules",
-        "description": "A Centre Pompidou show at the Panthéon while the Pompidou is closed for renovation: about 30 artists, from Kupka to Jumana Manna, on lives at the margins of history. Daily 10:00–18:00. €16, reduced €13.",
+        "description": "A Centre Pompidou show at the Panthéon while the Pompidou is closed for renovation: about 30 artists, from Kupka to Jumana Manna, on lives at the margins of history. Daily 10:00–18:00.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-09-24T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
@@ -1210,15 +1171,15 @@
     {
       "slug": "orsay-jenny-holzer",
       "category": "exhibition",
-      "rkey": "3mxbs456vbcxh",
-      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456vbcxh",
+      "rkey": "3mxbs456uc2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456uc2xh",
       "sources": [
         "https://www.musee-orsay.fr/fr/programme/agenda/expositions/jenny-holzer-jai-vu"
       ],
       "record": {
         "$type": "community.lexicon.calendar.event",
         "name": "Jenny Holzer. J'ai vu",
-        "description": "Holzer's text works drawn from Orsay's collections — LED pieces, engraved stone benches and projections — opening on the first day of the week. Tue–Sun 9:30–18:00, Thursdays until 21:45. €16, reduced €13.",
+        "description": "Holzer's text works drawn from Orsay's collections — LED pieces, engraved stone benches and projections — opening on the first day of the week. Tue–Sun 9:30–18:00, Thursdays until 21:45.",
         "createdAt": "2026-10-07T12:00:00.000Z",
         "startsAt": "2026-10-20T00:00:00+02:00",
         "mode": "community.lexicon.calendar.event#inperson",
