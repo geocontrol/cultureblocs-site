@@ -91,6 +91,21 @@ Event directories:
     python3 tools/events/publish_frieze_events.py --file events/paris-art-week/events.json
     python3 tools/events/build_event_pages.py --dir paris-art-week
 
+    python3 tools/events/build_lff_events.py         # London Film Festival listing
+    python3 tools/events/publish_frieze_events.py --file events/london-film-festival/events.json
+    python3 tools/events/build_event_pages.py --dir london-film-festival
+
+A film festival is a different shape from an art week: meta.layout "films"
+draws one entry per film, A–Z or by day, from site-only `film` (credits) and
+`screenings` kept beside each record in events.json. One record per film runs
+from its first screening to the end of its last; a short carries its
+programme's screenings. The festival's source facts are in
+tools/events/lff_2026_source.txt — edit that, then rebuild.
+
+What a directory calls being there is meta.verb ({"button": "I saw",
+"past": "saw"}); without it, "I went". The button, the composer, the default
+post, the counts and the event pages all follow it (events/lib/verb.js).
+
 Deleting records from an account (dry run unless --apply; app password):
 
     python3 tools/delete_records.py 'com.cultureblocs.*'

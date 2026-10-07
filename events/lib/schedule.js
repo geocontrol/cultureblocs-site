@@ -35,6 +35,7 @@ export const FILTERS = [
 const GROUP_OF = {
   fair: 'fairs',
   talk: 'talks', talks: 'talks', screening: 'talks',
+  film: 'films',
   exhibition: 'exhibitions', commission: 'exhibitions',
   'gallery-day': 'galleries',
   party: 'nights', performance: 'nights',
@@ -110,6 +111,9 @@ export function merge(entries, liveRecords = []) {
       uri: hit?.uri || e.atUri,
       record: hit?.value || e.record,
       live: Boolean(hit),
+      // Site-only detail a festival listing carries beside each record.
+      ...(e.film ? { film: e.film } : {}),
+      ...(e.screenings ? { screenings: e.screenings } : {}),
     };
   });
 }

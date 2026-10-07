@@ -211,6 +211,21 @@
       "permanent": false
     },
     {
+      "source": "/events/london-film-festival",
+      "destination": "/events/london-film-festival/",
+      "permanent": false
+    },
+    {
+      "source": "/w/lff",
+      "destination": "/events/london-film-festival/",
+      "permanent": false
+    },
+    {
+      "source": "/w/lff/:key",
+      "destination": "/went/?dir=london-film-festival&e=:key",
+      "permanent": false
+    },
+    {
       "source": "/week",
       "destination": "/week/",
       "permanent": false

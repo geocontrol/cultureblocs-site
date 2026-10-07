@@ -3,6 +3,7 @@
  * no DOM — everything here is tested in node.
  */
 import { TZ, addDays, dayLabel, shape, zonedParts } from '../../events/lib/schedule.js';
+import { WENT, said } from '../../events/lib/verb.js';
 
 export const BEAD_NSID = 'com.cultureblocs.bead';
 export const POST_NSID = 'app.bsky.feed.post';
@@ -18,7 +19,7 @@ export const CHIP_DAYS = 7;        // longer than this and the day is a date pic
 const KIND_FOR = {
   fair: 'visit', exhibition: 'visit', commission: 'visit', 'gallery-day': 'visit',
   party: 'visit', talk: 'performance', talks: 'performance', performance: 'performance',
-  screening: 'screening',
+  screening: 'screening', film: 'screening',
 };
 export const kindFor = (category) => KIND_FOR[category] || 'visit';
 
@@ -108,9 +109,9 @@ export function findExisting(beads, eventUri, day, authorities = []) {
 /* ---------- the post ---------- */
 /* What the post says until the person edits it. The hashtag is always
  * kept whole at the end; the note gives way to fit. */
-export function defaultPostText({ name, note }) {
+export function defaultPostText({ name, note, verb = WENT }) {
   const tail = ` ${HASHTAG}`;
-  const head = `I went to ${String(name || 'this').trim()}`;
+  const head = said(verb, name);
   const body = String(note || '').trim().replace(/\s+/g, ' ');
   const room = POST_MAX - graphemes(tail);
   let text = body ? `${head} — ${body}` : head;
