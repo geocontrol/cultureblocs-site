@@ -91,6 +91,14 @@ Event directories:
     python3 tools/events/publish_frieze_events.py --file events/paris-art-week/events.json
     python3 tools/events/build_event_pages.py --dir paris-art-week
 
+Deleting records from an account (dry run unless --apply; app password):
+
+    python3 tools/delete_records.py 'com.cultureblocs.*'
+    python3 tools/delete_records.py community.lexicon.calendar.event --rkey <rkey> --apply
+
+Deleting a published event breaks beads that point at it; to hide one from
+the site instead, add it to events/hidden.json.
+
 A directory's times are read in its own zone: meta.tz in events.json (an IANA
 name, e.g. "Europe/Paris"); without it, Europe/London. The page, "I went" and
 the per-event pages all follow it. Write each record's offset for its date —
