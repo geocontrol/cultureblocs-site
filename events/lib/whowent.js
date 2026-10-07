@@ -2,8 +2,9 @@
  * these are other people's words, arriving from their own repositories. */
 import { esc } from './render.js';
 import { dayLabel } from './schedule.js';
+import { WENT, countWord } from './verb.js';
 
-export const countLabel = (n) => (n > 0 ? `${n} went` : '');
+export const countLabel = (n, verb = WENT) => countWord(verb, n);
 
 const initials = (s) => String(s || '?').replace(/^@/, '').slice(0, 1).toUpperCase();
 
@@ -14,7 +15,7 @@ function clip(text, max) {
 
 /* One bead as a line in a list. `event` is { name, href } when the list
  * spans events (the week's timeline); omitted on an event's own page. */
-export function beadItem(b, { event = null, noteMax = 280 } = {}) {
+export function beadItem(b, { event = null, noteMax = 280, verb = WENT } = {}) {
   const handle = b.profile?.handle || b.handle || b.did;
   const name = b.profile?.displayName || handle;
   const day = String(b.value?.createdAt || '').slice(0, 10);
@@ -30,7 +31,7 @@ export function beadItem(b, { event = null, noteMax = 280 } = {}) {
     <p class="who-line"><a class="who-name" href="${esc(profileUrl)}" rel="noopener">${esc(name)}</a>${
       name !== handle ? ` <span class="who-handle">@${esc(handle)}</span>` : ''}
       <span class="who-day">${/^\d{4}-\d{2}-\d{2}$/.test(day) ? esc(dayLabel(day)) : ''}</span></p>
-    ${event ? `<p class="who-event">went to <a href="${esc(event.href)}">${esc(event.name)}</a></p>` : ''}
+    ${event ? `<p class="who-event">${esc(verb.past)}${verb.to ? ' to' : ''} <a href="${esc(event.href)}">${esc(event.name)}</a></p>` : ''}
     ${note ? `<p class="who-note">${esc(note)}</p>` : ''}
     <p class="who-rec"><a href="${esc(recordUrl)}" rel="noopener">the bead →</a></p>
   </div>

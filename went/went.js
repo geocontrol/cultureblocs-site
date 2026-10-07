@@ -17,6 +17,7 @@ import {
 } from './lib/compose.js';
 import { dateLabel, dayLabel, groupOf, shape, tzOf } from '../events/lib/schedule.js';
 import { esc } from '../events/lib/render.js';
+import { said, verbOf, youSaid } from '../events/lib/verb.js';
 
 const $ = (id) => document.getElementById(id);
 const DRAFT = 'went:draft';
@@ -74,6 +75,7 @@ async function loadContext(eventUri, dir) {
     eventUrl: entry ? `${SITE}${dirBase}${entry.slug}/` : null,
     dirUrl: dirBase,
     dirName: listing?.meta?.name || null,
+    verb: verbOf(listing),
     tags: [listing?.meta?.tag].filter(Boolean),
   };
 }
@@ -103,9 +105,18 @@ function renderEvent() {
     </div></article>`;
   if (st.ctx.dirUrl) {
     ui.crumbs.innerHTML = `<a href="/events/">Events</a> / <a href="${esc(st.ctx.dirUrl)}">`
-      + `${esc(st.ctx.dirName || 'Directory')}</a> / I went`;
+      + `${esc(st.ctx.dirName || 'Directory')}</a> / ${esc(st.ctx.verb.button)}`;
   }
-  document.title = `I went to ${r.name} — CultureBlocs`;
+  const h1 = document.querySelector('.hero h1');
+  if (h1) h1.textContent = `${st.ctx.verb.button}.`;
+  if (!st.ctx.verb.to) {
+    const lab = document.querySelector('#day-picker > span');
+    if (lab) lab.textContent = `The day you ${st.ctx.verb.past} it`;
+    document.getElementById('day-chips')?.setAttribute('aria-label', `Day you ${st.ctx.verb.past} it`);
+    const step = document.querySelector('#compose .step .sec');
+    if (step && /The event/.test(step.textContent)) step.lastChild.textContent = ' The film';
+  }
+  document.title = `${said(st.ctx.verb, r.name)} — CultureBlocs`;
 }
 
 /* ---------- the day ---------- */
@@ -155,7 +166,7 @@ function counter(el, text, max) {
 }
 
 ui.note.addEventListener('input', () => {
-  if (!st.postEdited) ui.postText.value = defaultPostText({ name: st.ctx.event.value.name, note: ui.note.value });
+  if (!st.postEdited) ui.postText.value = defaultPostText({ name: st.ctx.event.value.name, note: ui.note.value, verb: st.ctx.verb });
   refresh();
 });
 ui.kind.addEventListener('change', refresh);
@@ -275,7 +286,7 @@ function fillForm(d) {
   ui.post.checked = Boolean(d.post);
   if (d.post !== undefined) st.postChoiceFor = '*';
   st.postEdited = Boolean(d.postEdited);
-  ui.postText.value = d.postText || defaultPostText({ name: st.ctx.event.value.name, note: d.note });
+  ui.postText.value = d.postText || defaultPostText({ name: st.ctx.event.value.name, note: d.note, verb: st.ctx.verb });
 }
 
 /* ---------- publishing ---------- */
@@ -366,7 +377,7 @@ function done({ beadUri, postUri, postError, draft, handle, did }) {
   const postRkey = postUri ? String(postUri).split('/').pop() : null;
   show(ui.form, false); say('');
   ui.done.innerHTML = `
-    <h2>You went to ${esc(name)}.</h2>
+    <h2>${esc(youSaid(st.ctx.verb, name))}.</h2>
     <p>Your bead for <b>${esc(dayLabel(draft.day))}</b> is saved in
     <b>@${esc(handle)}</b>’s own repository. It points at the event, so it will
     show up wherever this programme is read.</p>
@@ -378,7 +389,7 @@ function done({ beadUri, postUri, postError, draft, handle, did }) {
       ${st.ctx.dir ? `<a href="/week/?dir=${encodeURIComponent(st.ctx.dir)}&who=${encodeURIComponent(handle)}">your whole week →</a>` : ''}
       ${st.ctx.dirUrl ? `<a href="${esc(st.ctx.dirUrl)}">back to ${esc(st.ctx.dirName || 'the programme')} →</a>` : ''}
     </div>
-    <p>Went to something else too? Pick it from the programme and do the same —
+    <p>${st.ctx.verb.to ? 'Went to something else too?' : `${esc(st.ctx.verb.past[0].toUpperCase() + st.ctx.verb.past.slice(1))} something else too?`} Pick it from the programme and do the same —
     each one becomes another bead. And if you’d like to do more with them —
     add photos, string a day together — that’s what <a href="/apps.html">Loom</a>
     is for. It picks these up from your account.</p>`;
@@ -448,7 +459,7 @@ async function boot() {
 
   renderEvent();
   fillKinds(st.ctx.entry?.category);
-  ui.postText.value = defaultPostText({ name: st.ctx.event.value.name, note: '' });
+  ui.postText.value = defaultPostText({ name: st.ctx.event.value.name, note: '', verb: st.ctx.verb });
   if (draft.note !== undefined) fillForm(draft);
   if (!renderDays(draft.day)) return;
   say('');

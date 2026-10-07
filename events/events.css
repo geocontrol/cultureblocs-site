@@ -112,3 +112,29 @@ section.day{margin:2.4rem 0;scroll-margin-top:7.5rem}
 .who-rec{font:.72rem var(--mono);margin-top:.35rem!important}
 .who-rec a{color:var(--faint)}
 .who-foot{font-size:.85rem;color:var(--faint);max-width:40rem}
+
+/* a film festival (layout: films) */
+.ev-films,.event-page.ev-films{--k:var(--watch)}
+.film-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.film-find input,.film-find select{font:.92rem var(--body);color:var(--ink);background:var(--card);
+  border:1px solid var(--edge);border-radius:999px;padding:.38rem .9rem;min-width:0}
+.film-find input{width:min(22rem,100%)}
+.film-find input:focus,.film-find select:focus{outline:2px solid var(--watch);outline-offset:1px}
+.film-count{font:.75rem var(--mono);color:var(--faint);margin:.5rem 0 0}
+.jump[data-for="az"]{gap:.85rem}
+.film-credit{margin:.15rem 0 0;font-size:.9rem;color:var(--faint)}
+.film-prog{margin:.15rem 0 0;font-size:.88rem;color:var(--faint)}
+.film-prog b{font-weight:600;color:var(--ink)}
+.film-shows{list-style:none;margin:.45rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem .5rem}
+.film-shows li{font:.76rem var(--mono);border:1px solid var(--edge);border-radius:6px;padding:.15rem .45rem;background:var(--wash)}
+.film-shows li.today{border-color:var(--watch);color:var(--watch)}
+.sc-where{color:var(--faint)}
+.ev-facts .film-shows{margin:0;flex-direction:column}
+.ev-facts .film-shows li{background:none;border:0;padding:0;font:1rem var(--body)}
+.ev-facts .film-shows .sc-when{font:600 .9rem var(--mono);margin-right:.4rem}
+.slot .ev-where{color:var(--faint)}
+section.letter .sec{font-size:1.4rem}
+@media (max-width:40rem){
+  .film-find,.film-find input,.film-find select{width:100%}
+}
+.film-find .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}

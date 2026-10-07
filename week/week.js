@@ -18,6 +18,7 @@ import { belongsTo, canonicalise, personWeek } from '../events/lib/report.js';
 import { listCollection } from '../events/lib/atproto.js';
 import { groupOf } from '../events/lib/schedule.js';
 import { hider } from '../events/lib/went.js';
+import { verbOf } from '../events/lib/verb.js';
 import { esc } from '../events/lib/render.js';
 
 const SITE = 'https://www.cultureblocs.com';
@@ -92,12 +93,12 @@ function renderWeek() {
   document.title = `${nameOf()}’s ${dirName()} — CultureBlocs`;
   $('crumbs').innerHTML = `<a href="/events/">Events</a> / <a href="/events/${esc(st.dir)}/">${esc(dirName())}</a> / ${esc(nameOf())}`;
   if (!week.beads) {
-    say(`<h2>No beads here yet</h2><p>@${esc(st.person.handle)} hasn’t said they went to anything in
+    say(`<h2>No beads here yet</h2><p>@${esc(st.person.handle)} hasn’t said they ${esc(verbOf(st.listing).past)}${verbOf(st.listing).to ? ' to' : ''} anything in
       ${esc(dirName())}. <a href="/events/${esc(st.dir)}/">See the programme →</a></p>`);
     return false;
   }
   $('thread').innerHTML = thread(week);
-  $('stats').textContent = `${week.beads} ${week.beads === 1 ? 'bead' : 'beads'} · ${week.events} ${week.events === 1 ? 'event' : 'events'} · ${week.days.length} ${week.days.length === 1 ? 'day' : 'days'}`;
+  $('stats').textContent = `${week.beads} ${week.beads === 1 ? 'bead' : 'beads'} · ${week.events} ${st.listing?.meta?.layout === 'films' ? (week.events === 1 ? 'film' : 'films') : (week.events === 1 ? 'event' : 'events')} · ${week.days.length} ${week.days.length === 1 ? 'day' : 'days'}`;
   $('days').innerHTML = week.days.map(d => `<section class="wk-day"><h2 class="sec">${esc(d.label)}</h2>
     ${d.items.map(({ bead, event }) => `<article class="wk-item k-${esc(groupOf(event?.category) || 'fairs')}">
       <span class="wk-dot" aria-hidden="true"></span>

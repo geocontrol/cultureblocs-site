@@ -1,0 +1,269 @@
+# BFI London Film Festival 2026 — every entry on the festival's Films A–Z,
+# read from whatson.bfi.org.uk on 7 October 2026 (title, the BFI page it
+# links to, the shorts programme it sits in, the festival strand, credits,
+# and each screening). Facts only: no synopses or copy from the BFI.
+#
+# Columns, " | "-separated:
+#   title | BFI page slug | shorts programme | strand | director(s) | with |
+#   country | year | minutes | screenings
+# Screenings are DDHHMM.V in October 2026, London time, V = venue below.
+# Rebuild the listing from this file with tools/events/build_lff_events.py.
+V: 0=BFI Southbank, Screen NFT1; 1=BFI Southbank, Screen NFT3; 2=Vue West End, EPIC 1; 3=ICA Cinema, Screen 1; 4=Curzon Soho Cinema, Screen 2; 5=Curzon Soho Cinema, Screen 3; 6=BFI Southbank, Screen NFT2; 7=Southbank Centre, Royal Festival Hall; 8=Prince Charles Cinema, Downstairs Screen; 9=Vue West End, EPIC 2; 10=BFI IMAX, Waterloo; 11=Curzon Soho Cinema, Screen 1; 12=BFI Southbank, Screen NFT4
+14th | 14th | | SPECIALPRESENTATIONS | Ava DuVernay | | USA | 2026 | 108 | 121800.0 161325.1 182030.2
+7 Miles Out | 7-miles-out | | AWARDS | Carol Morley | Lucy Halliday, Aidan Gillen, Gemma Whelan | UK | 2026 | 127 | 171805.0 181215.2
+9 Temples to Heaven | 9-temples-to-heaven | | AWARDS | Sompot Chidgasornpongse | Amara Ramnarong, Surachai Ningsanond, Jirawut Chiwaruck | Thailand-Singapore-France-Norway-China-Hong Kong (S.A.R. of China)-Indonesia-Qatar | 2026 | 141 | 111515.3 121745.4 121800.5
+Act 3 | act-3 | | AWARDS | Christine Molloy and Joe Lawlor | | Ireland-UK | 2026 | 83 | 151700.0 172040.3
+Agnes | as-the-years-roll-by | As the Years Roll By | SHORTS | Leah Vlemmiks | | UK-Canada | 2026 | 11 | 101520.2 141535.6
+All About the Money | all-about-the-money | | DEBATE | Sinéad O’Shea | | Ireland-USA-Tunisia | 2026 | 95 | 172000.2 181615.1
+All Change | as-the-years-roll-by | As the Years Roll By | SHORTS | Lena Molander | | UK | 2025 | 3 | 101520.2 141535.6
+All of a Sudden | all-of-a-sudden | | LOVE | Ryusuke Hamaguchi | Virginie Efira, Tao Okamoto, Kyozo Nagatsuka | France-Japan-Germany-Belgium | 2026 | 196 | 101845.0 181415.7
+all that appears solid is built on blood | cadences-of-resistance | Cadences of Resistance | EXPERIMENTA | Izdihar Afyouni, Gelare Khoshgozaran | | Palestine-Iran-UK | 2026 | 11 | 171820.3
+All Yours | land-of-hope-and-gory | Land of Hope and Gory | SHORTS | Sophia Di Martino | | UK | 2025 | 8 | 072030.8 182000.6
+Aller & Retour | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Lucia Bulgheroni, Michele Greco | | Italy | 2025 | 9 | 171000.0
+Aman | i-see-myself | I See Myself | SHORTS | Rahul Roye | | India-UK-USA-France | 2026 | 16 | 161815.9 172030.1
+Amazomania | amazomania | | DEBATE | Nathan Grossman | | Sweden-Denmark-France | 2026 | 93 | 161820.6 181530.4 181545.5
+Ana, en passant | ana-en-passant | | JOURNEY | Fernanda Salgado | Jéssica Pierina, Zezé Motta, Carlos Francisco | Brazil-Portugal-France | 2026 | 90 | 132050.6 141615.1
+and Roger | games-lounge | Games Lounge | GAMES | TearyHand Studio | | | | |
+The Animals | i-see-myself | I See Myself | SHORTS | Calvin Demba | | UK | 2026 | 18 | 161815.9 172030.1
+ANIMOL | animol | | AWARDS | Ashley Walters | Tut Nyuot, Vladyslav Baliuk, Stephen Graham | UK | 2025 | 92 | 111825.0 151230.2 182100.1
+Artificial | artificial | | GALA | Luca Guadagnino | Andrew Garfield, Yura Borisov, Monica Barbaro, Mark Rylance, Ike Barinholtz | USA-Italy | 2026 | 140 | 112100.7 151450.2 161130.7
+At Night | at-night | | DARE | Beatrice Gibson | Diocouda Diaoune, Kátia Belo Cardoso, Sophie Robinson | UK-France | 2026 | 87 | 111820.3 131615.6
+Atlantic Rhapsody | atlantic-rhapsody | | DARE | Zhong Kaifeng | Yin Fang, Wang Yitong, Li Xueqin | China | 2026 | 101 | 162050.6 172015.4 172030.5
+Az Zeeb | az-zeeb | | EXPERIMENTA | Rafael Guendelman | | Chile-Qatar | 2026 | 86 | 132045.3 151600.6
+Ba’s Book | bas-book | | AWARDS | Ashley Duong | Ashley Duong, Anh Duong, Nguyen Hoang Duy | Canada | 2026 | 103 | 081800.4 081815.5 091545.6
+Babyface | life-drawing | Life / Drawing | SHORTS | Sacha Beeley | | UK | 2026 | 6 | 091815.8 161230.2
+Badak | tracing-islands | Tracing Islands | EXPERIMENTA | Riar Rizaldi | | Indonesia-Thailand | 2025 | 31 | 152030.3
+The Banning Curse | banning-curse | | LAUGH | Mohsen Amiryousefi | Mohsen Amiryousefi | Iran | 2026 | 88 | 142015.4 142030.5 151600.3
+Bats & Bugs | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Lena von Döhren | | Switzerland | 2026 | 11 | 171000.0
+Behemoth! | behemoth | | GALA | Tony Gilroy | Pedro Pascal, Olivia Wilde, Eva Victor, Will Arnett | USA | 2026 | 127 | 131800.7 141100.7 161520.9
+Being Heumann | being-heumann | | GALA | Siân Heder | Ruth Madeley, Madeline Delp, Mark Ruffalo, Dylan O’Brien, Rob Delaney | USA | 2026 | 127 | 121745.7 131415.7 161450.2
+The Beloved | beloved | | GALA | Rodrigo Sorogoyen | Javier Bardem, Victoria Luengo, Raúl Arévalo | Spain | 2026 | 135 | 081745.7 111400.10 151215.11
+Ben’Imana | benimana | | AWARDS | Marie-Clémentine Dusabejambo | Clémentine U. Nyirinkindi, Isabelle Kabano, Kesia Kelly Nishimwe | Rwanda-France-Gabon-Norway | 2026 | 101 | 121730.11 131550.1
+Bermuda Riots are Different | i-see-myself | I See Myself | SHORTS | Alyson Thompson, Matt Mead | | UK-Bermuda | 2026 | 6 | 161815.9 172030.1
+Between Us and the WoRld | cadences-of-resistance | Cadences of Resistance | EXPERIMENTA | Wallace Minchong Li | | UK | 2026 | 17 | 171820.3
+The Bird’s Placebo | life-drawing | Life / Drawing | SHORTS | Rami Jarboui | | Tunisia | 2025 | 20 | 091815.8 161230.2
+A Bit of Light | bit-of-light | | JOURNEY | Ali Asgari | Misagh Zareh, Sadaf Asgari, Forouzan Jamshidnejad | Iran-Switzerland-Italy-Canada-Turkey | 2026 | 86 | 171800.9 181405.1
+Black Church Bay | black-church-bay | | THRILL | Rhys Marc Jones | Tom Cullen, Joe Locke, Marli Siu | UK | 2026 | 107 | 151830.9 171245.9 181220.8
+The Blood Countess | blood-countess | | CULT | Ulrike Ottinger | Isabelle Huppert, Birgit Minichmayr, Thomas Schubert | Austria-Luxembourg-Germany | 2026 | 119 | 082030.2 141810.8 181745.4 181800.5
+La Bola Negra | bola-negra | | GALA | Javier Ambrossi, Javier Calvo | Guitarricadelafuente, Miguel Bernardeau, Carlos González, Milo Quifes, Penélope Cruz | Spain-France | 2026 | 155 | 082100.7 121400.7 152000.4 152015.5
+Buckskin | cadences-of-resistance | Cadences of Resistance | EXPERIMENTA | Mars Verrone | | USA | 2026 | 17 | 171820.3
+Bundle | altered-states | Altered States | SHORTS | Carlo Milillo | | UK | 2026 | 13 | 131750.2 171450.6
+Bunker | bunker | | GALA | Florian Zeller | Javier Bardem, Penélope Cruz, Stephen Graham, Paul Dano, Patrick Schwarzenegger | UK | 2026 | 126 | 101745.7 121045.7 151250.9
+The Calf Doll | calf-doll | | AWARDS | Ankur Hooda | Mst. Satbir Singh Hooda, Chameli Devi, Dheeraj Kumar | India | 2026 | 91 | 082040.3 091800.4 091815.5
+Cameron Winter at Carnegie Hall | cameron-winter-at-carnegie-hall | | CREATE | Paul Thomas Anderson | Cameron Winter | USA | 2026 | 71 | 071830.8 081500.0 152100.9
+Carl Sagan: We Are Made of Star Stuff | carl-sagan-we-are-made-of-star-stuff | | CREATE | Nanette Burstein | | USA | 2026 | 90 | 142100.2 162100.1
+The Centre Cannot Hold | chorus-that-carries | The Chorus that Carries | EXPERIMENTA | Ufuoma Essi | | UK-France | 2026 | 40 | 151815.3
+Chronicles from the Siege | chronicles-from-the-siege | | DARE | Abdallah Al-Khatib | Nadim Rimawi, Saja Kilani, Ahmed Zitouni | Algeria-France-Palestine | 2026 | 98 | 132055.1 141745.4 141800.5
+Chronovisor | chronovisor | | DARE | Kevin Walker, Jack Auen | Anne Laure Sellier | USA | 2026 | 99 | 092050.1 111250.3
+Clarissa | clarissa | | JOURNEY | Arie Esiri, Chuko Esiri | Sophie Okonedo, David Oyelowo, India Amarteifio | Nigeria-USA | 2026 | 134 | 122030.2 131445.0 172010.6
+The Clouds of Odessa | life-drawing | Life / Drawing | SHORTS | Luca Arcangeli | | Italy | 2026 | 13 | 091815.8 161230.2
+Club Kid | club-kid | | GALA | Jordan Firstman | Jordan Firstman, Reggie Absolom, Diego Calva, Cara Delevingne, Kirby Howell-Baptiste | USA | 2026 | 122 | 172100.7 181100.7 181750.8
+A Common Story | common-story | | AWARDS | Anna Foglietta | Alba Rohrwacher, Guido Caprino, Caterina Casini | Italy | 2026 | 110 | 112045.11 121535.1
+Concrete Land | concrete-land | | AWARDS | Asmahan Bkerat | | Jordan-Palestine | 2026 | 101 | 082055.6 101350.1
+Concrete Turned to Sand | concrete-turned-to-sand | | AWARDS | Jessica Johnson, Ryan Ermacora | | Canada | 2026 | 73 | 112035.3 131415.6
+Congo Boy | congo-boy | | CREATE | Rafiki Fariala | Bradley Fiomona, Christy Djomanda, Pétruche Mbomba | Central African Republic-France-Democratic Republic of Congo-Italy | 2026 | 91 | 112030.2 121400.6
+Coward | coward | | LOVE | Lukas Dhont | Emmanuel Macchia, Valentin Campagne | Belgium-France-Netherlands | 2026 | 127 | 152030.11 181525.0
+Dance of the Spirits | life-drawing | Life / Drawing | SHORTS | Andreea-Lorena Florea | | UK | 2026 | 6 | 091815.8 161230.2
+Dao | dao | | LOVE | Alain Gomis | Katy Correa, D’Johé Kouadio, Samir Guesmi | France-Senegal-Guinea-Bissau | 2026 | 185 | 151915.0 161450.3
+Date Night | call-your-bluff | Call Your Bluff | SHORTS | Tanya Reynolds | | UK | 2026 | 16 | 082030.8 111245.1
+Daughters of the Late Colonel | life-drawing | Life / Drawing | SHORTS | Elizabeth Hobbs | | UK-Germany | 2026 | 9 | 091815.8 161230.2
+The Day I Became a Bird | games-lounge | Games Lounge | GAMES | Passion Pictures and Hyper Luminal Games | | | | |
+A Day in the Life of Jo: Chapter Phaedra | day-in-the-life-of-jo | | DARE | Jacqueline Lentzou | Evita Andriopoulou, Eleni Vergeti, Anastasia Gouliamou | Greece-Germany-France | 2026 | 87 | 171415.11 181745.3
+The Debut | debut | | GALA | Jesse Eisenberg | Julianne Moore, Paul Giamatti, Halle Bailey, Jesse Eisenberg, Cara Buono | USA | 2026 | 105 | 181915.7 182040.0 182045.8
+Dependence | dependence | | AWARDS | Grace Harper Brighouse | | UK | 2026 | 94 | 111530.2 122020.1
+La Dérive | derive | | JOURNEY | Paula Delsol | Jacqueline Vandal, Paulette Dubost, Pierre Barouh | France | 1964 | 83 | 152045.1
+The Devil Is In Me | call-your-bluff | Call Your Bluff | SHORTS | Tia Salisbury | | UK | 2026 | 11 | 082030.8 111245.1
+The Difficult Bride | difficult-bride | | AWARDS | Rubaiyat Hossain | Zaineen Chowdhury Karim, Saberi Alam Motaher, Azmeri Haque | France-Bangladesh-Portugal-Norway-Germany | 2026 | 88 | 112100.0 121320.1
+The Dreamed Adventure | dreamed-adventure | | THRILL | Valeska Grisebach | Yana Radeva, Syuleyman Letifov, Stoicho Kostadinov | Germany-France-Bulgaria-Austria | 2026 | 163 | 101730.3 111435.11
+Easter | easter | | CREATE | Mokya Shin | Saekja, Jinhyo Lim, Rosemary | South Korea | 2026 | 84 | 122100.6 141850.3
+The Echo Chamber | echo-chamber | | CREATE | Andrea Pallaoro | Alicia Vikander, Luca Marinelli, Susan Sarandon | Italy | 2026 | 120 | 171715.11 181510.2
+Elephants in the Fog | elephants-in-the-fog | | THRILL | Abinash Bikram Shah | Puspa Thing Lama, Sahab Din Maya, Jasmin Bishwokarma | Nepal-Germany-France-Brazil-Norway | 2026 | 103 | 171230.2 181840.1
+Elsinore | elsinore | | GALA | Simon Stone | Andrew Scott, Olivia Colman, Billie Piper, Johnny Flynn, Luke Thompson | UK | 2026 | 104 | 071915.7 091500.7 161230.0
+Endless Sunlight | chorus-that-carries | The Chorus that Carries | EXPERIMENTA | Tyson Houseman | | Canada | 2026 | 8 | 151815.3
+Everest: The Other Side | everest-the-other-side | | JOURNEY | Elizabeth Chai Vasarhelyi, Jimmy Chin | Jim Morrison, Hilaree Nelson | USA | 2026 | 113 | 101245.2 131820.1
+Everytime | everytime | | DARE | Sandra Wollner | Birgit Minichmayr, Tristan López, Lotte Shirin Keiling | Austria-Germany | 2026 | 124 | 161730.11 171300.1
+Eyeliner | life-drawing | Life / Drawing | SHORTS | Aisha Boudjillouli | | UK | 2026 | 8 | 091815.8 161230.2
+The Face of Horror | face-of-horror | | CULT | Anna Biller | Jonah Hauer-King, Kristine Froseth, Ellie Bamber | UK | 2026 | 120 | 151800.8 172030.8
+(Failing to Make) A Documentary About My Sudanese Family | altered-states | Altered States | SHORTS | Sid Elbadawi | | UK-Sudan | 2026 | 15 | 131750.2 171450.6
+Fantasies of a Rescue Dummy | life-drawing | Life / Drawing | SHORTS | Adrian Maganza | | UK | 2025 | 7 | 091815.8 161230.2
+FarEye | altered-states | Altered States | SHORTS | Hayden Mclean | | UK | 2026 | 13 | 131750.2 171450.6
+Fatherland | fatherland | | GALA | Paweł Pawlikowski | Sandra Hüller, Hanns Zischler, August Diehl | Poland-Germany-Italy-France | 2026 | 82 | 141815.7 151530.7 181320.6
+Filipiñana | filipinana | | DARE | Rafael Manuel | Jorrybell Agoto, Teroy Guzman, Carmen Castellanos | Singapore-UK-Philippines-France-Netherlands | 2026 | 99 | 171730.2 182030.4 182045.5
+Film Film | life-drawing | Life / Drawing | SHORTS | Arturs Voblikovs | | UK-Latvia | 2025 | 12 | 091815.8 161230.2
+Fishbrain | land-of-hope-and-gory | Land of Hope and Gory | SHORTS | Max Vanderspuy | | UK | 2026 | 22 | 072030.8 182000.6
+Fjord | fjord | | GALA | Cristian Mungiu | Sebastian Stan, Renate Reinsve, Lisa Carlehed | Romania-France-Norway-Denmark-Sweden-Finland | 2026 | 146 | 171400.7 181750.9
+Flies | flies | | LOVE | Fernando Eimbcke | Teresa Sánchez, Bastian Escobar, Hugo Ramírez | Mexico | 2026 | 99 | 112000.9 131815.4 131830.5
+FLORID | florid | | JOURNEY | Billy Lumby | Jonathan Jules, Saskia Chana, Unknown T | UK-Sweden | 2026 | 84 | 082100.9 121630.3
+Forest High | forest-high | | AWARDS | Manon Coubia | Salomé Richard, Aurélia Petit, Anne Coesens | Belgium-France | 2026 | 103 | 122045.4 122100.5 131320.1
+Forgotten Spaceman | altered-states | Altered States | SHORTS | Elham Ehsas | | UK-Afghanistan | 2026 | 16 | 131750.2 171450.6
+The Fox | fox | | LAUGH | Dario Russo | Emily Browning, Jai Courtney, Olivia Colman | Australia | 2025 | 90 | 092045.8 111245.8 182100.9
+Frank and Percy | frank-and-percy | | LOVE | Sean Mathias | Ian McKellen, Roger Allam, Joanna Lumley | UK | 2026 | 109 | 132035.0 171500.2
+Free Eliza (notes on an anatomical imperfection) | i-see-myself | I See Myself | SHORTS | Alexandra Matheou | | Cyprus-Greece-France | 2026 | 20 | 161815.9 172030.1
+French Girls | french-girls | | DARE | Hyun Lee | Mia Kidis, Daia, Anya Beyersdorf | Australia | 2026 | 83 | 121810.1 132045.4 132100.5
+The Friend’s House is Here | friends-house-is-here | | CREATE | Hossein Keshavarz, Maryam Ataei | Mahshad Bahraminejad, Hana Mana, Farzad Namavari | Iran-USA | 2026 | 95 | 111230.9 131830.6
+Fruit Gathering | fruit-gathering | | AWARDS | Aung Phyoe | Nandar Myat Aung, Nandar Myint Lwin | Myanmar-Czechia-France | 2026 | 79 | 141755.6 151550.1
+Furies | furies | | THRILL | Rami Kodeih | Maria Nakouzi, Rym Mroue, Hasan Akil | Lebanon-Brazil | 2026 | 134 | 102000.4 102015.5 111330.6
+Gentle Monster | gentle-monster | | DEBATE | Marie Kreutzer | Léa Seydoux, Jella Haase, Catherine Deneuve | Austria-Germany-France | 2026 | 115 | 101550.0 121445.11
+Geronto | as-the-years-roll-by | As the Years Roll By | SHORTS | Mark Pluck | | UK | 2026 | 18 | 101520.2 141535.6
+Gestures to Break an Image | compressed-distances | Compressed Distances | EXPERIMENTA | Mayra Villavicencio Príncipe | | Peru | 2026 | 15 | 131820.3
+A Girl Unknown | girl-unknown | | JOURNEY | Zou Jing | Li Gengxi, Shen Jiani, Zu Feng | China-France | 2026 | 128 | 092025.3 111040.6
+Glaxo | glaxo | | AWARDS | Benjamín Naishtat | Lali Espósito, Marcelo Subiotto, Esteban Bigliardi | Brazil-Argentina | 2026 | 107 | 122000.11 151115.0
+Godzilla Minus Zero | godzilla-minus-zero | | CULT | Takashi Yamazaki | Ryunosuke Kamiki, Minami Hamabe | Japan | 2026 | 135 | 141730.10 161730.8
+Going Home | compressed-distances | Compressed Distances | EXPERIMENTA | Kamal Aljafari | | Germany-France-Palestine | 2026 | 21 | 131820.3
+Gone to Earth | gone-to-earth | | SPECIALPRESENTATIONS | Michael Powell, Emeric Pressburger | Jennifer Jones, David Farrar, Cyril Cusack | UK | 1950 | 111 | 071800.0
+A Good Little Soldier | good-little-soldier | | DEBATE | Stéphane Brizé | Alba Rohrwacher, Vincent Lindon | France | 2026 | 101 | 162020.2 171745.4 171800.5
+La Gradiva | gradiva | | JOURNEY | Marine Atlan | Antonia Buresi, Colas Quignard, Suzanne Gerin | France-Italy | 2026 | 145 | 091745.11 111505.1
+A Grief Encounter | as-the-years-roll-by | As the Years Roll By | SHORTS | James Ashley McLaren | | Australia | 2026 | 12 | 101520.2 141535.6
+Grounded | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Chris Callus | | New Zealand | 2026 | 4 | 171000.0
+Guided Tour | tracing-islands | Tracing Islands | EXPERIMENTA | Alba Jaramillo | | France-Puerto Rico | 2026 | 15 | 152030.3
+Ha-Chan, Shake Your Booty! | ha-chan-shake-your-booty | | LOVE | Josef Kubota Wladyka | Rinko Kikuchi, Alberto Guerra, Alejandro Edda | USA | 2026 | 121 | 101430.9 112030.8
+Hanabi | hanabi | | EXPERIMENTA | Ana Vaz | | France-Brazil | 2026 | 105 | 162040.3 181730.6
+Hearing | hearing | | DARE | Lê Bảo | Nguyễn Quốc Tuấn, Ngọc Tản, Khánh Huyền | Vietnam-Singapore-Norway-France-Indonesia-Saudi Arabia-Cambodia-Thailand-Taiwan | 2026 | 128 | 142015.6 151700.4 151715.5
+Heysel 85 | heysel-85 | | THRILL | Teodora Ana Mihai | Violet Braeckman, Matteo Simoni, Josse De Pauw | Belgium-Netherlands-Germany | 2026 | 92 | 151815.6 171200.4 171215.5
+Hindsight | i-see-myself | I See Myself | SHORTS | Remi R.M. Moses | | UK | 2026 | 11 | 161815.9 172030.1
+The History of Concrete | history-of-concrete | | LAUGH | John Wilson | | USA | 2026 | 101 | 131815.8 152045.8 171545.1
+Hot Spot | hot-spot | | CULT | Agnieszka Smoczyńska | Andrzej Konopka, Noomi Rapace, Reika Kirishima | Poland-Greece | 2026 | 101 | 102100.8 121800.2 151330.1
+Hot Water | hot-water | | LAUGH | Ramzi Bashour | Lubna Azabal, Daniel Zolghadri, Dale Dickey | USA | 2026 | 97 | 071800.11 092055.6
+House of the Wind | house-of-the-wind | | LOVE | Bernard Auguste Kouemo Yanghu | Josette Kwanya, Moudjeu Pouadeu, Adrien Jolivet | Cameroon-France-Belgium-Benin-Saudi Arabia-Qatar | 2026 | 104 | 081830.1 092015.4 092030.5
+How To Hide It | call-your-bluff | Call Your Bluff | SHORTS | Ramla Ali, Richard A. Moore | | UK | 2025 | 13 | 082030.8 111245.1
+I Love Boosters | i-love-boosters | | GALA | Boots Riley | Keke Palmer, Demi Moore, Naomi Ackie, Taylour Paige, LaKeith Stanfield | USA | 2026 | 113 | 092115.7 151810.1 172045.9
+I Plant My Hand in the Garden | i-plant-my-hand-in-the-garden | | DARE | Hoda Taheri, Boris Hadžija | Hoda Taheri, Boris Hadzija, Branka Hadžija | Germany-Serbia-USA | 2026 | 83 | 102100.3 111625.6
+I See Buildings Fall Like Lightning | i-see-buildings-fall-like-lightning | | DEBATE | Clio Barnard | Anthony Boyle, Daryl McCormack, Jay Lycurgo, Lola Petticrew, Joe Cole | UK | 2026 | 110 | 162040.0 181130.1 181200.11
+I Was Kidnapped! | life-drawing | Life / Drawing | SHORTS | Dhananjay Barangule | | UK | 2026 | 7 | 091815.8 161230.2
+The Idiot(s) | idiots | | AWARDS | Małgorzata Szumowska, Michał Englert | Aimee Lou Wood, Johnny Flynn, Vicky Krieps | Germany-Poland | 2026 | 118 | 142030.0 162030.8 181230.3
+Imperium | imperium | | AWARDS | Sergei Loznitsa | | Germany-France-Italy-Lithuania | 2026 | 176 | 111435.0 131440.3
+In a Whisper | in-a-whisper | | LOVE | Leyla Bouzid | Eya Bouteraa, Hiam Abbass, Marion Barbeau | France-Tunisia | 2026 | 113 | 152030.2 161600.1
+In Dreaming | i-see-myself | I See Myself | SHORTS | Kristina Pringle | | UK | 2026 | 7 | 161815.9 172030.1
+In the Morning Sun | as-the-years-roll-by | As the Years Roll By | SHORTS | Serville Poblete | | Philippines-Canada | 2026 | 21 | 101520.2 141535.6
+In the Shadows | in-the-shadows | | JOURNEY | Anthony Wonke | Jasmine Jobson, Finn Cole, Gershwyn Eustache Jnr | UK | 2025 | 117 | 091815.9 101730.11 161445.11
+Inherit | inherit | | CULT | Banjong Pisanthanakun | Davika Hoorne, Baipor Thitiya Jirapornsilp, Sinjai Plengpanich | Thailand | 2026 | 129 | 092050.11 101110.8
+Ink | ink | | GALA | Danny Boyle | Jack O’Connell, Guy Pearce, Claire Foy | UK | 2026 | 118 | 122100.7 131100.7 181020.0
+Into the Forest | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Antonin Niclass | | Switzerland | 2026 | 10 | 171000.0
+Iron Boy | iron-boy | | FAMILY | Louis Clichy | Gary Clichy, Rod Paradot, Aurélie Vassort | France-Belgium | 2026 | 90 | 111015.0 161335.6
+Isabel | isabel | | JOURNEY | Gabe Klinger | Marina Person, Caio Horowicz, John Ortiz | Brazil-France | 2026 | 85 | 102030.11 111840.6
+It Gets Worse | it-gets-worse | | LAUGH | Leo Reich, Mounia Akl | Leo Reich, Emily Fairn, Olive Gray | UK | 2026 | 69 | 142100.8 181830.2
+It Will Happen Tonight | it-will-happen-tonight | | LOVE | Nanni Moretti | Louis Garrel, Jasmine Trinca, Hippolyte Girardot | Italy-France-Spain | 2026 | 103 | 151800.2 161515.0
+Iván & Hadoum | ivan-and-hadoum | | LOVE | Ian de la Rosa | Silver Chicón, Herminia Loh | Spain-Germany-Belgium | 2026 | 103 | 091815.6 111730.4 111745.5
+Josephine | josephine | | THRILL | Beth de Araújo | Mason Reeves, Channing Tatum, Gemma Chan | USA | 2026 | 119 | 132030.11 151400.0 171330.3
+Joy of Joys | joy-of-joys | | CREATE | Jonathan Glazer | Olivia Rodrigo, Arctic Monkeys | UK | 2026 | 38 | 111345.2
+Julián | julian | | FAMILY | Louise Bagnall | Knyght Darius Jack, Milcania Diaz-Rojas | Ireland-Luxembourg-Canada-Denmark | 2026 | 85 | 101050.0 141400.1
+Ken Russell’s The Devils | devils | | CULT | Ken Russell | Vanessa Redgrave, Oliver Reed, Gemma Jones | UK | 1971 | 114 | 092040.0 121800.8
+Ketticè | kettice | | AWARDS | Giovanni Tortorici | Salvatore Gallina, Rachele Testagrossa, Monica Bellucci | Italy | 2026 | 106 | 091800.0 101515.4 101530.5
+A Kind of Purity | call-your-bluff | Call Your Bluff | SHORTS | Theo Shivdasani | | UK | 2026 | 15 | 082030.8 111245.1
+Klara and the Sun | klara-and-the-sun | | GALA | Taika Waititi | Jenna Ortega, Amy Adams, Mia Tharia, Steve Buscemi, Natasha Lyonne | New Zealand-USA-UK | 2026 | 116 | 152045.7 161445.7 171520.9
+Koschka | koschka | | FAMILY | Bernd Sahling | Sebastian Erbes, Ilkay Yalcin, Bella Mortlock | Germany | 2026 | 74 | 181530.6
+Lady | lady | | AWARDS | Olive Nwosu | Jessica Gabriel’s Ujah, Amanda Oruh, Tinuade Jemiseye | UK-Nigeria | 2026 | 93 | 102100.2 131210.0
+Lali | lali | | LAUGH | Sarmad Sultan Khoosat | Mamya Shajaffar, Channan Hanif, Rasti Farooq | Pakistan | 2026 | 116 | 072035.3 081810.6
+Landscapes of Shame | tracing-islands | Tracing Islands | EXPERIMENTA | Patrick Hough | | Ireland-UK | 2026 | 30 | 152030.3
+The Last Day | last-day | | AWARDS | Rachel Rose | Alicia Vikander, Victoria Pedretti, Wagner Moura | USA | 2026 | 99 | 082015.11 091800.3
+Last Minute | i-see-myself | I See Myself | SHORTS | Sam Brain | | UK | 2026 | 5 | 161815.9 172030.1
+The Last Snow | land-of-hope-and-gory | Land of Hope and Gory | SHORTS | Rodolphe Bouquet-Populus | | France | 2025 | 19 | 072030.8 182000.6
+Laundreams | call-your-bluff | Call Your Bluff | SHORTS | Amber Gadd, Evie Ward-Drummond | | UK | 2026 | 15 | 082030.8 111245.1
+Lemonade | lemonade | | LOVE | Kim Bartley | Lewis Brophy, Carla Tous, Barry Keoghan | Ireland-UK | 2026 | 112 | 101230.11 131750.11 141300.6
+Let Them Be Seen | let-them-be-seen | | DARE | Nolitha Refilwe Mkulisi | | South Africa-Germany | 2026 | 75 | 161840.3 171250.6
+The Liberation | liberation | | THRILL | Guy Nattiv | Carrie Coon, Lily James, Bella Ramsey | USA | 2026 | 126 | 102000.9 111745.8
+Life of Jorge Luis Borges | life-of-jorge-luis-borges | | DARE | Mariano Llinás | Ernesto Montequín, Mariano Llinás, Laura Paredes | Argentina | 2026 | 343 | 101615.1 131600.12
+Listen | as-the-years-roll-by | As the Years Roll By | SHORTS | Taliesin Black-Brown | | USA | 2026 | 15 | 101520.2 141535.6
+Local Sensations | reconstruction-sites | Reconstruction Sites | EXPERIMENTA | Tulapop Saenjaroen | | Thailand | 2025 | 26 | 181515.3
+Lofsöng | games-lounge | Games Lounge | GAMES | Unrelated Studio | | | | |
+A Long Winter | long-winter | | GALA | Andrew Haigh | Fred Hechinger, Ebon Moss-Bachrach, Caitríona Balfe, Kit Connor, D’Pharaoh Woon-A-Tai | Canada-UK | 2026 | 117 | 142045.7 151215.7 171430.4 171445.5
+Look Back | look-back | | AWARDS | Hirokazu Koreeda | Natsuki Deguchi, Aju Makita | Japan | 2026 | 100 | 141745.0 161255.9 171740.8
+LouLou | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Hanneke van der Linden | | Netherlands-Belgium | 2026 | 11 | 171000.0
+Love Eternal | games-lounge | Games Lounge | GAMES | brlka | | | | |
+MaeBee: The Camping Trap | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Tim O’Sullivan, Craig Knowles | | UK-Ireland | 2026 | 8 | 171000.0
+Making Marie Antoinette | making-marie-antoinette | | CREATE | Eleanor Coppola | | USA | 2026 | 85 | 072045.0 081815.8 101745.4 101800.5
+Man Eating Pussy | land-of-hope-and-gory | Land of Hope and Gory | SHORTS | Emily Lawson | | Canada | 2026 | 12 | 072030.8 182000.6
+The Man I Love | man-i-love | | CREATE | Ira Sachs | Rami Malek, Tom Sturridge, Luther Ford | USA | 2026 | 95 | 081745.11 091200.0
+A Man of His Time | man-of-his-time | | DARE | Emmanuel Marre | Swann Arlaud, Sandrine Blancke, Mathieu Perotto | France-Belgium | 2026 | 158 | 101740.2 111405.4 111420.5
+Marie Madeleine | marie-madeleine | | DARE | Gessica Généus | Gessica Généus, Béonard Monteau, Edouard Baptiste | France-Haiti-Belgium-Canada | 2026 | 104 | 101245.4 101300.5 112045.6
+Mariinka | mariinka | | DEBATE | Pieter-Jan de Pue | | Belgium-Netherlands-Germany-Sweden | 2026 | 94 | 072045.4 072100.5 091555.1 171930.12
+Masao Adachi Takes a Passport Photo | compressed-distances | Compressed Distances | EXPERIMENTA | Kamal Aljafari | | Germany-Japan-France | 2026 | 27 | 131820.3
+Masc | masc | | AWARDS | Bertil Nilsson | Joshua Griffin, Tega Alexander, Ed White | UK | 2026 | 83 | 081830.9 112015.4 112030.5 181530.9
+The Match | match | | THRILL | Juan Cabral, Santiago Franco | Gary Lineker, Jorge Valdano | Argentina-Spain | 2026 | 91 | 082045.0 122100.9 142045.1
+Meatmylk | land-of-hope-and-gory | Land of Hope and Gory | SHORTS | Lucy Luscombe | | UK | 2026 | 15 | 072030.8 182000.6
+The Meltdown | meltdown | | THRILL | Manuela Martelli | Maya O’Rourke, Saskia Rosendahl, Maia Rae Domagala | Chile-USA-Spain-Mexico | 2026 | 118 | 132030.2 141700.11
+Micro Bangs | call-your-bluff | Call Your Bluff | SHORTS | Iris Breward | | UK | 2026 | 5 | 082030.8 111245.1
+A Mighty Adventure | mighty-adventure | | FAMILY | Toe Yuen | | Taiwan-Malaysia-Hong Kong (S.A.R of China) | 2026 | 77 | 101145.1
+Minotaur | minotaur | | GALA | Andrey Zvyagintsev | Dmitriy Mazurov, Iris Lebedeva, Boris Kudrin, Yuriy Zavalnyouk, Varvara Zmykova | France-Germany-Latvia | 2026 | 141 | 161745.7 172000.11 182000.3
+Misty Green | misty-green | | JOURNEY | Chris Rock | Rosalind Eleazar, Adam Driver, Daniel Kaluuya | USA | 2026 | 104 | 121830.9 181815.0
+Mixtape | games-lounge | Games Lounge | GAMES | Beethoven and Dinosaur | | | | |
+Mon Taxi | altered-states | Altered States | SHORTS | Meriem Sakrouhi | | Morocco-USA | 2026 | 8 | 131750.2 171450.6
+Moonglow | moonglow | | THRILL | Isabel Sandoval | Isabel Sandoval, Arjo Atayde | Philippines-Taiwan-Japan | 2026 | 108 | 151800.11 161550.6
+Mouse | mouse | | LOVE | Kelly O’Sullivan, Alex Thompson | Katherine Mallen Kupferer, Sophie Okonedo, Chloe Coleman | USA | 2026 | 120 | 142030.9 161445.8
+The Muscles Are Tense | cadences-of-resistance | Cadences of Resistance | EXPERIMENTA | Mahshid Mahboubifar | | Germany-Iran | 2026 | 16 | 171820.3
+Musk | musk | | DEBATE | Alex Gibney | | USA | 2026 | 235 | 091600.2 101405.8
+My Friend the Sun | my-friend-the-sun | | FAMILY | Alejandra Pérez González | Jason Kesser, Sienna Oquendo, Rayner Gabriel | Mexico-Brazil | 2026 | 82 | 171045.6
+My Notes on Mars | my-notes-on-mars | | AWARDS | Lili Horvát | Mackenzie Davis, Rupert Friend, Atanáz Babinchak | Hungary-Austria | 2026 | 108 | 161800.0 181430.11
+My Undesirable Friends: Part II – Exile | my-undesirable-friends-part-ii | | DEBATE | Julia Loktev | | USA | 2026 | 370 | 141200.3 151230.12
+My Wife Cries | my-wife-cries | | DARE | Angela Schanelec | Vladimir Vulević, Agathe Bonitzer, Birte Schöink | Germany-France | 2026 | 92 | 101610.6 121830.6
+Nightborn | nightborn | | CULT | Hanna Bergholm | Seidi Haarla, Rupert Grint | Finland-Lithuania-France-UK | 2026 | 92 | 092100.9 101840.8 141830.1
+No Archive Can Restore this Chorus of (Diasporic) Shame | cadences-of-resistance | Cadences of Resistance | EXPERIMENTA | Onyeka Igwe | | UK | 2026 | 15 | 171820.3
+No Good Men | no-good-men | | JOURNEY | Shahrbanoo Sadat | Shahrbanoo Sadat, Anwar Hashimi, Liam Hussaini | Germany-France-Norway-Denmark-Afghanistan | 2026 | 103 | 081800.2 101500.11
+O River, We Forced You to Chew Up Their Crops | chorus-that-carries | The Chorus that Carries | EXPERIMENTA | Philip Rizk | | Egypt | 2026 | 18 | 151815.3
+Once Upon a Time in Harlem | once-upon-a-time-in-harlem-film | | AWARDS | William Greaves, David Greaves | | USA | 2026 | 100 | 101500.3 111815.1
+Our Share of Sand | our-share-of-sand | | AWARDS | Shalini Adnani | Maya Mehta, Ellora Torchia, Zeeshan Ayyub | UK-Greece-India | 2026 | | 101715.9 111145.4 111200.5
+Pakeezah | pakeezah | | LOVE | Kamal Amrohi | Meena Kumari, Ashok Kumar, Raaj Kumar | India | 1972 | 153 | 181045.10
+Panelstory, or How a Housing Development is Born | panelstory | | DEBATE | Věra Chytilová | Lukáš Bech, Antonín Vaňha, Eva Kačírková | Czechoslovakia | 1979 | 100 | 161835.1
+Paper Plane | i-see-myself | I See Myself | SHORTS | Saoirse Ronan | | | | | 161815.9 172030.1
+Paper Tiger | paper-tiger | | GALA | James Gray | Scarlett Johansson, Adam Driver, Miles Teller | USA | 2026 | 114 | 102100.7 111045.7 171500.8
+Perfect Road | perfect-road | | JOURNEY | Adam Bonke, Christian Bonke | Max Schnell, Nina Ridder | Denmark | 2026 | 91 | 162030.4 162045.5 171720.6
+La Perra | perra | | JOURNEY | Dominga Sotomayor | Manuela Oyarzún, David Gaete, Selton Mello | Chile-Brazil | 2026 | 112 | 072030.11 081530.6
+Petrolheads | petrolheads | | LOVE | Emil Langballe | | Denmark | 2026 | 76 | 071830.4 071845.5 081620.1
+Piccolo Piccolo | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Marta Gennari | | France-Switzerland | 2025 | 9 | 171000.0
+A Place to Heal | place-to-heal | | JOURNEY | Cédric Kahn | Zoé Monpart, Malou Khebizi, Kenji Peyran | France | 2026 | 105 | 161745.2 182015.11
+PLEASE | life-drawing | Life / Drawing | SHORTS | Anna Mantzaris | | Sweden-France-Czechia-Norway-Finland | 2026 | 8 | 091815.8 161230.2
+Possible Love | possible-love | | GALA | Lee Chang-dong | Jeon Do-yeon, Sul Kyung-gu, Zo In-sung, Cho Yeo-jeong | South Korea | 2026 | 164 | 111715.7 141415.7 181200.9
+Prima Facie | prima-facie | | GALA | Susanna White | Cynthia Erivo, Daniel Ings, Toheeb Jimoh, Noma Dumezweni, Elliot Levey | UK-Australia | 2026 | 106 | 132115.7 162050.9 171100.7
+Primetime | primetime | | THRILL | Lance Oppenheim | Robert Pattinson, Merritt Wever, Anna Faris | USA | 2026 | 107 | 111800.10
+Prince | prince | | THRILL | Federico Borgia | Roberto Suárez, Maitina De Marco, Esteban Bigliardi | Uruguay-Argentina | 2026 | 94 | 081815.3 091330.1
+Queer Edward II | queer-edward-ii | | AWARDS | Theo Rollason | | UK | 2026 | 97 | 111800.2 132045.8 181900.12
+Ray Gunn | ray-gunn | | GALA | Brad Bird | Sam Rockwell, Scarlett Johansson, Tom Waits | USA | 2026 | 119 | 101415.7 171100.10
+Rebellion | rebellion | | DEBATE | Ken Fero, Tariq Mehmood | | UK | 2026 | 80 | 142100.3 151350.6
+Red the Ocean Around U | red-the-ocean-around-u | | IMMERSIVE | CROSSLUCID | | Germany | 2024 | |
+Revolutionaries Never Die | revolutionaries-never-die | | DARE | Mohanad Yaqubi | | Palestine-Belgium-Qatar | 2026 | 80 | 101830.6 122045.3
+Rogue Trooper | rogue-trooper | | CULT | Duncan Jones | Aneurin Barnard, Matt Berry, Hayley Atwell | UK | 2026 | 120 | 092030.2 122035.8 161200.11
+Rose | rose | | DARE | Markus Schleinzer | Sandra Hüller, Caro Braun, Marisa Growaldt | Austria-Germany | 2026 | 94 | 131800.0 151510.11
+RW-LO | reconstruction-sites | Reconstruction Sites | EXPERIMENTA | Martine Syms | | USA | 2026 | 21 | 181515.3
+The Secret Lives of Baba Segi’s Wives | secret-lives-of-baba-segis-wives | | JOURNEY | Daniel Oriahi | Omowunmi Dada, Iyabo Ojo, Mercy Aigbe, Bimbo Ademoye | Nigeria | 2026 | 119 | 141815.2 152030.6
+Shab-Nameh: Women of Iran’s Forgotten Left | shab-nameh-women-of-irans-forgotten-left | | SPECIALPRESENTATIONS | Maryam Tafakory | | UK-Iran | 2026 | 41 | 171615.3
+sitrep | compressed-distances | Compressed Distances | EXPERIMENTA | Blair Barnes | | USA | 2026 | 20 | 131820.3
+The Slightest Touch | slightest-touch | | LOVE | Rachel Fleit | | USA-Ireland | 2026 | 103 | 122045.0 151600.9
+Solwata | solwata | | IMMERSIVE | Felix Gaedtke, Gayatri Parameswaran | Mark Ruffalo | UK | 2026 | 25 |
+The Sorrows of Young Charlotte | land-of-hope-and-gory | Land of Hope and Gory | SHORTS | Shir Ariya | | UK | 2026 | 13 | 072030.8 182000.6
+Sphinx Alberta’s Smile | animated-shorts-for-younger-audiences | Animated Shorts For Younger Audiences | FAMILY | Dace Riduze | | Latvia-Estonia | 2026 | 16 | 171000.0
+The Station | station | | JOURNEY | Sara Ishaq | Manal Al-Mulaiki, Abeer Mohammed, Rashad Khaled | Yemen-Jordan-France-Germany-Netherlands-Norway-Qatar | 2026 | 112 | 082030.4 082045.5 102035.6
+Stolen Memories | altered-states | Altered States | SHORTS | Anders Davidsen | | Norway-Sweden | 2026 | 18 | 131750.2 171450.6
+The Story of Documentary Film (The 1990s) | story-of-documentary-film | | CREATE | Mark Cousins | | UK | 2026 | 120 | 111800.11 151210.8
+Sumo: Spirit Weighs Nothing | sumo-spirit-weighs-nothing | | AWARDS | Erik Shirai | | Japan-USA-UK-Denmark | 2026 | 99 | 131820.9 161800.4 161815.5
+Supporting Role | supporting-role | | CREATE | Ana Urushadze | Dato Bakhtadze, Nato Murvanidze, Lasha Mebuke | Georgia-Estonia-Turkey-Switzerland-USA | 2026 | 140 | 071730.3 091240.6
+Surprise Film | surprise-film | | EVENTS | | | | | | 162115.7
+Sweet Bitter Sweet | call-your-bluff | Call Your Bluff | SHORTS | Nicolee Tsin | | UK | 2025 | 9 | 082030.8 111245.1
+Sweet Milk Lake | sweet-milk-lake | | SPECIALPRESENTATIONS | Harvey Zielinski | Harvey Zielinski, Hunter Page-Lochard, Kieran Darcy-Smith | Australia | 2026 | 94 | 162015.11 171810.1
+Tender Loving Care | tender-loving-care | | GALA | Mike Leigh | Marion Bailey, Paul Jesson, Kate O’Flynn, Alice Bailey Johnson | UK | 2026 | 107 | 151800.7 171215.0 181250.4 181305.5
+the thought of the innermost being | reconstruction-sites | Reconstruction Sites | EXPERIMENTA | Jack Jeffreys | | UK | 2026 | 10 | 181515.3
+Title | reconstruction-sites | Reconstruction Sites | EXPERIMENTA | Laida Lertxundi | | France-UK-Spain | 2026 | 19 | 181515.3
+To Hold a Mountain | to-hold-a-mountain | | LOVE | Biljana Tutorov, Petar Glomazić | | Serbia-France-Montenegro-Slovenia | 2026 | 105 | 091820.1 101230.3
+To the North | altered-states | Altered States | SHORTS | Amer Nasser | | Palestine | 2026 | 8 | 131750.2 171450.6
+Too Many Beasts | too-many-beasts | | LAUGH | Sarah Arnold | Alexis Manenti, Ella Rumpf, Vincent Dedienne | France | 2026 | 95 | 141750.9 161225.8
+Treasure Island | i-see-myself | I See Myself | SHORTS | Miryam Charles | | Canada | 2026 | 18 | 161815.9 172030.1
+The Trip to the Northern Lights | trip-to-the-northern-lights | | SPECIALPRESENTATIONS | Michael Winterbottom | Steve Coogan, Rob Brydon | UK | 2026 | 68 | 172110.0
+Tropical Fractals | tropical-fractals | | EXPERIMENTA | Leonardo Pirondi | Ivo Müller, Valentina Rosset, André Bohn | Portugal-Brazil | 2026 | 72 | 121840.3
+Tutu | tutu | | JOURNEY | Sam Pollard | | UK-South Africa | 2026 | 101 | 101310.0 132100.9
+A Twist of Hate | call-your-bluff | Call Your Bluff | SHORTS | Maddy Shenai | | UK | 2026 | 9 | 082030.8 111245.1
+An Unimaginable Leap | tracing-islands | Tracing Islands | EXPERIMENTA | Hope Pearl Strickland | | UK-Jamaica | 2025 | 18 | 152030.3
+The Unknown | unknown | | CULT | Arthur Harari | Léa Seydoux, Niels Schneider | France | 2025 | 140 | 141945.11 151455.8
+Untitled Woman | as-the-years-roll-by | As the Years Roll By | SHORTS | Camille Summers-Valli | | UK | 2026 | 17 | 101520.2 141535.6
+Variations on a Theme | variations-on-a-theme | | LOVE | Devon Delmar, Jason Jacobs | Hettie Farmer | South Africa-Netherlands-Qatar | 2026 | 65 | 082100.1 101415.6
+VisionQuest | visionquest | | JOURNEY | Terry Matalas, Christopher J. Byrne, Gandja Monteiro, Vincenzo Natali | Paul Bettany, James Spader, Ruaridh Mollica | USA-UK | 2025 | 97 | 121800.10
+Wales Visitation | reconstruction-sites | Reconstruction Sites | EXPERIMENTA | Sadia Pineda Hameed | | UK | 2026 | 16 | 181515.3
+Water Body | water-body | | IMMERSIVE | Marshmallow Laser Feast – Barnaby Steel, Ersin Han Ersin, Robin McNicholas | Robert Macfarlane, James Bulley, Ludmilla Balkis | UK | 2026 | 30 |
+The Whisper of Sunlight | whisper-of-sunlight | | DEBATE | Siu-pong Wong | | Hong Kong (S.A.R of China) | 2026 | 84 | 112040.1 121620.6
+White Musk | altered-states | Altered States | SHORTS | Fatima Wardy | | Sudan-USA | 2026 | 18 | 131750.2 171450.6
+Wicker | wicker | | LAUGH | Alex Huston Fischer, Eleanor Wilson | Olivia Colman, Alexander Skarsgård, Elizabeth Debicki | USA | 2026 | 105 | 081745.0 101200.9 141500.0
+Wild Horse Nine | wild-horse-nine | | GALA | Martin McDonagh | John Malkovich, Sam Rockwell, Steve Buscemi, Tom Waits, Parker Posey | USA-UK-Chile | 2026 | 118 | 091800.7 101100.7 111500.8
+Wildwood | wildwood | | GALA | Travis Knight | Peyton Elizabeth Lee, Jacob Tremblay, Carey Mulligan, Mahershala Ali, Angela Bassett | USA | 2026 | 132 | 111345.7 171145.8
+Woman Unknown | woman-unknown | | AWARDS | May el-Toukhy | Mathilde Arcel, Carsten Bjørnlund, Marina Bouras | Denmark-Latvia-Sweden | 2026 | 126 | 171500.0 181730.11
+The World Came Flooding In | world-came-flooding-in | | IMMERSIVE | Isobel Knowles, Van Sowerwine | | Australia | 2025 | 25 |
+You dreamt you saw yourself but couldn’t see your face | chorus-that-carries | The Chorus that Carries | EXPERIMENTA | Shireen Seno | | Philippines-USA | 2026 | 7 | 151815.3
+Your Mother Your Mother Your Mother | your-mother-your-mother-your-mother | | GALA | Bassam Tariq | Mahershala Ali, John Cho, Laith Nakli, Adia, Giancarlo Esposito | USA-UK | 2026 | 111 | 171745.7 181500.8
+Zero Intention of Living Quietly | zero-intention-of-living-quietly | | CREATE | Edward Lovelace | | UK | 2026 | 87 | 111500.9 141230.0

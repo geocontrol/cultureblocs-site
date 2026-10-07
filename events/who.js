@@ -22,8 +22,9 @@ async function hiddenList() {
 async function main() {
   const uri = section.dataset.event;
   const went = section.dataset.went;
-  const firstOne = `<p class="ev-intro">No one has said they went yet.${went
-    ? ` Been? <a href="${esc(went)}">Be the first →</a>` : ''}</p>`;
+  const said = section.dataset.said || 'went';
+  const firstOne = `<p class="ev-intro">No one has said they ${esc(said)} yet.${went
+    ? ` ${said === 'went' ? 'Been?' : 'Seen it?'} <a href="${esc(went)}">Be the first →</a>` : ''}</p>`;
   try {
     const [hidden, links] = await Promise.all([hiddenList(), beadLinks(uri)]);
     const beads = await readBeads(links, { reader: makeReader(), hidden, eventUris: new Set([uri]) });
@@ -32,7 +33,7 @@ async function main() {
     items.innerHTML = `<p class="ev-intro">${people} ${people === 1 ? 'person' : 'people'} so far, newest first.</p>`
       + beadList(beads, () => ({ noteMax: 3000 }));
   } catch {
-    items.innerHTML = '<p class="ev-intro">Who went couldn’t be loaded just now — the open index may be busy. Try again later.</p>';
+    items.innerHTML = '<p class="ev-intro">That list couldn’t be loaded just now — the open index may be busy. Try again later.</p>';
   }
 }
 

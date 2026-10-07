@@ -11,7 +11,9 @@
  */
 import { listCollection, resolveActor } from './lib/atproto.js';
 import { esc, renderDirectory, sourceLine } from './lib/render.js';
+import { renderFilms } from './lib/films.js';
 import { merge, tzOf, zonedParts } from './lib/schedule.js';
+import { WENT, verbOf } from './lib/verb.js';
 import { beadLinks, hider, makeReader, peopleIn, pool, readBeads } from './lib/went.js';
 import { beadList, countLabel } from './lib/whowent.js';
 
@@ -21,6 +23,13 @@ const actor = root.dataset.actor;
 /* Set from the listing: the directory's time zone and today's date in it. */
 let tz;
 let today = null;
+let verb = WENT;
+/* 'films' for a festival: one entry per film, A–Z or by day (lib/films.js). */
+let layout = 'week';
+const q0 = new URLSearchParams(location.search);
+let view = q0.get('view') === 'days' ? 'days' : 'az';
+let findText = '';
+let section = q0.get('section') || '';
 
 let filter = new URLSearchParams(location.search).get('show') || 'all';
 
@@ -45,12 +54,55 @@ function applyFilter() {
   });
 }
 
+/* ---------- a festival: view, search, section ---------- */
+const fold = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+function applyFilms() {
+  const words = fold(findText).split(/\s+/).filter(Boolean);
+  root.querySelectorAll('.chip.view').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.view === view)));
+  root.querySelectorAll('.film-view').forEach(v => { v.hidden = v.dataset.view !== view; });
+  root.querySelectorAll('.jump[data-for]').forEach(j => { j.hidden = j.dataset.for !== view; });
+  let shown = 0;
+  const pane = root.querySelector(`.film-view[data-view="${view}"]`);
+  pane?.querySelectorAll('.ev').forEach(el => {
+    const ok = (!section || el.dataset.section === section)
+      && words.every(w => el.dataset.q.includes(w));
+    el.hidden = !ok;
+    if (ok) shown += 1;
+  });
+  pane?.querySelectorAll('section.day').forEach(sec => {
+    const any = [...sec.querySelectorAll('.ev')].some(ev => !ev.hidden);
+    sec.hidden = !any;
+    const link = root.querySelector(`.jump a[href="#${sec.id}"]`);
+    if (link) link.hidden = !any;
+  });
+  const count = root.querySelector('#film-count');
+  if (count) {
+    const what = view === 'days' ? 'screening' : 'film';
+    count.textContent = `${shown} ${what}${shown === 1 ? '' : 's'}${words.length || section ? ' match' : ''}`;
+  }
+}
+
+function keepInUrl() {
+  const q = new URLSearchParams(location.search);
+  if (view === 'days') q.set('view', 'days'); else q.delete('view');
+  if (section) q.set('section', section); else q.delete('section');
+  history.replaceState(null, '', `${location.pathname}${q.size ? `?${q}` : ''}${location.hash}`);
+}
+
+root.addEventListener('input', (e) => {
+  if (e.target.id === 'film-q') { findText = e.target.value; applyFilms(); }
+});
+root.addEventListener('change', (e) => {
+  if (e.target.id === 'film-section') { section = e.target.value; keepInUrl(); applyFilms(); }
+});
+
 /* ---------- who went ---------- */
 const counts = new Map();   // event uri -> people
 function applyCounts() {
   root.querySelectorAll('.went-count').forEach(el => {
     const n = counts.get(el.dataset.uri) || 0;
-    el.textContent = countLabel(n);
+    el.textContent = countLabel(n, verb);
   });
 }
 
@@ -69,7 +121,10 @@ async function whoWent(events) {
   const summary = document.getElementById('who-summary');
   if (!section) return;
   const hidden = await loadHidden();
-  const real = events.filter(e => e.category !== 'umbrella' && e.uri);
+  let real = events.filter(e => e.category !== 'umbrella' && e.uri);
+  // A festival has hundreds of films: only ask the index about ones that
+  // have started showing — nobody has said they saw the rest yet.
+  if (layout === 'films' && today) real = real.filter(e => String(e.record?.startsAt || '').slice(0, 10) <= today);
   const nameOf = new Map(real.map(e => [e.uri, e]));
   const linkSets = await pool(real, 5, (e) => beadLinks(e.uri));
   const all = [];
@@ -88,11 +143,11 @@ async function whoWent(events) {
   });
   if (!beads.length) return;
   const dir = root.dataset.dir;
-  summary.textContent = `${people} ${people === 1 ? 'person has' : 'people have'} said they went`
+  summary.textContent = `${people} ${people === 1 ? 'person has' : 'people have'} said they ${verb.past}`
     + ` — ${unique.length} ${unique.length === 1 ? 'bead' : 'beads'} so far. Newest first.`;
   items.innerHTML = beadList(beads, (b) => {
     const e = nameOf.get(b.value.subject.uri);
-    return { event: e ? { name: e.record.name, href: `/events/${dir}/${e.slug}/` } : null };
+    return { verb, event: e ? { name: e.record.name, href: `/events/${dir}/${e.slug}/` } : null };
   });
   section.hidden = false;
 }
@@ -100,13 +155,33 @@ async function whoWent(events) {
 function draw(events) {
   const open = new Set([...root.querySelectorAll('details[open]')]
     .map(d => d.closest('.ev')?.id).filter(Boolean));
-  root.innerHTML = renderDirectory({ events, today, dir: root.dataset.dir || null, tz });
+  const args = { events, today, dir: root.dataset.dir || null, tz, verb };
+  if (layout === 'films') {
+    const q = root.querySelector('#film-q')?.value;
+    root.innerHTML = renderFilms(args);
+    if (q) root.querySelector('#film-q').value = q;
+    const sel = root.querySelector('#film-section');
+    if (sel) sel.value = section;
+    open.forEach(id => document.getElementById(id)?.querySelector('details')?.setAttribute('open', ''));
+    applyFilms();
+    applyCounts();
+    return;
+  }
+  root.innerHTML = renderDirectory(args);
   open.forEach(id => document.getElementById(id)?.querySelector('details')?.setAttribute('open', ''));
   applyFilter();
   applyCounts();
 }
 
 root.addEventListener('click', async (e) => {
+  const viewChip = e.target.closest('.chip.view');
+  if (viewChip) {
+    view = viewChip.dataset.view;
+    keepInUrl();
+    applyFilms();
+    if (view === 'days' && today) document.getElementById(`d-${today}`)?.scrollIntoView();
+    return;
+  }
   const chip = e.target.closest('.chip');
   if (chip) {
     filter = chip.dataset.filter;
@@ -139,6 +214,8 @@ async function main() {
     return;
   }
   tz = tzOf(listing);
+  verb = verbOf(listing);
+  layout = listing.meta?.layout === 'films' ? 'films' : 'week';
   today = zonedParts(new Date().toISOString(), tz)?.date || null;
   const entries = listing.records || [];
   const total = entries.filter(e => e.category !== 'umbrella').length;

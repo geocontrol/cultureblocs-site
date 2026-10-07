@@ -4,6 +4,7 @@
  * they arrive over the network and the page must not care who wrote them.
  */
 import { FILTERS, arrange, dateLabel, dayLabel, statusOf } from './schedule.js';
+import { WENT } from './verb.js';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
@@ -43,7 +44,7 @@ export function eventLinks(ev, dir) {
   return { page, went };
 }
 
-function eventHtml({ ev, when }, idSuffix, dir) {
+function eventHtml({ ev, when }, idSuffix, dir, verb = WENT) {
   const r = ev.record || {};
   const { page, went } = eventLinks(ev, dir);
   const where = place(r);
@@ -59,7 +60,7 @@ function eventHtml({ ev, when }, idSuffix, dir) {
     <h3>${page ? `<a href="${esc(page)}">${esc(r.name)}</a>` : esc(r.name)}${status ? ` <span class="status prototype">${esc(status)}</span>` : ''}</h3>
     ${where ? `<p class="ev-where"><a href="${esc(where.map)}" rel="noopener">${esc(where.name)}</a></p>` : ''}
     <div class="ev-actions">
-    ${went ? `<a class="went-btn" href="${esc(went)}">I went</a>` : ''}
+    ${went ? `<a class="went-btn" href="${esc(went)}">${esc(verb.button)}</a>` : ''}
     <span class="went-count" data-uri="${esc(ev.uri)}"></span>
     <details>
       <summary>Details</summary>
@@ -74,10 +75,10 @@ function eventHtml({ ev, when }, idSuffix, dir) {
 </article>`;
 }
 
-function dayHtml(day, today, dir) {
+function dayHtml(day, today, dir, verb) {
   const isToday = day.date === today;
-  const timed = day.timed.map(x => eventHtml(x, `--${day.date}`, dir)).join('\n');
-  const open = day.open.map(x => eventHtml(x, `--${day.date}`, dir)).join('\n');
+  const timed = day.timed.map(x => eventHtml(x, `--${day.date}`, dir, verb)).join('\n');
+  const open = day.open.map(x => eventHtml(x, `--${day.date}`, dir, verb)).join('\n');
   return `<section class="day" id="d-${esc(day.date)}" data-day="${esc(day.date)}">
   <h2 class="sec">${esc(dayLabel(day.date))}${isToday ? ' <span class="status working">today</span>' : ''}</h2>
   ${timed ? `<div class="ev-group" data-kind="timed">${timed}</div>` : ''}
@@ -85,14 +86,14 @@ function dayHtml(day, today, dir) {
 </section>`;
 }
 
-function runningHtml(running, weekEnd, dir) {
+function runningHtml(running, weekEnd, dir, verb) {
   if (!running.length) return '';
   const items = running.map(({ ev, sh }) => {
     const closing = sh.endDate <= weekEnd;
     const when = closing
       ? `Closes ${dayLabel(sh.endDate)}`
       : `Until ${dateLabel(sh.endDate)}`;
-    return eventHtml({ ev, when }, '', dir);
+    return eventHtml({ ev, when }, '', dir, verb);
   });
   return `<section class="day" id="running" data-day="running">
   <h2 class="sec">On throughout the week</h2>
@@ -115,7 +116,7 @@ export function sourceLine({ actor, live, total, error }) {
 
 /* The whole schedule. `today` is a date string in the directory's zone
  * (`tz`, London by default) or null. */
-export function renderDirectory({ events, today = null, dir = null, tz }) {
+export function renderDirectory({ events, today = null, dir = null, tz, verb = WENT }) {
   const { days, running } = arrange(events, tz);
   const weekEnd = days.length ? days[days.length - 1].date : '';
   const groups = new Set(events.map(e => e.group).filter(Boolean));
@@ -131,6 +132,6 @@ export function renderDirectory({ events, today = null, dir = null, tz }) {
   <div class="chips" role="group" aria-label="Show">${filters}</div>
   <div class="jump" role="navigation" aria-label="Days">${jump}</div>
 </div>
-${days.map(d => dayHtml(d, today, dir)).join('\n')}
-${runningHtml(running, weekEnd, dir)}`;
+${days.map(d => dayHtml(d, today, dir, verb)).join('\n')}
+${runningHtml(running, weekEnd, dir, verb)}`;
 }

@@ -25,12 +25,70 @@ E = html.escape
 
 GROUP = {"fair": "fairs", "talk": "talks", "talks": "talks", "screening": "talks",
          "exhibition": "exhibitions", "commission": "exhibitions",
-         "gallery-day": "galleries", "party": "nights", "performance": "nights"}
+         "gallery-day": "galleries", "party": "nights", "performance": "nights",
+         "film": "films"}
 COLOUR = {"fairs": "#2B4BC7", "talks": "#C74E2B", "exhibitions": "#2E7A4F",
-          "galleries": "#C7860F", "nights": "#5B2BC7"}
+          "galleries": "#C7860F", "nights": "#5B2BC7", "films": "#0F6E6B"}
 KIND_WORD = {"fair": "Fair", "talk": "Talk", "talks": "Talks", "screening": "Film",
              "exhibition": "Exhibition", "commission": "Commission",
-             "gallery-day": "Gallery day", "party": "Night", "performance": "Performance"}
+             "gallery-day": "Gallery day", "party": "Night", "performance": "Performance",
+             "film": "Film"}
+
+
+def verb(meta):
+    """What the directory calls being there (events/lib/verb.js): went / saw."""
+    v = meta.get("verb") or {}
+    if isinstance(v, dict) and v.get("button") and v.get("past"):
+        return {"button": v["button"], "past": v["past"], "it": " it"}
+    return {"button": "I went", "past": "went", "it": ""}
+
+
+def kind_word(entry):
+    f = entry.get("film") or {}
+    if entry["category"] != "film":
+        return KIND_WORD.get(entry["category"], "Event")
+    if f.get("section") == "Expanded":
+        return "Game" if f.get("programme") == "Games Lounge" else "Immersive"
+    if f.get("programme"):
+        return "Short film"
+    return "Film"
+
+
+def credit_line(f):
+    parts = []
+    if f.get("directors"):
+        parts.append("Dir. " + ", ".join(f["directors"]))
+    made = " ".join(x for x in (f.get("country"), f.get("year")) if x)
+    if made:
+        parts.append(made)
+    if f.get("runtime"):
+        parts.append(f"{f['runtime']}min")
+    return " · ".join(parts)
+
+
+def screenings_html(entry):
+    shows = entry.get("screenings") or []
+    if not shows:
+        return ""
+    items = "".join(
+        f"<li><span class=\"sc-when\">{E(day(london(s['start']).date()))} {london(s['start']):%H:%M}</span> "
+        f"<span class=\"sc-where\">{E(s.get('venue', ''))}</span></li>" for s in shows)
+    head = "The programme screens" if (entry.get("film") or {}).get("programme") else "Screenings"
+    return f'<dt>{"Shows" if head == "Screenings" else "Programme"}</dt><dd><ul class="film-shows">{items}</ul></dd>'
+
+
+def film_facts(entry):
+    f = entry.get("film") or {}
+    rows = []
+    if f.get("programme"):
+        rows.append(("In", f"{f['programme']}" + (f" · {f['section']}" if f.get("section") else "")))
+    elif f.get("section"):
+        rows.append(("Strand", f["section"]))
+    if credit_line(f):
+        rows.append(("Film", credit_line(f)))
+    if f.get("cast"):
+        rows.append(("With", f["cast"]))
+    return "".join(f"<dt>{E(k)}</dt><dd>{E(v)}</dd>" for k, v in rows)
 
 NAV = """<nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
@@ -108,6 +166,8 @@ def page(entry, meta, d, has_image):
     group = GROUP.get(entry["category"], "fairs")
     desc_meta = " · ".join(x for x in (when + (f", {time}" if time else ""), venue) if x)
     went = f"/went/?dir={quote(d)}&event={quote(entry['atUri'], safe='')}"
+    v = verb(meta)
+    film = entry["category"] == "film"
     image = f"{url}og.png" if has_image else f"{SITE}/events/{d}/og.png"
     links = " · ".join(
         f'<a href="{E(safe(u["uri"]))}" rel="noopener">{E(u.get("name") or u["uri"])}</a>'
@@ -142,23 +202,24 @@ def page(entry, meta, d, has_image):
 <main>
   <p class="ev-meta"><a href="/events/">Events</a> / <a href="/events/{E(d)}/">{E(meta["name"])}</a></p>
   <article class="event-page ev-{group}">
-    <p class="ev-kind">{E(KIND_WORD.get(entry["category"], "Event"))}{f' · <span class="status prototype">{E(flag)}</span>' if flag else ''}</p>
+    <p class="ev-kind">{E(kind_word(entry))}{f' · <span class="status prototype">{E(flag)}</span>' if flag else ''}</p>
     <div class="hero"><h1>{E(name)}</h1></div>
     <dl class="ev-facts">
-      <dt>When</dt><dd>{E(when)}{f"<br>{E(time)}" if time else ""}</dd>
-      {f"<dt>Where</dt><dd>{map_link}</dd>" if address else ""}
+      {film_facts(entry) if film else ""}
+      {screenings_html(entry) if film and entry.get("screenings") else f'<dt>When</dt><dd>{E(when)}{f"<br>{E(time)}" if time else ""}</dd>'}
+      {f"<dt>Where</dt><dd>{map_link}</dd>" if address and not entry.get("screenings") else ""}
     </dl>
-    <p><a class="cta" href="{E(went)}">I went</a></p>
-    <p class="ev-intro">Been? Say so in a bead of your own — a small note kept in
-    your Atmosphere account (Bluesky, Blacksky…), pointing at this event.</p>
+    <p><a class="cta" href="{E(went)}">{E(v["button"])}</a></p>
+    <p class="ev-intro">{"Seen it?" if film else "Been?"} Say so in a bead of your own — a small note kept in
+    your Atmosphere account (Bluesky, Blacksky…), pointing at this {"film" if film else "event"}.</p>
     {f'<section><h2 class="sec">About</h2><p class="ev-desc">{E(rec["description"])}</p></section>' if rec.get("description") else ""}
     {f'<p class="ev-links">{links}</p>' if links else ""}
-    <section id="who-went" class="who" data-event="{E(entry["atUri"])}" data-went="{E(went)}">
-      <h2 class="sec">Who went</h2>
+    <section id="who-went" class="who" data-event="{E(entry["atUri"])}" data-went="{E(went)}" data-said="{E(v["past"] + v["it"])}">
+      <h2 class="sec">Who {E(v["past"])}{E(v["it"])}</h2>
       <div id="who-items"><p class="ev-intro">Looking for beads…</p></div>
     </section>
     <section>
-      <h2 class="sec">This event as a record</h2>
+      <h2 class="sec">This {"film" if film else "event"} as a record</h2>
       <p class="ev-ref">Published as an open calendar record by
       <code>@{E(meta["repo"])}</code>. Reference it from anything you write:<br>
       <code>{E(entry["atUri"])}</code></p>
@@ -278,7 +339,9 @@ def main():
             when, time = when_lines(e["record"])
             venue, _ = location(e["record"])
             sub = " · ".join(x for x in (when + (f", {time}" if time else ""), venue) if x)
-            card(out / "og.png", e["record"]["name"], sub, f"{meta['name']}  ·  I went",
+            if e["category"] == "film" and credit_line(e.get("film") or {}):
+                sub = credit_line(e["film"])
+            card(out / "og.png", e["record"]["name"], sub, f"{meta['name']}  ·  {verb(meta)['button']}",
                  COLOUR[GROUP.get(e["category"], "fairs")])
         has_image = (out / "og.png").exists()
         (out / "index.html").write_text(page(e, meta, a.dir, has_image), encoding="utf-8")
