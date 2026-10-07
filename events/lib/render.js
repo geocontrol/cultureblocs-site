@@ -44,7 +44,7 @@ export function eventLinks(ev, dir) {
   return { page, went };
 }
 
-function eventHtml({ ev, when }, idSuffix, dir, verb = WENT) {
+export function eventHtml({ ev, when }, idSuffix, dir, verb = WENT) {
   const r = ev.record || {};
   const { page, went } = eventLinks(ev, dir);
   const where = place(r);

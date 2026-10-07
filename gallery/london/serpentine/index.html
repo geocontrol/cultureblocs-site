@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serpentine Galleries — CultureBlocs</title>
+<meta name="description" content="An independent demonstration listing of what's on at the Serpentine in Kensington Gardens — exhibitions, the Pavilion, talks and Park Nights — published as open ATProto calendar records you can point a bead at.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.cultureblocs.com/gallery/london/serpentine/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CultureBlocs">
+<meta property="og:title" content="Serpentine Galleries, as records">
+<meta property="og:description" content="Exhibitions, the Pavilion, talks and Park Nights at the Serpentine — open calendar records, and a place to say you went.">
+<meta property="og:url" content="https://www.cultureblocs.com/gallery/london/serpentine/">
+<meta property="og:image" content="https://www.cultureblocs.com/events/serpentine-galleries/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/events/events.css">
+<style>
+  .venues{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:0 0 2rem}
+  .venue{border-left:3px solid var(--read);padding:.2rem 0 .2rem .9rem}
+  .venue h3{font:600 1rem var(--disp);margin:0 0 .2rem}
+  .venue p{margin:.1rem 0;font-size:.9rem}
+  .venue .hrs{font:.78rem var(--mono);color:var(--faint)}
+  .venue code{font:.72rem var(--mono);color:var(--faint)}
+  #directory h3.gal-day{font:600 .7rem var(--disp);letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);margin:1.2rem 0 .4rem}
+</style>
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <p class="ev-meta">Galleries / London / Serpentine</p>
+  <div class="hero"><h1>Serpentine.</h1>
+  <p class="lede">Two galleries and a Pavilion in Kensington Gardens — what’s
+  <b>on now</b>, what’s <b>opening</b>, and the <b>talks and nights</b> in between.
+  Every entry here is an open calendar record, so if you went you can say so in
+  a bead of your own that already knows where you were and what it was about.</p></div>
+
+  <p class="ev-meta" id="source" role="status" aria-live="polite">Loading the programme…</p>
+
+  <noscript><p class="ev-intro">This page reads its events live from the AT
+  Protocol network and needs JavaScript to do that. The raw listing is
+  <a href="/events/serpentine-galleries/events.json">here as JSON</a>.</p></noscript>
+
+  <div id="directory" data-listing="/events/serpentine-galleries/events.json"
+       data-actor="cultureblocs.com" data-dir="serpentine-galleries"></div>
+
+  <section id="who-went" class="who" hidden>
+    <h2 class="sec">The season, as people lived it</h2>
+    <p class="ev-intro" id="who-summary"></p>
+    <div id="who-items"></div>
+    <p class="who-foot">Beads people have published to their own accounts pointing
+    at something here, found through <a href="https://constellation.microcosm.blue"
+    rel="noopener">Constellation</a>’s open index of the network. Edit or delete
+    yours and this follows.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Where</h2>
+    <div class="venues">
+      <div class="venue"><h3>Serpentine South</h3>
+        <p>Kensington Gardens, London W2 3XA</p>
+        <p class="hrs">Tue–Sun 10:00–18:00 · reopens 8 Oct</p>
+        <p><code>51.5047, −0.1750</code></p></div>
+      <div class="venue"><h3>Serpentine North</h3>
+        <p>West Carriage Drive, London W2 2AR</p>
+        <p class="hrs">Tue–Sun 10:00–18:00</p>
+        <p><code>51.5071, −0.1713</code></p></div>
+      <div class="venue"><h3>Serpentine Pavilion</h3>
+        <p>On the lawn of Serpentine South</p>
+        <p class="hrs">Daily 10:00–18:00 · until 25 Oct</p>
+        <p><code>51.5047, −0.1750</code></p></div>
+    </div>
+    <p class="ev-intro">Entry is free; Serpentine advises booking a free ticket.
+    Nearest Tube: Lancaster Gate or Knightsbridge.
+    <a href="https://www.serpentinegalleries.org/visit/" rel="noopener">Plan a visit on serpentinegalleries.org →</a></p>
+  </section>
+
+  <section>
+    <h2 class="sec">How this works — and how it should</h2>
+    <div class="cards">
+      <div class="card"><h3>Events are records</h3>
+        <p>Each exhibition, talk and night is a <code>community.lexicon.calendar.event</code>
+        record. This page reads them live from the repository, so a correction
+        shows here without a site deploy.</p>
+        <div class="links"><a href="/events/serpentine-galleries/events.json">the listing →</a></div></div>
+      <div class="card"><h3>Your visit is yours</h3>
+        <p>Press <b>I went</b> and a <em>visit</em> bead is written to your own
+        Atmosphere account (Bluesky, Blacksky…) pointing at the event. The memory
+        stays with you; the event is just what it points at.</p>
+        <div class="links"><a href="/howto.html#bead">write a bead →</a></div></div>
+      <div class="card"><h3>Beads that know where they are</h3>
+        <p>Alongside each record the listing carries the venue’s address and
+        coordinates, the exhibition a talk belongs to, the people involved and
+        the kind of bead to suggest — what a totem or Pocket Totem needs to mint
+        a bead with its context already filled in.</p></div>
+      <div class="card"><h3>Better from the gallery</h3>
+        <p>This is a demonstration made by CultureBlocs. The right publisher is the
+        gallery: post these records from its own account, link “I went” from its
+        own pages, and every visitor’s bead points at the source. Nothing here
+        needs a CultureBlocs server.</p></div>
+      <div class="card"><h3>Independent</h3>
+        <p>An unofficial listing compiled from serpentinegalleries.org on
+        7 October 2026. It is not affiliated with or endorsed by Serpentine.
+        Times change — check before you travel.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+<script type="module" src="/events/events.js"></script>
+</body>
+</html>

@@ -102,6 +102,22 @@ from its first screening to the end of its last; a short carries its
 programme's screenings. The festival's source facts are in
 tools/events/lff_2026_source.txt — edit that, then rebuild.
 
+A gallery is a third shape: meta.layout "gallery" draws On now / Opening soon /
+Talks & events / Recently (events/lib/gallery.js) instead of day by day. The
+Serpentine's page is unlisted at /gallery/london/serpentine/ (meta.home) — not in
+the nav or on events/index.html — while its data and per-event pages stay in
+events/serpentine-galleries/ so "I went", My week and publishing work unchanged;
+/events/serpentine-galleries/ redirects to the gallery page.
+
+    python3 tools/events/build_serpentine_events.py  # Serpentine listing
+    python3 tools/events/publish_frieze_events.py --file events/serpentine-galleries/events.json
+    python3 tools/events/build_event_pages.py --dir serpentine-galleries
+
+Its listing also carries what a bead-minting app needs beside each record —
+meta.venues (address, coordinates, hours), each entry's venue, beadKind, `about`
+(the exhibition a talk belongs to) and people — plus meta.venueProfile, the
+com.cultureblocs.venue.profile a gallery could publish from its own account.
+
 What a directory calls being there is meta.verb ({"button": "I saw",
 "past": "saw"}); without it, "I went". The button, the composer, the default
 post, the counts and the event pages all follow it (events/lib/verb.js).

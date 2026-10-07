@@ -12,6 +12,7 @@
 import { listCollection, resolveActor } from './lib/atproto.js';
 import { esc, renderDirectory, sourceLine } from './lib/render.js';
 import { renderFilms } from './lib/films.js';
+import { renderGallery } from './lib/gallery.js';
 import { merge, tzOf, zonedParts } from './lib/schedule.js';
 import { WENT, verbOf } from './lib/verb.js';
 import { beadLinks, hider, makeReader, peopleIn, pool, readBeads } from './lib/went.js';
@@ -24,7 +25,8 @@ const actor = root.dataset.actor;
 let tz;
 let today = null;
 let verb = WENT;
-/* 'films' for a festival: one entry per film, A–Z or by day (lib/films.js). */
+/* 'films' for a festival: one entry per film, A–Z or by day (lib/films.js);
+ * 'gallery' for a venue's programme: on now / soon / talks (lib/gallery.js). */
 let layout = 'week';
 const q0 = new URLSearchParams(location.search);
 let view = q0.get('view') === 'days' ? 'days' : 'az';
@@ -167,7 +169,7 @@ function draw(events) {
     applyCounts();
     return;
   }
-  root.innerHTML = renderDirectory(args);
+  root.innerHTML = layout === 'gallery' ? renderGallery(args) : renderDirectory(args);
   open.forEach(id => document.getElementById(id)?.querySelector('details')?.setAttribute('open', ''));
   applyFilter();
   applyCounts();
@@ -215,7 +217,7 @@ async function main() {
   }
   tz = tzOf(listing);
   verb = verbOf(listing);
-  layout = listing.meta?.layout === 'films' ? 'films' : 'week';
+  layout = ['films', 'gallery'].includes(listing.meta?.layout) ? listing.meta.layout : 'week';
   today = zonedParts(new Date().toISOString(), tz)?.date || null;
   const entries = listing.records || [];
   const total = entries.filter(e => e.category !== 'umbrella').length;

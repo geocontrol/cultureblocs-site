@@ -157,6 +157,14 @@ def safe(u):
     return u if re.match(r"^https?://", str(u or "")) else None
 
 
+def crumbs(meta, d):
+    """Back to the directory. A directory with its own home (meta.home, e.g. a
+    gallery at /gallery/london/serpentine/) isn't under /events/, so no Events crumb."""
+    if meta.get("home"):
+        return f'<a href="{E(meta["home"])}">{E(meta["name"])}</a>'
+    return f'<a href="/events/">Events</a> / <a href="/events/{E(d)}/">{E(meta["name"])}</a>'
+
+
 def page(entry, meta, d, has_image):
     rec = entry["record"]
     name = rec["name"]
@@ -200,7 +208,7 @@ def page(entry, meta, d, has_image):
 <body>
 {NAV}
 <main>
-  <p class="ev-meta"><a href="/events/">Events</a> / <a href="/events/{E(d)}/">{E(meta["name"])}</a></p>
+  <p class="ev-meta">{crumbs(meta, d)}</p>
   <article class="event-page ev-{group}">
     <p class="ev-kind">{E(kind_word(entry))}{f' · <span class="status prototype">{E(flag)}</span>' if flag else ''}</p>
     <div class="hero"><h1>{E(name)}</h1></div>
@@ -347,7 +355,7 @@ def main():
         (out / "index.html").write_text(page(e, meta, a.dir, has_image), encoding="utf-8")
     if images:
         card(base / "og.png", meta["name"], meta.get("cardLine") or "Fairs, talks, gallery days and exhibitions, day by day",
-             "cultureblocs.com/events", "#2B4BC7")
+             "cultureblocs.com" + (meta.get("home") or "/events").rstrip("/"), "#2B4BC7")
 
     # A slug that is no longer in the listing is a page that should go.
     for child in base.iterdir():
