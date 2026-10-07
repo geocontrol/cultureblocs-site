@@ -47,7 +47,8 @@
           }
         ]
       },
-      "notes": "Unofficial umbrella record; not published by Art Basel."
+      "notes": "Unofficial umbrella record; not published by Art Basel.",
+      "cid": "bafyreielo3g6sryevjvbuu7dl6e45bv3xavh3qbed7fcanin4byaco53dy"
     },
     {
       "slug": "art-basel-paris-2026",
@@ -89,7 +90,8 @@
           }
         ]
       },
-      "notes": "Oh La La! 2026 lead reported as Philippine Leroy-Beaulieu (Ocula, The Art Newspaper) but not yet named by Art Basel — left out. The 2025 names (Loïc Prigent, Edward Enninful) do not apply to 2026."
+      "notes": "Oh La La! 2026 lead reported as Philippine Leroy-Beaulieu (Ocula, The Art Newspaper) but not yet named by Art Basel — left out. The 2025 names (Loïc Prigent, Edward Enninful) do not apply to 2026.",
+      "cid": "bafyreif3ftlqbxpv2b5y4dsxj2p65hgww3uy5eqkeykddlvjj2ai4mbsuq"
     },
     {
       "slug": "art-basel-paris-conversations-2026",
@@ -127,7 +129,8 @@
           }
         ]
       },
-      "notes": "Venue and free access from the official press release. The Thu 22–Sat 24 days and session names come from secondary sources only and disagree with each other (e.g. a Louvre panel's speakers), so no sessions are listed yet. Update when artbasel.com publishes the programme."
+      "notes": "Venue and free access from the official press release. The Thu 22–Sat 24 days and session names come from secondary sources only and disagree with each other (e.g. a Louvre panel's speakers), so no sessions are listed yet. Update when artbasel.com publishes the programme.",
+      "cid": "bafyreidzguouyiia3i6vut2ac7saggipbzz6y3xkm7jm5gbswndgsj2k2e"
     },
     {
       "slug": "paris-internationale-2026",
@@ -164,7 +167,8 @@
           }
         ]
       },
-      "notes": "Daily hours not published. Admission conflicts on the official site: the press page says free and open to all, the info page says accreditation only. Postcode 75010 inferred from the street address."
+      "notes": "Daily hours not published. Admission conflicts on the official site: the press page says free and open to all, the info page says accreditation only. Postcode 75010 inferred from the street address.",
+      "cid": "bafyreico66bfujim3ylyrlvpcmcyd4bofdwsvbekve3vddnj6sbx2jemwa"
     },
     {
       "slug": "asia-now-2026",
@@ -200,7 +204,8 @@
           }
         ]
       },
-      "notes": "Some listings give 22–26 October; the fair's own site gives 20–24, used here."
+      "notes": "Some listings give 22–26 October; the fair's own site gives 20–24, used here.",
+      "cid": "bafyreid3e3o6kud7sd2crhx55jsrpym4xx2foua5uohgllzji34tlf4sge"
     },
     {
       "slug": "design-miami-paris-2026",
@@ -236,7 +241,8 @@
           }
         ]
       },
-      "notes": "Some listings give 22–26 October; the fair's own site gives 20–25 with the 20th as preview, used here."
+      "notes": "Some listings give 22–26 October; the fair's own site gives 20–25 with the 20th as preview, used here.",
+      "cid": "bafyreig6zlljzmkglzetovh3ndumgooi3opbfpexbwb4xqv67qrcxf23sq"
     },
     {
       "slug": "akaa-2026",
@@ -272,7 +278,8 @@
             "name": "AKAA"
           }
         ]
-      }
+      },
+      "cid": "bafyreiehsmdpichrh6e57ngnbb3uifnwpjew6f7ni3ckrwjlnt643tpzi4"
     },
     {
       "slug": "offscreen-paris-2026",
@@ -307,7 +314,8 @@
             "name": "OFFSCREEN"
           }
         ]
-      }
+      },
+      "cid": "bafyreigkxfsdopcpule7ar34oe7266knjsaot7ktjeizxezfybn3tyuzja"
     },
     {
       "slug": "ceramic-art-fair-paris-2026",
@@ -342,7 +350,8 @@
             "name": "Ceramic Art Fair"
           }
         ]
-      }
+      },
+      "cid": "bafyreiaxjhhpgx2oah32z5invkslaftwemr2orn6ajiqn6wol3usfd3nsq"
     },
     {
       "slug": "outsider-paris-2026",
@@ -377,7 +386,8 @@
             "name": "Outsider' Paris"
           }
         ]
-      }
+      },
+      "cid": "bafyreie66zuic4pcoszhj2oj2xi2zn6fb4hwnyrg6zwvubfin6chdteg3a"
     },
     {
       "slug": "moderne-art-fair-2026",
@@ -412,7 +422,8 @@
             "name": "Moderne Art Fair"
           }
         ]
-      }
+      },
+      "cid": "bafyreibhhu6x3afp6qvvbunhphld7zvrdjgyw3se3hnr4cxmfwpw3ptsdi"
     },
     {
       "slug": "menart-fair-2026",
@@ -447,7 +458,8 @@
             "name": "Menart Fair"
           }
         ]
-      }
+      },
+      "cid": "bafyreiammcetkf6vkilwwqyuowljj7rinibltfqqzap3nnr4xt6hndiu54"
     },
     {
       "slug": "petit-palais-cosima-von-bonin",
@@ -483,7 +495,8 @@
           }
         ]
       },
-      "notes": "Not to be confused with the Petit Palais's own paid show, Prune Nourry's carte blanche, opening the same day."
+      "notes": "Not to be confused with the Petit Palais's own paid show, Prune Nourry's carte blanche, opening the same day.",
+      "cid": "bafyreia7ls3a4lvwcjrw5nro4l6plf45dvkglawoqi7efxn6dsl3zcsf3i"
     },
     {
       "slug": "place-clemenceau-robert-indiana-love-wall",
@@ -518,7 +531,8 @@
             "name": "Art Basel Public Program"
           }
         ]
-      }
+      },
+      "cid": "bafyreigyeli77snaocb7ol7qflt7l32g7hoypwgsj6xlzxokyddi6damlu"
     },
     {
       "slug": "square-jean-perrin-lionel-sabatte",
@@ -553,7 +567,8 @@
             "name": "Art Basel Public Program"
           }
         ]
-      }
+      },
+      "cid": "bafyreiam36ekx2viyou5qkhuzxtwzbjcw6lcl6e5yyxup6innzk3vhgqsq"
     },
     {
       "slug": "jardin-nouvelle-france-boz-deseo-garden",
@@ -588,7 +603,8 @@
             "name": "Art Basel Public Program"
           }
         ]
-      }
+      },
+      "cid": "bafyreic6msfocdj6otgziwtukwsxssvbmpfqtcjea2on4g3rb2urr2byay"
     },
     {
       "slug": "trocadero-tracey-emin",
@@ -624,7 +640,8 @@
           }
         ]
       },
-      "notes": "End is after the CEST→CET change (25 Oct), hence +01:00."
+      "notes": "End is after the CEST→CET change (25 Oct), hence +01:00.",
+      "cid": "bafyreibybfysvvdztr23yr5zathgjhzopl7x7t2xxtnrcqyxfzrxmcxq2e"
     },
     {
       "slug": "avenue-winston-churchill-sculpture-2026",
@@ -662,7 +679,8 @@
           }
         ]
       },
-      "notes": "2026 artist list not confirmed: the official page still shows the 2025 line-up. Press reports name works by Niki de Saint Phalle and Marcello Maloberti among others. Add names when artbasel.com updates."
+      "notes": "2026 artist list not confirmed: the official page still shows the 2025 line-up. Press reports name works by Niki de Saint Phalle and Marcello Maloberti among others. Add names when artbasel.com updates.",
+      "cid": "bafyreihwglon6llvycokp7rp733y7r5v55lqmm7s6nv6i3uzzagtmxsoq4"
     },
     {
       "slug": "palais-iena-miu-miu-alice-diop",
@@ -704,7 +722,8 @@
           }
         ]
       },
-      "notes": "Kept to what artbasel.com confirms (Alice Diop, Miu Miu, Palais d'Iéna). Dates 21–25 Oct are from press reports, as are the artists, performances and free entry — add once official. Opening hours not yet published."
+      "notes": "Kept to what artbasel.com confirms (Alice Diop, Miu Miu, Palais d'Iéna). Dates 21–25 Oct are from press reports, as are the artists, performances and free entry — add once official. Opening hours not yet published.",
+      "cid": "bafyreidurkichppbxv7s7faetipgfauwwgvxwl36ot44dr5qxmaipievru"
     },
     {
       "slug": "cite-architecture-kennedy-yanko",
@@ -741,7 +760,8 @@
           }
         ]
       },
-      "notes": "Hours and admission not given on the official pages; check the museum's site."
+      "notes": "Hours and admission not given on the official pages; check the museum's site.",
+      "cid": "bafyreicf3q7dmzbcw7tkukejml46r76osnys5tzii6l3pwlfcjw2ilhjl4"
     },
     {
       "slug": "grand-palais-cezanne-et-nous",
@@ -777,7 +797,8 @@
           }
         ]
       },
-      "notes": "Opening days conflict on grandpalais.fr (exhibition page says Tue–Sun; practical info lists no closed day)."
+      "notes": "Opening days conflict on grandpalais.fr (exhibition page says Tue–Sun; practical info lists no closed day).",
+      "cid": "bafyreic7gm3oi6eyzr73bm23oy2sb7bxllbda77u3xrbystza7skkqsiwu"
     },
     {
       "slug": "flv-gustave-fayet",
@@ -812,7 +833,8 @@
             "name": "Fondation Louis Vuitton"
           }
         ]
-      }
+      },
+      "cid": "bafyreic54ln4xfi2vyiqm2rv2byxidjr3qcz47fzdkgwun5jhxwwg6ldfu"
     },
     {
       "slug": "bourse-de-commerce-remember-me",
@@ -848,7 +870,8 @@
             "name": "Bourse de Commerce"
           }
         ]
-      }
+      },
+      "cid": "bafyreiejcldo3w6q5przioue6n3w567aax4pq7o7rx5nagdnuuhojptxqu"
     },
     {
       "slug": "picasso-kurt-schwitters",
@@ -883,7 +906,8 @@
             "name": "Musée Picasso"
           }
         ]
-      }
+      },
+      "cid": "bafyreigjp4ivaaqdjf47ybzvqp3db3lljkyjhqbh7l627xqpx4gz5np6im"
     },
     {
       "slug": "jeu-de-paume-stan-douglas",
@@ -919,7 +943,8 @@
           }
         ]
       },
-      "notes": "Official hours page incomplete; closed Mondays per secondary listings."
+      "notes": "Official hours page incomplete; closed Mondays per secondary listings.",
+      "cid": "bafyreie6lk44asoymsxn5ccncqx6qv7tbkuece56yygojalrgf3kkcbpsi"
     },
     {
       "slug": "mep-penn-fashion",
@@ -954,7 +979,8 @@
             "name": "MEP"
           }
         ]
-      }
+      },
+      "cid": "bafyreih3gawdmtgibfrogrl7sockzhlyxnzdtz4saz4i6xkjr2cm3m2myq"
     },
     {
       "slug": "palais-de-tokyo-toi-et-ta-bande",
@@ -990,7 +1016,8 @@
           }
         ]
       },
-      "notes": "Secondary source only (paris.fr); palaisdetokyo.com could not be read. Check before publishing."
+      "notes": "Secondary source only (paris.fr); palaisdetokyo.com could not be read. Check before publishing.",
+      "cid": "bafyreihqrgqf57nn2bou754sletcfzuc2c35kvawz3gjs4sgwugyandulu"
     },
     {
       "slug": "mam-kerry-james-marshall",
@@ -1025,7 +1052,8 @@
             "name": "Musée d'Art Moderne de Paris"
           }
         ]
-      }
+      },
+      "cid": "bafyreifdorhhwsyo4pqaxorg2x4atvzm7e7gn5huhocmjbnyqzjqsyzaqu"
     },
     {
       "slug": "mam-prix-marcel-duchamp-2026",
@@ -1060,7 +1088,8 @@
             "name": "Musée d'Art Moderne de Paris"
           }
         ]
-      }
+      },
+      "cid": "bafyreibvslqfvbmkgtvebxfeihcij562oi5wtjupbq3kwz4tisyi3autjm"
     },
     {
       "slug": "lafayette-anticipations-autumn-2026",
@@ -1096,7 +1125,8 @@
             "name": "Lafayette Anticipations"
           }
         ]
-      }
+      },
+      "cid": "bafyreiglo2ht46nejcwkv2eebrbkpn57ryvxdbl36ny47xvvv42rgfjywe"
     },
     {
       "slug": "fondation-cartier-ibrahim-mahama",
@@ -1131,7 +1161,8 @@
             "name": "Fondation Cartier"
           }
         ]
-      }
+      },
+      "cid": "bafyreicysmqichqr47w6snwgr4cc4m4hirmeqxb4dsvejtxdkm3t7concm"
     },
     {
       "slug": "pantheon-vies-minuscules",
@@ -1166,7 +1197,8 @@
             "name": "Centre Pompidou"
           }
         ]
-      }
+      },
+      "cid": "bafyreicau5qbh5mbxs3ep3an2jlcmuuicfgu2nkx5vgrus3lwjxfv33hvi"
     },
     {
       "slug": "orsay-jenny-holzer",
@@ -1202,7 +1234,8 @@
           }
         ]
       },
-      "notes": "Façade projections 18–22 Oct, 19:00–23:00, are from a secondary source and not listed separately."
+      "notes": "Façade projections 18–22 Oct, 19:00–23:00, are from a secondary source and not listed separately.",
+      "cid": "bafyreift3wyumszaioiugfiutxubhy5bwjzm37nzjrqel3n2dqvn7n5rdy"
     }
   ]
 }
