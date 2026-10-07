@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  HASHTAG, POST_MAX, buildBead, buildPost, covers, dayOptions, defaultPostText,
+  HASHTAG, POST_MAX, buildBead, buildPost, covers, dayOptions, defaultPostText, todayIn,
   findExisting, graphemes, hashtagFacets, kindFor, parseAtUri, scopesFor, validDirectory,
 } from '../lib/compose.js';
 
@@ -107,4 +107,15 @@ test('default kinds follow the directory category', () => {
   assert.equal(kindFor('talk'), 'performance');
   assert.equal(kindFor('screening'), 'screening');
   assert.equal(kindFor(undefined), 'visit');
+});
+
+test('day choices for a Paris event are Paris days', () => {
+  const abp = { name: 'Art Basel Paris 2026', startsAt: '2026-10-21T10:00:00+02:00', endsAt: '2026-10-25T19:00:00+01:00' };
+  assert.deepEqual(dayOptions(abp, '2026-10-20', 'Europe/Paris'), { status: 'future', opens: '2026-10-21' });
+  const sun = dayOptions(abp, '2026-10-25', 'Europe/Paris');
+  assert.equal(sun.mode, 'chips');
+  assert.deepEqual(sun.days.map(d => d.date), ['2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']);
+  // 23:30 in London on the 24th is already the 25th in Paris
+  assert.equal(todayIn('Europe/Paris', new Date('2026-10-24T22:30:00Z')), '2026-10-25');
+  assert.equal(todayIn('Europe/London', new Date('2026-10-24T22:30:00Z')), '2026-10-24');
 });

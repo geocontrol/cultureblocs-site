@@ -13,9 +13,9 @@ import { cleanHandle, getRecord, identify, listBeads, postsToBluesky, profileCar
 import {
   EVENT_NSID, BEAD_NSID, POST_NSID, KINDS, NOTE_MAX, POST_MAX, SITE,
   buildBead, buildPost, covers, dayOptions, defaultPostText, findExisting, graphemes,
-  kindFor, parseAtUri, scopesFor, todayInLondon, validDirectory,
+  kindFor, parseAtUri, scopesFor, todayIn, validDirectory,
 } from './lib/compose.js';
-import { dateLabel, dayLabel, groupOf, shape } from '../events/lib/schedule.js';
+import { dateLabel, dayLabel, groupOf, shape, tzOf } from '../events/lib/schedule.js';
 import { esc } from '../events/lib/render.js';
 
 const $ = (id) => document.getElementById(id);
@@ -69,7 +69,7 @@ async function loadContext(eventUri, dir) {
   if (!event) throw new Error('That event couldn’t be found. It may have been withdrawn.');
   const dirBase = dir ? `/events/${dir}/` : null;
   return {
-    event, entry, listing, dir,
+    event, entry, listing, dir, tz: tzOf(listing),
     pageUrl: entry ? `${dirBase}${entry.slug}/` : null,
     eventUrl: entry ? `${SITE}${dirBase}${entry.slug}/` : null,
     dirUrl: dirBase,
@@ -78,8 +78,8 @@ async function loadContext(eventUri, dir) {
   };
 }
 
-function rangeLabel(record) {
-  const sh = shape(record);
+function rangeLabel(record, tz) {
+  const sh = shape(record, tz);
   if (!sh) return '';
   if (sh.days === 1) return `${dayLabel(sh.start.date)}${sh.openStart ? '' : ` · ${sh.start.time}`}`;
   if (sh.running) return `${dateLabel(sh.start.date)} – ${dateLabel(sh.endDate)}`;
@@ -96,7 +96,7 @@ function renderEvent() {
   const r = event.value || {};
   const group = groupOf(entry?.category) || 'fairs';
   ui.card.innerHTML = `<article class="ev ev-${esc(group)}">
-    <div class="ev-when">${esc(rangeLabel(r))}</div>
+    <div class="ev-when">${esc(rangeLabel(r, st.ctx.tz))}</div>
     <div class="ev-body"><h3>${esc(r.name)}</h3>
       ${venueOf(r) ? `<p class="ev-where">${esc(venueOf(r))}</p>` : ''}
       ${pageUrl ? `<p class="ev-links"><a href="${esc(pageUrl)}">about this event →</a></p>` : ''}
@@ -110,7 +110,7 @@ function renderEvent() {
 
 /* ---------- the day ---------- */
 function renderDays(preferred) {
-  const opts = dayOptions(st.ctx.event.value, todayInLondon());
+  const opts = dayOptions(st.ctx.event.value, todayIn(st.ctx.tz), st.ctx.tz);
   if (opts.status === 'future') {
     say(`<h2>Not yet</h2><p>${esc(st.ctx.event.value.name)} opens on
       ${esc(dayLabel(opts.opens))}. Come back once you’ve been — this page will be

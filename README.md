@@ -87,6 +87,15 @@ Event directories:
     python3 tools/events/build_cards.py              # printable QR cards (pip install segno)
                                                      # -> /events/<dir>/cards/, 8 per A4 sheet
 
+    python3 tools/events/build_paris_events.py       # Paris Art Week listing
+    python3 tools/events/publish_frieze_events.py --file events/paris-art-week/events.json
+    python3 tools/events/build_event_pages.py --dir paris-art-week
+
+A directory's times are read in its own zone: meta.tz in events.json (an IANA
+name, e.g. "Europe/Paris"); without it, Europe/London. The page, "I went" and
+the per-event pages all follow it. Write each record's offset for its date —
+Paris is +02:00 until 03:00 on 25 Oct 2026 and +01:00 after (the build checks).
+
 Rebuilding the listing keeps DID URIs, and keeps CIDs for records that haven't
 changed. After editing an event: build, publish --apply, build_event_pages, commit.
 
