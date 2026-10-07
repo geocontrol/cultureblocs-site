@@ -73,7 +73,7 @@ async function loadContext(eventUri, dir) {
     event, entry, listing, dir, tz: tzOf(listing),
     pageUrl: entry ? `${dirBase}${entry.slug}/` : null,
     eventUrl: entry ? `${SITE}${dirBase}${entry.slug}/` : null,
-    dirUrl: dirBase,
+    dirUrl: listing?.meta?.home || dirBase,
     dirName: listing?.meta?.name || null,
     verb: verbOf(listing),
     tags: [listing?.meta?.tag].filter(Boolean),

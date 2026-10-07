@@ -105,6 +105,15 @@
       ]
     },
     {
+      "source": "/gallery/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data:; connect-src 'self' https:"
+        }
+      ]
+    },
+    {
       "source": "/events/(.*)/events.json",
       "headers": [
         {
@@ -228,6 +237,31 @@
     {
       "source": "/week",
       "destination": "/week/",
+      "permanent": false
+    },
+    {
+      "source": "/gallery/london/serpentine",
+      "destination": "/gallery/london/serpentine/",
+      "permanent": false
+    },
+    {
+      "source": "/events/serpentine-galleries",
+      "destination": "/gallery/london/serpentine/",
+      "permanent": false
+    },
+    {
+      "source": "/events/serpentine-galleries/",
+      "destination": "/gallery/london/serpentine/",
+      "permanent": false
+    },
+    {
+      "source": "/w/srp",
+      "destination": "/gallery/london/serpentine/",
+      "permanent": false
+    },
+    {
+      "source": "/w/srp/:key",
+      "destination": "/went/?dir=serpentine-galleries&e=:key",
       "permanent": false
     }
   ],

@@ -1,0 +1,682 @@
+{
+  "meta": {
+    "title": "Serpentine Galleries, London — CultureBlocs event dataset",
+    "name": "Serpentine Galleries",
+    "directory": "serpentine-galleries",
+    "home": "/gallery/london/serpentine/",
+    "layout": "gallery",
+    "tag": "serpentine-galleries",
+    "short": "srp",
+    "tz": "Europe/London",
+    "cardLine": "Exhibitions, the Pavilion, talks and Park Nights",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "generated": "2026-10-07",
+    "status": "draft — review flagged notes before publishing",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and for bead-minting apps, and is not published.",
+    "forMinting": "A minting app can take, per entry: the event's atUri (+cid once published) as the bead's subject; venues[entry.venue].geo as the bead's place (fuzz before publishing, as the bead lexicon requires); beadKind as the suggested kind; `about` to link a talk to its exhibition; and `people` as candidate refs.",
+    "timezone": "Times are Europe/London; BST (+01:00) until 02:00 on 25 Oct 2026, GMT (+00:00) after — the Pavilion's and Soto's last day, 25 October, is +00:00. Exhibitions run 10:00 on their first day to 18:00 on their last.",
+    "checked": "Checked against serpentinegalleries.org on 7 October 2026. Entries with `notes` have open questions.",
+    "omitted": "Ongoing projects without dates (Serpentine Podcast, Future Art Ecosystems, Legal Lab, Changing Play, the fellowships, the How We Hold book) and Danielle Brathwaite-Shirley's online game I DIDNT REALISE YOU THOUGHT LIKE THAT (THE DELUSION) — these are works to read, listen to or play, not dated events, and belong in a bead's refs rather than as calendar records. The Pavilion architects' talk (5 June) is past.",
+    "unofficial": "Independent listing by CultureBlocs, made as a demonstration; not affiliated with or endorsed by Serpentine. The aim is for a venue to publish these records from its own account.",
+    "venues": {
+      "south": {
+        "name": "Serpentine South",
+        "address": "Kensington Gardens, London W2 3XA",
+        "geo": {
+          "lat": 51.504691,
+          "lng": -0.175012,
+          "precision": "exact"
+        },
+        "hours": "Tue–Sun 10:00–18:00 (reopens 8 October 2026 after installation)"
+      },
+      "north": {
+        "name": "Serpentine North",
+        "address": "West Carriage Drive, Kensington Gardens, London W2 2AR",
+        "geo": {
+          "lat": 51.507065,
+          "lng": -0.171279,
+          "precision": "exact"
+        },
+        "hours": "Tue–Sun 10:00–18:00"
+      },
+      "pavilion": {
+        "name": "Serpentine Pavilion",
+        "address": "Kensington Gardens (lawn of Serpentine South), London W2 3XA",
+        "geo": {
+          "lat": 51.504691,
+          "lng": -0.175012,
+          "precision": "100m"
+        },
+        "hours": "Daily 10:00–18:00 until 25 October 2026"
+      }
+    },
+    "venueProfile": {
+      "_about": "What Serpentine could publish once from its own account (rkey self) so that its events, and beads about them, have an organisation to point at.",
+      "$type": "com.cultureblocs.venue.profile",
+      "name": "Serpentine",
+      "description": "Two galleries and an annual architecture Pavilion in Kensington Gardens, London. Free to visit.",
+      "location": {
+        "$type": "community.lexicon.location.address",
+        "country": "GB",
+        "locality": "London",
+        "name": "Serpentine",
+        "street": "Kensington Gardens",
+        "postalCode": "W2 3XA"
+      },
+      "accessibility": "The galleries have full disability access and facilities. Saturday Talks offer BSL interpretation on request.",
+      "links": [
+        {
+          "uri": "https://www.serpentinegalleries.org",
+          "title": "Serpentine"
+        },
+        {
+          "uri": "https://www.serpentinegalleries.org/whats-on/",
+          "title": "What's on"
+        },
+        {
+          "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list",
+          "title": "Tickets"
+        }
+      ],
+      "createdAt": "2026-10-07T22:00:00.000Z"
+    },
+    "count": 10,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
+  },
+  "records": [
+    {
+      "slug": "amar-kanwar",
+      "category": "exhibition",
+      "rkey": "3mxcwycny22mq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwycny22mq",
+      "venue": "north",
+      "beadKind": "visit",
+      "people": [
+        {
+          "name": "Amar Kanwar",
+          "role": "artist"
+        },
+        {
+          "name": "Chris Bayley",
+          "role": "curator"
+        },
+        {
+          "name": "Kit Gurnos",
+          "role": "assistant curator"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/amar-kanwar-exhibition/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Amar Kanwar",
+        "description": "A major solo exhibition by the New Delhi-based artist and filmmaker, staged as a single site-specific installation of new and earlier films that turns Serpentine North into a slow, dark, meditative space. Kanwar's films, made over three decades, move between documentary, travelogue and visual essay and return to the after-lives of decolonisation and the 1947 Partition. Includes Such a Morning (2017), The Peacock's Graveyard (2023) and The Charcoal Man (2026), a new seven-screen work premiering here — about three hours of film in all, to watch whole or wander through. Very low light, with moments of full darkness. Free; booking advised. Tue–Sun 10:00–18:00.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-09-23T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-31T18:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine North",
+            "street": "West Carriage Drive, Kensington Gardens",
+            "postalCode": "W2 2AR"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine North",
+            "latitude": "51.507065",
+            "longitude": "-0.171279"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/amar-kanwar-exhibition/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list",
+            "name": "Book (free)"
+          }
+        ]
+      },
+      "price": "Free"
+    },
+    {
+      "slug": "justin-caguiat-change-ringing",
+      "category": "exhibition",
+      "rkey": "3mxcwycnyzcmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwycnyzcmq",
+      "venue": "south",
+      "beadKind": "visit",
+      "people": [
+        {
+          "name": "Justin Caguiat",
+          "role": "artist"
+        },
+        {
+          "name": "Lily Pickett",
+          "role": "composer"
+        },
+        {
+          "name": "Hans Ulrich Obrist",
+          "role": "curator"
+        },
+        {
+          "name": "Natalia Grabowska",
+          "role": "curator"
+        },
+        {
+          "name": "Alexa Chow",
+          "role": "assistant curator"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/justin-caguiat-change-ringing/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Justin Caguiat: Change Ringing",
+        "description": "Justin Caguiat's first major UK exhibition: a site-responsive installation across painting, sculpture, printmaking, sound and film. New thermochromic paintings shift with heat and light; bronze bells cast as flowers and seeds ring in changing sequences to a score by Lily Pickett drawn from English change ringing, with the gallery walls gathering and carrying the sound. Free; booking advised.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-10-08T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-10T18:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine South",
+            "street": "Kensington Gardens",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine South",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/justin-caguiat-change-ringing/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list/justin-caguiat-exhibition",
+            "name": "Book (free)"
+          }
+        ]
+      },
+      "price": "Free",
+      "notes": "Serpentine South gallery hours aren't printed on the exhibition page; assumed Tue–Sun 10:00–18:00 like Serpentine North."
+    },
+    {
+      "slug": "serpentine-pavilion-2026-lanza-atelier",
+      "category": "commission",
+      "rkey": "3mxcwycnzykmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwycnzykmq",
+      "venue": "pavilion",
+      "beadKind": "visit",
+      "people": [
+        {
+          "name": "LANZA atelier",
+          "role": "architect"
+        },
+        {
+          "name": "Isabel Abascal",
+          "role": "architect"
+        },
+        {
+          "name": "Alessandro Arienzo",
+          "role": "architect"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/serpentine-pavilion-2026-by-isabel-abascal-and-alessandro-arienzo-lanza-atelier/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Serpentine Pavilion 2026: a serpentine, by LANZA atelier",
+        "description": "This year's Pavilion, by Mexico City studio LANZA atelier (Isabel Abascal and Alessandro Arienzo). A curving brick crinkle-crankle wall forms its south side, nodding to English garden walls, the brick of Serpentine South and the nearby lake; brick columns like a grove of trees hold up a translucent roof. Free, daily 10:00–18:00 (closing 17:00 on 7 October). Last days.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-06-06T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine Pavilion",
+            "street": "Kensington Gardens (lawn of Serpentine South)",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine Pavilion",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/serpentine-pavilion-2026-by-isabel-abascal-and-alessandro-arienzo-lanza-atelier/",
+            "name": "Serpentine"
+          }
+        ]
+      },
+      "price": "Free"
+    },
+    {
+      "slug": "jesus-rafael-soto-penetrable-bbl-jaune",
+      "category": "commission",
+      "rkey": "3mxcwyco2xsmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwyco2xsmq",
+      "venue": "south",
+      "beadKind": "visit",
+      "people": [
+        {
+          "name": "Jesús Rafael Soto",
+          "role": "artist"
+        },
+        {
+          "name": "Lizzie Carey-Thomas",
+          "role": "curator"
+        },
+        {
+          "name": "Alexa Chow",
+          "role": "curator"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/jesus-rafael-soto-penetrable-bbl-jaune/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Jesús Rafael Soto: Pénétrable BBL Jaune",
+        "description": "A walk-through sculpture in Kensington Gardens beside Serpentine South: some 4,000 hanging yellow PVC tubes on a 10-metre steel frame, finished by the movement and touch of the people passing through it. Soto (1923–2005) began the Pénétrable series in 1967; this is a 2023 edition of a 1999 work. Free.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-06-16T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine South",
+            "street": "Kensington Gardens",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine South",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/jesus-rafael-soto-penetrable-bbl-jaune/",
+            "name": "Serpentine"
+          }
+        ]
+      },
+      "price": "Free",
+      "notes": "Outdoor work; the page gives no hours of its own — the record uses gallery hours."
+    },
+    {
+      "slug": "saturday-talk-alexa-chow-caguiat",
+      "category": "talk",
+      "rkey": "3mxcwyco3x2mq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwyco3x2mq",
+      "venue": "south",
+      "beadKind": "performance",
+      "people": [
+        {
+          "name": "Alexa Chow",
+          "role": "speaker"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/saturday-talks-alexa-chow-on-justin-caguiat-change-ringing/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Saturday Talks: Alexa Chow on Justin Caguiat: Change Ringing",
+        "description": "A tour of Justin Caguiat: Change Ringing led by Assistant Exhibitions Curator Alexa Chow, on the exhibition's opening weekend. Free; booking advised. BSL interpretation on request.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-10-10T11:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine South",
+            "street": "Kensington Gardens",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine South",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/saturday-talks-alexa-chow-on-justin-caguiat-change-ringing/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list/saturday-talks-alexa-chow-on-justin-caguiat-exhibition",
+            "name": "Book (free)"
+          }
+        ]
+      },
+      "about": "justin-caguiat-change-ringing",
+      "price": "Free"
+    },
+    {
+      "slug": "saturday-talk-liz-stumpf-pavilion",
+      "category": "talk",
+      "rkey": "3mxcwyco4wcmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwyco4wcmq",
+      "venue": "pavilion",
+      "beadKind": "performance",
+      "people": [
+        {
+          "name": "Liz Stumpf",
+          "role": "speaker"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/saturday-talks-liz-stumpf-on-lanza-ateliers-2026-serpentine-pavilion-2/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Saturday Talks: Liz Stumpf on LANZA atelier's 2026 Serpentine Pavilion",
+        "description": "Assistant Exhibitions Curator Liz Stumpf leads a tour of the Pavilion — what inspired it, how LANZA atelier works, and the history of the commission. Free; booking advised. BSL interpretation on request.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-10-10T12:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine Pavilion",
+            "street": "Kensington Gardens (lawn of Serpentine South)",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine Pavilion",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/saturday-talks-liz-stumpf-on-lanza-ateliers-2026-serpentine-pavilion-2/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list/saturday-talks-liz-stumpf-on-lanza-ateliers-pavilion-2",
+            "name": "Book (free)"
+          }
+        ]
+      },
+      "about": "serpentine-pavilion-2026-lanza-atelier",
+      "price": "Free"
+    },
+    {
+      "slug": "saturday-talk-chris-bayley-kanwar",
+      "category": "talk",
+      "rkey": "3mxcwyco5vkmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwyco5vkmq",
+      "venue": "north",
+      "beadKind": "performance",
+      "people": [
+        {
+          "name": "Chris Bayley",
+          "role": "speaker"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/saturday-talks-chris-bayley-on-amar-kanwar/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Saturday Talks: Chris Bayley on Amar Kanwar",
+        "description": "Exhibitions Curator Chris Bayley introduces Amar Kanwar and the installation at Serpentine North. Free; booking advised. BSL interpretation on request.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-10-31T12:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine North",
+            "street": "West Carriage Drive, Kensington Gardens",
+            "postalCode": "W2 2AR"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine North",
+            "latitude": "51.507065",
+            "longitude": "-0.171279"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/saturday-talks-chris-bayley-on-amar-kanwar/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list/saturday-talks-chris-bayley-on-amar-kanwar-exhibition",
+            "name": "Book (free)"
+          }
+        ]
+      },
+      "about": "amar-kanwar",
+      "price": "Free"
+    },
+    {
+      "slug": "saturday-talk-natalia-grabowska-caguiat",
+      "category": "talk",
+      "rkey": "3mxcwyco6usmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwyco6usmq",
+      "venue": "south",
+      "beadKind": "performance",
+      "people": [
+        {
+          "name": "Natalia Grabowska",
+          "role": "speaker"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/saturday-talks-natalia-grabowska-on-justin-caguiat-change-ringing/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Saturday Talks: Natalia Grabowska on Justin Caguiat: Change Ringing",
+        "description": "Curator at Large Natalia Grabowska leads a tour of Justin Caguiat: Change Ringing. Free; booking advised. BSL interpretation on request.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-11-14T12:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine South",
+            "street": "Kensington Gardens",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine South",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/saturday-talks-natalia-grabowska-on-justin-caguiat-change-ringing/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list/saturday-talks-natalia-grabowska-on-justin-caguiat-exhibition",
+            "name": "Book (free)"
+          }
+        ]
+      },
+      "about": "justin-caguiat-change-ringing",
+      "price": "Free"
+    },
+    {
+      "slug": "park-nights-2026-shala-miller-02-oct",
+      "category": "performance",
+      "rkey": "3mxcwyco7u2mq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwyco7u2mq",
+      "venue": "pavilion",
+      "beadKind": "performance",
+      "people": [
+        {
+          "name": "Shala Miller",
+          "role": "artist"
+        },
+        {
+          "name": "Dorothy Carlos",
+          "role": "performer"
+        },
+        {
+          "name": "Samantha Feliciano",
+          "role": "performer"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/park-nights-2026-shala-miller/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Park Nights 2026: Shala Miller — hideandseek",
+        "description": "hideandseek: an evening of improvised voice and strings in the Pavilion — the UK debut of New York-based artist, writer and musician Shala Miller, with experimental cellist Dorothy Carlos and Samantha Feliciano, in a new Park Nights commission made to resonate through LANZA atelier's building. £10, £7 concessions.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-10-02T20:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine Pavilion",
+            "street": "Kensington Gardens (lawn of Serpentine South)",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine Pavilion",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/park-nights-2026-shala-miller/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list",
+            "name": "Book"
+          }
+        ]
+      },
+      "about": "serpentine-pavilion-2026-lanza-atelier",
+      "price": "£10 / £7",
+      "notes": "Two nights, one record each, so a bead can point at the night you were there. No end time given."
+    },
+    {
+      "slug": "park-nights-2026-shala-miller-03-oct",
+      "category": "performance",
+      "rkey": "3mxcwycoatcmq",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxcwycoatcmq",
+      "venue": "pavilion",
+      "beadKind": "performance",
+      "people": [
+        {
+          "name": "Shala Miller",
+          "role": "artist"
+        },
+        {
+          "name": "Dorothy Carlos",
+          "role": "performer"
+        },
+        {
+          "name": "Samantha Feliciano",
+          "role": "performer"
+        }
+      ],
+      "sources": [
+        "https://www.serpentinegalleries.org/whats-on/park-nights-2026-shala-miller/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Park Nights 2026: Shala Miller — hideandseek",
+        "description": "hideandseek: an evening of improvised voice and strings in the Pavilion — the UK debut of New York-based artist, writer and musician Shala Miller, with experimental cellist Dorothy Carlos and Samantha Feliciano, in a new Park Nights commission made to resonate through LANZA atelier's building. £10, £7 concessions.",
+        "createdAt": "2026-10-07T22:00:00.000Z",
+        "startsAt": "2026-10-03T20:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Serpentine Pavilion",
+            "street": "Kensington Gardens (lawn of Serpentine South)",
+            "postalCode": "W2 3XA"
+          },
+          {
+            "$type": "community.lexicon.location.geo",
+            "name": "Serpentine Pavilion",
+            "latitude": "51.504691",
+            "longitude": "-0.175012"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.serpentinegalleries.org/whats-on/park-nights-2026-shala-miller/",
+            "name": "Serpentine"
+          },
+          {
+            "uri": "https://serpentinegalleries.ticketing.veevartapp.com/tickets/view/list",
+            "name": "Book"
+          }
+        ]
+      },
+      "about": "serpentine-pavilion-2026-lanza-atelier",
+      "price": "£10 / £7",
+      "notes": "Two nights, one record each, so a bead can point at the night you were there. No end time given."
+    }
+  ]
+}
