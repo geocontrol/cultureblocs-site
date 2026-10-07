@@ -1,0 +1,1247 @@
+{
+  "meta": {
+    "title": "Paris Art Week 2026 — CultureBlocs event dataset",
+    "name": "Paris Art Week 2026",
+    "directory": "paris-art-week",
+    "tag": "paris-art-week-2026",
+    "short": "paw",
+    "tz": "Europe/Paris",
+    "cardLine": "Fairs, free installations, talks and exhibitions, day by day",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "generated": "2026-10-07",
+    "status": "draft — review flagged notes before publishing",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published.",
+    "timezone": "Times are Europe/Paris; CEST (+02:00) until 03:00 on 25 Oct 2026, CET (+01:00) after — so the fair's last day, Sunday 25 October, is +01:00. All-day/date-only events use 00:00–23:59 because the lexicon has no all-day flag.",
+    "checked": "Dates checked on each organiser's own website on 7 October 2026. Entries with `notes` rely partly on secondary sources or have open questions.",
+    "omitted": "7 Rue Froissart, Place des Vosges and Upstairs Art Fair (no 2026 edition confirmed on their sites); Art Basel Paris Conversations sessions (line-up not yet announced); auction-house sales (Sotheby's 'Modernités' 23 Oct, Phillips 21 Oct, Artcurial 24 Oct; Christie's dates not found).",
+    "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Art Basel or any listed organiser.",
+    "count": 34,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
+  },
+  "records": [
+    {
+      "slug": "paris-art-week-2026",
+      "category": "umbrella",
+      "rkey": "3mxbs455v22xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs455v22xh",
+      "sources": [
+        "https://d2u3kfwd92fzu7.cloudfront.net/EN_ABP26_GLA_PR_1.pdf",
+        "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/guides/262814-art-basel-2026-the-off-site-exhibition-program-to-discover-in-paris"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Paris Art Week 2026",
+        "description": "The week of art fairs, public installations, talks and museum openings around Art Basel Paris at the Grand Palais. Umbrella record: individual events in this collection reference the same week.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+01:00",
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris",
+            "name": "Art Basel Paris"
+          }
+        ]
+      },
+      "notes": "Unofficial umbrella record; not published by Art Basel."
+    },
+    {
+      "slug": "art-basel-paris-2026",
+      "category": "fair",
+      "rkey": "3mxbs455vzcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs455vzcxh",
+      "sources": [
+        "https://d2u3kfwd92fzu7.cloudfront.net/EN_ABP26_GLA_PR_1.pdf",
+        "https://www.artbasel.com/stories/art-basel-paris-2026-gallery-list-announcement",
+        "https://www.artbasel.com/paris/visitor-information"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Art Basel Paris 2026",
+        "description": "Fifth edition, the first under director Karim Crippa: 211 exhibitors from 41 countries and territories across the Galeries, Emergence and Premise sectors. Avant-Première Tue 20 (invitation only); Preview Days Wed 21 10:00–20:00 and Thu 22 11:00–14:00 (invitation); Vernissage Thu 22 14:00–20:00 (Vernissage ticket or invitation); public days Fri 23–Sun 25, 11:00–19:00. Oh La La!, the fair's one-day rehang with a guest from outside the art world, runs Fri 23 and Sat 24. Ticketed.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T10:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T19:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Grand Palais",
+            "street": "Avenue Winston Churchill",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris",
+            "name": "Art Basel Paris"
+          },
+          {
+            "uri": "https://www.artbasel.com/paris/tickets",
+            "name": "Tickets"
+          }
+        ]
+      },
+      "notes": "Ticket prices not confirmed on artbasel.com (secondary listings give €47 day / €30 reduced), so left out. Oh La La! 2026 lead reported as Philippine Leroy-Beaulieu (Ocula, The Art Newspaper) but not yet named by Art Basel — left out. The 2025 names (Loïc Prigent, Edward Enninful) do not apply to 2026."
+    },
+    {
+      "slug": "art-basel-paris-conversations-2026",
+      "category": "talks",
+      "rkey": "3mxbs455wykxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs455wykxh",
+      "sources": [
+        "https://d2u3kfwd92fzu7.cloudfront.net/EN_ABP26_GLA_PR_1.pdf",
+        "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/152802-art-basel-paris-2026-the-events-and-meetings-in-paris-during-this-art-week",
+        "https://theartnewspaper.com/2026/09/22/emily-in-art-basel-paris-netflix-star-lead-french-fairs-weekend-rehang"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Art Basel Paris Conversations 2026",
+        "description": "The fair's talks programme, moved this year to the Grand Palais auditorium. Free to attend; booking advised. Art Basel has said the full line-up is still to be announced.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-22T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T23:59:00+02:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Grand Palais",
+            "street": "Avenue Winston Churchill",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/conversations",
+            "name": "Conversations"
+          }
+        ]
+      },
+      "notes": "Venue and free access from the official press release. The Thu 22–Sat 24 days and session names come from secondary sources only and disagree with each other (e.g. a Louvre panel's speakers), so no sessions are listed yet. Update when artbasel.com publishes the programme."
+    },
+    {
+      "slug": "paris-internationale-2026",
+      "category": "fair",
+      "rkey": "3mxbs455xxsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs455xxsxh",
+      "sources": [
+        "https://parisinternationale.com",
+        "https://parisinternationale.com/press"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Paris Internationale 2026",
+        "description": "12th edition of the gallery-founded fair for emerging and experimental positions, this year in a new canal-side space on the Quai de Valmy. Preview Mon 19 October.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T23:59:00+02:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Paris Internationale, 187–189 Quai de Valmy",
+            "street": "187–189 Quai de Valmy",
+            "postalCode": "75010"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://parisinternationale.com",
+            "name": "Paris Internationale"
+          }
+        ]
+      },
+      "notes": "Daily hours not published. Admission conflicts on the official site: the press page says free and open to all, the info page says accreditation only. Postcode 75010 inferred from the street address."
+    },
+    {
+      "slug": "asia-now-2026",
+      "category": "fair",
+      "rkey": "3mxbs455yx2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs455yx2xh",
+      "sources": [
+        "https://asianowparis.com"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Asia Now 2026",
+        "description": "12th edition of the Paris fair for contemporary art from Asia and its diasporas, with galleries, curated projects, film and performance across La Monnaie de Paris. VIP preview Mon 19 October; open daily 11:00–19:00. Ticketed.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T11:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T19:00:00+02:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "La Monnaie de Paris",
+            "street": "11 Quai de Conti",
+            "postalCode": "75006"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://asianowparis.com",
+            "name": "Asia Now"
+          }
+        ]
+      },
+      "notes": "Some listings give 22–26 October; the fair's own site gives 20–24. Price not shown on the official ticket page."
+    },
+    {
+      "slug": "design-miami-paris-2026",
+      "category": "fair",
+      "rkey": "3mxbs455zwcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs455zwcxh",
+      "sources": [
+        "https://designmiami.com/fair/paris-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Design Miami.Paris 2026",
+        "description": "Fourth Paris edition of the collectible design fair, in an 18th-century hôtel particulier in the 7th. Preview Tue 20 (members and collectors). Public days Wed 21–Sun 25: Wed–Sat 11:00–19:00, Sun 11:00–18:00.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T11:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "L'Hôtel de Maisons",
+            "street": "51 rue de l'Université",
+            "postalCode": "75007"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://designmiami.com/fair/paris-2026",
+            "name": "Design Miami.Paris"
+          }
+        ]
+      },
+      "notes": "Some listings give 22–26 October; the fair's own site gives 20–25 with the 20th as preview. No ticket price published."
+    },
+    {
+      "slug": "akaa-2026",
+      "category": "fair",
+      "rkey": "3mxbs4562vkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs4562vkxh",
+      "sources": [
+        "https://akaafair.com/infos-pratiques/",
+        "https://my.weezevent.com/akaa-also-known-as-africa-2026"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "AKAA – Also Known As Africa 2026",
+        "description": "11th edition of the art and design fair centred on Africa and its diasporas. Preview Thu 22 (invitation). Fri 23–Sat 24 12:00–20:00, Sun 25 12:00–18:00. €16, reduced €11, under-12s free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-23T12:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Carreau du Temple",
+            "street": "4 rue Eugène Spuller",
+            "postalCode": "75003"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://akaafair.com",
+            "name": "AKAA"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "offscreen-paris-2026",
+      "category": "fair",
+      "rkey": "3mxbs4563usxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs4563usxh",
+      "sources": [
+        "https://offscreenparis.com/visiting"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "OFFSCREEN Paris 2026",
+        "description": "Fifth edition of the fair for photography and the moving image, with about 30 artists in a 17th-century chapel at the Salpêtrière. Preview Mon 19 (invitation). Tue–Sat 11:00–19:00, Sun 11:00–18:00. €12, students €8 (free on Wed 21), under-12s free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T11:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Chapelle Saint-Louis de la Salpêtrière (enter via Jardin Marie Curie)",
+            "street": "47 boulevard de l'Hôpital",
+            "postalCode": "75013"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://offscreenparis.com",
+            "name": "OFFSCREEN"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ceramic-art-fair-paris-2026",
+      "category": "fair",
+      "rkey": "3mxbs4564u2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs4564u2xh",
+      "sources": [
+        "https://ceramicartfair.com"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Ceramic Art Fair Paris 2026",
+        "description": "Galleries showing ceramics and glass, from historical pieces to new work. Preview Tue 20. Wed–Sat 11:00–20:00, Thu until 21:00, Sun 11:00–17:00.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T11:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T17:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Maison de l'Amérique latine",
+            "street": "1 rue Saint-Dominique",
+            "postalCode": "75007"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://ceramicartfair.com",
+            "name": "Ceramic Art Fair"
+          }
+        ]
+      },
+      "notes": "No ticket price published."
+    },
+    {
+      "slug": "outsider-paris-2026",
+      "category": "fair",
+      "rkey": "3mxbs4565tcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs4565tcxh",
+      "sources": [
+        "https://www.outsiderparis.com"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Outsider' Paris 2026",
+        "description": "Fourth edition of the fair for art brut and outsider art: 18 galleries from 8 countries, with a side programme at the Halle Saint-Pierre. Vernissage Tue 20 from 17:00. Wed–Sat 11:00–20:00, Sun 11:00–17:00. Free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T11:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T17:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Bastille Design Center",
+            "street": "74 boulevard Richard-Lenoir",
+            "postalCode": "75011"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.outsiderparis.com",
+            "name": "Outsider' Paris"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "moderne-art-fair-2026",
+      "category": "fair",
+      "rkey": "3mxbs4566skxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs4566skxh",
+      "sources": [
+        "https://moderneartfair.com/informations/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Moderne Art Fair 2026",
+        "description": "Modern and contemporary art in temporary pavilions on the Place de la Concorde. Preview and vernissage Wed 21. Thu–Sat 11:00–20:00, Sun 11:00–18:00.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-22T11:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Place de la Concorde (temporary pavilions)",
+            "street": "Place de la Concorde",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://moderneartfair.com",
+            "name": "Moderne Art Fair"
+          }
+        ]
+      },
+      "notes": "Ticket page mixes 2025 and 2026 content (€25 / €15 students), so prices are left out."
+    },
+    {
+      "slug": "menart-fair-2026",
+      "category": "fair",
+      "rkey": "3mxbs4567rsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs4567rsxh",
+      "sources": [
+        "https://menart-fair.com/access/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Menart Fair 2026",
+        "description": "Seventh edition of the fair for art from the Middle East and North Africa and its diasporas, about 40 galleries, themed 'Where is Home?'. Preview Thu 22. Fri–Sat 12:00–20:00, Sun 12:00–19:00. €16, reduced €11.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-23T12:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T19:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Galerie Joseph",
+            "street": "116 rue de Turenne",
+            "postalCode": "75003"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://menart-fair.com",
+            "name": "Menart Fair"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "petit-palais-cosima-von-bonin",
+      "category": "commission",
+      "rkey": "3mxbs456ar2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456ar2xh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/petit-palais"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Cosima von Bonin, 'Dollys & Beaux' at the Petit Palais",
+        "description": "Art Basel Paris Public Program: new soft sculptures by Cosima von Bonin, presented by Petzel, Gala and Neu. Free. 10:00–18:00, until 20:00 on Fri 23 and Sat 24.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T10:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Petit Palais",
+            "street": "Avenue Winston Churchill",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/petit-palais",
+            "name": "Art Basel Public Program"
+          }
+        ]
+      },
+      "notes": "Not to be confused with the Petit Palais's own paid show, Prune Nourry's carte blanche, opening the same day."
+    },
+    {
+      "slug": "place-clemenceau-robert-indiana-love-wall",
+      "category": "commission",
+      "rkey": "3mxbs456bqcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456bqcxh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/place-clemenceau"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Robert Indiana, 'LOVE Wall' on Place Clemenceau",
+        "description": "Art Basel Paris Public Program: Indiana's Cor-Ten steel LOVE Wall (1966–2006), presented by Almine Rech, outdoors between the Champs-Élysées and Avenue Winston Churchill. Free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Place Clemenceau",
+            "street": "Place Clemenceau",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/place-clemenceau",
+            "name": "Art Basel Public Program"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "square-jean-perrin-lionel-sabatte",
+      "category": "commission",
+      "rkey": "3mxbs456cpkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456cpkxh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/square-jean-perrin"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Lionel Sabatté, 'Champs d'Oiseaux' in Square Jean Perrin",
+        "description": "Art Basel Paris Public Program: new bronze work by Lionel Sabatté, presented by Ceysson & Bénétière, in the garden beside the Grand Palais. Free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Square Jean Perrin",
+            "street": "Avenue du Général Eisenhower",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/square-jean-perrin",
+            "name": "Art Basel Public Program"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "jardin-nouvelle-france-boz-deseo-garden",
+      "category": "commission",
+      "rkey": "3mxbs456dosxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456dosxh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/jardin-nouvelle-france"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Boz Deseo Garden, 'Celia, or the Misfortunes of Virtue'",
+        "description": "Art Basel Paris Public Program: painted steel sculptures by Boz Deseo Garden, presented by Petrine, in the small garden behind the Grand Palais. Free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Jardin de la Nouvelle-France",
+            "street": "Avenue Franklin-D.-Roosevelt",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/jardin-nouvelle-france",
+            "name": "Art Basel Public Program"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "trocadero-tracey-emin",
+      "category": "commission",
+      "rkey": "3mxbs456eo2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456eo2xh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/parvis-droits-homme"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Tracey Emin at the Trocadéro",
+        "description": "Art Basel Paris Public Program: three bronzes by Tracey Emin — 'I lay here for you' (2018), 'I Followed You to the End' (2024) and 'I Will Not Be Alone' (2025) — presented by White Cube on the Parvis des Droits de l'Homme, facing the Eiffel Tower. Free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-14T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Parvis des Droits de l'Homme, Trocadéro",
+            "street": "Place du Trocadéro-et-du-11-Novembre",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/parvis-droits-homme",
+            "name": "Art Basel Public Program"
+          }
+        ]
+      },
+      "notes": "End is after the CEST→CET change (25 Oct), hence +01:00."
+    },
+    {
+      "slug": "avenue-winston-churchill-sculpture-2026",
+      "category": "commission",
+      "rkey": "3mxbs456fncxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456fncxh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/avenue-winston-churchill",
+        "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/319777-art-basel-paris-2026-contemporary-artworks-transform-winston-churchill-avenue",
+        "https://ocula.com/magazine/art-news/art-basel-paris-reveals-2026-programme/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Sculpture on Avenue Winston Churchill",
+        "description": "Art Basel Paris Public Program: the pedestrianised avenue between the Grand Palais and the Petit Palais becomes an open-air sculpture route. Free.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Avenue Winston Churchill (between the Grand Palais and the Petit Palais)",
+            "street": "Avenue Winston Churchill",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/avenue-winston-churchill",
+            "name": "Art Basel Public Program"
+          }
+        ]
+      },
+      "notes": "2026 artist list not confirmed: the official page still shows the 2025 line-up. Press reports name works by Niki de Saint Phalle and Marcello Maloberti among others. Add names when artbasel.com updates."
+    },
+    {
+      "slug": "beaux-arts-kutlug-ataman",
+      "category": "commission",
+      "rkey": "3mxbs456gmkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456gmkxh",
+      "sources": [
+        "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/283304-art-basel-paris-2026-an-installation-exploring-memory-at-the-chapelle-des-petits-augustins"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Kutluğ Ataman at the Chapelle des Petits-Augustins",
+        "description": "Shown during Art Basel Paris week: a video installation of some forty screens carrying portraits and testimony from Küba, a vanished community near Istanbul. Free. 10:00–19:00.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T10:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T19:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Chapelle des Petits-Augustins, Beaux-Arts de Paris",
+            "street": "14 rue Bonaparte",
+            "postalCode": "75006"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://beauxartsparis.fr",
+            "name": "Beaux-Arts de Paris"
+          }
+        ]
+      },
+      "notes": "Secondary source only (Sortiraparis); no artbasel.com page found and no work title published. Check before publishing."
+    },
+    {
+      "slug": "palais-iena-miu-miu-alice-diop",
+      "category": "commission",
+      "rkey": "3mxbs456hlsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456hlsxh",
+      "sources": [
+        "https://www.artbasel.com/paris/public-program/palais-iena",
+        "https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/283340-art-basel-paris-2026-cinema-dance-and-sculpture-as-alice-diop-and-miu-miu-take-over-the-palais-d-iena",
+        "https://www.nssmag.com/en/art-design/46808/art-basel-paris-2026-miu-miu-alice-diop-geste-de-consolation"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Miu Miu presents Alice Diop: 'Geste de Consolation'",
+        "description": "Art Basel Paris Public Program, with Miu Miu: the film-maker Alice Diop's first exhibition, on how Black women are represented, with works by Zanele Muholi, Simone Leigh and Mary Lee Bendolph, choreography by Nadia Beugré, readings and music. Free; guided tours bookable on miumiu.com from 8 October.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Palais d'Iéna",
+            "street": "9 place d'Iéna",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.artbasel.com/paris/public-program/palais-iena",
+            "name": "Art Basel Public Program"
+          },
+          {
+            "uri": "https://www.miumiu.com",
+            "name": "Miu Miu"
+          }
+        ]
+      },
+      "notes": "The official page names Alice Diop but gave no details; content from Sortiraparis and NSS. Opening hours and performance times not yet published."
+    },
+    {
+      "slug": "cite-architecture-kennedy-yanko",
+      "category": "commission",
+      "rkey": "3mxbs456il2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456il2xh",
+      "sources": [
+        "https://www.artbasel.com/stories/kennedy-yanko-art-basel-paris-2026-mary-magdalene",
+        "https://www.citedelarchitecture.fr/en?page=361",
+        "https://75.agendaculturel.fr/exposition/exposition-kennedy-yanco-1.html"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Kennedy Yanko: 'Ce qui nous rassemble'",
+        "description": "Art Basel Paris Public Program: Kennedy Yanko's sculptures shown among the museum's plaster casts of French monuments. Included in the museum ticket. 11:00–19:00, until 21:00 on Thursdays, closed Tuesdays.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-16T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-03T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Cité de l'architecture et du patrimoine",
+            "street": "1 place du Trocadéro-et-du-11-Novembre",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.citedelarchitecture.fr",
+            "name": "Cité de l'architecture et du patrimoine"
+          }
+        ]
+      },
+      "notes": "Part of the Public Program per artbasel.com; hours and price from a secondary listing. Unlike the rest of the programme, this one is paid."
+    },
+    {
+      "slug": "grand-palais-cezanne-et-nous",
+      "category": "exhibition",
+      "rkey": "3mxbs456jkcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456jkcxh",
+      "sources": [
+        "https://www.grandpalais.fr/fr/programme/cezanne-et-nous"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Cézanne et nous / Cézanne and Us",
+        "description": "About 180 works tracing how Cézanne was taken up by later artists, from Gauguin, Matisse, Picasso and Mondrian to Joan Mitchell, Bridget Riley and Peter Doig — in the same building as the fair. €19, reduced €16.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-09-23T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-17T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Grand Palais, Galleries 3–4",
+            "street": "17 avenue du Général Eisenhower",
+            "postalCode": "75008"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.grandpalais.fr/fr/programme/cezanne-et-nous",
+            "name": "Grand Palais"
+          }
+        ]
+      },
+      "notes": "Opening days conflict on grandpalais.fr (exhibition page says Tue–Sun; practical info lists no closed day)."
+    },
+    {
+      "slug": "flv-gustave-fayet",
+      "category": "exhibition",
+      "rkey": "3mxbs456kjkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456kjkxh",
+      "sources": [
+        "https://www.fondationlouisvuitton.fr/fr/evenements/gustave-fayet-collectionneur-createur"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Gustave Fayet, collectionneur – créateur. Icônes de l'art moderne",
+        "description": "The Fondation's reopening show: the collector and artist Gustave Fayet, his own work beside the Van Gogh, Gauguin and Redon he collected, including Van Gogh's 'Self-Portrait with Bandaged Ear'. Closed Tuesdays.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-09T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-03-08T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Fondation Louis Vuitton",
+            "street": "8 avenue du Mahatma Gandhi",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.fondationlouisvuitton.fr/fr/evenements/gustave-fayet-collectionneur-createur",
+            "name": "Fondation Louis Vuitton"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bourse-de-commerce-remember-me",
+      "category": "exhibition",
+      "rkey": "3mxbs456lisxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456lisxh",
+      "sources": [
+        "https://www.pinaultcollection.com/en/node/2174",
+        "https://www.pinaultcollection.com/en/press"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Remember Me",
+        "description": "Photography's bicentenary from the Pinault Collection: about 700 works by more than 70 photographers, from Le Gray and Man Ray to Cindy Sherman and Wolfgang Tillmans, hung across eras. Barbara Kruger takes over the Rotunda alongside. €15, reduced €10; closed Tuesdays; Fridays until 21:00.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-07T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-18T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Bourse de Commerce – Pinault Collection",
+            "street": "2 rue de Viarmes",
+            "postalCode": "75001"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.pinaultcollection.com/en/node/2174",
+            "name": "Bourse de Commerce"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "picasso-kurt-schwitters",
+      "category": "exhibition",
+      "rkey": "3mxbs456mi2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456mi2xh",
+      "sources": [
+        "https://www.museepicassoparis.fr/fr/agenda/kurt-schwitters-le-chaos-monde-1918-1948/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Kurt Schwitters. Le chaos-monde 1918–1948",
+        "description": "Retrospective of more than 300 works by Schwitters — painter, poet, typographer and collagist — set against Picasso. Tue–Sun 9:30–18:00. €16, reduced €12.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-06T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-07T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Musée national Picasso-Paris",
+            "street": "5 rue de Thorigny",
+            "postalCode": "75003"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.museepicassoparis.fr/fr/agenda/kurt-schwitters-le-chaos-monde-1918-1948/",
+            "name": "Musée Picasso"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "jeu-de-paume-stan-douglas",
+      "category": "exhibition",
+      "rkey": "3mxbs456nhcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456nhcxh",
+      "sources": [
+        "https://jeudepaume.org/en/evenement/35043/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Stan Douglas. Parallax",
+        "description": "Retrospective of about 40 films, video installations and photographs since the late 1980s, on how technology shapes images and memory. Opens on the first day of the week. €14.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-10T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Jeu de Paume, Jardin des Tuileries",
+            "street": "1 place de la Concorde",
+            "postalCode": "75001"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://jeudepaume.org/en/evenement/35043/",
+            "name": "Jeu de Paume"
+          }
+        ]
+      },
+      "notes": "Official hours page incomplete; closed Mondays per secondary listings."
+    },
+    {
+      "slug": "mep-penn-fashion",
+      "category": "exhibition",
+      "rkey": "3mxbs456ogkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456ogkxh",
+      "sources": [
+        "https://www.mep-fr.org/wp-content/uploads/2026/07/cp_pennfashion_eng_mep.pdf"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Penn & Fashion",
+        "description": "Irving Penn's fashion photography from 1947 to 2008, much of it for Vogue, including his work with Issey Miyake. Wed–Sun; closed Mon–Tue. €13, reduced €8.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-09-30T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-17T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Maison Européenne de la Photographie (MEP)",
+            "street": "5/7 rue de Fourcy",
+            "postalCode": "75004"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.mep-fr.org",
+            "name": "MEP"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "palais-de-tokyo-toi-et-ta-bande",
+      "category": "exhibition",
+      "rkey": "3mxbs456pfsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456pfsxh",
+      "sources": [
+        "https://www.paris.fr/evenements/toi-et-ta-bande-exposition-collective-117953"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Toi et ta bande. Exposition collective",
+        "description": "Group show of about 30 works by artists and collectives living outside the big cities, on ways of living and working together. Closed Tuesdays; open until midnight on Thursdays.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-14T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Palais de Tokyo",
+            "street": "13 avenue du Président Wilson",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://palaisdetokyo.com",
+            "name": "Palais de Tokyo"
+          }
+        ]
+      },
+      "notes": "Secondary source only (paris.fr); palaisdetokyo.com could not be read. Check before publishing."
+    },
+    {
+      "slug": "mam-kerry-james-marshall",
+      "category": "exhibition",
+      "rkey": "3mxbs456qf2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456qf2xh",
+      "sources": [
+        "https://www.mam.paris.fr/fr/expositions-en-cours"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Kerry James Marshall: The Histories",
+        "description": "Marshall's first exhibition in France: about 70 works across four decades. Tue–Sun 10:00–18:00, Thursdays until 21:30. €17, reduced €15.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-09-18T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-24T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Musée d'Art Moderne de Paris",
+            "street": "11 avenue du Président Wilson",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.mam.paris.fr/fr/expositions-en-cours",
+            "name": "Musée d'Art Moderne de Paris"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "mam-prix-marcel-duchamp-2026",
+      "category": "exhibition",
+      "rkey": "3mxbs456recxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456recxh",
+      "sources": [
+        "https://www.mam.paris.fr/fr/expositions-en-cours"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Prix Marcel Duchamp 2026",
+        "description": "The four nominees — Joël Andrianomearisoa, Brognon Rollin, Laura Henno and Josèfa Ntjam — shown with the Centre Pompidou. The winner is announced on Thursday 22 October, mid-week.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-02T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-07T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Musée d'Art Moderne de Paris",
+            "street": "11 avenue du Président Wilson",
+            "postalCode": "75116"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.mam.paris.fr/fr/expositions-en-cours",
+            "name": "Musée d'Art Moderne de Paris"
+          }
+        ]
+      },
+      "notes": "Price not confirmed."
+    },
+    {
+      "slug": "lafayette-anticipations-autumn-2026",
+      "category": "exhibition",
+      "rkey": "3mxbs456sdkxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456sdkxh",
+      "sources": [
+        "https://www.lafayetteanticipations.com/fr/exposition/yu-nishimura",
+        "https://www.lafayetteanticipations.com/fr/exposition/helene-fauquet"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Yu Nishimura and Hélène Fauquet at Lafayette Anticipations",
+        "description": "Two openings: Yu Nishimura's first French institutional solo show, 'Towards a Sea', about 50 dreamlike landscapes; and Hélène Fauquet's 'Vivresse', sculpture built around shells and bubbles. Mungo Thomson's bronze snowman stands in the courtyard until 29 November. Free. Wed–Sun 11:00–19:00.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-21T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-03T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Lafayette Anticipations",
+            "street": "9 rue du Plâtre",
+            "postalCode": "75004"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.lafayetteanticipations.com",
+            "name": "Lafayette Anticipations"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "fondation-cartier-ibrahim-mahama",
+      "category": "exhibition",
+      "rkey": "3mxbs456tcsxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456tcsxh",
+      "sources": [
+        "https://www.fondationcartier.com/programme/exposition/le-temps-des-recoltes-ibrahim-mahama"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Ibrahim Mahama: Le Temps des récoltes",
+        "description": "Ibrahim Mahama and nine collaborators, including his 'Parliament of Ghosts', in the Fondation's new Palais-Royal building. Opens Thursday 22 October. Tue–Sun 11:00–19:00, Fridays until 22:00. €15, reduced €10.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-22T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-28T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Fondation Cartier pour l'art contemporain",
+            "street": "2 place du Palais-Royal",
+            "postalCode": "75001"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.fondationcartier.com/programme/exposition/le-temps-des-recoltes-ibrahim-mahama",
+            "name": "Fondation Cartier"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pantheon-vies-minuscules",
+      "category": "exhibition",
+      "rkey": "3mxbs456uc2xh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456uc2xh",
+      "sources": [
+        "https://www.centrepompidou.fr/fr/programme/agenda/evenement/zfJ5Enx"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Vies minuscules",
+        "description": "A Centre Pompidou show at the Panthéon while the Pompidou is closed for renovation: about 30 artists, from Kupka to Jumana Manna, on lives at the margins of history. Daily 10:00–18:00. €16, reduced €13.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-09-24T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-01-31T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Panthéon",
+            "street": "Place du Panthéon",
+            "postalCode": "75005"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.centrepompidou.fr/fr/programme/agenda/evenement/zfJ5Enx",
+            "name": "Centre Pompidou"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "orsay-jenny-holzer",
+      "category": "exhibition",
+      "rkey": "3mxbs456vbcxh",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxbs456vbcxh",
+      "sources": [
+        "https://www.musee-orsay.fr/fr/programme/agenda/expositions/jenny-holzer-jai-vu"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Jenny Holzer. J'ai vu",
+        "description": "Holzer's text works drawn from Orsay's collections — LED pieces, engraved stone benches and projections — opening on the first day of the week. Tue–Sun 9:30–18:00, Thursdays until 21:45. €16, reduced €13.",
+        "createdAt": "2026-10-07T12:00:00.000Z",
+        "startsAt": "2026-10-20T00:00:00+02:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2027-02-21T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "FR",
+            "locality": "Paris",
+            "name": "Musée d'Orsay",
+            "street": "1 rue de la Légion d'Honneur",
+            "postalCode": "75007"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.musee-orsay.fr/fr/programme/agenda/expositions/jenny-holzer-jai-vu",
+            "name": "Musée d'Orsay"
+          }
+        ]
+      },
+      "notes": "Façade projections 18–22 Oct, 19:00–23:00, are from a secondary source and not listed separately."
+    }
+  ]
+}

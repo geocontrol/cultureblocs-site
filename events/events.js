@@ -11,14 +11,16 @@
  */
 import { listCollection, resolveActor } from './lib/atproto.js';
 import { esc, renderDirectory, sourceLine } from './lib/render.js';
-import { londonParts, merge } from './lib/schedule.js';
+import { merge, tzOf, zonedParts } from './lib/schedule.js';
 import { beadLinks, hider, makeReader, peopleIn, pool, readBeads } from './lib/went.js';
 import { beadList, countLabel } from './lib/whowent.js';
 
 const root = document.getElementById('directory');
 const sourceEl = document.getElementById('source');
 const actor = root.dataset.actor;
-const today = londonParts(new Date().toISOString())?.date || null;
+/* Set from the listing: the directory's time zone and today's date in it. */
+let tz;
+let today = null;
 
 let filter = new URLSearchParams(location.search).get('show') || 'all';
 
@@ -98,7 +100,7 @@ async function whoWent(events) {
 function draw(events) {
   const open = new Set([...root.querySelectorAll('details[open]')]
     .map(d => d.closest('.ev')?.id).filter(Boolean));
-  root.innerHTML = renderDirectory({ events, today, dir: root.dataset.dir || null });
+  root.innerHTML = renderDirectory({ events, today, dir: root.dataset.dir || null, tz });
   open.forEach(id => document.getElementById(id)?.querySelector('details')?.setAttribute('open', ''));
   applyFilter();
   applyCounts();
@@ -136,6 +138,8 @@ async function main() {
     root.innerHTML = '<p class="ev-intro">The listing could not be loaded. Please reload the page.</p>';
     return;
   }
+  tz = tzOf(listing);
+  today = zonedParts(new Date().toISOString(), tz)?.date || null;
   const entries = listing.records || [];
   const total = entries.filter(e => e.category !== 'umbrella').length;
 

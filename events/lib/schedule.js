@@ -1,11 +1,20 @@
 /* Turning event records into a week you can read. Pure: no fetch, no DOM.
  *
- * Every date is read in Europe/London. The records carry offsets (+01:00
- * before 25 October, +00:00 after), so a visitor in New York still sees
- * the fair open at 11:00 — the time on the door, not on their phone.
+ * Every date is read in the directory's own time zone — Europe/London unless
+ * the listing's meta.tz says otherwise (Paris Art Week is Europe/Paris). The
+ * records carry offsets (+01:00 before 25 October, +00:00 after, in London),
+ * so a visitor in New York still sees the fair open at 11:00 — the time on
+ * the door, not on their phone.
  */
 
 export const TZ = 'Europe/London';
+
+/* A listing's time zone: meta.tz if it names a real IANA zone, else London. */
+export function tzOf(listing) {
+  const tz = listing?.meta?.tz;
+  if (typeof tz !== 'string' || !tz) return TZ;
+  try { new Intl.DateTimeFormat('en-GB', { timeZone: tz }); return tz; } catch { return TZ; }
+}
 
 /* The lexicon has no all-day flag; the dataset marks date-only events
  * 00:00 → 23:59. Anything ending before 06:00 is the tail of a night, not
@@ -33,16 +42,22 @@ const GROUP_OF = {
 
 export const groupOf = (category) => GROUP_OF[category] || null;
 
-const partsFmt = new Intl.DateTimeFormat('en-GB', {
-  timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit',
-  hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-});
+const partsFmts = new Map();
+function partsFmt(tz) {
+  if (!partsFmts.has(tz)) {
+    partsFmts.set(tz, new Intl.DateTimeFormat('en-GB', {
+      timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+    }));
+  }
+  return partsFmts.get(tz);
+}
 
-/* { date: '2026-10-15', time: '11:00', mins: 660 } in London time. */
-export function londonParts(iso) {
+/* { date: '2026-10-15', time: '11:00', mins: 660 } in the given zone. */
+export function zonedParts(iso, tz = TZ) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return null;
-  const p = Object.fromEntries(partsFmt.formatToParts(d).map(x => [x.type, x.value]));
+  const p = Object.fromEntries(partsFmt(tz).formatToParts(d).map(x => [x.type, x.value]));
   const hour = p.hour === '24' ? '00' : p.hour;
   return {
     date: `${p.year}-${p.month}-${p.day}`,
@@ -50,6 +65,9 @@ export function londonParts(iso) {
     mins: Number(hour) * 60 + Number(p.minute),
   };
 }
+
+/* The same, in London (the default directory zone). */
+export const londonParts = (iso) => zonedParts(iso, TZ);
 
 const utcNoon = (date) => new Date(`${date}T12:00:00Z`);
 export const dayDiff = (a, b) => Math.round((utcNoon(b) - utcNoon(a)) / 86400000);
@@ -96,12 +114,12 @@ export function merge(entries, liveRecords = []) {
   });
 }
 
-/* Where an event sits in time, in London days. */
-export function shape(record) {
-  const s = londonParts(record?.startsAt);
+/* Where an event sits in time, in the directory's days. */
+export function shape(record, tz = TZ) {
+  const s = zonedParts(record?.startsAt, tz);
   if (!s) return null;
-  const hasEnd = Boolean(record.endsAt && londonParts(record.endsAt));
-  const e = hasEnd ? londonParts(record.endsAt) : s;
+  const hasEnd = Boolean(record.endsAt && zonedParts(record.endsAt, tz));
+  const e = hasEnd ? zonedParts(record.endsAt, tz) : s;
   let endDate = e.date;
   if (hasEnd && endDate > s.date && e.mins < NIGHT_ENDS_BEFORE) endDate = addDays(endDate, -1);
   if (endDate < s.date) endDate = s.date;
@@ -135,12 +153,12 @@ const isTimed = (sh) => sh.days === 1 && !sh.openStart;
 
 /* The week as days, plus what runs throughout. Hidden categories (the
  * umbrella record) and records whose dates don't parse are dropped. */
-export function arrange(events) {
+export function arrange(events, tz = TZ) {
   const days = new Map();
   const running = [];
   for (const ev of events) {
     if (!ev.group) continue;
-    const sh = shape(ev.record);
+    const sh = shape(ev.record, tz);
     if (!sh) continue;
     if (sh.running) { running.push({ ev, sh }); continue; }
     for (let d = sh.start.date; d <= sh.endDate; d = addDays(d, 1)) {

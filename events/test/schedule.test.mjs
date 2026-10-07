@@ -68,3 +68,63 @@ test('the Frieze listing arranges into days plus exhibitions running all week', 
   assert.ok(firstOpen > -1 && firstOpen < firstMid);
   assert.equal(dayLabel('2026-10-15'), 'Thu 15 Oct');
 });
+
+/* ---------- directories in other time zones (Paris Art Week) ---------- */
+import { tzOf, zonedParts } from '../lib/schedule.js';
+
+const paris = JSON.parse(readFileSync(
+  new URL('../paris-art-week/events.json', import.meta.url), 'utf8'));
+const PARIS = 'Europe/Paris';
+
+test('a listing names its zone; anything unusable falls back to London', () => {
+  assert.equal(tzOf(paris), PARIS);
+  assert.equal(tzOf(listing), 'Europe/London');          // Frieze has no meta.tz
+  assert.equal(tzOf({ meta: { tz: 'Mars/Olympus_Mons' } }), 'Europe/London');
+  assert.equal(tzOf(null), 'Europe/London');
+});
+
+test('Paris times are read in Paris, either side of the clock change', () => {
+  assert.deepEqual(zonedParts('2026-10-23T11:00:00+02:00', PARIS), { date: '2026-10-23', time: '11:00', mins: 660 });
+  // the same instant in London is an hour earlier — why the zone matters
+  assert.equal(zonedParts('2026-10-23T11:00:00+02:00').time, '10:00');
+  // Sunday 25 October is after 03:00 CEST → CET, so +01:00
+  assert.deepEqual(zonedParts('2026-10-25T19:00:00+01:00', PARIS), { date: '2026-10-25', time: '19:00', mins: 1140 });
+});
+
+test('a Paris all-day run keeps its days only when read in Paris', () => {
+  const r = rec('2026-10-20T00:00:00+02:00', '2026-10-25T23:59:00+01:00');
+  const inParis = shape(r, PARIS);
+  assert.equal(inParis.start.date, '2026-10-20');
+  assert.equal(inParis.endDate, '2026-10-25');
+  assert.ok(inParis.openStart && inParis.openEnd);
+  assert.equal(whenLabel(inParis, '2026-10-20'), 'Opens · day 1 of 6');
+  // read in London it would start on the 19th at 23:00 — the bug this avoids
+  assert.equal(shape(r).start.date, '2026-10-19');
+});
+
+test('the Paris listing arranges into its week in Paris time', () => {
+  const { days, running } = arrange(merge(paris.records), tzOf(paris));
+  assert.deepEqual(days.map(d => d.date),
+    ['2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']);
+  const wed = days.find(d => d.date === '2026-10-21');
+  const fair = wed.open.find(x => x.ev.slug === 'art-basel-paris-2026');
+  assert.equal(fair.when, 'Opens 10:00');
+  const sun = days.find(d => d.date === '2026-10-25');
+  assert.equal(sun.open.find(x => x.ev.slug === 'art-basel-paris-2026').when, 'Final day · until 19:00');
+  assert.ok(running.some(x => x.ev.slug === 'trocadero-tracey-emin'));
+  assert.ok(!days.some(d => [...d.timed, ...d.open].some(x => x.ev.category === 'umbrella')));
+});
+
+test('every Paris record carries the right offset for its date', () => {
+  const SWITCH = Date.parse('2026-10-25T01:00:00Z');
+  for (const e of paris.records) {
+    for (const k of ['startsAt', 'endsAt']) {
+      const v = e.record[k];
+      if (!v) continue;
+      const want = Date.parse(v) < SWITCH ? '+02:00' : '+01:00';
+      assert.ok(v.endsWith(want), `${e.slug} ${k} ${v}`);
+    }
+    assert.ok(e.atUri.startsWith('at://did:'), e.slug);
+    assert.equal(e.record.locations?.[0]?.country ?? 'FR', 'FR', e.slug);
+  }
+});

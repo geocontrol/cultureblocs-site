@@ -113,9 +113,10 @@ export function sourceLine({ actor, live, total, error }) {
     : `Showing the prepared listing — these events are not yet published to <code>@${esc(actor)}</code>.`;
 }
 
-/* The whole schedule. `today` is a London date string or null. */
-export function renderDirectory({ events, today = null, dir = null }) {
-  const { days, running } = arrange(events);
+/* The whole schedule. `today` is a date string in the directory's zone
+ * (`tz`, London by default) or null. */
+export function renderDirectory({ events, today = null, dir = null, tz }) {
+  const { days, running } = arrange(events, tz);
   const weekEnd = days.length ? days[days.length - 1].date : '';
   const groups = new Set(events.map(e => e.group).filter(Boolean));
   const filters = FILTERS.filter(([key]) => key === 'all' || groups.has(key))

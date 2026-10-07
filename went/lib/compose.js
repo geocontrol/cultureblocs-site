@@ -2,7 +2,7 @@
  * chosen, what the bead looks like, what the Bluesky post says. No fetch,
  * no DOM — everything here is tested in node.
  */
-import { addDays, dayLabel, londonParts, shape } from '../../events/lib/schedule.js';
+import { TZ, addDays, dayLabel, shape, zonedParts } from '../../events/lib/schedule.js';
 
 export const BEAD_NSID = 'com.cultureblocs.bead';
 export const POST_NSID = 'app.bsky.feed.post';
@@ -48,8 +48,8 @@ export const validDirectory = (d) => /^[a-z0-9][a-z0-9-]{0,63}$/.test(String(d |
 /* ---------- days ---------- */
 /* Which days a person can say they went. Never the future; never before
  * the event began. Short events get chips, long runs a date picker. */
-export function dayOptions(record, todayDate) {
-  const sh = shape(record);
+export function dayOptions(record, todayDate, tz = TZ) {
+  const sh = shape(record, tz);
   if (!sh) return { status: 'unknown' };
   if (todayDate < sh.start.date) return { status: 'future', opens: sh.start.date };
   const last = sh.endDate < todayDate ? sh.endDate : todayDate;
@@ -60,9 +60,11 @@ export function dayOptions(record, todayDate) {
   return { status: 'ok', mode: 'chips', ...span, days, initial: last };
 }
 
-export const todayInLondon = (now = new Date()) => londonParts(now.toISOString()).date;
+export const todayIn = (tz = TZ, now = new Date()) => zonedParts(now.toISOString(), tz).date;
+export const todayInLondon = (now = new Date()) => todayIn(TZ, now);
 
-/* A day, not a moment: noon UTC is the same calendar day in London all year. */
+/* A day, not a moment: noon UTC is the same calendar day in London and
+ * Paris all year. */
 export const dayInstant = (date) => `${date}T12:00:00.000Z`;
 
 /* ---------- the bead ---------- */

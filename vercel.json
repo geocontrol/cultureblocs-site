@@ -196,6 +196,21 @@
       "permanent": false
     },
     {
+      "source": "/events/paris-art-week",
+      "destination": "/events/paris-art-week/",
+      "permanent": false
+    },
+    {
+      "source": "/w/paw",
+      "destination": "/events/paris-art-week/",
+      "permanent": false
+    },
+    {
+      "source": "/w/paw/:key",
+      "destination": "/went/?dir=paris-art-week&e=:key",
+      "permanent": false
+    },
+    {
       "source": "/week",
       "destination": "/week/",
       "permanent": false

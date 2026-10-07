@@ -20,7 +20,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[2]
 RESERVED = {"cards", "report"}   # folders in a directory that aren't event pages
 SITE = "https://www.cultureblocs.com"
-LONDON = ZoneInfo("Europe/London")
+ZONE = ZoneInfo("Europe/London")   # the directory's zone: meta.tz, set in main()
 E = html.escape
 
 GROUP = {"fair": "fairs", "talk": "talks", "talks": "talks", "screening": "talks",
@@ -47,9 +47,9 @@ FOOTER = """<footer><div class="inner">
 </div></footer>"""
 
 
-# ---------- dates, read in London as the site does ----------
+# ---------- dates, read in the directory's zone as the site does ----------
 def london(iso):
-    return datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(LONDON)
+    return datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(ZONE)
 
 
 def shape(rec):
@@ -257,6 +257,8 @@ def main():
     base = ROOT / "events" / a.dir
     doc = json.loads((base / "events.json").read_text(encoding="utf-8"))
     meta = doc["meta"]
+    global ZONE
+    ZONE = ZoneInfo(meta.get("tz") or "Europe/London")
     images = not a.no_images
     if images:
         try:
@@ -281,7 +283,7 @@ def main():
         has_image = (out / "og.png").exists()
         (out / "index.html").write_text(page(e, meta, a.dir, has_image), encoding="utf-8")
     if images:
-        card(base / "og.png", meta["name"], "Fairs, talks, gallery days and exhibitions, day by day",
+        card(base / "og.png", meta["name"], meta.get("cardLine") or "Fairs, talks, gallery days and exhibitions, day by day",
              "cultureblocs.com/events", "#2B4BC7")
 
     # A slug that is no longer in the listing is a page that should go.
