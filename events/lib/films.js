@@ -164,7 +164,7 @@ export function renderFilms({ events, today = null, dir = null, tz = TZ, verb = 
       <button type="button" class="chip view" data-view="days" aria-pressed="false">By day</button>
     </div>
     <label class="film-find"><span class="sr">Find a film</span>
-      <input type="search" id="film-q" placeholder="Find a film, director or programme" autocomplete="off"></label>
+      <input type="search" id="film-q" placeholder="Find a film or director" autocomplete="off"></label>
     ${sections.length > 1 ? `<label class="film-find"><span class="sr">Section</span>
       <select id="film-section"><option value="">All sections</option>${sections.map(s => `<option>${esc(s)}</option>`).join('')}</select></label>` : ''}
   </div>
