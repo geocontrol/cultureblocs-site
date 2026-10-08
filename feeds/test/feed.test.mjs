@@ -8,6 +8,7 @@ import {
 const cfg = JSON.parse(readFileSync(new URL('../feeds.json', import.meta.url), 'utf8'));
 const listing = JSON.parse(readFileSync(new URL('../../events/frieze-week-london/events.json', import.meta.url), 'utf8'));
 const feed = cfg.feeds[0];
+const EVENTS = listing.records.filter(e => e.category !== 'umbrella').length; // event pages
 const json = (body, status = 200) => ({ ok: status < 400, status, json: async () => body });
 
 test('the feed is found by its at:// URI, with the publisher DID or handle', () => {
@@ -29,7 +30,7 @@ test('the committed DID document matches the config', () => {
 test('page URLs cover the week page and every event, not the umbrella', () => {
   const urls = pageUrls(listing, 'frieze-week-london');
   assert.equal(urls[0], 'https://www.cultureblocs.com/events/frieze-week-london/');
-  assert.equal(urls.length, 31);
+  assert.equal(urls.length, EVENTS + 1);
   assert.ok(urls.includes('https://www.cultureblocs.com/events/frieze-week-london/british-museum-bayeux-tapestry/'));
 });
 
@@ -69,7 +70,7 @@ test('sources are merged and de-duplicated, and one failing source is survivable
     'at://did:plc:me/app.bsky.feed.post/3mx7xnxroos26',
     'at://did:plc:y/app.bsky.feed.post/3mx7aaaaaaaa2',
   ]);
-  assert.equal(calls.filter(c => c.includes('constellation')).length, 31);
+  assert.equal(calls.filter(c => c.includes('constellation')).length, EVENTS + 1);
   assert.ok(calls.some(c => c.includes('q=%23CultureBlocs+frieze')));
 });
 

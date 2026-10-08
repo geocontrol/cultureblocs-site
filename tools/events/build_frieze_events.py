@@ -78,6 +78,7 @@ S = {  # sources
  "ica": "https://www.ica.art/exhibitions/frieze-x-ica-artists-film-programme-2026",
  "aaf": "https://affordableartfair.com/fairs/london-battersea-autumn/",
  "minor_ed": "https://minorattractions.com/editions/minor-attractions-2026",
+ "artsvp": "https://artsvp.com/studios/",
 }
 
 # (slug, category, name, description, startsAt, endsAt, location, uris, status, sources, notes)
@@ -227,8 +228,22 @@ show("gasworks-paloma-contreras-lomas", "Paloma Contreras Lomas",
      "Culmination of the Mexican artist's 2026 Gasworks residency: an 'installation-underworld'.",
      "2026-10-01T00:00:00+01:00", "2026-12-13T23:59:00+00:00", GASWORKS, "https://www.gasworks.org.uk/", "Gasworks")
 
+# ---- Added after first publish. Append only: rkeys come from list position,
+# so inserting above would change the rkeys of records already published.
+ev("artsvp-studio-visits-frieze-week-2026", "gallery-day", "ARTSVP Studio Visits",
+   "Invitation-only artist studio visits across London during Frieze Week, curated by Liza Mazurina for ARTSVP. "
+   "Mon 12: Battersea (Edyta; Henry Baldwin & Christopher Ge) and Camberwell (Catherine Long; Gloria Pescaru & Cato). "
+   "Tue 13: Earl's Court (Fiona von Fürstenberg & Georgia Dalzell) and Notting Hill (Marina Priyomova, Anna Lugovska, Amelia Badenoch, Stacie McCormick). "
+   "Thu 15: The City (Gus Monday, Cayetano Sanz de Santamaría, KV Duong, Shane Keisuke Berkery). "
+   "Fri 16: Soho (Revue Residency). "
+   "Sat 17: Marylebone (Talia Golchin, Anya Kashina, Mariella Smilas). "
+   "By invitation; request access via ARTSVP.",
+   "2026-10-12T00:00:00+01:00", "2026-10-17T23:59:00+01:00", addr("Artists' studios (by invitation)"),
+   [uri(S["artsvp"], "ARTSVP Studios"), uri(S["artsvp"] + "request-access/", "Request an invitation")],
+   ["artsvp"], notes="Invitation only. Studio addresses and visit times are not published, only neighbourhoods; no visits on Wed 14.")
+
 # ---- Build
-DT = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$")
+DT =re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$")
 base_us = int(time.mktime(time.strptime("2026-10-05 20:30:00", "%Y-%m-%d %H:%M:%S"))) * 1_000_000
 random.seed(2026)
 clock = random.randrange(1024)
@@ -265,6 +280,11 @@ if OUT.exists():
             o["atUri"] = p["atUri"]
             if p.get("cid") and p.get("record") == o["record"]:
                 o["cid"] = p["cid"]
+        elif did:
+            # A new record: the repo's DID is already known, so its event page
+            # can use the DID form (what beads and Constellation use) before
+            # it is published.
+            o["atUri"] = f"at://{did}/{COLL}/{o['rkey']}"
 
 doc = {
   "meta": {
