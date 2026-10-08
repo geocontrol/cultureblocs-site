@@ -4,6 +4,7 @@
     "name": "Frieze Week London 2026",
     "directory": "frieze-week-london",
     "tag": "frieze-week-london-2026",
+    "short": "fwl",
     "repo": "cultureblocs.com",
     "collection": "community.lexicon.calendar.event",
     "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
@@ -13,9 +14,8 @@
     "timezone": "Times are Europe/London; BST (+01:00) until 25 Oct 2026, GMT (+00:00) after. All-day/date-only events use 00:00–23:59 because the lexicon has no all-day flag.",
     "omitted": "Christie's/Sotheby's/Phillips Frieze Week evening sales — 2026 dates not confirmed at time of build.",
     "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Frieze or any listed organiser.",
-    "count": 31,
-    "did": "did:plc:l3726um33xesakwqhjkkpoet",
-    "short": "fwl"
+    "count": 32,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
   },
   "records": [
     {
@@ -1147,6 +1147,44 @@
         ]
       },
       "cid": "bafyreigbrpavgu6mwl5d546tokl7g56hriqe2o2deaqbqguxra6nmwbmua"
+    },
+    {
+      "slug": "artsvp-studio-visits-frieze-week-2026",
+      "category": "gallery-day",
+      "rkey": "3mx5noap7ssbn",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mx5noap7ssbn",
+      "sources": [
+        "https://artsvp.com/studios/"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "ARTSVP Studio Visits",
+        "description": "Invitation-only artist studio visits across London during Frieze Week, curated by Liza Mazurina for ARTSVP. Mon 12: Battersea (Edyta; Henry Baldwin & Christopher Ge) and Camberwell (Catherine Long; Gloria Pescaru & Cato). Tue 13: Earl's Court (Fiona von Fürstenberg & Georgia Dalzell) and Notting Hill (Marina Priyomova, Anna Lugovska, Amelia Badenoch, Stacie McCormick). Thu 15: The City (Gus Monday, Cayetano Sanz de Santamaría, KV Duong, Shane Keisuke Berkery). Fri 16: Soho (Revue Residency). Sat 17: Marylebone (Talia Golchin, Anya Kashina, Mariella Smilas). By invitation; request access via ARTSVP.",
+        "createdAt": "2026-10-05T20:30:00.000Z",
+        "startsAt": "2026-10-12T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-17T23:59:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Artists' studios (by invitation)"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://artsvp.com/studios/",
+            "name": "ARTSVP Studios"
+          },
+          {
+            "uri": "https://artsvp.com/studios/request-access/",
+            "name": "Request an invitation"
+          }
+        ]
+      },
+      "notes": "Invitation only. Studio addresses and visit times are not published, only neighbourhoods; no visits on Wed 14."
     }
   ]
 }

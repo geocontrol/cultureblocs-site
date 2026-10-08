@@ -26,7 +26,7 @@ test('people are counted once; notes, events reached and widest week add up', ()
   assert.equal(s.notes, 3);
   assert.equal(s.strands, 2);
   assert.equal(s.posts, 5);
-  assert.equal(s.eventsTotal, 30);
+  assert.equal(s.eventsTotal, listing.records.filter(e => e.category !== 'umbrella').length);
   assert.equal(s.eventsReached, 3);
   assert.equal(s.widest, 2);
   assert.deepEqual(s.perEvent.slice(0, 3).map(r => [r.slug, r.people, r.beads]), [
