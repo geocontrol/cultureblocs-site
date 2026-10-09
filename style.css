@@ -115,6 +115,13 @@ td.t{font-family:var(--mono);font-size:.78rem;color:var(--faint);white-space:now
   border-radius:8px;padding:.75rem 1.3rem}
 .cta:hover{background:#3A5BD9}
 
+/* support note */
+.support{background:var(--wash);border:1px solid var(--edge);border-left:3px solid var(--listen);
+  border-radius:8px;padding:1.2rem 1.4rem}
+.support h2.sec{border-bottom:0;padding-bottom:0;margin-bottom:.6rem}
+.support p{max-width:38rem;margin:0}
+.support .links{margin-top:.8rem;font:.78rem var(--mono)}
+
 footer{border-top:1px solid var(--edge);margin-top:2rem}
 footer .inner{max-width:60rem;margin:0 auto;padding:1.6rem 1.4rem;
   font:.8rem var(--mono);color:var(--faint)}
