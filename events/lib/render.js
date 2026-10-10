@@ -10,6 +10,16 @@ export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 }[c]));
 
+/* An account as a URL path segment. A DID keeps its colons — bsky.app
+ * can't open /profile/did%3Aplc%3A… — and so does a handle; anything that
+ * is neither is encoded, so it can't break out of the path. */
+export function actorPath(id) {
+  const s = String(id ?? '');
+  if (/^did:[a-z]+:[A-Za-z0-9._:%-]{1,2048}$/.test(s)) return s;
+  if (/^[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/.test(s)) return s.toLowerCase();
+  return encodeURIComponent(s);
+}
+
 /* Only http(s) links from a record become hrefs. */
 export function safeHref(u) {
   try {

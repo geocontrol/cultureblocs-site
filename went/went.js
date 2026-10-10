@@ -16,7 +16,7 @@ import {
   kindFor, parseAtUri, scopesFor, todayIn, validDirectory,
 } from './lib/compose.js';
 import { dateLabel, dayLabel, groupOf, shape, tzOf } from '../events/lib/schedule.js';
-import { esc } from '../events/lib/render.js';
+import { actorPath, esc } from '../events/lib/render.js';
 import { said, verbOf, youSaid } from '../events/lib/verb.js';
 
 const $ = (id) => document.getElementById(id);
@@ -384,8 +384,8 @@ function done({ beadUri, postUri, postError, draft, handle, did }) {
     ${postUri ? '<p>Your post is up on Bluesky.</p>' : ''}
     ${postError ? `<p class="went-error">The bead is saved, but the Bluesky post didn’t go: ${esc(postError)}</p>` : ''}
     <div class="links">
-      <a href="https://pdsls.dev/at/${esc(did)}/${BEAD_NSID}/${esc(beadRkey)}" rel="noopener">see the record →</a>
-      ${postRkey ? `<a href="https://bsky.app/profile/${esc(did)}/post/${esc(postRkey)}" rel="noopener">see your post →</a>` : ''}
+      <a href="https://pdsls.dev/at/${esc(actorPath(did))}/${BEAD_NSID}/${esc(beadRkey)}" rel="noopener">see the record →</a>
+      ${postRkey ? `<a href="https://bsky.app/profile/${esc(actorPath(did))}/post/${esc(postRkey)}" rel="noopener">see your post →</a>` : ''}
       ${st.ctx.dir ? `<a href="/week/?dir=${encodeURIComponent(st.ctx.dir)}&who=${encodeURIComponent(handle)}">your whole week →</a>` : ''}
       ${st.ctx.dirUrl ? `<a href="${esc(st.ctx.dirUrl)}">back to ${esc(st.ctx.dirName || 'the programme')} →</a>` : ''}
     </div>

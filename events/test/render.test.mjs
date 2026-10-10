@@ -39,3 +39,17 @@ test('the source line says honestly where the events came from', () => {
   assert.match(sourceLine({ actor: 'cultureblocs.com', live: 0, total: 30 }), /not yet published/);
   assert.match(sourceLine({ actor: 'cultureblocs.com', live: 0, total: 30, error: true }), /couldn’t be reached/);
 });
+
+import { actorPath } from '../lib/render.js';
+import { beadItem } from '../lib/whowent.js';
+
+test('profile links keep a DID readable — bsky.app cannot open did%3Aplc%3A…', () => {
+  assert.equal(actorPath('did:plc:7agixx6qbaedfeyszn3lfboo'), 'did:plc:7agixx6qbaedfeyszn3lfboo');
+  assert.equal(actorPath('did:web:www.cultureblocs.com'), 'did:web:www.cultureblocs.com');
+  assert.equal(actorPath('Iain.bsky.social'), 'iain.bsky.social');
+  assert.equal(actorPath('../x?y'), '..%2Fx%3Fy');
+  const html = beadItem({ did: 'did:plc:7agixx6qbaedfeyszn3lfboo', rkey: '3mxh7gss6j42s',
+    profile: { handle: 'iaindodsworth.bsky.social' }, value: { createdAt: '2026-10-09T12:00:00.000Z' } });
+  assert.ok(html.includes('href="https://bsky.app/profile/did:plc:7agixx6qbaedfeyszn3lfboo"'));
+  assert.ok(!html.includes('%3A'));
+});

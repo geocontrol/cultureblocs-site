@@ -3,7 +3,7 @@
 import { collect } from './lib/collect.js';
 import { summarise } from './lib/report.js';
 import { dayColumns, eventBars, notes, pairList, table, tiles } from './lib/reportview.js';
-import { esc } from './lib/render.js';
+import { actorPath, esc } from './lib/render.js';
 
 const root = document.getElementById('report');
 const dir = root.dataset.dir;
@@ -50,7 +50,7 @@ async function main() {
     $('rp-notes').innerHTML = notes(data.beads, data.listing, dir);
     $('rp-tables').innerHTML = table(s);
     if (data.posts?.rkey) {
-      $('rp-feed').href = `https://bsky.app/profile/${encodeURIComponent(data.posts.publisher)}/feed/${encodeURIComponent(data.posts.rkey)}`;
+      $('rp-feed').href = `https://bsky.app/profile/${actorPath(data.posts.publisher)}/feed/${encodeURIComponent(data.posts.rkey)}`;
     }
     download(data, s);
     root.classList.add('ready');

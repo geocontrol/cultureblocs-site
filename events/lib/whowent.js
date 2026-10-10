@@ -1,6 +1,6 @@
 /* HTML for who went. Pure: strings in, strings out, everything escaped —
  * these are other people's words, arriving from their own repositories. */
-import { esc } from './render.js';
+import { actorPath, esc } from './render.js';
 import { dayLabel } from './schedule.js';
 import { WENT, countWord } from './verb.js';
 
@@ -23,8 +23,8 @@ export function beadItem(b, { event = null, noteMax = 280, verb = WENT } = {}) {
   const avatar = /^https:\/\//.test(b.profile?.avatar || '')
     ? `<img class="who-av" src="${esc(b.profile.avatar)}" alt="" loading="lazy">`
     : `<span class="who-av who-av-none" aria-hidden="true">${esc(initials(name))}</span>`;
-  const profileUrl = `https://bsky.app/profile/${encodeURIComponent(b.did)}`;
-  const recordUrl = `https://pdsls.dev/at/${encodeURIComponent(b.did)}/com.cultureblocs.bead/${encodeURIComponent(b.rkey)}`;
+  const profileUrl = `https://bsky.app/profile/${actorPath(b.did)}`;
+  const recordUrl = `https://pdsls.dev/at/${actorPath(b.did)}/com.cultureblocs.bead/${encodeURIComponent(b.rkey)}`;
   return `<li class="who-bead">
   ${avatar}
   <div class="who-body">

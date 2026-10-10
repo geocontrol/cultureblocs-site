@@ -19,7 +19,7 @@ import { listCollection } from '../events/lib/atproto.js';
 import { groupOf } from '../events/lib/schedule.js';
 import { hider } from '../events/lib/went.js';
 import { verbOf } from '../events/lib/verb.js';
-import { esc } from '../events/lib/render.js';
+import { actorPath, esc } from '../events/lib/render.js';
 
 const SITE = 'https://www.cultureblocs.com';
 const DRAFT = 'week:draft';
@@ -244,8 +244,8 @@ async function publish(draft) {
     in <b>@${esc(st.person.handle)}</b>’s own repository.${postUri ? ' Your post is up on Bluesky.' : ''}</p>
     ${postError ? `<p class="went-error">The strand is saved, but the Bluesky post didn’t go: ${esc(postError)}</p>` : ''}
     <div class="links"><a href="${esc(wall)}">see it on your wall →</a>
-      ${postUri ? `<a href="https://bsky.app/profile/${esc(st.person.did)}/post/${esc(String(postUri).split('/').pop())}" rel="noopener">see your post →</a>` : ''}
-      <a href="https://pdsls.dev/at/${esc(st.person.did)}/${STRAND_NSID}/${esc(rkey)}" rel="noopener">the record →</a></div>
+      ${postUri ? `<a href="https://bsky.app/profile/${esc(actorPath(st.person.did))}/post/${esc(String(postUri).split('/').pop())}" rel="noopener">see your post →</a>` : ''}
+      <a href="https://pdsls.dev/at/${esc(actorPath(st.person.did))}/${STRAND_NSID}/${esc(rkey)}" rel="noopener">the record →</a></div>
     <p>Change your mind about the words? Come back to this page and publish again —
     it updates the same strand.</p>`;
   show($('done'));
