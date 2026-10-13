@@ -285,16 +285,25 @@ async function call(method, nsid, { body, params, contentType } = {}) {
     err.status = res.status; err.code = code;
     throw err;
   }
-  return res.json();
+  // deleteRecord may answer with an empty body on older servers
+  const text = await res.text();
+  return text ? JSON.parse(text) : {};
 }
 
 export const createRecord = (collection, record) =>
   call('POST', 'com.atproto.repo.createRecord',
     { body: { repo: session().did, collection, record } });
 
-export const putRecord = (collection, rkey, record) =>
+/* swapRecord: the CID the caller last read. If the record has changed
+ * since (edited on another device), the server refuses with InvalidSwap
+ * rather than overwrite it. */
+export const putRecord = (collection, rkey, record, swapRecord) =>
   call('POST', 'com.atproto.repo.putRecord',
-    { body: { repo: session().did, collection, rkey, record } });
+    { body: { repo: session().did, collection, rkey, record, ...(swapRecord ? { swapRecord } : {}) } });
+
+export const deleteRecord = (collection, rkey, swapRecord) =>
+  call('POST', 'com.atproto.repo.deleteRecord',
+    { body: { repo: session().did, collection, rkey, ...(swapRecord ? { swapRecord } : {}) } });
 
 export const uploadBlob = (blob) =>
   call('POST', 'com.atproto.repo.uploadBlob',

@@ -156,6 +156,41 @@
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'"
         }
       ]
+    },
+    {
+      "source": "/beads/client-metadata.json",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/beads/sw.js",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/beads/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -237,6 +272,11 @@
     {
       "source": "/week",
       "destination": "/week/",
+      "permanent": false
+    },
+    {
+      "source": "/beads",
+      "destination": "/beads/",
       "permanent": false
     },
     {
