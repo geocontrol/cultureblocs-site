@@ -29,7 +29,7 @@ const show = (el, on = true) => { el.hidden = !on; };
 const say = (html) => { $('status').innerHTML = html; show($('status'), Boolean(html)); };
 const fail = (el, msg) => { el.textContent = msg || ''; show(el, Boolean(msg)); };
 const KIND = { visit: 'a visit', performance: 'a performance or talk', screening: 'a screening', dwell: 'time with one thing', bloc: 'a marked moment' };
-const COLOUR = { fairs: '#2B4BC7', talks: '#C74E2B', exhibitions: '#2E7A4F', galleries: '#C7860F', nights: '#5B2BC7' };
+const COLOUR = { fairs: '#2B4BC7', talks: '#C74E2B', exhibitions: '#2E7A4F', galleries: '#C7860F', nights: '#5B2BC7', workshops: '#B0326E' };
 
 const st = { dir: null, listing: null, person: null, beads: [], existing: null, week: null, postEdited: false };
 

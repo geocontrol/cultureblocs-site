@@ -26,6 +26,7 @@ export const RUNNING_AFTER_DAYS = 7;
 export const FILTERS = [
   ['all', 'Everything'],
   ['fairs', 'Fairs'],
+  ['workshops', 'Workshops'],
   ['talks', 'Talks & film'],
   ['exhibitions', 'Exhibitions'],
   ['galleries', 'Gallery days'],
@@ -34,9 +35,10 @@ export const FILTERS = [
 
 const GROUP_OF = {
   fair: 'fairs',
-  talk: 'talks', talks: 'talks', screening: 'talks',
+  workshop: 'workshops', 'office-hours': 'workshops',
+  talk: 'talks', talks: 'talks', screening: 'talks', meetup: 'talks',
   film: 'films',
-  exhibition: 'exhibitions', commission: 'exhibitions',
+  exhibition: 'exhibitions', commission: 'exhibitions', tour: 'exhibitions',
   'gallery-day': 'galleries',
   party: 'nights', performance: 'nights',
 };

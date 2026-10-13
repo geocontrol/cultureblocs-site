@@ -255,6 +255,21 @@
       "permanent": false
     },
     {
+      "source": "/events/peckham-digital",
+      "destination": "/events/peckham-digital/",
+      "permanent": false
+    },
+    {
+      "source": "/w/pd",
+      "destination": "/events/peckham-digital/",
+      "permanent": false
+    },
+    {
+      "source": "/w/pd/:key",
+      "destination": "/went/?dir=peckham-digital&e=:key",
+      "permanent": false
+    },
+    {
       "source": "/events/london-film-festival",
       "destination": "/events/london-film-festival/",
       "permanent": false

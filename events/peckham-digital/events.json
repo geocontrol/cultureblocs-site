@@ -1,0 +1,1427 @@
+{
+  "meta": {
+    "title": "Peckham Digital 2026 — CultureBlocs event dataset",
+    "name": "Peckham Digital 2026",
+    "directory": "peckham-digital",
+    "tag": "peckham-digital-2026",
+    "short": "pd",
+    "tz": "Europe/London",
+    "cardLine": "Workshops, talks, performance and two exhibitions, day by day",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "generated": "2026-10-13",
+    "status": "draft — review flagged notes before publishing",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published.",
+    "timezone": "Times are Europe/London; BST (+01:00) until 02:00 on 25 Oct 2026, GMT (+00:00) after — so the festival's last day, Sunday 25 October, is +00:00.",
+    "checked": "Every event read from the festival's own Ticket Tailor box office on 13 October 2026. Three box-office times are evidently typos and are corrected; each says so in its `notes`.",
+    "prices": "Prices are the box office's own: paid workshops £16.80 or £10.70 concession incl. VAT; everything else free to book.",
+    "omitted": "Nothing from the box office is left out. Descriptions are our own short summaries; the organisers' copy and artist biographies stay on their pages.",
+    "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Peckham Digital or any listed artist or venue.",
+    "count": 35,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
+  },
+  "records": [
+    {
+      "slug": "peckham-digital-2026",
+      "category": "umbrella",
+      "rkey": "3mxquvnwf22qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwf22qm",
+      "sources": [
+        "https://www.peckhamdigital.org",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Peckham Digital 2026",
+        "description": "The fifth Peckham Digital, a festival of creative computing in south-east London: two exhibitions, workshops, talks, a Processing Community Day, office hours, live audio-visual performance and a night of short films, across Copeland Park and The Hub. Umbrella record: individual events in this collection reference the same festival.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-22T00:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T23:59:00+00:00",
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital",
+            "name": "Programme and tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "Unofficial umbrella record; not published by Peckham Digital."
+    },
+    {
+      "slug": "exhibition-2026",
+      "category": "exhibition",
+      "rkey": "3mxquvnwfzcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwfzcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434118",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Peckham Digital 2026: the exhibitions",
+        "description": "Two exhibitions for the festival's fifth year. Mediating Behaviours: ten artists working with interactive installation, digital media and experimental sound and image — Ahnjili Zhuparris, Evander Duncan, Jihui Yang, Latifah Dickson, Mantė Elelueta & Danielius Šermukšnis, Marianna Glykofridi, MDamager, Priyal Patel, Ruiyang Wang and Weezy Derham. Minimal Viable Home: games as an art form, with Ama Dogbe, Cristina Bianchi, Jade Lin and Sabina Oțelea, shown at Rabbet London. Thursday to Sunday. Free; book a ticket for the day you go.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-22T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T21:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434118",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "The box office gives 10:00 Thu to 21:00 Sun as one span with a free ticket per day; we read that as daily 10:00–21:00 but the organisers don't say so. Minimal Viable Home is described as being at Rabbet London; no address is given, so the record carries Copeland Gallery only."
+    },
+    {
+      "slug": "noodlerack-generative-modular",
+      "category": "workshop",
+      "rkey": "3mxquvnwgykqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwgykqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2394047",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Intro to Generative Modular Synthesis with Noodlerack",
+        "description": "Jeremy Osztreicher introduces modular synthesis as a way to build small generative sound systems, patching oscillators, clocks, envelopes, filters and randomness in Noodlerack, a free modular synth that runs in the browser. Beginners welcome; bring a laptop and headphones. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-22T17:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-22T19:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2394047",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "artists-party-opening",
+      "category": "party",
+      "rkey": "3mxquvnwhxsqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwhxsqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2426153",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Artists' Party – Festival Opening",
+        "description": "The festival's opening night at the gallery, with performances by malu laet (WYRMDIE: Cyber-Dragons), Yaa Adoma (Like my heart is me, a voice and DNA-sonification piece) and Nell Lang with Ezra Escobar. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-22T18:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-22T22:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2426153",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "byow-meetup",
+      "category": "meetup",
+      "rkey": "3mxquvnwix2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwix2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419647",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "BYOW (Bring Your Own Website) Meetup",
+        "description": "A meet-up for small, handmade and poetic web practice, hosted by artist and researcher Kendal Beynon. Bring a web project and show it in up to ten minutes; conversation follows. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-23T17:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-23T19:30:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419647",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "noisy-spaces",
+      "category": "workshop",
+      "rkey": "3mxquvnwjwcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwjwcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2394217",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Noisy Spaces: Embodiment, Technology and Public Space",
+        "description": "Sound and performance artist Kat Macdonald leads collective sound-making exercises from the London Community Laptop Orchestra and a short history of London's 1970s experimental collective performance — the laptop as a tool that looks outward. Open to all levels; bring a laptop. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-23T17:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-23T19:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2394217",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "untitled-robot-story",
+      "category": "performance",
+      "rkey": "3mxquvnwkvkqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwkvkqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419319",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Untitled (Robot Story)",
+        "description": "A new show by Conscript Theatre, a techno-physical performance company: networks set up and run on stage, live camera, experimental audio and video, 3D animation, dance and puppetry, on telling stories when technology overtakes fiction. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-23T20:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-23T21:45:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419319",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pcd-digital-tile-design",
+      "category": "workshop",
+      "rkey": "3mxquvnwlusqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwlusqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434101",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Processing Community Day Workshop: Digital Tile Design and Fabrication",
+        "description": "Marysia Tańska and James Walker introduce p5.js through prepared examples, then everyone designs their own pattern and cuts it out as a bookmark. Part of Processing Community Day. Free; places prioritised for 18–25 year olds not in employment or education.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T10:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T11:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434101",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "slime-city",
+      "category": "workshop",
+      "rkey": "3mxquvnwmu2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwmu2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419763",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "SLIME CITY: Grow your own algorithmic slime mold anti-surveillance mask using Scaniverse and Blender",
+        "description": "Fran Hayes leads a beginner workshop against facial recognition: 3D-scan each other's heads on a phone, grow a slime-mould pattern over the mesh with a Python script in Blender, and leave with a print-ready mask file. Bring a laptop with Blender and a phone with a scanning app. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T10:15:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T12:15:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419763",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "The title names Scaniverse; the requirements on the same page say Polycam. The description says 'a scanning app'."
+    },
+    {
+      "slug": "counterfeit-games",
+      "category": "talk",
+      "rkey": "3mxquvnwntcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwntcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2418755",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Counterfeit Games: Anti-Game Approaches to Playable Experiences",
+        "description": "Computational artist and game maker Jade Lin (strawberrycongee) talks about playable works that borrow the language of games while refusing their rules of progress and reward. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T10:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T11:30:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2418755",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "The box office says 10:30 AM – 11:30 PM; read as 10:30–11:30, a one-hour talk."
+    },
+    {
+      "slug": "pcd-planet-friendly-processing",
+      "category": "workshop",
+      "rkey": "3mxquvnwoskqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwoskqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2429611",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Processing Community Day Workshop: Planet-friendly Processing",
+        "description": "Considerate Digital show how much energy a creative coding project uses, then build an interactive webcam piece in Processing and look at running creative code on low-power, recycled hardware. Bring a laptop with Processing installed. Part of Processing Community Day. Free; places prioritised for 18–25 year olds not in employment or education.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T11:15:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T12:15:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2429611",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "conserving-time-based-media",
+      "category": "talk",
+      "rkey": "3mxquvnwprsqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwprsqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2430678",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Methods in Conserving Time-Based Contemporary New Media and Collection as Pilgrimage",
+        "description": "Artist and scholar Alexa Ann Bonomo on the history of conserving time-based and digital art, and her 'collection as pilgrimage' practice — 3D-scanning artefacts on long walks for Hyperviolet, a digital world joined to handmade books and craft. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T12:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T13:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2430678",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "office-hours-joel-gethin-lewis",
+      "category": "office-hours",
+      "rkey": "3mxquvnwqr2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwqr2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2439106",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Office Hours with Joel Gethin Lewis",
+        "description": "Book a 30-minute one-to-one with Joel Gethin Lewis — course leader at UAL's Creative Computing Institute and Interactive Creative Director of Universal Everything — for questions, feedback on your work or career advice in creative computing. Free.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T12:15:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T18:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "SOCIAL, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2439106",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "Fully booked when read on 13 October; the box office offered a waiting list."
+    },
+    {
+      "slug": "pcd-spoke-physical-interaction",
+      "category": "workshop",
+      "rkey": "3mxquvnwrqcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwrqcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2432574",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Processing Community Day Workshop: SPOKE – Physical interaction with Processing",
+        "description": "Tom Fox introduces SPOKE, his capacitive-touch MIDI board, with p5.js/Processing: touches become numbers, colour, shape and 3D form in real time. Each participant gets a free SpokeBoard. Bring a laptop with Processing installed. Part of Processing Community Day. Free; places prioritised for 18–25 year olds not in employment or education.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T12:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T13:30:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2432574",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "intro-to-picodevil",
+      "category": "workshop",
+      "rkey": "3mxquvnwspkqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwspkqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419790",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Intro to Picodevil",
+        "description": "Game designer and creative technologist v buckenham teaches Picodevil, her open-source browser tool for live-coding visuals from chopped, tiled and treated video clips. Bring a laptop with a browser. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T13:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T15:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419790",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ar-live-performance-spectacles",
+      "category": "talk",
+      "rkey": "3mxquvnwtosqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwtosqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419446",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Designing Augmented Reality for Live Performance (with Snapchat Spectacles)",
+        "description": "Musician and technologist Lien Tran (LIÊNA) on designing for lightweight AR glasses in live music, drawing on her work as supporting musician and developer for Imogen Heap's improvised performance at the Spectacles launch. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T14:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T15:30:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419446",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pcd-small-computers-local-worlds",
+      "category": "workshop",
+      "rkey": "3mxquvnwuo2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwuo2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434169",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Processing Community Day Workshop: Small computers, local worlds",
+        "description": "Yadira Sánchez (tecnomilpa; Slade Art+Tech Research Lab) leads a hands-on build of small portable computers — board, screen, keyboard, power — then adds sensors, buttons and local links between them, in the spirit of DIY cyberdecks. No experience needed. Part of Processing Community Day. Free; places prioritised for 18–25 year olds not in employment or education.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T14:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T15:30:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434169",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "build-a-bot",
+      "category": "workshop",
+      "rkey": "3mxquvnwvncqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwvncqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2429507",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Build-a-bot: take back your tools",
+        "description": "Mahalia Henry-Richards (UAL Creative Computing Institute) on what a bot can be beyond the chat window: design your own on paper — what it knows, what it won't do, who owns the data — then run it locally with Ollama. No coding needed; bring a laptop with Ollama installed. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T15:15:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T16:45:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2429507",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pcd-machines-made-of-words",
+      "category": "workshop",
+      "rkey": "3mxquvnwwmkqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwwmkqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434190",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Processing Community Day Workshop: Small (or large) machines made of words",
+        "description": "Poets and Goldsmiths lecturers Iris Colomb and Jérémie Wenger use visual poetry and Oulipo-style writing constraints, on paper and in p5.js, with a spotlight on the spatialist poet Ilse Garnier. No coding experience needed. Part of Processing Community Day. Free; places prioritised for 18–25 year olds not in employment or education.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T15:45:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T16:45:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434190",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "vera-molnar-order-and-chaos",
+      "category": "talk",
+      "rkey": "3mxquvnwxlsqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwxlsqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419825",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Between Order and Chaos: The Art of Vera Molnar",
+        "description": "Melanie Lenz, the V&A's curator of digital art, on Vera Molnar (1924–2023), a pioneer of computer-made art, and the V&A display Degrees of Disruption: Vera Molnar and Generative Art. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T16:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T17:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419825",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pcd-townhall-learning-to-teach",
+      "category": "talk",
+      "rkey": "3mxquvnwyl2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwyl2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2439027",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Processing Community Day Townhall: Learning to Teach",
+        "description": "London's grassroots creative-coding groups on how they teach code — quick talks from Future Inventions, In-grid, London Live Coding, Permacomputing Club, Phreaking Collective / Cranberry Lemonade and the Slade Art+Tech Research Lab (UCL) — then an unconference: bring questions and practices to share. Free.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T17:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T19:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2439027",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "live-audio-visual-performances",
+      "category": "performance",
+      "rkey": "3mxquvnwzkcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnwzkcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419340",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Live Audio-visual Performances",
+        "description": "An open mic for laptop performers — bring yours — then sets from Talia'Kah (Behind the signal, generative visuals with TidalCycles sound), LAPTOPBACK (Lithium Womb) and Ali Bross (Twisted dreams). Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-24T19:30:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-24T22:00:00+01:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419340",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "intro-to-pure-data",
+      "category": "workshop",
+      "rkey": "3mxquvnx2jkqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnx2jkqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2418891",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Intro to Pure Data",
+        "description": "Nadia Li (Slade, BA Art and Technology) teaches the basics of sound art in Pure Data's visual programming language — oscillators, noise, filters and arrays to draw your waveforms. Bring a laptop with Pure Data vanilla installed. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T11:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2418891",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "building-beats-with-strudel",
+      "category": "workshop",
+      "rkey": "3mxquvnx3isqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnx3isqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2439138",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Building Beats with Strudel",
+        "description": "Shaan Rehsi (shapesandjapes) of Melanated Coalition teaches Strudel, the browser live-coding environment, building an amapiano-inspired beat from scratch — drums, log drum, bass and chords. No coding or production experience needed; bring a laptop and headphones. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T10:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T11:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2439138",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "The box office says 10:30 AM – 11:30 PM; the page describes an hour-long session, so read as 10:30–11:30."
+    },
+    {
+      "slug": "bonsai-sound-and-image",
+      "category": "workshop",
+      "rkey": "3mxquvnx4i2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnx4i2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2418940",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Bonsai: Wiring the World into Sound and Image",
+        "description": "NeuroGEARS, who develop the open-source Bonsai visual reactive language, build a live installation from camera and microphone streams, then everyone forks it and remaps the inputs and outputs. Beginners welcome. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T12:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T13:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2418940",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "good-artificial-life-simulation",
+      "category": "talk",
+      "rkey": "3mxquvnx5hcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnx5hcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434216",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "What Makes a Good Artificial Life Simulation?",
+        "description": "Tom Appleyard on artificial life, from early computer viruses through embodied agents that learn to walk and cooperate to LLM-driven virtual people — and what it takes for something lifelike to emerge. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T12:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T13:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434216",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "office-hours-kasia-molga",
+      "category": "office-hours",
+      "rkey": "3mxquvnx6gkqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnx6gkqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2469093",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Office Hours with Kasia Molga",
+        "description": "Book a 30-minute one-to-one with artist and creative coder Kasia Molga, whose work collaborates with nature and the oceans, for questions, feedback or career advice in creative computing. Slots 12:15, 12:45, 14:00, 17:00 and 17:30. Free.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T12:15:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "SOCIAL, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2469093",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      },
+      "notes": "The box office runs this to 18:00 on Mon 26 October, after the festival ends; its five slots are all on Sunday, so read as Sunday 12:15–18:00."
+    },
+    {
+      "slug": "wall-drawing-robot",
+      "category": "workshop",
+      "rkey": "3mxquvnx7fsqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnx7fsqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2429521",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Build Your Own Wall Drawing Robot",
+        "description": "Artist Liz Melchor leads a group build of a polargraph wall plotter — 3D-printed gondola, stepper motors, servo, MKS TinyBee firmware and G-code — with an online tutorial so you can build your own at home. All levels. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T13:45:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T16:45:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2429521",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://lizmelchor.com/peckham-workshop/",
+            "name": "Materials list"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "moodboard-to-mannequin",
+      "category": "workshop",
+      "rkey": "3mxquvnxaf2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxaf2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2429303",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "From Moodboard to Mannequin: A Beginner's Guide to Projection Mapping",
+        "description": "Amber Lucia's workshop, first made with the V&A Youth Collective: draw a fashion illustration, photograph it, and projection-map it onto a mannequin with Map Club, a free open-source web tool, ending in a group showcase. No experience or device needed. £16.80, concession £10.70 (incl. VAT).",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T14:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T15:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "The Hub (Camberwell College of Arts, UAL)",
+            "street": "42 Bonar Road",
+            "postalCode": "SE15 5FB"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2429303",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "automation-and-us",
+      "category": "talk",
+      "rkey": "3mxquvnxbecqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxbecqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434095",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Automation and Us",
+        "description": "Live coder Lu Wilson (Algorave London, Pastagang) on automation in their practice — cellular automata worked by hand, surrealist automatism, live coding mistaken for AI, and collaboration as a kind of automation. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T14:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T15:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434095",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bsl-exhibition-tour",
+      "category": "tour",
+      "rkey": "3mxquvnxcdkqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxcdkqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2429655",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "British Sign Language Exhibition Tour",
+        "description": "A tour of the Mediating Behaviours exhibition in British Sign Language, led by Deaf performance artist, choreographer and BSL art guide Chisato Minamimura. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T14:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T15:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2429655",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "voice-technology-witchcraft",
+      "category": "talk",
+      "rkey": "3mxquvnxdcsqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxdcsqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419494",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Voice, Technology, and Witchcraft",
+        "description": "Artist and researcher June Kuhn (softshadow; Imperial College London) on trans voice training technology as a mode of magic, through her microtonal feedback instrument Ephemerides and a séance in the Wick Woods, both from NIME '26. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T15:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T16:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419494",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "what-even-is-an-art-game",
+      "category": "talk",
+      "rkey": "3mxquvnxec2qm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxec2qm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2419490",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "What Even is An Art Game?",
+        "description": "Elliott Burns, curator and author of Side Quest, gives a vote-based performance lecture: agree or disagree from your phone as he unpacks what 'art game' means and how games sit in galleries. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T17:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T18:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2419490",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "who-gets-seen-in-xr",
+      "category": "talk",
+      "rkey": "3mxquvnxfbcqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxfbcqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2430614",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Who Gets Seen in XR? Data, Diversity, and Generalization in Extended Reality",
+        "description": "Creative technologist Mashall Khattak (Gloss Engine) draws on teaching XR design in Pakistan to ask whose data, bodies and contexts extended reality is built for. Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T18:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2430614",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "digital-reel-screenings",
+      "category": "screening",
+      "rkey": "3mxquvnxgakqm",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxquvnxgakqm",
+      "sources": [
+        "https://www.tickettailor.com/events/peckhamdigital/2434250",
+        "https://www.tickettailor.com/events/peckhamdigital"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Digital Reel: Creative Computing Film Screenings",
+        "description": "Eight short films made with creative computing: SHATTRD (uoshi), How to Excel at Everything (Marion Balac), Eye Lynx (Catherine Chapman), Rule 30 (there are no girls on the internet) (Erinne Huston), The Nest (Grier Iana), p0wer vect0rs (Helena Nikonole), Cyborg Needs No Redemption (Sofia Talanti) and IT GIRL (Raw2.2 and Alex Quicho). Free, booking required.",
+        "createdAt": "2026-10-13T12:00:00.000Z",
+        "startsAt": "2026-10-25T19:45:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-25T20:45:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Copeland Gallery, Copeland Park",
+            "street": "133 Copeland Road",
+            "postalCode": "SE15 3SN"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/peckhamdigital/2434250",
+            "name": "Tickets"
+          },
+          {
+            "uri": "https://www.peckhamdigital.org",
+            "name": "Peckham Digital"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -53,3 +53,33 @@ test('profile links keep a DID readable — bsky.app cannot open did%3Aplc%3A…
   assert.ok(html.includes('href="https://bsky.app/profile/did:plc:7agixx6qbaedfeyszn3lfboo"'));
   assert.ok(!html.includes('%3A'));
 });
+
+/* ---------- Peckham Digital: a festival with workshops ---------- */
+import { arrange, tzOf } from '../lib/schedule.js';
+import { kindFor } from '../../went/lib/compose.js';
+
+const peckham = JSON.parse(readFileSync(
+  new URL('../peckham-digital/events.json', import.meta.url), 'utf8'));
+
+test('Peckham Digital arranges into its four days, Sunday after the clock change', () => {
+  const events = merge(peckham.records);
+  const { days } = arrange(events, tzOf(peckham));
+  assert.deepEqual(days.map(d => d.date), ['2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']);
+  const sun = days.find(d => d.date === '2026-10-25');
+  const pd = sun.timed.find(x => x.ev.slug === 'intro-to-pure-data');
+  assert.ok(pd.when.startsWith('10:00'), pd.when);   // GMT on the 25th, still 10:00 on the door
+  // the exhibition runs alongside every day
+  for (const d of days) assert.ok(d.open.some(x => x.ev.slug === 'exhibition-2026'), d.date);
+});
+
+test('Workshops get their own chip, but only where a listing has workshops', () => {
+  const html = renderDirectory({ events: merge(peckham.records), tz: tzOf(peckham) });
+  for (const f of ['all', 'workshops', 'talks', 'exhibitions', 'nights']) {
+    assert.ok(html.includes(`data-filter="${f}"`), f);
+  }
+  assert.ok(!html.includes('data-filter="fairs"'));
+  const frieze = renderDirectory({ events: merge(listing.records) });
+  assert.ok(!frieze.includes('data-filter="workshops"'));
+  assert.equal(kindFor('workshop'), 'visit');
+  assert.equal(kindFor('talk'), 'performance');
+});
