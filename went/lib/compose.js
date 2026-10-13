@@ -20,6 +20,7 @@ const KIND_FOR = {
   fair: 'visit', exhibition: 'visit', commission: 'visit', 'gallery-day': 'visit',
   party: 'visit', talk: 'performance', talks: 'performance', performance: 'performance',
   screening: 'screening', film: 'screening',
+  workshop: 'visit', 'office-hours': 'visit', meetup: 'visit', tour: 'visit',
 };
 export const kindFor = (category) => KIND_FOR[category] || 'visit';
 

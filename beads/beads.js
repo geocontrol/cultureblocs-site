@@ -129,7 +129,7 @@ async function loadBeads() {
 
 /* Events people can point a bead at: every directory on the site. */
 async function loadEvents() {
-  let dirs = ['frieze-week-london', 'paris-art-week', 'london-film-festival'];
+  let dirs = ['frieze-week-london', 'paris-art-week', 'london-film-festival', 'peckham-digital'];
   try {
     const html = await (await fetch('/events/', { cache: 'no-cache' })).text();
     const found = [...html.matchAll(/href="\/events\/([a-z0-9-]+)\/"/g)].map(m => m[1]);

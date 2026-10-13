@@ -106,6 +106,15 @@ Event directories:
     python3 tools/events/publish_frieze_events.py --file events/london-film-festival/events.json
     python3 tools/events/build_event_pages.py --dir london-film-festival
 
+    python3 tools/events/build_peckham_events.py     # Peckham Digital listing
+    python3 tools/events/publish_frieze_events.py --file events/peckham-digital/events.json
+    python3 tools/events/build_event_pages.py --dir peckham-digital
+
+Peckham Digital is a week-shaped directory read from the festival's Ticket Tailor
+box office. It adds a Workshops filter (categories workshop and office-hours),
+alongside meetup (Talks & film) and tour (Exhibitions); the chip only appears
+where a listing has such events, so the other directories are unchanged.
+
 A film festival is a different shape from an art week: meta.layout "films"
 draws one entry per film, A–Z or by day, from site-only `film` (credits) and
 `screenings` kept beside each record in events.json. One record per film runs

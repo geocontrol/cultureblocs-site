@@ -23,7 +23,7 @@ from build_event_pages import GROUP, KIND_WORD, location, when_lines  # noqa: E4
 ROOT = Path(__file__).resolve().parents[2]
 SHORT = "https://cultureblocs.com"   # QR links: short, so the codes stay simple
 E = html.escape
-ORDER = ["fairs", "talks", "nights", "galleries", "exhibitions"]
+ORDER = ["fairs", "workshops", "talks", "nights", "galleries", "exhibitions"]
 
 
 def qr_svg(url):
