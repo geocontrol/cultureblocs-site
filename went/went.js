@@ -387,6 +387,7 @@ function done({ beadUri, postUri, postError, draft, handle, did }) {
       <a href="https://pdsls.dev/at/${esc(actorPath(did))}/${BEAD_NSID}/${esc(beadRkey)}" rel="noopener">see the record →</a>
       ${postRkey ? `<a href="https://bsky.app/profile/${esc(actorPath(did))}/post/${esc(postRkey)}" rel="noopener">see your post →</a>` : ''}
       ${st.ctx.dir ? `<a href="/week/?dir=${encodeURIComponent(st.ctx.dir)}&who=${encodeURIComponent(handle)}">your whole week →</a>` : ''}
+      <a href="/beads/">all your beads →</a>
       ${st.ctx.dirUrl ? `<a href="${esc(st.ctx.dirUrl)}">back to ${esc(st.ctx.dirName || 'the programme')} →</a>` : ''}
     </div>
     <p>${st.ctx.verb.to ? 'Went to something else too?' : `${esc(st.ctx.verb.past[0].toUpperCase() + st.ctx.verb.past.slice(1))} something else too?`} Pick it from the programme and do the same —

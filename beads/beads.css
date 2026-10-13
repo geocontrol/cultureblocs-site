@@ -1,0 +1,82 @@
+/* My beads. Builds on /style.css, /events/events.css and /went/went.css. */
+
+.bd-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  gap:.6rem 1.2rem;border-bottom:1px solid var(--edge);padding:.4rem 0 1rem;margin:.6rem 0 0}
+.bd-actions{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
+.bd-actions .cta{min-height:2.4rem;padding:.5rem 1.1rem}
+.bd-flash{background:var(--wash);border:1px solid var(--edge);border-radius:8px;padding:.6rem .9rem;color:var(--ink)}
+.bd-controls{margin-top:1rem}
+
+/* one bead in the list */
+a.bd-card{grid-template-columns:9.5rem 1fr auto;color:inherit;text-decoration:none;cursor:pointer;
+  transition:border-color .12s,box-shadow .12s}
+a.bd-card:hover,a.bd-card:focus-visible{border-color:var(--k);box-shadow:0 2px 8px rgba(27,29,34,.08)}
+a.bd-card:focus-visible{outline:2px solid var(--k);outline-offset:2px}
+.bd-kind{display:block;font:600 .66rem var(--disp);letter-spacing:.14em;text-transform:uppercase;margin-top:.15rem}
+.bd-note{margin:.3rem 0 0;font-size:.98rem;white-space:pre-line;overflow-wrap:anywhere}
+.bd-empty{color:var(--faint);font-style:italic}
+.bd-tags{margin:.4rem 0 0;font:.75rem var(--mono);color:var(--faint);display:flex;flex-wrap:wrap;gap:.2rem .6rem}
+.bd-app{margin:.35rem 0 0;font:.7rem var(--mono);color:var(--faint)}
+.bd-thumb{width:4.5rem;height:4.5rem;object-fit:cover;border-radius:6px;background:var(--wash);align-self:start}
+.bd-empty-state{border:1px dashed var(--thread);border-radius:10px;padding:1.6rem 1.4rem;margin:2rem 0;max-width:40rem}
+.bd-empty-state h2{font:600 1.3rem var(--disp);margin:0 0 .4rem}
+
+/* the editor */
+.bd-editor{max-width:44rem}
+.bd-title{font:600 clamp(1.5rem,4vw,2.1rem)/1.2 var(--disp);margin:.4rem 0 .2rem;overflow-wrap:anywhere}
+.bd-editor .step{margin:1.8rem 0}
+.bd-h{font:600 .72rem var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 .6rem}
+.bd-editor .opt{font-style:normal;color:var(--faint);letter-spacing:.06em;text-transform:none;font-weight:400;margin-left:.3rem}
+.bd-when{display:flex;gap:1rem;flex-wrap:wrap}
+.bd-when .field{flex:0 1 13rem}
+.went input[type=time],.went input[type=url]{font:1rem/1.5 var(--body);color:var(--ink);background:var(--card);
+  border:1px solid var(--edge);border-radius:8px;padding:.65rem .8rem;width:100%;max-width:38rem}
+.bd-subject{margin:.6rem 0;font-size:.95rem;color:var(--ink)}
+.bd-subject:empty{display:none}
+#f-subject .chip[hidden]{display:none}
+.bd-picks{list-style:none;margin:.3rem 0 0;padding:0;max-width:38rem;border-radius:8px;overflow:hidden}
+.bd-picks li button{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--edge);
+  border-top-width:0;padding:.55rem .8rem;font:.95rem var(--body);color:var(--ink);cursor:pointer}
+.bd-picks li:first-child button{border-top-width:1px;border-radius:8px 8px 0 0}
+.bd-picks li:last-child button{border-radius:0 0 8px 8px}
+.bd-picks li:only-child button{border-radius:8px}
+.bd-picks li button:hover,.bd-picks li button:focus-visible{background:var(--wash)}
+.bd-picks li button span{font:.75rem var(--mono);color:var(--faint);margin-left:.4rem}
+.bd-picks .hint{margin:.4rem 0}
+
+.bd-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.8rem;max-width:44rem}
+.bd-images:empty{display:none}
+.bd-img{background:var(--card);border:1px solid var(--edge);border-radius:8px;padding:.5rem;display:flex;flex-direction:column;gap:.4rem}
+.bd-img img,.bd-noimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:5px;background:var(--wash)}
+.bd-noimg{display:grid;place-items:center;color:var(--faint)}
+.bd-img textarea{font:.85rem/1.4 var(--body);min-height:3.4rem;padding:.4rem .5rem}
+.bd-new{border-style:dashed}
+.bd-add{display:inline-flex;align-items:center;gap:.5rem;margin:.8rem 0 .2rem;cursor:pointer;
+  font:600 .72rem var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+  border:1px solid currentColor;border-radius:999px;padding:.45rem 1rem}
+.bd-add input{position:absolute;width:1px;height:1px;opacity:0}
+.bd-add:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+
+.bd-link{display:grid;grid-template-columns:1.4fr 1fr auto;gap:.5rem;align-items:center;max-width:44rem;margin:0 0 .5rem}
+.bd-link input{font:.95rem var(--body)!important;padding:.5rem .65rem!important}
+
+.bd-more{margin:1.6rem 0;max-width:44rem}
+.bd-more summary{cursor:pointer;font:600 .72rem var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.bd-more summary:hover{color:var(--accent)}
+
+.bd-save{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.bd-danger{border-top:1px solid var(--edge);margin:2.4rem 0 1rem;padding-top:1.2rem}
+.bd-del{font:600 .72rem var(--disp);letter-spacing:.14em;text-transform:uppercase;background:none;
+  color:var(--listen);border:1px solid currentColor;border-radius:999px;padding:.45rem 1rem;cursor:pointer;margin-right:1rem}
+.bd-del.sure{background:var(--listen);color:#fff;border-color:var(--listen)}
+.bd-del[disabled]{opacity:.6;cursor:progress}
+
+@media (max-width:40rem){
+  a.bd-card{grid-template-columns:1fr auto}
+  a.bd-card .ev-when{grid-column:1/-1}
+  .bd-thumb{width:3.6rem;height:3.6rem}
+  .bd-link{grid-template-columns:1fr}
+  .bd-actions{width:100%;justify-content:space-between}
+}
+.bd-prop{border:1px dashed var(--thread);border-radius:999px;padding:0 .45rem;color:var(--ink)}
+a.bd-card[data-proposal]{border-style:dashed}

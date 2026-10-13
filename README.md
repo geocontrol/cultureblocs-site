@@ -40,6 +40,17 @@ apps built on it, and the London meetup.
                                            Constellation + Bluesky search, merges, pages.
     .well-known/did.json                   did:web:www.cultureblocs.com, the feed service's
                                            identity (must match feeds.json; a test checks)
+    beads/                                 "My beads": sign in with ATProto OAuth and see, search,
+                                           edit, delete and make your own beads, from any device.
+                                           Not local-first: it works on the account directly.
+                                           Edits lay only the form's changes over the stored
+                                           record (fields it doesn't show survive) and are sent
+                                           with swapRecord, so a bead changed elsewhere is never
+                                           overwritten. Its own OAuth client
+                                           (beads/client-metadata.json, store "beads") and an
+                                           installable PWA shell (beads/sw.js — bump V on deploy).
+                                           Logic in beads/lib/model.js, tested:
+                                           node --test 'beads/test/*.test.mjs'
     week/                                  "My week": one person's beads for a directory
                                            (?dir=&who=), publishable as a strand. Its own
                                            OAuth client (week/client-metadata.json).

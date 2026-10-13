@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My beads — CultureBlocs</title>
+<meta name="description" content="Sign in with your Atmosphere account to see, edit, delete and make your CultureBlocs beads — kept in your own account, not on this website.">
+<meta name="oauth-store" content="beads">
+<link rel="atproto-client" href="https://www.cultureblocs.com/beads/client-metadata.json">
+<link rel="canonical" href="https://www.cultureblocs.com/beads/">
+<link rel="manifest" href="/beads/manifest.webmanifest">
+<meta name="theme-color" content="#FAFAF9">
+<link rel="icon" href="/beads/icon-192.png">
+<link rel="apple-touch-icon" href="/beads/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Beads">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CultureBlocs">
+<meta property="og:title" content="My beads">
+<meta property="og:description" content="See, edit and make your CultureBlocs beads, in your own Atmosphere account.">
+<meta property="og:url" content="https://www.cultureblocs.com/beads/">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/events/events.css">
+<link rel="stylesheet" href="/went/went.css">
+<link rel="stylesheet" href="/beads/beads.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <p class="ev-meta"><a href="/apps.html">Apps</a> / My beads</p>
+  <div class="hero" id="hero"><h1>My beads.</h1>
+  <p class="lede">Every bead in your Atmosphere account — from Loom, a totem,
+  <b>I went</b>, or made right here. Look back over them, put them right,
+  take them away, or make a new one. They live in your account, not on this
+  website: this page only reads and writes them for you.</p></div>
+
+  <noscript><p class="ev-intro">This page signs you in to your own account
+  and works with it from your browser, so it needs JavaScript.</p></noscript>
+
+  <div id="status" class="went-status" role="status" aria-live="polite">Loading…</div>
+
+  <!-- signing in -->
+  <section id="signin" class="went" hidden>
+    <label class="field">
+      <span>Your handle</span>
+      <input id="handle" type="text" inputmode="email" autocomplete="username"
+        autocapitalize="none" spellcheck="false" placeholder="you.bsky.social">
+    </label>
+    <p class="hint">You’ll approve this on your account’s own sign-in page — your
+    password never comes here. CultureBlocs asks to <b>make, change and delete
+    beads</b> and to <b>upload pictures</b> for them. Some account providers can’t
+    yet grant permissions that narrow and ask for general access instead — this
+    page still only ever touches your beads.</p>
+    <button type="button" class="cta" id="go">Sign in</button>
+    <p class="went-error" id="signin-error" hidden></p>
+    <p class="hint">New to all this? <a href="https://bsky.app" rel="noopener">A free
+    Bluesky account</a> works — so does Blacksky, Eurosky, or your own server.</p>
+  </section>
+
+  <!-- the list -->
+  <section id="app" hidden>
+    <div class="bd-bar">
+      <p class="who"><img id="me-avatar" alt="" hidden><span>Signed in as <b id="me-handle"></b></span></p>
+      <div class="bd-actions">
+        <a class="cta" href="#new" id="new-btn">New bead</a>
+        <button type="button" class="link" id="export">Download all</button>
+        <button type="button" class="link" id="sign-out">Sign out</button>
+      </div>
+    </div>
+    <p class="went-status bd-flash" id="flash" role="status" aria-live="polite" hidden></p>
+
+    <div id="list-view">
+      <div class="ev-controls bd-controls">
+        <div class="film-bar">
+          <label class="film-find"><span class="sr">Find a bead</span>
+            <input type="search" id="q" placeholder="Find a bead" autocomplete="off"></label>
+          <label class="film-find"><span class="sr">Kind</span>
+            <select id="kind-filter"><option value="">Every kind</option></select></label>
+        </div>
+        <p class="film-count" id="count" aria-live="polite"></p>
+      </div>
+      <div id="list"></div>
+    </div>
+
+    <!-- one bead: open it to edit; or a new one -->
+    <form id="editor" class="went bd-editor" hidden novalidate>
+      <p class="ev-meta"><a href="#" id="back">← All beads</a></p>
+      <h2 class="bd-title" id="ed-title"></h2>
+      <p class="hint" id="ed-sub"></p>
+      <p class="public-note" id="restored" hidden>Your unsaved changes are back.
+      Any pictures you’d added need adding again.</p>
+
+      <section class="step">
+        <label class="field inline"><span>Kind</span><select id="f-kind"></select></label>
+        <div class="bd-when">
+          <label class="field"><span>Day</span><input type="date" id="f-date" required></label>
+          <label class="field"><span>Time <i class="opt">optional</i></span><input type="time" id="f-time"></label>
+        </div>
+        <p class="hint" id="f-tz"></p>
+      </section>
+
+      <section class="step">
+        <h3 class="bd-h">What it was</h3>
+        <div class="chips" role="radiogroup" aria-label="What it was" id="f-subject">
+          <button type="button" class="chip" role="radio" data-v="keep" aria-checked="false">As it is</button>
+          <button type="button" class="chip" role="radio" data-v="event" aria-checked="false">An event</button>
+          <button type="button" class="chip" role="radio" data-v="place" aria-checked="false">A place</button>
+          <button type="button" class="chip" role="radio" data-v="none" aria-checked="false">Nothing</button>
+        </div>
+        <p class="bd-subject" id="f-subject-now"></p>
+        <div id="f-event" hidden>
+          <label class="field"><span class="sr">Find an event</span>
+            <input type="search" id="f-event-q" placeholder="Search Frieze Week, Paris Art Week, the film festival… or paste an at:// address" autocomplete="off"></label>
+          <ul class="bd-picks" id="f-event-results" role="listbox" aria-label="Events"></ul>
+        </div>
+        <label class="field" id="f-place-row" hidden><span class="sr">Place</span>
+          <input type="text" id="f-place" placeholder="Tate Modern, a friend’s kitchen, the 38 bus…"></label>
+      </section>
+
+      <section class="step">
+        <label class="field"><span>Note</span>
+          <textarea id="f-note" rows="5" placeholder="What stayed with you?"></textarea></label>
+        <p class="count" id="f-note-count"></p>
+        <label class="field"><span>Tags <i class="opt">up to 8, comma between</i></span>
+          <input type="text" id="f-tags" autocapitalize="none" placeholder="lff-2026, with Sam"></label>
+        <label class="field inline"><span>Seen / read / heard as</span>
+          <select id="f-format"><option value="">—</option></select></label>
+      </section>
+
+      <section class="step">
+        <h3 class="bd-h">Pictures</h3>
+        <div class="bd-images" id="f-images"></div>
+        <label class="bd-add"><input type="file" id="f-file" accept="image/*" multiple>
+          <span>Add pictures</span></label>
+        <p class="hint">Resized and stripped of camera data (including location)
+        before they leave this device. Describe each one for people who can’t see it.</p>
+      </section>
+
+      <section class="step">
+        <h3 class="bd-h">Links</h3>
+        <div id="f-links"></div>
+        <button type="button" class="link" id="f-add-link">Add a link</button>
+      </section>
+
+      <details class="bd-more" id="f-more">
+        <summary>More about this bead</summary>
+        <dl class="bead-preview" id="f-details"></dl>
+        <label class="check" id="f-geo-row" hidden><input type="checkbox" id="f-geo"> Remove its location</label>
+      </details>
+
+      <p class="public-note" id="ed-public">Beads are public: anyone can read them,
+      like a post. Saving writes straight to your account.</p>
+      <p class="went-error" id="ed-error" hidden></p>
+      <div class="bd-save">
+        <button type="button" class="cta" id="save">Save</button>
+        <a href="#" class="link" id="cancel">Cancel</a>
+      </div>
+
+      <section class="bd-danger" id="danger" hidden>
+        <h3 class="bd-h">Delete this bead</h3>
+        <p class="hint">It goes from your account, and from any event page that
+        showed it. This can’t be undone.</p>
+        <div id="del-warn"></div>
+        <button type="button" class="bd-del" id="del">Delete…</button>
+        <div id="del-confirm" hidden>
+          <p><b>Delete it for good?</b></p>
+          <button type="button" class="bd-del sure" id="del-yes">Yes, delete</button>
+          <button type="button" class="link" id="del-no">Keep it</button>
+        </div>
+      </section>
+    </form>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+<script type="module" src="/beads/beads.js"></script>
+</body>
+</html>
