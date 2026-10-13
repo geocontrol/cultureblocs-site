@@ -10,7 +10,7 @@
  * change this with it.
  */
 
-export const esc = s => (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+export const esc = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const BULLET = /^\s*[*-]\s+/;
 const TIMED = /^\d{2}:\d{2}\s/;

@@ -146,7 +146,26 @@ async function authServer(pds) {
     const prm = await jget(`${pds}/.well-known/oauth-protected-resource`);
     if (prm.authorization_servers?.length) issuer = prm.authorization_servers[0];
   } catch (e) { /* older PDSs: the PDS is its own authorisation server */ }
-  return jget(`${issuer}/.well-known/oauth-authorization-server`);
+  return checkedMeta(issuer, await jget(`${issuer}/.well-known/oauth-authorization-server`));
+}
+
+/* Everything in this metadata came from a server chosen by whoever owns the
+ * handle being signed in, and authorization_endpoint ends up in location.href.
+ * So: the issuer must be the server we asked (RFC 8414 §3.3), and every
+ * endpoint we will navigate to or POST to must be plain https — never
+ * javascript:, data: or http:. */
+const httpsUrl = (u) => {
+  try { return new URL(u).protocol === 'https:'; } catch (e) { return false; }
+};
+const sameIssuer = (a, b) => String(a || '').replace(/\/+$/, '') === String(b || '').replace(/\/+$/, '');
+function checkedMeta(issuer, meta) {
+  if (!httpsUrl(issuer) || !sameIssuer(meta?.issuer, issuer)) {
+    throw new Error('sign-in server metadata does not match the server');
+  }
+  for (const k of ['authorization_endpoint', 'pushed_authorization_request_endpoint', 'token_endpoint']) {
+    if (!httpsUrl(meta[k])) throw new Error(`sign-in server gave an unsafe ${k}`);
+  }
+  return meta;
 }
 
 /* ---------- sign in ---------- */
@@ -189,6 +208,10 @@ export async function completeLogin() {
   sessionStorage.removeItem('easel:oauth-pending');
   if (!pending) throw new Error('no sign-in was in progress');
   if (q.get('state') !== pending.state) throw new Error('state mismatch — sign in again');
+  // RFC 9207: the callback names its issuer; it must be the one we sent them to.
+  if (q.has('iss') && !sameIssuer(q.get('iss'), pending.meta.issuer)) {
+    throw new Error('sign-in answered by the wrong server — sign in again');
+  }
 
   const body = new URLSearchParams({
     grant_type: 'authorization_code', code: q.get('code'),
@@ -201,8 +224,11 @@ export async function completeLogin() {
   });
   if (!res.ok) throw new Error(`sign-in failed (${res.status})`);
   const tok = await res.json();
+  // The token must be for the account whose handle we resolved; anything else
+  // is a server speaking for someone it isn't authoritative for.
+  if (tok.sub !== pending.did) throw new Error('sign-in returned a different account — sign in again');
   const session = {
-    did: tok.sub || pending.did, handle: pending.handle, pds: pending.pds,
+    did: pending.did, handle: pending.handle, pds: pending.pds,
     token_endpoint: pending.meta.token_endpoint,
     access: tok.access_token, refresh: tok.refresh_token,
     expires: Date.now() + (tok.expires_in || 3600) * 1000,
