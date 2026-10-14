@@ -110,6 +110,11 @@ Event directories:
     python3 tools/events/publish_frieze_events.py --file events/peckham-digital/events.json
     python3 tools/events/build_event_pages.py --dir peckham-digital
 
+    python3 tools/events/build_meetup_events.py      # CultureBlocs meetups (unlisted; home /meetup.html)
+    python3 tools/events/publish_frieze_events.py --file events/cultureblocs-meetups/events.json
+    python3 tools/events/build_event_pages.py --dir cultureblocs-meetups
+QR / short link for a meetup: cultureblocs.com/w/meetup/<slug> → the I went composer.
+
 Peckham Digital is a week-shaped directory read from the festival's Ticket Tailor
 box office. It adds a Workshops filter (categories workshop and office-hours),
 alongside meetup (Talks & film) and tour (Exhibitions); the chip only appears

@@ -270,6 +270,26 @@
       "permanent": false
     },
     {
+      "source": "/events/cultureblocs-meetups",
+      "destination": "/meetup.html",
+      "permanent": false
+    },
+    {
+      "source": "/events/cultureblocs-meetups/",
+      "destination": "/meetup.html",
+      "permanent": false
+    },
+    {
+      "source": "/w/meetup",
+      "destination": "/meetup.html#i-went",
+      "permanent": false
+    },
+    {
+      "source": "/w/meetup/:key",
+      "destination": "/went/?dir=cultureblocs-meetups&e=:key",
+      "permanent": false
+    },
+    {
       "source": "/events/london-film-festival",
       "destination": "/events/london-film-festival/",
       "permanent": false

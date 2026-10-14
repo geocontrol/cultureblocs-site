@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "CultureBlocs meetups — CultureBlocs event dataset",
+    "name": "CultureBlocs meetups",
+    "directory": "cultureblocs-meetups",
+    "home": "/meetup.html",
+    "tag": "cultureblocs-meetup",
+    "short": "meetup",
+    "tz": "Europe/London",
+    "cardLine": "Creative × Tech evenings in London",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published.",
+    "calendar": "https://luma.com/calendar/cal-siHm3wAIGRkwlCh",
+    "count": 1,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
+  },
+  "records": [
+    {
+      "slug": "autumn-2026",
+      "category": "meetup",
+      "rkey": "3mxtbzc5u2222",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mxtbzc5u2222",
+      "sources": [
+        "https://luma.com/787591ep"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "CultureBlocs: Creative × Tech Autumn Meetup",
+        "description": "A friendly London evening for people at every stage — tech-curious, practitioners, technologists and founders — to share projects and problems and talk about what technology and data can do for the creative and cultural sector. Arrivals and drinks from 18:30, a welcome to CultureBlocs, informal shares, open conversation and newcomer-friendly networking in small groups. Hosted by Mark Simpkins and Oliver Outen.",
+        "createdAt": "2026-10-14T10:00:00.000Z",
+        "startsAt": "2026-10-14T18:30:00+01:00",
+        "endsAt": "2026-10-14T21:00:00+01:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Sixes Party Cricket, London Bridge",
+            "street": "50 Bermondsey Street",
+            "postalCode": "SE1 3UD"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://luma.com/787591ep",
+            "name": "Register on Luma"
+          },
+          {
+            "uri": "https://www.cultureblocs.com/meetup.html",
+            "name": "CultureBlocs meetup"
+          }
+        ]
+      }
+    }
+  ]
+}
