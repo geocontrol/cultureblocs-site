@@ -239,7 +239,7 @@ class CultureblocsStrands extends HTMLElement {
       article{background:var(--cb-card,transparent);border-left:3px solid var(--cb-ink,#1B1D22);
         padding:0 0 .4rem 1.1rem;margin:0 0 1.8rem}
       h3{margin:0;font-size:1.05em;letter-spacing:.02em}
-      .meta{font-size:.78em;color:var(--cb-faint,#8A8880);margin:.15rem 0 .6rem}
+      .meta{font-size:.78em;color:var(--cb-faint,#6B6962);margin:.15rem 0 .6rem}
       .meta a{color:var(--cb-accent,#2B4BC7)}
       .narrative{margin:.2rem 0 .8rem;font-style:italic}
       .narrative p{margin:.35rem 0;white-space:pre-line}
@@ -254,7 +254,7 @@ class CultureblocsStrands extends HTMLElement {
         width:2px;background:var(--cb-thread,#C9C7C0)}
       .stops>li{position:relative;display:grid;grid-template-columns:2.4rem 1.4rem 1fr;
         gap:.15rem;padding:0 0 1.05rem;align-items:start}
-      time{font-size:.72em;color:var(--cb-faint,#8A8880);text-align:right;
+      time{font-size:.72em;color:var(--cb-faint,#6B6962);text-align:right;
         padding-top:.2em;font-variant-numeric:tabular-nums}
       .dot{width:11px;height:11px;border-radius:50%;margin:.28em auto 0;display:block;
         box-shadow:0 0 0 3px var(--cb-card,#fff0)}
@@ -263,7 +263,7 @@ class CultureblocsStrands extends HTMLElement {
       .body p{margin:.1rem 0 0;font-size:.92em;line-height:1.45;white-space:pre-line}
       .tracks{margin:.4rem 0 0;font-size:.8em;line-height:1.6}
       .tracks li{display:block;padding:0}
-      .tt{font-variant-numeric:tabular-nums;color:var(--cb-faint,#8A8880);
+      .tt{font-variant-numeric:tabular-nums;color:var(--cb-faint,#6B6962);
         margin-right:.55em;font-size:.92em}
       .work{font-weight:600;font-size:.92em}
       .artist{font-style:italic;font-size:.88em}

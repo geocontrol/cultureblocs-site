@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="400" height="400" role="img" aria-label="CultureBlocs">
+  <rect width="160" height="160" fill="#F2F1EC"/>
+  <line x1="0" y1="80" x2="160" y2="80" stroke="#C9C7C0" stroke-width="5"/>
+  <circle cx="80" cy="80" r="30" fill="#2B4BC7"/>
+  <circle cx="80" cy="80" r="11" fill="#F2F1EC"/>
+</svg>
