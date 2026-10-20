@@ -75,7 +75,7 @@ function thread(week) {
   const labels = [];
   items.forEach((it, i) => {
     if (i > 0 && it.first) x += gap;
-    if (it.first) labels.push(`<text x="${x}" y="${y + 36}" font-size="11" fill="#8A8880" font-family="ui-monospace,Menlo,monospace">${esc(it.day.label.replace(' Oct', ''))}</text>`);
+    if (it.first) labels.push(`<text x="${x}" y="${y + 36}" font-size="11" fill="#6B6962" font-family="ui-monospace,Menlo,monospace">${esc(it.day.label.replace(' Oct', ''))}</text>`);
     const c = COLOUR[groupOf(it.event?.category)] || '#4A4741';
     dots.push(`<circle cx="${x + 10}" cy="${y}" r="10" fill="${c}" stroke="#FAFAF9" stroke-width="2"><title>${esc(it.event?.record?.name || 'An event')} — ${esc(it.day.label)}</title></circle>`);
     x += step;

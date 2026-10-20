@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CultureBlocs — cultural memory, strung by hand</title>
-<meta name="description" content="Open schemas and small tools for keeping a record of your cultural life — exhibitions, gigs, films, books and encounters — locally first, on your own terms.">
+<title>CultureBlocs: an open data layer for creative and cultural activity</title>
+<meta name="description" content="An open vocabulary for recording what people make, present and experience in culture, as small pieces of data anyone can publish and build on.">
+<link rel="icon" href="/brand/cultureblocs-favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -18,88 +19,141 @@
 </nav>
 <main>
   <div class="hero">
-    <h1>Cultural memory, strung by hand.</h1>
-    <p class="lede">CultureBlocs is a set of <b>open schemas</b> and <b>small tools</b>
-    for keeping a record of your cultural life — the exhibitions, gigs, films, books
-    and encounters that make it up. Moments are minted as <b>beads</b>, told into
-    <b>strands</b>, and kept in a <b>String</b> you run yourself. Publishing is a
-    deliberate act, never a default.</p>
+    <h1>An open data layer for cultural life.</h1>
+    <p class="lede">CultureBlocs is a shared, open way to record creative and cultural
+    activity as small pieces of data. Making work, putting on a show, watching, reading,
+    visiting: anyone can publish it, and anyone can build on it.</p>
+    <div class="ctas">
+      <a class="cta" href="/lexicons.html">Read the lexicon</a>
+      <a class="cta ghost" href="#in-use">See it in use</a>
+    </div>
   </div>
 
   <div class="string-hero" role="img"
-       aria-label="A thread strung with beads: bloc, visit, read, listen, watch, encounter — the kinds of cultural moment CultureBlocs records">
+       aria-label="A thread strung with beads for six kinds of activity: create, perform, visit, read, listen and watch">
     <svg viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg">
       <line x1="0" y1="52" x2="900" y2="52" stroke="var(--thread)" stroke-width="2.5"/>
-      <circle cx="90"  cy="52" r="13" fill="var(--bloc)"/>
-      <circle cx="235" cy="52" r="13" fill="var(--visit)"/>
-      <circle cx="380" cy="52" r="13" fill="var(--read)"/>
-      <circle cx="525" cy="52" r="13" fill="var(--listen)"/>
-      <circle cx="670" cy="52" r="13" fill="var(--watch)"/>
-      <circle cx="815" cy="52" r="13" fill="var(--encounter)"/>
-      <rect x="443" y="14" width="12" height="12" fill="var(--plaster)"
+      <circle cx="75"  cy="52" r="13" fill="var(--bloc)"/>
+      <circle cx="225" cy="52" r="13" fill="var(--performance)"/>
+      <circle cx="375" cy="52" r="13" fill="var(--visit)"/>
+      <circle cx="525" cy="52" r="13" fill="var(--read)"/>
+      <circle cx="675" cy="52" r="13" fill="var(--listen)"/>
+      <circle cx="825" cy="52" r="13" fill="var(--watch)"/>
+      <rect x="444" y="46" width="12" height="12" fill="var(--plaster)"
             stroke="var(--ink)" stroke-width="2.5"/>
-      <text x="90"  y="92" text-anchor="middle">bloc</text>
-      <text x="235" y="92" text-anchor="middle">visit</text>
-      <text x="380" y="92" text-anchor="middle">read</text>
-      <text x="525" y="92" text-anchor="middle">listen</text>
-      <text x="670" y="92" text-anchor="middle">watch</text>
-      <text x="815" y="92" text-anchor="middle">encounter</text>
-      <text x="470" y="23" text-anchor="start" style="text-transform:none;letter-spacing:.04em">a bookmark on a work</text>
+      <text x="75"  y="92" text-anchor="middle">create</text>
+      <text x="225" y="92" text-anchor="middle">perform</text>
+      <text x="375" y="92" text-anchor="middle">visit</text>
+      <text x="525" y="92" text-anchor="middle">read</text>
+      <text x="675" y="92" text-anchor="middle">listen</text>
+      <text x="825" y="92" text-anchor="middle">watch</text>
     </svg>
   </div>
 
-  <div class="principles">
-    <div><h2>Local-first</h2>
-      <p>Beads are minted on your devices and live in a store you run. Nothing needs
-      the network to work; a gallery basement is a fine place to remember something.</p></div>
-    <div><h2>Own your data</h2>
-      <p>The record store runs on your machine. Every schema is open, every export
-      is yours, and the tools are small enough to read.</p></div>
-    <div><h2>Privacy by default</h2>
-      <p>Everything starts private. Sharing is a promotion you perform on purpose —
-      per bead, per strand — with locations fuzzed and devices stripped on the way out.</p></div>
-  </div>
+  <section>
+    <h2 class="sec">Making and experiencing both count</h2>
+    <div class="cards pair">
+      <div class="card"><div class="label">Making</div>
+        <p>create · share · perform · present · curate · host</p></div>
+      <div class="card"><div class="label">Experiencing</div>
+        <p>watch · listen · view · read · visit · take part</p></div>
+    </div>
+    <p class="narrow">An exhibition and the people who saw it. A film and everyone who
+    watched it. CultureBlocs records both, in the same format.</p>
+  </section>
 
   <section>
-    <h2 class="sec">How a moment travels</h2>
-    <div class="pipeline">totem press ──────┐
-phone mint ───────┤
-scrobbled play ───┤──> Loom ──> the String (your record store)
-written by hand ──┘   the desk         │
-                                       │ deliberate publish
-                                       ▼
-                         your ATProto repo ──> the wall · a catalogue · an embed</div>
-    <p>The same schemas describe a bead whether it lives on a device, in your String,
-    or published to the open web — privacy is a property of <em>where a record lives</em>,
-    not of its shape. That is what makes local-first and federation two ends of one
-    thread rather than two systems.</p>
+    <h2 class="sec">Every record is a bead</h2>
+    <div class="split">
+      <p>A bead is one small record: who did what, with which work, where and when.
+      Each one is tiny. Published together, by artists, venues and audiences, they show
+      cultural activity that no single platform, venue or box office can see today.</p>
+      <div class="bead-list">
+        <div class="bead"><span class="dot" style="background:var(--listen)"></span>
+          <div><div class="label">Listen · private</div>
+          <div>Kind of Blue, Miles Davis</div>
+          <div class="when">14 Oct 2026</div></div></div>
+        <div class="bead"><span class="dot" style="background:var(--visit)"></span>
+          <div><div class="label">Visit · public</div>
+          <div>Frieze London, Regent's Park</div>
+          <div class="when">15 Oct 2026</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="in-use">
+    <h2 class="sec">What people do with it</h2>
+    <div class="cards pair">
+      <div class="card"><h3><span class="dot" style="background:var(--bloc)"></span>An artist</h3>
+        <p>Publishes a CreativeID, then a bead for each new work. Her own website, a
+        gallery's site and an open-call portal all read the same records, so she
+        updates once.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--visit)"></span>A venue</h3>
+        <p>Publishes its season as event records. Visitors who choose to share an
+        "I went" bead point back to the event, so the venue can count who came without
+        collecting anything itself.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--listen)"></span>A listener</h3>
+        <p>Lets a scrobbler turn plays into listen beads. They stay on her own machine
+        until she picks which to share.</p></div>
+      <div class="card"><h3><span class="dot" style="background:var(--watch)"></span>A festival or researcher</h3>
+        <p>Reads published beads across a city or a weekend to see participation beyond
+        ticket sales, using data nobody had to hand over to a platform.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Say who you are, once</h2>
+    <p class="narrow">Artists and cultural practitioners can publish a
+    <strong>CreativeID</strong>: a short public profile of who you are and what you do,
+    made in the <strong>Persona Studio</strong>. It's yours, in your words, and readable
+    by any app that uses CultureBlocs.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">There is no CultureBlocs platform</h2>
+    <p class="narrow">CultureBlocs publishes three things. There is nothing to sign up
+    to, and anyone can build something with the data.</p>
+    <div class="cards">
+      <div class="card"><h3>The lexicon</h3>
+        <p>Open schemas for creative and cultural activity, under
+        <code>com.cultureblocs.*</code>.</p>
+        <div class="links"><a href="/lexicons.html">Read the lexicon →</a></div></div>
+      <div class="card"><h3>Example apps</h3>
+        <p>Apps that read and write it, to use, copy or ignore.</p>
+        <div class="links"><a href="/apps.html">See the apps →</a></div></div>
+      <div class="card"><h3>Recipes</h3>
+        <p>How to publish your own records, step by step.</p>
+        <div class="links"><a href="/howto.html">How to →</a></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Publish where you already are</h2>
+    <div class="cards pair">
+      <div class="card"><div class="label now">Today</div>
+        <p>AT Protocol: Bluesky and the wider Atmosphere</p></div>
+      <div class="card"><div class="label">Exploring</div>
+        <p>ActivityPub (Mastodon and the fediverse), Solid pods, linked data on a
+        plain website</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Your records, your choice</h2>
+    <p class="narrow">Records can live on your own devices first. Nothing is public until
+    you publish it, and precise location and device details are removed when you do.</p>
   </section>
 
   <section>
     <h2 class="sec">Start somewhere</h2>
-    <div class="cards">
-      <div class="card"><h3>Read the schemas</h3>
-        <p>Nine small lexicons — beads, annotations, strands, creative identity,
-        venues, and their shared parts — published under
-        <code>com.cultureblocs.*</code> and resolvable from this domain.</p>
-        <div class="links"><a href="/lexicons.html">Protocol reference →</a></div></div>
-      <div class="card"><h3>Do the basic things</h3>
-        <p>Write a bead, tell a strand, claim a work, publish an event, put the
-        result on a website — one recipe each, app and command line.</p>
-        <div class="links"><a href="/howto.html">How to →</a></div></div>
-      <div class="card"><h3>See the tools</h3>
-        <p>A hardware totem, the Loom desk, the String record store, a phone
-        minter, an easel for your own work — all small, all yours to run.</p>
-        <div class="links"><a href="/apps.html">The apps →</a></div></div>
-      <div class="card"><h3>Browse event directories</h3>
-        <p>Cultural programmes published as open calendar records — starting with
-        Frieze Week London — that your own beads can point at.</p>
-        <div class="links"><a href="/events/">Events →</a></div></div>
-      <div class="card"><h3>Come to the meetup</h3>
-        <p>A London evening for people working across technology, data, creativity
-        and culture. Newcomers welcome.</p>
-        <div class="links"><a href="/meetup.html">CultureBlocs meetup →</a></div></div>
-    </div>
+    <ul class="start">
+      <li><a href="/lexicons.html"><span>Building something?</span><span class="go">Read the lexicon →</span></a></li>
+      <li><a href="/apps.html#creative"><span>An artist or practitioner?</span><span class="go">Make your CreativeID →</span></a></li>
+      <li><a href="/events/"><span>Been to something?</span><span class="go">Say "I went" →</span></a></li>
+      <li><a href="/howto.html#event"><span>Running a venue or festival?</span><span class="go">Publish your programme →</span></a></li>
+      <li><a href="/apps.html"><span>Curious about the tools?</span><span class="go">Loom, the String and the totem →</span></a></li>
+      <li><a href="/meetup.html"><span>In London?</span><span class="go">Come to the meetup →</span></a></li>
+    </ul>
   </section>
 
   <section class="support" aria-labelledby="support-h">
