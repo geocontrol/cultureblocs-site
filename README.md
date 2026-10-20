@@ -57,6 +57,12 @@ apps built on it, and the London meetup.
     events/<dir>/report/ + events/report.js live report: people, beads, per event/day,
                                            pairs, notes, + the how-it-was-built case study
     privacy.html                           the policy every OAuth client here points at
+    ns/creativeid.{html,ttl,jsonld}        GENERATED — the creativeid: Linked Data vocabulary
+                                           (namespace https://www.cultureblocs.com/ns/creativeid#).
+                                           Edit tools/ns/build_creativeid.py, then run it; --check
+                                           fails if the files are stale. /ns/creativeid answers
+                                           HTML, Turtle or JSON-LD by Accept header (vercel.json).
+                                           Terms are only ever added, never removed or redefined.
     tools/events/                          build + publish scripts for the Frieze Week
                                            records (see "Event directories" below)
 
