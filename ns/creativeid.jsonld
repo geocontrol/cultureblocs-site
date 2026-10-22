@@ -1,0 +1,293 @@
+{
+  "@context": {
+    "creativeid": "https://www.cultureblocs.com/ns/creativeid#",
+    "schema": "https://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.cultureblocs.com/ns/creativeid",
+      "@type": "owl:Ontology",
+      "dcterms:title": "CreativeID vocabulary",
+      "dcterms:description": "Terms for describing a creative persona, its works and its connections, for any creative or cultural practice. Used with schema.org; mirrors the com.cultureblocs.creative.* AT Protocol lexicons.",
+      "dcterms:creator": "CultureBlocs",
+      "dcterms:issued": {
+        "@value": "2026-10-20",
+        "@type": "xsd:date"
+      },
+      "dcterms:modified": {
+        "@value": "2026-10-20",
+        "@type": "xsd:date"
+      },
+      "owl:versionInfo": "0.1",
+      "rdfs:seeAlso": [
+        {
+          "@id": "https://www.cultureblocs.com/lexicons.html"
+        },
+        {
+          "@id": "https://github.com/geocontrol/creativeid-studio"
+        }
+      ]
+    },
+    {
+      "@id": "creativeid:Persona",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Persona",
+      "rdfs:comment": "A name someone works under, described the way they choose. It is not a legal identity: one person can have several personas, and a duo, band or collective can share one. Published alongside schema:Person. Personas are never linked to each other in anything published.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable"
+    },
+    {
+      "@id": "creativeid:Work",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Work",
+      "rdfs:comment": "Something a persona made, performed, showed, curated or released: an object, an event, a recording, an exhibition, a text. Published alongside schema:CreativeWork. Saying it is yours is the claim; nobody has to approve it.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "creativeid:Connection",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Connection",
+      "rdfs:comment": "One persona's own statement about a party or a record: I performed at, exhibited with, curated, am a member of, am represented by. It is one-sided by design. When the other side makes the matching statement, a reader can see that the two agree. A connection without a match is ordinary, not doubtful.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable"
+    },
+    {
+      "@id": "creativeid:Credit",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Credit",
+      "rdfs:comment": "A name on a work: who else was involved, optionally with their DID and what they did.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable"
+    },
+    {
+      "@id": "creativeid:completionDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "completion date",
+      "rdfs:comment": "When the work was made or first shown, in the creator's own words: “2019”, “spring 2024”, “2021–2023”. Deliberately free text, because creative dates are often approximate or spans. schema:dateCreated is kept for when the record itself was made.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": {
+        "@id": "creativeid:Work"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "creativeid:credits",
+      "@type": "rdf:Property",
+      "rdfs:label": "credits",
+      "rdfs:comment": "The people and groups credited on a work.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": {
+        "@id": "creativeid:Work"
+      },
+      "schema:rangeIncludes": {
+        "@id": "creativeid:Credit"
+      }
+    },
+    {
+      "@id": "creativeid:links",
+      "@type": "rdf:Property",
+      "rdfs:label": "links",
+      "rdfs:comment": "Web pages about a persona or a work: a portfolio, a shop, a gallery page, a review. Each is a schema:WebPage with a url and an optional name. Not schema:sameAs, which would say the page is the persona; not schema:url, which holds one main address.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": [
+        {
+          "@id": "creativeid:Persona"
+        },
+        {
+          "@id": "creativeid:Work"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:WebPage"
+      }
+    },
+    {
+      "@id": "creativeid:subject",
+      "@type": "rdf:Property",
+      "rdfs:label": "subject",
+      "rdfs:comment": "Who or what a connection is about. Either a party, given by creativeid:did (and optionally a name), or a specific record, given by creativeid:uri (and optionally creativeid:cid).",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": {
+        "@id": "creativeid:Connection"
+      }
+    },
+    {
+      "@id": "creativeid:relationship",
+      "@type": "rdf:Property",
+      "rdfs:label": "relationship",
+      "rdfs:comment": "What the connection says, as a short word or phrase. Suggested values: created, collaborated_on, performed, exhibited, curated, released, represented_by, attests_to, references, member_of. Any other value is valid; a practice that needs a new word doesn’t need a schema change.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": {
+        "@id": "creativeid:Connection"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "creativeid:role",
+      "@type": "rdf:Property",
+      "rdfs:label": "role",
+      "rdfs:comment": "The part someone played, in their own words: “vocals”, “lighting design”, “co-curator”.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": [
+        {
+          "@id": "creativeid:Connection"
+        },
+        {
+          "@id": "creativeid:Credit"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "creativeid:note",
+      "@type": "rdf:Property",
+      "rdfs:label": "note",
+      "rdfs:comment": "A short free-text note on a connection.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": {
+        "@id": "creativeid:Connection"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "creativeid:did",
+      "@type": "rdf:Property",
+      "rdfs:label": "DID",
+      "rdfs:comment": "The decentralised identifier (DID) of a party: a persona's AT Protocol account, a venue, a collective. Written as an IRI, e.g. did:plc:… or did:web:… Also used on the subject of a connection. A DID is what lets a reader match two sides of a connection.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:domainIncludes": [
+        {
+          "@id": "creativeid:Credit"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "rdfs:Resource"
+      }
+    },
+    {
+      "@id": "creativeid:uri",
+      "@type": "rdf:Property",
+      "rdfs:label": "record URI",
+      "rdfs:comment": "The address of a specific record, normally an at:// URI, used as the subject of a connection about that record.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:rangeIncludes": {
+        "@id": "rdfs:Resource"
+      }
+    },
+    {
+      "@id": "creativeid:cid",
+      "@type": "rdf:Property",
+      "rdfs:label": "content identifier",
+      "rdfs:comment": "The CID of the record named by creativeid:uri, pinning the exact version that was referred to. If the record is edited later its CID changes, so a reader can say “changed since confirmed” without anyone having to police it.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "stable",
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "creativeid:private",
+      "@type": "rdf:Property",
+      "rdfs:label": "private details",
+      "rdfs:comment": "Details the creative keeps for themselves (legal name, agent's phone, anything else). Stored only in the persona file on their computer. Never published: it appears only in the file on the creative's own computer.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "testing",
+      "schema:domainIncludes": {
+        "@id": "creativeid:Persona"
+      }
+    },
+    {
+      "@id": "creativeid:publications",
+      "@type": "rdf:Property",
+      "rdfs:label": "publications",
+      "rdfs:comment": "Where and when this persona has been published, so republishing updates the same records. Never published: it appears only in the file on the creative's own computer.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "testing"
+    },
+    {
+      "@id": "creativeid:personaId",
+      "@type": "rdf:Property",
+      "rdfs:label": "persona id",
+      "rdfs:comment": "The persona's local identifier and file name in the studio. Never published: it appears only in the file on the creative's own computer.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "testing"
+    },
+    {
+      "@id": "creativeid:schemaVersion",
+      "@type": "rdf:Property",
+      "rdfs:label": "schema version",
+      "rdfs:comment": "The version of the local file format, used to upgrade older files. Never published: it appears only in the file on the creative's own computer.",
+      "rdfs:isDefinedBy": {
+        "@id": "https://www.cultureblocs.com/ns/creativeid"
+      },
+      "vs:term_status": "testing",
+      "schema:rangeIncludes": {
+        "@id": "xsd:integer"
+      }
+    }
+  ]
+}

@@ -191,6 +191,78 @@
           "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'"
         }
       ]
+    },
+    {
+      "source": "/ns/(.*)",
+      "headers": [
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/ns/creativeid",
+      "headers": [
+        {
+          "key": "vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/ns/creativeid",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/turtle.*"
+        }
+      ],
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "text/turtle; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/ns/creativeid",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*application/(ld\\+)?json.*"
+        }
+      ],
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/ld+json"
+        }
+      ]
+    },
+    {
+      "source": "/ns/creativeid.ttl",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "text/turtle; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/ns/creativeid.jsonld",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/ld+json"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -341,6 +413,32 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/ns/creativeid",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*text/turtle.*"
+        }
+      ],
+      "destination": "/ns/creativeid.ttl"
+    },
+    {
+      "source": "/ns/creativeid",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": ".*application/(ld\\+)?json.*"
+        }
+      ],
+      "destination": "/ns/creativeid.jsonld"
+    },
+    {
+      "source": "/ns/creativeid",
+      "destination": "/ns/creativeid.html"
+    },
     {
       "source": "/wall/:actor/:rkey",
       "destination": "/wall/index.html"

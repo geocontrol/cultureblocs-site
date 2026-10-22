@@ -166,3 +166,18 @@ footer a{color:var(--faint)}
 .start a .go{color:var(--accent)}
 .start a:hover .go{text-decoration:underline}
 .cards.pair{grid-template-columns:repeat(auto-fit,minmax(20rem,1fr))}
+
+/* vocabulary pages (ns/) */
+.measure{max-width:38rem}
+p.note{font-size:.92rem;color:var(--faint);max-width:38rem}
+p.note code{color:var(--ink)}
+.scroll{overflow-x:auto}
+.term{scroll-margin-top:1.5rem}
+.term h3 a.self{color:var(--ink);text-decoration:none}
+.term h3 a.self:hover{text-decoration:underline}
+.term > p{margin:.2rem 0 .7rem;max-width:38rem}
+table.facts{width:auto;margin-top:.4rem}
+table.facts th{font:600 .7rem var(--disp);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);border:0;padding:.3rem 1.2rem .3rem 0;white-space:nowrap;vertical-align:top}
+table.facts td{border:0;padding:.3rem 0;overflow-wrap:anywhere}
+table.facts code{font-size:.8rem}
