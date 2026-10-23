@@ -327,7 +327,8 @@ async function publish(draft) {
     const fresh = await listBeads(s.pds, s.did).catch(() => st.acct?.beads || []);
     const existing = findExisting(fresh, event.uri, draft.day,
       [event.publisher?.did, event.publisher?.handle]);
-    const bead = buildBead({ event, day: draft.day, note: draft.note, kind: draft.kind, tags, eventUrl });
+    const bead = buildBead({ event, day: draft.day, note: draft.note, kind: draft.kind, tags, eventUrl,
+      category: entry?.category });
     const res = existing
       ? await oauth.putRecord(BEAD_NSID, existing.rkey, bead)
       : await oauth.createRecord(BEAD_NSID, bead);

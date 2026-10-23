@@ -70,7 +70,30 @@ export const todayInLondon = (now = new Date()) => todayIn(TZ, now);
 export const dayInstant = (date) => `${date}T12:00:00.000Z`;
 
 /* ---------- the bead ---------- */
-export function buildBead({ event, day, note, kind, tags = [], eventUrl, now = new Date() }) {
+/* Directory categories whose entries are works (a film), not occasions. */
+const WORK_CATEGORIES = new Set(['film', 'screening']);
+
+/* What the bead is about, by name: a subject ref.
+ *
+ * `subject` points at the event record, and a strongRef carries no name — so
+ * without this, anything showing the bead (Loom's timeline, the wall) knows
+ * only an at:// address. A film from a festival listing is a work, with its
+ * year when the listing gives one ("USA 2026, 108 min"); anything else is an
+ * event. Not anchored: the name need not appear in the note. */
+export function subjectRef(event, category) {
+  const r = event?.value || {};
+  const label = String(r.name || '').trim();
+  if (!label) return null;
+  const work = WORK_CATEGORIES.has(category);
+  const descriptor = { label: truncate(label, 500) };
+  if (work) {
+    const year = /\b((?:18|19|20)\d{2}), \d+ min\b/.exec(String(r.description || ''));
+    if (year) descriptor.date = year[1];
+  }
+  return { type: work ? 'work' : 'event', role: 'subject', descriptor };
+}
+
+export function buildBead({ event, day, note, kind, tags = [], eventUrl, category, now = new Date() }) {
   const ref = { $type: 'com.cultureblocs.defs#strongRef', uri: event.uri };
   if (event.cid) ref.cid = event.cid;
   const bead = {
@@ -86,6 +109,8 @@ export function buildBead({ event, day, note, kind, tags = [], eventUrl, now = n
   if (eventUrl) {
     bead.links = [{ uri: eventUrl, title: truncate(event.value?.name || 'Event', 300) }];
   }
+  const about = subjectRef(event, category);
+  if (about) bead.refs = [about];
   bead.provenance = { app: APP_ID, mintedAt: now.toISOString(), timeAnchored: false };
   return bead;
 }

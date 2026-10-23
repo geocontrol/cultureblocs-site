@@ -44,11 +44,22 @@ test('the bead points at the event, holds the day not the moment, and no locatio
     subject: { $type: 'com.cultureblocs.defs#strongRef', uri: EV, cid: 'bafyrei-event' },
     note: 'The Code Universe section.', tags: ['frieze-week-london-2026'],
     links: [{ uri: 'https://www.cultureblocs.com/events/frieze-week-london/frieze-london-2026/', title: 'Frieze London 2026' }],
+    refs: [{ type: 'event', role: 'subject', descriptor: { label: 'Frieze London 2026' } }],
     provenance: { app: 'cultureblocs-went', mintedAt: '2026-10-15T19:03:00.000Z', timeAnchored: false },
   });
   assert.ok(!('geo' in bead));
   const bare = buildBead({ event: { uri: EV, value: fair }, day: '2026-10-15', note: '' });
   assert.ok(!('note' in bare) && !('tags' in bare) && !('links' in bare) && !('cid' in bare.subject));
+});
+
+test('a film is named in the bead as a work, with its year; anything else as an event', () => {
+  const film = { name: '14th', startsAt: '2026-10-12T18:00:00+01:00', endsAt: '2026-10-18T22:18:00+01:00',
+    description: 'Special Presentations. Directed by Ava DuVernay. USA 2026, 108 min. Screens Mon 12 Oct 18:00.' };
+  const saw = buildBead({ event: { uri: EV, value: film }, day: '2026-10-12', note: '', kind: 'screening', category: 'film' });
+  assert.deepEqual(saw.refs, [{ type: 'work', role: 'subject', descriptor: { label: '14th', date: '2026' } }]);
+  const went = buildBead({ event: { uri: EV, value: fair }, day: '2026-10-15', note: '', category: 'fair' });
+  assert.deepEqual(went.refs, [{ type: 'event', role: 'subject', descriptor: { label: 'Frieze London 2026' } }]);
+  assert.ok(!('refs' in buildBead({ event: { uri: EV, value: {} }, day: '2026-10-15', note: '' })));
 });
 
 test('a second bead for the same event and day is found, whichever authority it used', () => {
