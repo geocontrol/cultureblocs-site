@@ -1,0 +1,3923 @@
+{
+  "meta": {
+    "title": "Games Transformed Festival 2026 — CultureBlocs event dataset",
+    "name": "Games Transformed 2026",
+    "directory": "games-transformed",
+    "tag": "games-transformed-2026",
+    "short": "gt",
+    "tz": "Europe/London",
+    "cardLine": "Panels, workshops, performance and 36 games to play, day by day",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "generated": "2026-10-25",
+    "status": "draft — review flagged notes before publishing",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published.",
+    "timezone": "Times are Europe/London, GMT (+00:00) throughout: the clocks went back on 25 October 2026, before the festival.",
+    "checked": "Every programme item read from the festival's Ticket Tailor page on 25 October 2026 (tools/events/games_transformed_2026_source.txt). Venue addresses from venue listings and Pelican House's own box office.",
+    "timesTbc": "The festival gives no times, rooms or speakers for individual sessions. Sessions are date-only (startsAt 00:00, no endsAt) and show as 'Time tbc'; games run from Saturday 10:00 to Sunday 19:30. Update and republish when a timetable appears.",
+    "prices": "From the box office checkout on 25 October 2026, plus booking fees: weekend pass £45 standard / £55 final release; Saturday or Sunday day pass £25; under-16 day ticket £15; Friday evening social £5; motherlode party £12 (not in day or weekend passes). Solidarity tickets on request.",
+    "omitted": "Nothing in the programme is left out. Descriptions are our own short summaries; the organisers' copy stays on their page.",
+    "unofficial": "Independent listing by CultureBlocs; not affiliated with or endorsed by Games Transformed or any listed game, maker or venue.",
+    "count": 68,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
+  },
+  "records": [
+    {
+      "slug": "games-transformed-2026",
+      "category": "umbrella",
+      "rkey": "3mypwynvbk2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvbk2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games Transformed Festival 2026",
+        "description": "A festival of games and radical politics in Bethnal Green, East London, run by the volunteer-led Games Transformed. The 2026 theme, Here to Stay, Here to Play, echoes the 1970s East London anti-racist slogan Here to Stay, Here to Fight: racial and migrant justice as one struggle, and games as a way to resist. Over 80 games, plus panels, workshops, performance, a youth and families programme and the motherlode afterparty, across Proposition Studios, Pelican House and Three Colts Tavern. Friday 18:30–23:00, Saturday 10:00–18:30 (afterparty from 20:00), Sunday 10:00–19:30. Weekend and day passes; the Friday social and the afterparty are ticketed separately. Free or discounted solidarity tickets are available by email. Umbrella record: the events in this collection reference the same festival.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-30T18:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          },
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed",
+            "name": "Games Transformed box office"
+          }
+        ]
+      },
+      "notes": "Unofficial umbrella record; not published by Games Transformed. The box office header gives Fri 18:00 – Sun 19:30; the page's own When? section says Friday 18:30, which we use."
+    },
+    {
+      "slug": "games-against-borders",
+      "category": "talk",
+      "rkey": "3mypwynvcjci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvcjci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games Against Borders symposium and evening social",
+        "description": "The festival opens with the ReImagining Value Action Lab's Games Against Borders symposium, then a relaxed social evening of games and a chance to meet other players and organisers. Ticketed separately as the Friday evening social: £5 + £1 booking fee.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-30T18:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-10-30T23:00:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          },
+          {
+            "uri": "https://reimaginingvalue.ca/borders/",
+            "name": "ReImagining Value Action Lab"
+          }
+        ]
+      },
+      "notes": "The page's When? section gives Friday 18:30–23:00; the ticket is named 'Evening Social from 6pm'. Venue not stated."
+    },
+    {
+      "slug": "monstreous-costume-competition",
+      "category": "party",
+      "rkey": "3mypwynvdiki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvdiki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "MONSTREOUS Costume and Cosplay Competition",
+        "description": "The Halloween costume theme is monsters — monstrosity as political, the label pinned on those who challenge the established order. Prizes, including free games and festival tickets, for the most MONSTREOUS outfits across Saturday's day and night programme.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Runs across Saturday's day and night programme; no judging time given."
+    },
+    {
+      "slug": "motherlode-afterparty",
+      "category": "party",
+      "rkey": "3mypwynvehsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvehsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "motherlode afterparty",
+        "description": "The Games Transformed afterparty takes over all three venues from 8pm till late: DJs including Bledi, Dance Against Deportations and Nachtlicker, live coding, shibari performance, cross-venue quests, an immersive chill space, games and the costume competition. Not included in day or weekend passes: party ticket £12 + £1 booking fee.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T20:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "The page says 8pm (twice); the ticket is named 'from 7pm'. We use 20:00. Ends 'till late', so no endsAt."
+    },
+    {
+      "slug": "what-a-state",
+      "category": "family",
+      "rkey": "3mypwynvfh2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvfh2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "What a State!?",
+        "description": "The youth and families programme, for ages 8 and up (8–88, younger children welcome to join in): an immersive world of absurd challenges and bureaucracy, built around a Very Completely Official British Citizenship Test. Saturday and Sunday. Under-16 day tickets £15 + £1 booking fee; a crèche run with Nanny Solidarity Network is available — tell the festival in advance.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "The page says the youth and families programme runs all day on both days; we give it festival hours."
+    },
+    {
+      "slug": "technofascism-and-the-potential-of-gameful-resistance",
+      "category": "panel",
+      "rkey": "3mypwynvggci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvggci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Technofascism and the potential of gameful resistance",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "where-do-i-stand-exploring-how-to-organise-and-knowing-your",
+      "category": "workshop",
+      "rkey": "3mypwynvhfki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvhfki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Where do I stand? - Exploring how to organise and knowing your workers rights!",
+        "description": "A workshop at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "games-against-empires-a-spotlight-on-radical-games",
+      "category": "panel",
+      "rkey": "3mypwynviesi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynviesi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games against empires: A spotlight on radical games",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "dolphins-everywhere-a-cooperative-boardgame",
+      "category": "workshop",
+      "rkey": "3mypwynvje2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvje2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Dolphins Everywhere: A cooperative boardgame",
+        "description": "A workshop at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "worldbuilding-for-solidarity-and-hope",
+      "category": "panel",
+      "rkey": "3mypwynvkdci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvkdci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Worldbuilding for solidarity and hope",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "fascism-minus-20",
+      "category": "game-session",
+      "rkey": "3mypwynvlcki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvlcki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Fascism Minus 20'",
+        "description": "A game session at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "play-rebellion-imagination-radical-games-beyond-the-console",
+      "category": "panel",
+      "rkey": "3mypwynvmbsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvmbsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Play, Rebellion, Imagination: Radical games beyond the console",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "here-to-stay-here-to-play-gaming-against-racism-and-borders",
+      "category": "panel",
+      "rkey": "3mypwynvnb2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvnb2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Here to Stay - Here to Play: Gaming against racism and borders",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "sprouts-of-hope-gta-vi-workers-fight-the-system",
+      "category": "panel",
+      "rkey": "3mypwynvoaci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvoaci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Sprouts of Hope: GTA VI Workers Fight The System",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "games-in-the-precarious-workplace-playing-resistance",
+      "category": "workshop",
+      "rkey": "3mypwynvp7ki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvp7ki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games in the Precarious Workplace: Playing Resistance",
+        "description": "A workshop at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "talmen-a-new-mindsport-from-gaza-for-peace-and-solidarity",
+      "category": "workshop",
+      "rkey": "3mypwynvq6si4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvq6si4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Talmen: A new mindsport from Gaza for peace and solidarity",
+        "description": "A workshop at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cowboy-postcapitalism-an-in-game-lecture-performance",
+      "category": "screening",
+      "rkey": "3mypwynvr62i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvr62i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Cowboy Postcapitalism: An in-game lecture-performance",
+        "description": "A film at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "no-games-for-genocide-building-anti-imperialist-boycotts-in",
+      "category": "panel",
+      "rkey": "3mypwynvs5ci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvs5ci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "No Games for Genocide: Building anti-imperialist boycotts in the games industry",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "gtmo-441-reclaiming-agency-against-the-games-of-empire",
+      "category": "panel",
+      "rkey": "3mypwynvt4ki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvt4ki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "GTMO 441: Reclaiming agency against the games of empire",
+        "description": "A panel at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "the-social-shrieks-game-a-spooky-cooperative-organizing",
+      "category": "workshop",
+      "rkey": "3mypwynvu3si4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvu3si4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "The Social Shrieks Game: A spooky cooperative organizing simulator",
+        "description": "A workshop at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "scarcity-is-a-paucity-of-imagination-a-tabletop-game-design",
+      "category": "workshop",
+      "rkey": "3mypwynvv32i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvv32i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Scarcity Is a paucity of imagination: a tabletop game design workshop",
+        "description": "A workshop at Games Transformed 2026, Saturday 31 October. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Saturday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "games-as-social-movement-organizing-tools",
+      "category": "panel",
+      "rkey": "3mypwynvw2ci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvw2ci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games as social movement organizing tools",
+        "description": "A panel at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "racial-justice-and-union-organizing-in-the-games-sector",
+      "category": "panel",
+      "rkey": "3mypwynvwzki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvwzki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Racial Justice and Union Organizing in the Games Sector",
+        "description": "A panel at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ethical-tech-choices-the-organisers-dilemma",
+      "category": "workshop",
+      "rkey": "3mypwynvxysi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvxysi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Ethical Tech Choices: the Organisers Dilemma",
+        "description": "A workshop at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "the-adventures-of-team-normal-actual-play",
+      "category": "performance",
+      "rkey": "3mypwynvyy2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvyy2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "The Adventures of Team Normal Actual Play",
+        "description": "A performance at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "games-for-new-worlds-a-spotlight-on-radical-games",
+      "category": "panel",
+      "rkey": "3mypwynvzxci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynvzxci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games for new worlds: A spotlight on radical games",
+        "description": "A panel at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "game-changers-a-debate-game-of-radical-vs-liberal-abundance",
+      "category": "workshop",
+      "rkey": "3mypwynw2wki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynw2wki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Game-Changers: A debate game of radical vs liberal \"abundance\"",
+        "description": "A workshop at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "beyond-the-colonial-present-games-and-play-as-collective",
+      "category": "panel",
+      "rkey": "3mypwynw3vsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynw3vsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Beyond the colonial present: Games and play as collective liberation",
+        "description": "A panel at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "interactive-storytelling-and-escape-games-as-educational",
+      "category": "workshop",
+      "rkey": "3mypwynw4v2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynw4v2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Interactive Storytelling and Escape Games as Educational and Fighting Tools",
+        "description": "A workshop at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "games-that-bite-back-the-subversive-potential-of-emotional",
+      "category": "workshop",
+      "rkey": "3mypwynw5uci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynw5uci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Games that Bite Back: The subversive potential of emotional impact",
+        "description": "A workshop at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "gamed-capitalism-and-21st-century-fascism",
+      "category": "panel",
+      "rkey": "3mypwynw6tki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynw6tki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Gamed Capitalism and 21st Century Fascism",
+        "description": "A panel at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "digital-twin-protocol-a-counter-surveillance-larp",
+      "category": "workshop",
+      "rkey": "3mypwynw7ssi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynw7ssi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Digital Twin Protocol: a counter-surveillance LARP",
+        "description": "A workshop at Games Transformed 2026, Sunday 1 November. The festival hasn't published a time, room or speakers for its sessions yet. Covered by the Sunday day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-11-01T00:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "all-will-rise",
+      "category": "videogame",
+      "rkey": "3mypwynwas2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwas2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "All Will Rise",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "bury-me-my-love",
+      "category": "videogame",
+      "rkey": "3mypwynwbrci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwbrci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Bury Me, My Love",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "checkpoint-universe",
+      "category": "videogame",
+      "rkey": "3mypwynwcqki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwcqki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Checkpoint Universe",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "creatures-like-us",
+      "category": "videogame",
+      "rkey": "3mypwynwdpsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwdpsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Creatures Like Us",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "crip-anthology-2016-2024",
+      "category": "videogame",
+      "rkey": "3mypwynwep2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwep2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "crip_anthology (2016-2024)",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "dont-get-your-hopes-up",
+      "category": "videogame",
+      "rkey": "3mypwynwfoci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwfoci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Don't Get Your Hopes Up",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "dreams-on-a-pillow",
+      "category": "videogame",
+      "rkey": "3mypwynwgnki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwgnki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Dreams on a Pillow",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "earth-engine",
+      "category": "videogame",
+      "rkey": "3mypwynwhmsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwhmsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Earth Engine",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "erased",
+      "category": "videogame",
+      "rkey": "3mypwynwim2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwim2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Erased",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "four-horsemen",
+      "category": "videogame",
+      "rkey": "3mypwynwjlci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwjlci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Four Horsemen",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "good-citizen-a-colorful-revolution",
+      "category": "videogame",
+      "rkey": "3mypwynwkkki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwkkki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Good Citizen: a colorful revolution",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "hedgeborough",
+      "category": "videogame",
+      "rkey": "3mypwynwljsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwljsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Hedgeborough",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "into-games",
+      "category": "videogame",
+      "rkey": "3mypwynwmj2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwmj2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Into Games",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "meal-deal-the-gamification-of-labour",
+      "category": "videogame",
+      "rkey": "3mypwynwnici4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwnici4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Meal Deal - the gamification of labour",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "path-out",
+      "category": "videogame",
+      "rkey": "3mypwynwohki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwohki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Path Out",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "piscgame",
+      "category": "videogame",
+      "rkey": "3mypwynwpgsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwpgsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "PISCGAME",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "take-us-north",
+      "category": "videogame",
+      "rkey": "3mypwynwqg2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwqg2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Take Us North",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "vanished-puzzle-quest",
+      "category": "videogame",
+      "rkey": "3mypwynwrfci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwrfci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Vanished Puzzle Quest",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "venba",
+      "category": "videogame",
+      "rkey": "3mypwynwseki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwseki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Venba",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "when-rivers-were-trails",
+      "category": "videogame",
+      "rkey": "3mypwynwtdsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwtdsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "When Rivers Were Trails",
+        "description": "A videogame, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "antifascist-tooth-fairy",
+      "category": "analogue-game",
+      "rkey": "3mypwynwud2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwud2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Antifascist Tooth Fairy",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "candytrail",
+      "category": "analogue-game",
+      "rkey": "3mypwynwvcci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwvcci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Candytrail",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "carrom",
+      "category": "analogue-game",
+      "rkey": "3mypwynwwbki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwwbki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Carrom",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "four-winds-mahjong-club",
+      "category": "analogue-game",
+      "rkey": "3mypwynwxasi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwxasi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Four Winds Mahjong Club",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "indigenous-games",
+      "category": "analogue-game",
+      "rkey": "3mypwynwya2i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwya2i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Indigenous games",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "kaugummihexomat",
+      "category": "analogue-game",
+      "rkey": "3mypwynwz7ci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynwz7ci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Kaugummihexomat",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "may-you-fish-in-interesting-times",
+      "category": "analogue-game",
+      "rkey": "3mypwynx26ki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynx26ki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "May You Fish in Interesting Times",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "occupation",
+      "category": "analogue-game",
+      "rkey": "3mypwynx35si4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynx35si4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Occupation",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "play-in-nature-birds-in-the-city-bengaluru-edition",
+      "category": "analogue-game",
+      "rkey": "3mypwynx452i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynx452i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Play in Nature / Birds in the City: Bengaluru Edition",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "political-tabletop-games",
+      "category": "analogue-game",
+      "rkey": "3mypwynx54ci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynx54ci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Political tabletop games",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "promesa-playing-oppression",
+      "category": "analogue-game",
+      "rkey": "3mypwynx63ki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynx63ki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Promesa / Playing Oppression",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "right-2-roam",
+      "category": "analogue-game",
+      "rkey": "3mypwynx72si4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynx72si4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Right 2 Roam",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "slop-machines-a-critical-ai-social-deduction-game",
+      "category": "analogue-game",
+      "rkey": "3mypwynxa22i4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynxa22i4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Slop Machines: A Critical AI Social Deduction Game",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "tawlah-palestinian-backgammon",
+      "category": "analogue-game",
+      "rkey": "3mypwynxazci4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynxazci4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Tawlah (Palestinian backgammon)",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "the-justice-deck",
+      "category": "analogue-game",
+      "rkey": "3mypwynxbyki4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynxbyki4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "The Justice Deck",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    },
+    {
+      "slug": "viral-empire",
+      "category": "analogue-game",
+      "rkey": "3mypwynxcxsi4",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mypwynxcxsi4",
+      "sources": [
+        "https://www.tickettailor.com/events/gamestransformed/2328476"
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Viral Empire",
+        "description": "An analogue game, on the festival floor to play on Saturday and Sunday, 31 October – 1 November. Covered by a day pass or a weekend pass.",
+        "createdAt": "2026-10-25T19:30:00.000Z",
+        "startsAt": "2026-10-31T10:00:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "endsAt": "2026-11-01T19:30:00+00:00",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition, Pelican House or Three Colts Tavern, Bethnal Green",
+            "street": "Cambridge Heath Road"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Proposition Studios",
+            "street": "279 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Pelican House",
+            "postalCode": "E1 5QJ"
+          },
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "Three Colts Tavern",
+            "street": "199 Cambridge Heath Road",
+            "postalCode": "E2 0EL"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.tickettailor.com/events/gamestransformed/2328476",
+            "name": "Programme and tickets"
+          }
+        ]
+      },
+      "notes": "Playable throughout festival hours both days; the page doesn't say which venue."
+    }
+  ]
+}

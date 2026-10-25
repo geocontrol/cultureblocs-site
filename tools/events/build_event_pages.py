@@ -24,18 +24,22 @@ ZONE = ZoneInfo("Europe/London")   # the directory's zone: meta.tz, set in main(
 E = html.escape
 
 GROUP = {"fair": "fairs", "talk": "talks", "talks": "talks", "screening": "talks", "meetup": "talks",
+         "panel": "talks", "videogame": "games", "analogue-game": "games",
+         "game-session": "games", "family": "games",
          "workshop": "workshops", "office-hours": "workshops", "tour": "exhibitions",
          "exhibition": "exhibitions", "commission": "exhibitions",
          "gallery-day": "galleries", "party": "nights", "performance": "nights",
          "film": "films"}
 COLOUR = {"fairs": "#2B4BC7", "talks": "#C74E2B", "exhibitions": "#2E7A4F",
           "galleries": "#C7860F", "nights": "#5B2BC7", "films": "#0F6E6B",
-          "workshops": "#B0326E"}
+          "workshops": "#B0326E", "games": "#0F6E6B"}
 KIND_WORD = {"fair": "Fair", "talk": "Talk", "talks": "Talks", "screening": "Film",
              "exhibition": "Exhibition", "commission": "Commission",
              "gallery-day": "Gallery day", "party": "Night", "performance": "Performance",
              "film": "Film", "workshop": "Workshop", "office-hours": "Office hours",
-             "meetup": "Meetup", "tour": "Tour"}
+             "meetup": "Meetup", "tour": "Tour", "panel": "Panel",
+             "videogame": "Videogame", "analogue-game": "Analogue game",
+             "game-session": "Game session", "family": "Youth & families"}
 
 
 def verb(meta):

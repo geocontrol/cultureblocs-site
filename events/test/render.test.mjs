@@ -83,3 +83,50 @@ test('Workshops get their own chip, but only where a listing has workshops', () 
   assert.equal(kindFor('workshop'), 'visit');
   assert.equal(kindFor('talk'), 'performance');
 });
+
+/* ---------- Games Transformed: a programme without times ---------- */
+const gt = JSON.parse(readFileSync(
+  new URL('../games-transformed/events.json', import.meta.url), 'utf8'));
+const gtSource = readFileSync(
+  new URL('../../tools/events/games_transformed_2026_source.txt', import.meta.url), 'utf8')
+  .split('\n').filter(l => l.trim() && !l.startsWith('#')).map(l => l.split('\t')[2].replace(/\s+/g, ' ').trim());
+
+test('Games Transformed lists every programme item, titles as the festival gives them', () => {
+  const names = new Set(gt.records.map(r => r.record.name));
+  assert.equal(gtSource.length, 63);
+  for (const t of gtSource) assert.ok(names.has(t), t);
+  assert.equal(gt.records.length, 68);   // + umbrella, symposium, costumes, afterparty, youth programme
+});
+
+test('Games Transformed sessions show Time tbc under their day; games run both days', () => {
+  const { days } = arrange(merge(gt.records), tzOf(gt));
+  assert.deepEqual(days.map(d => d.date), ['2026-10-30', '2026-10-31', '2026-11-01']);
+  const [fri, sat, sun] = days;
+  assert.ok(fri.timed.some(x => x.ev.slug === 'games-against-borders' && x.when === '18:30–23:00'));
+  const panel = sat.open.find(x => x.ev.slug === 'technofascism-and-the-potential-of-gameful-resistance');
+  assert.equal(panel.when, 'Time tbc');
+  assert.ok(sat.timed.some(x => x.ev.slug === 'motherlode-afterparty' && x.when === 'From 20:00'));
+  assert.equal(sat.open.filter(x => x.ev.slug === 'venba').length, 1);
+  assert.equal(sun.open.find(x => x.ev.slug === 'venba').when, 'Final day · until 19:30');
+  // undated sessions come before the games that run all weekend
+  const idx = (d, slug) => d.open.findIndex(x => x.ev.slug === slug);
+  assert.ok(idx(sat, 'technofascism-and-the-potential-of-gameful-resistance') < idx(sat, 'venba'));
+  for (const r of gt.records) {
+    assert.ok(r.record.startsAt.endsWith('+00:00'), r.slug);       // GMT after the clock change
+    assert.equal(r.record.locations[0].name,
+      'Proposition, Pelican House or Three Colts Tavern, Bethnal Green');
+  }
+});
+
+test('Games get their own chip only where a listing has games; panels are talks', () => {
+  const html = renderDirectory({ events: merge(gt.records), tz: tzOf(gt) });
+  for (const f of ['all', 'workshops', 'talks', 'games', 'nights']) {
+    assert.ok(html.includes(`data-filter="${f}"`), f);
+  }
+  assert.ok(!html.includes('data-filter="exhibitions"'));
+  assert.ok(!renderDirectory({ events: merge(peckham.records), tz: tzOf(peckham) })
+    .includes('data-filter="games"'));
+  assert.equal(kindFor('panel'), 'performance');
+  assert.equal(kindFor('videogame'), 'dwell');
+  assert.equal(kindFor('game-session'), 'visit');
+});

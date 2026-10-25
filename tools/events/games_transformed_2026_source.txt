@@ -1,0 +1,67 @@
+# Games Transformed Festival 2026 — programme as listed on the festival's Ticket Tailor page
+# https://www.tickettailor.com/events/gamestransformed/2328476, read 25 October 2026.
+# The page gives each item's title and format, grouped by day. No times, rooms or speakers.
+# section<TAB>format<TAB>title
+Saturday 31st October	🦜 Panel	Technofascism and the potential of gameful resistance
+Saturday 31st October	👩🏽‍🏫 Workshop	Where do I stand? - Exploring how to organise and knowing your workers rights!
+Saturday 31st October	🦜 Panel	Games against empires: A spotlight on radical games
+Saturday 31st October	👩🏽‍🏫 Workshop	Dolphins Everywhere: A cooperative boardgame
+Saturday 31st October	🦜 Panel	Worldbuilding for solidarity and hope
+Saturday 31st October	🎲 Game session	Fascism Minus 20'
+Saturday 31st October	🦜 Panel	Play, Rebellion, Imagination: Radical games beyond the console
+Saturday 31st October	🦜 Panel	Here to Stay - Here to Play: Gaming against racism and borders
+Saturday 31st October	🦜 Panel	Sprouts of Hope: GTA VI Workers Fight The System
+Saturday 31st October	👩🏽‍🏫 Workshop	Games in the Precarious Workplace: Playing Resistance
+Saturday 31st October	👩🏽‍🏫 Workshop	Talmen: A new mindsport from Gaza for peace and solidarity
+Saturday 31st October	🎥 Film	Cowboy Postcapitalism: An in-game lecture-performance
+Saturday 31st October	🦜 Panel	No Games for Genocide: Building anti-imperialist boycotts in the games industry
+Saturday 31st October	🦜 Panel	GTMO 441: Reclaiming agency against the games of empire
+Saturday 31st October	👩🏽‍🏫 Workshop	The Social Shrieks Game: A spooky cooperative organizing simulator
+Saturday 31st October	👩🏽‍🏫 Worksho	Scarcity Is a paucity of imagination: a tabletop game design workshop
+Sunday 1st November	🦜 Panel	Games as social movement organizing tools
+Sunday 1st November	🦜 Panel	Racial Justice and Union Organizing in the Games Sector
+Sunday 1st November	👩🏽‍🏫 Workshop	Ethical Tech Choices: the Organisers Dilemma
+Sunday 1st November	🎭 Performance	The Adventures of Team Normal Actual Play
+Sunday 1st November	🦜 Panel	Games for new worlds: A spotlight on radical games
+Sunday 1st November	👩🏽‍🏫 Workshop	Game-Changers: A debate game of radical vs liberal "abundance"
+Sunday 1st November	🦜 Panel	Beyond the colonial present: Games and play as collective liberation
+Sunday 1st November	👩🏽‍🏫 Workshop	Interactive Storytelling and Escape Games as Educational and Fighting Tools
+Sunday 1st November	👩🏽‍🏫 Workshop	Games that Bite Back: The subversive potential of emotional impact
+Sunday 1st November	🦜 Panel	Gamed Capitalism and 21st Century Fascism
+Sunday 1st November	👩🏽‍🏫 Workshop	Digital Twin Protocol: a counter-surveillance LARP
+Games to play on both Saturday and Sunday	🎮 Videogame	All Will Rise
+Games to play on both Saturday and Sunday	🎮 Videogame	Bury Me, My Love
+Games to play on both Saturday and Sunday	🎮 Videogame	Checkpoint Universe
+Games to play on both Saturday and Sunday	🎮 Videogame	Creatures Like Us
+Games to play on both Saturday and Sunday	🎮 Videogame	crip_anthology (2016-2024)
+Games to play on both Saturday and Sunday	🎮 Videogame	Don't Get Your Hopes Up
+Games to play on both Saturday and Sunday	🎮 Videogame	Dreams on a Pillow
+Games to play on both Saturday and Sunday	🎮 Videogame	Earth Engine
+Games to play on both Saturday and Sunday	🎮 Videogame	Erased
+Games to play on both Saturday and Sunday	🎮 Videogame	Four Horsemen
+Games to play on both Saturday and Sunday	🎮 Videogame	Good Citizen: a colorful revolution
+Games to play on both Saturday and Sunday	🎮 Videogame	Hedgeborough
+Games to play on both Saturday and Sunday	🎮 Videogame	Into Games
+Games to play on both Saturday and Sunday	🎮 Videogame	Meal Deal - the gamification of labour
+Games to play on both Saturday and Sunday	🎮 Videogame	Path Out
+Games to play on both Saturday and Sunday	🎮 Videogame	PISCGAME
+Games to play on both Saturday and Sunday	🎮 Videogame	Take Us North
+Games to play on both Saturday and Sunday	🎮 Videogame	Vanished Puzzle Quest
+Games to play on both Saturday and Sunday	🎮 Videogame	Venba
+Games to play on both Saturday and Sunday	🎮 Videogame	When Rivers Were Trails
+Games to play on both Saturday and Sunday	🎲 Analogue game	Antifascist Tooth Fairy
+Games to play on both Saturday and Sunday	🎲 Analogue game	Candytrail
+Games to play on both Saturday and Sunday	🎲 Analogue game	Carrom
+Games to play on both Saturday and Sunday	🎲 Analogue game	Four Winds Mahjong Club
+Games to play on both Saturday and Sunday	🎲 Analogue game	Indigenous games
+Games to play on both Saturday and Sunday	🎲 Analogue game	Kaugummihexomat
+Games to play on both Saturday and Sunday	🎲 Analogue game	May You Fish in Interesting Times
+Games to play on both Saturday and Sunday	🎲 Analogue game	Occupation
+Games to play on both Saturday and Sunday	🎲 Analogue game	Play in Nature / Birds in the City: Bengaluru Edition
+Games to play on both Saturday and Sunday	🎲 Analogue game	Political tabletop games
+Games to play on both Saturday and Sunday	🎲 Analogue game	Promesa / Playing Oppression
+Games to play on both Saturday and Sunday	🎲 Analogue game	Right 2 Roam
+Games to play on both Saturday and Sunday	🎲 Analogue game	Slop Machines: A Critical AI Social Deduction Game
+Games to play on both Saturday and Sunday	🎲 Analogue game	Tawlah (Palestinian backgammon)
+Games to play on both Saturday and Sunday	🎲 Analogue game	The Justice Deck
+Games to play on both Saturday and Sunday	🎲 Analogue game	Viral Empire
