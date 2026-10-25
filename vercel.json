@@ -342,6 +342,21 @@
       "permanent": false
     },
     {
+      "source": "/events/games-transformed",
+      "destination": "/events/games-transformed/",
+      "permanent": false
+    },
+    {
+      "source": "/w/gt",
+      "destination": "/events/games-transformed/",
+      "permanent": false
+    },
+    {
+      "source": "/w/gt/:key",
+      "destination": "/went/?dir=games-transformed&e=:key",
+      "permanent": false
+    },
+    {
       "source": "/events/cultureblocs-meetups",
       "destination": "/meetup.html",
       "permanent": false

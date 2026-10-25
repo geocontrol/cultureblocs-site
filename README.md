@@ -116,6 +116,10 @@ Event directories:
     python3 tools/events/publish_frieze_events.py --file events/peckham-digital/events.json
     python3 tools/events/build_event_pages.py --dir peckham-digital
 
+    python3 tools/events/build_games_transformed_events.py   # Games Transformed listing
+    python3 tools/events/publish_frieze_events.py --file events/games-transformed/events.json
+    python3 tools/events/build_event_pages.py --dir games-transformed
+
     python3 tools/events/build_meetup_events.py      # CultureBlocs meetups (unlisted; home /meetup.html)
     python3 tools/events/publish_frieze_events.py --file events/cultureblocs-meetups/events.json
     python3 tools/events/build_event_pages.py --dir cultureblocs-meetups
@@ -125,6 +129,13 @@ Peckham Digital is a week-shaped directory read from the festival's Ticket Tailo
 box office. It adds a Workshops filter (categories workshop and office-hours),
 alongside meetup (Talks & film) and tour (Exhibitions); the chip only appears
 where a listing has such events, so the other directories are unchanged.
+
+Games Transformed is a week-shaped directory read from the festival's Ticket
+Tailor page (programme saved in tools/events/games_transformed_2026_source.txt).
+It adds a Games & play filter (videogame, analogue-game, game-session, family)
+and files panels under Talks & film. The festival publishes no session times,
+so sessions are date-only records that show "Time tbc"; edit and republish them
+when a timetable appears.
 
 A film festival is a different shape from an art week: meta.layout "films"
 draws one entry per film, A–Z or by day, from site-only `film` (credits) and

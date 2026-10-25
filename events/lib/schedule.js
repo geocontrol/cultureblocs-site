@@ -28,6 +28,7 @@ export const FILTERS = [
   ['fairs', 'Fairs'],
   ['workshops', 'Workshops'],
   ['talks', 'Talks & film'],
+  ['games', 'Games & play'],
   ['exhibitions', 'Exhibitions'],
   ['galleries', 'Gallery days'],
   ['nights', 'Performance & nights'],
@@ -36,7 +37,8 @@ export const FILTERS = [
 const GROUP_OF = {
   fair: 'fairs',
   workshop: 'workshops', 'office-hours': 'workshops',
-  talk: 'talks', talks: 'talks', screening: 'talks', meetup: 'talks',
+  talk: 'talks', talks: 'talks', panel: 'talks', screening: 'talks', meetup: 'talks',
+  videogame: 'games', 'analogue-game': 'games', 'game-session': 'games', family: 'games',
   film: 'films',
   exhibition: 'exhibitions', commission: 'exhibitions', tour: 'exhibitions',
   'gallery-day': 'galleries',
