@@ -263,6 +263,32 @@
           "value": "application/ld+json"
         }
       ]
+    },
+    {
+      "source": "/persona/client-metadata.json",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/persona/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'; frame-ancestors 'none'"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -424,6 +450,11 @@
     {
       "source": "/w/srp/:key",
       "destination": "/went/?dir=serpentine-galleries&e=:key",
+      "permanent": false
+    },
+    {
+      "source": "/persona",
+      "destination": "/persona/",
       "permanent": false
     }
   ],

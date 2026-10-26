@@ -1,0 +1,13 @@
+/* My creative persona. Builds on /style.css, /events/events.css and /went/went.css. */
+.bd-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:.5rem 0 1rem}
+.field .req{font-style:normal;text-transform:none;letter-spacing:0;font-family:var(--body);font-weight:400}
+.went input[type=text][aria-invalid=true],.went textarea[aria-invalid=true]{border-color:var(--listen)}
+.public-note{margin:1.6rem 0 1rem}
+.pp-label{border-left:3px solid var(--ink);padding:.2rem 0 .2rem 1rem;margin:1.4rem 0;max-width:38rem}
+.pp-label .pp-name{font:600 1.35rem/1.25 var(--disp);margin:0}
+.pp-label .pp-sub{font:.85rem var(--mono);color:var(--faint);margin:.3rem 0 .6rem}
+.pp-label .pp-bio{margin:0;white-space:pre-line}
+/* the site's --listen red is 4.4:1 on plaster; errors here must pass AA */
+.went-error,.count.over{color:#B3431F}
+.went input[type=text][aria-invalid=true],.went textarea[aria-invalid=true]{border-color:#B3431F}
+.field .req{color:var(--faint)}

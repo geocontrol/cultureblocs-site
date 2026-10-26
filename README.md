@@ -51,6 +51,14 @@ apps built on it, and the London meetup.
                                            installable PWA shell (beads/sw.js — bump V on deploy).
                                            Logic in beads/lib/model.js, tested:
                                            node --test 'beads/test/*.test.mjs'
+    persona/                               "My creative persona": sign in with ATProto OAuth and
+                                           publish one com.cultureblocs.creative.profile (rkey self)
+                                           to your own repo: name, about, disciplines, based in,
+                                           website. The no-install version of CreativeID Studio's
+                                           profile; anything the form doesn't show is kept. Own
+                                           OAuth client (persona/client-metadata.json, store
+                                           "persona"). Logic in persona/lib/profile.js, tested:
+                                           node --test 'persona/test/*.test.mjs'
     week/                                  "My week": one person's beads for a directory
                                            (?dir=&who=), publishable as a strand. Its own
                                            OAuth client (week/client-metadata.json).

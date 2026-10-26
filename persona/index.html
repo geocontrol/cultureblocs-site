@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My creative persona — CultureBlocs</title>
+<meta name="description" content="Sign in with your Atmosphere account and publish your creative persona — the name you work under and a few words about your practice — to your own account.">
+<meta name="oauth-store" content="persona">
+<link rel="atproto-client" href="https://www.cultureblocs.com/persona/client-metadata.json">
+<link rel="canonical" href="https://www.cultureblocs.com/persona/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CultureBlocs">
+<meta property="og:title" content="My creative persona">
+<meta property="og:description" content="Publish the name you work under and a few words about your practice to your own account.">
+<meta property="og:url" content="https://www.cultureblocs.com/persona/">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/events/events.css">
+<link rel="stylesheet" href="/went/went.css">
+<link rel="stylesheet" href="/persona/persona.css">
+<script type="module" src="/persona/persona.js"></script>
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <p class="ev-meta"><a href="/apps.html">Apps</a> / My creative persona</p>
+  <div class="hero" id="hero"><h1>My creative persona.</h1>
+  <p class="lede">The name you work under and a few words about your practice,
+  published to <b>your own account</b> so venues, galleries and directories can
+  find you and point at you. Nobody approves it and nothing is checked: saying
+  it is the claim. This page only writes it for you; it keeps nothing.</p></div>
+
+  <noscript><p class="ev-intro">This page signs you in to your own account
+  and works with it from your browser, so it needs JavaScript.</p></noscript>
+
+  <div id="status" class="went-status" role="status" aria-live="polite">Loading…</div>
+
+  <section id="signin" class="went" hidden>
+    <label class="field">
+      <span>Your handle</span>
+      <input id="handle" type="text" inputmode="email" autocomplete="username"
+        autocapitalize="none" spellcheck="false" placeholder="you.bsky.social">
+    </label>
+    <p class="hint">You’ll approve this on your account’s own sign-in page; your
+    password never comes here. CultureBlocs asks only to <b>make and change your
+    creative profile</b>. Some account providers can’t yet grant a permission that
+    narrow and ask for general access instead; this page still only ever writes
+    that one record.</p>
+    <button type="button" class="cta" id="go">Sign in</button>
+    <p class="went-error" id="signin-error" hidden></p>
+    <p class="hint">New to all this? <a href="https://bsky.app" rel="noopener">A free
+    Bluesky account</a> works, and so do Blacksky, Eurosky or your own server.</p>
+  </section>
+
+  <section id="app" hidden>
+    <div class="bd-bar">
+      <p class="who"><img id="me-avatar" alt="" hidden><span>Signed in as <b id="me-handle"></b></span></p>
+      <button type="button" class="link" id="sign-out">Sign out</button>
+    </div>
+
+    <form id="form" class="went" novalidate>
+      <p class="hint" id="existing-note" hidden></p>
+      <label class="field">
+        <span>Name you work under <i class="req">(needed)</i></span>
+        <input id="f-name" name="name" type="text" autocomplete="off" required aria-describedby="e-name">
+      </label>
+      <p class="went-error" id="e-name" hidden></p>
+
+      <label class="field">
+        <span>About</span>
+        <textarea id="f-bio" name="bio" rows="6" aria-describedby="c-bio e-bio"
+          placeholder="What you make, how you work, what you’re known for."></textarea>
+      </label>
+      <p class="count" id="c-bio"></p>
+      <p class="went-error" id="e-bio" hidden></p>
+
+      <label class="field">
+        <span>Disciplines</span>
+        <input id="f-disciplines" name="disciplines" type="text" autocomplete="off" aria-describedby="h-disc e-disciplines"
+          placeholder="painting, printmaking">
+      </label>
+      <p class="hint" id="h-disc">In your own words, separated by commas. Up to eight.</p>
+      <p class="went-error" id="e-disciplines" hidden></p>
+
+      <label class="field">
+        <span>Based in</span>
+        <input id="f-based" name="based" type="text" autocomplete="off" aria-describedby="e-based" placeholder="Peckham, London">
+      </label>
+      <p class="went-error" id="e-based" hidden></p>
+
+      <label class="field">
+        <span>Website</span>
+        <input id="f-website" name="website" type="text" inputmode="url" autocomplete="url" aria-describedby="e-website"
+          placeholder="yourname.com">
+      </label>
+      <p class="went-error" id="e-website" hidden></p>
+
+      <p class="public-note">This is public. Anyone can read it, and it stays in
+      your account until you change or remove it. Keep anything private
+      (a legal name, contact details) out of it.</p>
+      <button type="submit" class="cta" id="publish">Publish</button>
+      <p class="went-error" id="publish-error" hidden></p>
+    </form>
+
+    <section id="done" class="went-done" hidden aria-labelledby="done-title" tabindex="-1">
+      <h2 id="done-title">Published.</h2>
+      <p id="done-text"></p>
+      <div class="pp-label" id="label"></div>
+      <div class="links">
+        <a id="done-record" rel="noopener">See the record</a>
+        <button type="button" class="link" id="edit-again">Change it</button>
+      </div>
+    </section>
+  </section>
+</main>
+<footer><div class="inner">CultureBlocs · the record is a
+<a href="/lexicons.html#creative-profile">creative.profile</a> ·
+<a href="/privacy.html">privacy</a></div></footer>
+</body>
+</html>

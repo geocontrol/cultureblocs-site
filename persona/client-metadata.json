@@ -1,0 +1,22 @@
+{
+  "client_id": "https://www.cultureblocs.com/persona/client-metadata.json",
+  "client_name": "CultureBlocs — My creative persona",
+  "client_uri": "https://www.cultureblocs.com",
+  "logo_uri": "https://www.cultureblocs.com/beads/icon-192.png",
+  "policy_uri": "https://www.cultureblocs.com/privacy.html",
+  "tos_uri": "https://www.cultureblocs.com/privacy.html",
+  "redirect_uris": [
+    "https://www.cultureblocs.com/persona/"
+  ],
+  "scope": "atproto repo:com.cultureblocs.creative.profile?action=create&action=update transition:generic",
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "token_endpoint_auth_method": "none",
+  "application_type": "web",
+  "dpop_bound_access_tokens": true
+}
