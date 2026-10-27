@@ -42,6 +42,19 @@ code{font:.86em var(--mono);background:var(--wash);padding:.08em .35em;border-ra
 .crumb a{text-decoration:none}
 .hint{font-size:.86rem;color:var(--faint);margin:.3rem 0}
 .note{background:var(--wash);border-left:3px solid var(--accent);padding:.7rem 1rem;border-radius:0 8px 8px 0;font-size:.95rem}
+/* the public-data notice: the one thing nobody should miss */
+.public{display:flex;gap:1rem;align-items:flex-start;margin:2rem 0 0;padding:1.2rem 1.3rem;
+  background:var(--ink);color:#fff;border-radius:14px}
+.public h2{font:600 1.1rem var(--disp);margin:0 0 .4rem;color:#fff}
+.public p,.public li{font-size:.97rem;line-height:1.55}
+.public p{margin:0 0 .5rem}
+.public ul{margin:0;padding-left:1.1rem}
+.public li{margin:.2rem 0}
+.ico-public{flex:none;width:34px;height:34px;border-radius:50%;background:#FFD166;position:relative;margin-top:.1rem}
+.ico-public::before{content:"";position:absolute;left:50%;top:7px;width:4px;height:13px;margin-left:-2px;
+  border-radius:2px;background:var(--ink)}
+.ico-public::after{content:"";position:absolute;left:50%;bottom:6px;width:5px;height:5px;margin-left:-2.5px;
+  border-radius:50%;background:var(--ink)}
 .err{color:#B3261E;font-size:.9rem;margin:.4rem 0}
 .card{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:1.2rem 1.3rem}
 
@@ -289,3 +302,8 @@ label.check{display:flex;align-items:center;gap:.5rem;font:.95rem var(--body)}
   @keyframes fade-in{from{opacity:0;transform:translateX(12px)}}
 }
 .linkout{word-break:break-all;background:none;padding:0;font-size:.85rem}
+
+@media (prefers-reduced-motion:no-preference){
+  .ico-public{animation:nudge .7s .7s cubic-bezier(.3,1.6,.5,1) backwards}
+  @keyframes nudge{from{opacity:0;transform:scale(.4) rotate(-20deg)}}
+}
