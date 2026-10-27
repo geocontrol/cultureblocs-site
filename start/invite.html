@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make an invite — CultureBlocs</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/start/start.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/start/">Start</a>
+</nav>
+<main>
+  <section class="step-in">
+    <h1 class="h">Make an invite link</h1>
+    <p class="lede">The link opens the Start journey with their name, your note, and a suggested first step.
+    Nothing is stored; everything is in the link itself, so don't put anything private in it.</p>
+    <form id="invite" class="form card" autocomplete="off">
+      <label>Their name <input name="name" placeholder="Ada"></label>
+      <label>Suggested first step
+        <select name="path">
+          <option value="">No suggestion</option>
+          <option value="person">Creative profile and works</option>
+          <option value="venue">Venue, gallery or organisation</option>
+          <option value="event">An event</option>
+          <option value="note">A quick note</option>
+        </select></label>
+      <label>A note from you <span class="faint">(optional)</span>
+        <textarea name="message" rows="3" placeholder="Sorry I couldn't show you in person. This takes about ten minutes."></textarea></label>
+      <label>From <input name="from" placeholder="Your name"></label>
+    </form>
+    <h2 class="sec">The link</h2>
+    <div class="card">
+      <p><code id="link" class="linkout"></code></p>
+      <div class="tool-actions">
+        <button type="button" class="btn" id="copy">Copy link</button>
+        <a class="btn ghost" id="open" target="_blank" rel="noopener">Preview</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="module" src="/start/invite.js"></script>
+</body>
+</html>

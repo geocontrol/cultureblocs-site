@@ -1,6 +1,23 @@
 {
   "headers": [
     {
+      "source": "/start/client-metadata.json",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
       "source": "/week/client-metadata.json",
       "headers": [
         {
@@ -124,6 +141,15 @@
     },
     {
       "source": "/went/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src https: data: blob:; connect-src 'self' https:; form-action 'self'; base-uri 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/start/(.*)",
       "headers": [
         {
           "key": "Content-Security-Policy",
@@ -299,6 +325,11 @@
     {
       "source": "/went",
       "destination": "/went/",
+      "permanent": false
+    },
+    {
+      "source": "/start",
+      "destination": "/start/",
       "permanent": false
     },
     {
