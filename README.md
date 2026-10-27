@@ -65,6 +65,19 @@ apps built on it, and the London meetup.
     events/<dir>/report/ + events/report.js live report: people, beads, per event/day,
                                            pairs, notes, + the how-it-was-built case study
     privacy.html                           the policy every OAuth client here points at
+    start/                                 "Start": the onboarding journey for people invited to try
+                                           CultureBlocs. Welcome → account (sign in, or pick
+                                           Bluesky/Blacksky/Eurosky with suggested handles) → make
+                                           (creative profile + works, venue/org with address and
+                                           geo, calendar event, quick note bead) → bookmarkable
+                                           tools. Hash-routed (#venue, #event, #note work as
+                                           standalone tools). Own OAuth client
+                                           (start/client-metadata.json, store "start"); on
+                                           127.0.0.1 it signs in as a loopback client instead.
+                                           start/invite.html builds personalised links
+                                           (?i= base64url JSON: name, path, message, from — not
+                                           secret, nothing stored). Record builders in
+                                           start/lib/records.js: node --test 'start/test/*.test.mjs'
     ns/creativeid.{html,ttl,jsonld}        GENERATED — the creativeid: Linked Data vocabulary
                                            (namespace https://www.cultureblocs.com/ns/creativeid#).
                                            Edit tools/ns/build_creativeid.py, then run it; --check

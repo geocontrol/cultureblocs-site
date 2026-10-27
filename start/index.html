@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start — CultureBlocs</title>
+<meta name="description" content="Get started with CultureBlocs: set up an account, publish your first records, and keep a set of tools to come back to.">
+<meta name="robots" content="noindex">
+<meta name="oauth-store" content="start">
+<link rel="atproto-client" href="https://www.cultureblocs.com/start/client-metadata.json">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/start/start.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Protocol</a>
+  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+
+<header class="rail" aria-label="Progress">
+  <ol id="rail">
+    <li data-stage="welcome"><a href="#welcome"><span class="bead"></span><span class="lbl">Welcome</span></a></li>
+    <li data-stage="account"><a href="#account"><span class="bead"></span><span class="lbl">Account</span></a></li>
+    <li data-stage="make"><a href="#make"><span class="bead"></span><span class="lbl">Make</span></a></li>
+    <li data-stage="tools"><a href="#tools"><span class="bead"></span><span class="lbl">Your tools</span></a></li>
+  </ol>
+  <div id="who" class="who" hidden></div>
+</header>
+
+<main id="main" tabindex="-1">
+  <noscript><p>This page signs you in to your own account and writes to it
+  from your browser, so it needs JavaScript.</p></noscript>
+  <div id="view" class="view" aria-live="polite"></div>
+</main>
+
+<footer class="start-foot">
+  Records you make here go to your own account, not to this website.
+  <a href="/privacy.html">Privacy</a> ·
+  <a href="/apps.html">All apps</a>
+</footer>
+
+<script type="module" src="/start/start.js"></script>
+</body>
+</html>

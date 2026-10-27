@@ -1,0 +1,22 @@
+{
+  "client_id": "https://www.cultureblocs.com/start/client-metadata.json",
+  "client_name": "CultureBlocs — Start",
+  "client_uri": "https://www.cultureblocs.com",
+  "logo_uri": "https://www.cultureblocs.com/pocket/icon-192.png",
+  "policy_uri": "https://www.cultureblocs.com/privacy.html",
+  "tos_uri": "https://www.cultureblocs.com/privacy.html",
+  "redirect_uris": [
+    "https://www.cultureblocs.com/start/"
+  ],
+  "scope": "atproto repo:com.cultureblocs.creative.profile repo:com.cultureblocs.creative.work repo:com.cultureblocs.venue.profile repo:community.lexicon.calendar.event repo:com.cultureblocs.bead blob:image/* transition:generic",
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "token_endpoint_auth_method": "none",
+  "application_type": "web",
+  "dpop_bound_access_tokens": true
+}
