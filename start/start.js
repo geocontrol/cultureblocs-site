@@ -349,7 +349,19 @@ PAGES.idea = () => `
       <div><h2>Apps read them</h2><p>Catalogues, event listings, maps and calendars read the same records. If an app
         closes, your records stay in your account.</p></div>
     </div>
-    <p class="note">Records are public. Only add what you would put on a website.</p>
+    <aside class="public" aria-labelledby="public-h">
+      <span class="ico-public" aria-hidden="true"></span>
+      <div>
+        <h2 id="public-h">Everything you publish is public</h2>
+        <p>Your records are stored in your account's data store (its PDS). Anyone can read them: other people,
+        apps, and search engines. There is no private setting.</p>
+        <ul>
+          <li>Only add what you would put on a public website.</li>
+          <li>Don't add private details, such as a home address, phone number or personal email.</li>
+          <li>You can edit or delete a record later, but someone may already have copied it.</li>
+        </ul>
+      </div>
+    </aside>
   </section>
   ${nav('welcome', 'account', 'Next: your account')}`;
 
