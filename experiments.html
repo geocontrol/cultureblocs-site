@@ -61,6 +61,12 @@
       <div class="card"><h3>The DataBrick <span class="status planned">spec written</span></h3>
         <p>A Raspberry Pi as an always-on home for a household's records and a
         personal sync server, so nothing depends on a laptop being awake.</p></div>
+      <div class="card"><h3>AppView <span class="status planned">local only</span></h3>
+        <p>An index of public records across the network, for questions like “which
+        public records point at this event”. It's run locally for experiments;
+        CultureBlocs doesn't offer it as a public service. The listings use
+        <a href="https://constellation.microcosm.blue" rel="noopener">Constellation</a>,
+        a third-party open index, instead.</p></div>
     </div>
 
     <h3>How a moment travels</h3>
@@ -70,11 +76,24 @@ scrobbled play ┤──> Loom (the desk: write it whole, keep proposals) ──
 hand-written ──┘         │                                              (your store)
                          │ deliberate publish
                          ▼
-   your ATProto repo ──> the wall · the catalogue · the strand embed · the AppView</div>
+   your ATProto repo ──> the wall · the catalogue · the strand embed · a local index</div>
     <p>Beads arrive from whatever had your hands at the time. Loom is where they
     become an entry; the String is where they stay. Publishing is a separate,
     deliberate press — and what leaves is decided by one strip rule, held to its
     Python and JavaScript implementations by shared fixtures.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Reading records back</h2>
+    <div class="cards pair">
+      <div class="card"><h3>Frieze Week report <span class="status planned">example</span></h3>
+        <p>A page that reads back the records people kept about an example listing:
+        where they went, what went together, and their own words, with nothing stored
+        by us. Very few records point at the listing, so it shows the method, not
+        results. It also explains how the whole thing was built on ATProto with no
+        server of our own.</p>
+        <div class="links"><a href="/events/frieze-week-london/report/">see the report →</a></div></div>
+    </div>
   </section>
 
   <section>

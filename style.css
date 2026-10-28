@@ -81,7 +81,6 @@ h2.sec{font:600 .95rem var(--disp);letter-spacing:.18em;text-transform:uppercase
 .status.working{color:#0F6E6B;border-color:#0F6E6B}
 .status.prototype{color:#C7860F;border-color:#C7860F}
 .status.planned{color:var(--faint)}
-.status.demo{color:var(--faint)}
 
 /* lexicon reference */
 .lex{background:var(--card);border:1px solid var(--edge);border-left:3px solid var(--ink);
