@@ -20,10 +20,10 @@
 <body>
 <nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
-  <a class="item" href="/lexicons.html">Protocol</a>
-  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
   <a class="item" href="/howto.html">How to</a>
-  <a class="item" href="/events/" aria-current="page">Events</a>
+  <a class="item" href="/events/" aria-current="page">Listings</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main id="report" data-dir="frieze-week-london">
@@ -67,7 +67,7 @@
 
   <section id="how">
     <h2 class="sec">How this was made</h2>
-    <p class="rp-prose">A week-long programme of over thirty events, a way for anyone
+    <p class="rp-prose">A week-long programme of thirty-two events, a way for anyone
     there to say “I went”, and a live picture of the week — built on the
     <a href="https://atproto.com">AT Protocol</a> without a database or a server
     process of our own. The parts:</p>
@@ -81,7 +81,7 @@
           <rect x="20" y="20" width="220" height="86" rx="8" fill="#fff" stroke="#E4E2DB"/>
           <rect x="20" y="20" width="4" height="86" fill="#2B4BC7"/>
           <text x="36" y="44" font-weight="600">@cultureblocs.com repo</text>
-          <text x="36" y="66" fill="#4A4741" font-size="12">30 calendar event records</text>
+          <text x="36" y="66" fill="#4A4741" font-size="12">32 calendar event records</text>
           <text x="36" y="84" fill="#4A4741" font-size="12">+ the feed record</text>
 
           <rect x="20" y="214" width="220" height="96" rx="8" fill="#fff" stroke="#E4E2DB"/>
@@ -162,6 +162,8 @@
   <section>
     <h2 class="sec">Method and limits</h2>
     <ul class="rp-prose">
+      <li>This listing is a demonstration. CultureBlocs compiled and published the
+      event records; Frieze and the other organisers did not.</li>
       <li>Counts only what people chose to publish. It is a record of remembering, not
       of attendance, and is not comparable to ticket or footfall figures.</li>
       <li>People are counted by account (DID): one person recording three days is one
@@ -171,14 +173,17 @@
       the moment the page loads; the status line says if anything couldn’t be checked.</li>
       <li>Days are the day a person said they went, in London time.</li>
       <li>An independent project, not affiliated with Frieze or any organiser listed.</li>
+      <li>Small numbers are reported as they are. They show what a handful of people
+      chose to share, not how the week went.</li>
     </ul>
     <p class="rp-prose">Code: <a href="https://github.com/geocontrol/cultureblocs-site">github.com/geocontrol/cultureblocs-site</a>
     · Schemas: <a href="/lexicons.html">com.cultureblocs.*</a> · Privacy: <a href="/privacy.html">what we keep (nothing)</a></p>
   </section>
 </main>
 <footer><div class="inner">
-  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
   a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
   <a href="/privacy.html">privacy</a>
 </div></footer>
 <script type="module" src="/events/report.js"></script>

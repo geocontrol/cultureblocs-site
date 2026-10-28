@@ -21,20 +21,21 @@
 <body>
 <nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
-  <a class="item" href="/lexicons.html">Protocol</a>
-  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
   <a class="item" href="/howto.html">How to</a>
-  <a class="item" href="/events/" aria-current="page">Events</a>
+  <a class="item" href="/events/" aria-current="page">Listings</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
   <p class="ev-meta"><a href="/events/">Events</a> / Frieze Week London</p>
   <div class="hero"><h1>Frieze Week London 2026.</h1>
   <p class="lede">The fairs, talks, gallery days and exhibitions around Frieze
-  London and Frieze Masters, <b>13–18 October</b>, day by day. Every event here
-  is an open calendar record in the <code>@cultureblocs.com</code> repository —
-  so if you went, you can say so in a bead of your own that points straight at
-  it.</p></div>
+  London and Frieze Masters, <b>13–18 October</b>, day by day. This listing is a
+  demonstration compiled by CultureBlocs from Frieze's and other organisers'
+  public announcements; Frieze and the other organisers listed don't publish it.
+  If you went, you can say so in your own account, and your record will point at
+  the event.</p></div>
 
   <p class="ev-meta" id="source" role="status" aria-live="polite">Loading the listing…</p>
 
@@ -51,17 +52,23 @@
     <p class="who-foot">Beads people have published to their own accounts pointing
     at an event here, found through <a href="https://constellation.microcosm.blue"
     rel="noopener">Constellation</a>’s open index of the network. Edit or delete
-    yours and this follows.</p>
+    yours and this follows. This shows what people chose to publish. It isn't a count of who
+    attended.</p>
   </section>
 
   <section>
     <h2 class="sec">How this listing works</h2>
     <div class="cards">
+      <div class="card"><h3>A demonstration, not the official listing</h3>
+        <p>Compiled by CultureBlocs from Frieze's and other organisers' public
+        announcements and published from <code>@cultureblocs.com</code>, because
+        they don't publish their programmes this way yet. Not affiliated with or
+        endorsed by Frieze or any other organiser listed. Times change, so check
+        the venue before you travel.</p></div>
       <div class="card"><h3>Events are records</h3>
-        <p>Each event is a <code>community.lexicon.calendar.event</code> record
-        published from <code>@cultureblocs.com</code>. This page reads them from
-        the repository as you load it, so a correction appears here without a
-        site deploy.</p>
+        <p>Each event is a <code>community.lexicon.calendar.event</code> record,
+        the shared calendar format used across the network. This page reads them
+        live, so a correction appears here without a site update.</p>
         <div class="links"><a href="./events.json">the listing →</a></div></div>
       <div class="card"><h3>Your visit is yours</h3>
         <p>Went to something? Write a <em>visit</em> bead in your own repository
@@ -83,17 +90,20 @@
         Frieze, gathered in one feed. Pin it in the Bluesky app to follow the
         week as it happens.</p>
         <div class="links"><a href="https://bsky.app/profile/cultureblocs.com/feed/frieze-week" rel="noopener">the Frieze Week feed →</a></div></div>
-      <div class="card"><h3>Independent</h3>
-        <p>An unofficial listing compiled by CultureBlocs from public
-        announcements. It is not affiliated with or endorsed by Frieze or any
-        organiser listed. Times change — check the venue before you travel.</p></div>
+      <div class="card"><h3>Are you an organiser here?</h3>
+        <p>You could publish this programme yourself, in your own account. We'd
+        switch this page to read from you and link our copies to yours, so the
+        records people have already made still count.</p>
+        <div class="links"><a href="/howto.html#event">How to publish →</a> ·
+        <a href="https://geekyoto.com">Get in touch →</a></div></div>
     </div>
   </section>
 </main>
 <footer><div class="inner">
-  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
   a <a href="https://geekyoto.com">geekyoto</a> project ·
-  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
+  <a href="/privacy.html">privacy</a>
 </div></footer>
 <script type="module" src="/events/events.js"></script>
 </body>

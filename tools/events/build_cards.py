@@ -95,10 +95,10 @@ def main():
 <body>
 <nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
-  <a class="item" href="/lexicons.html">Protocol</a>
-  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
   <a class="item" href="/howto.html">How to</a>
-  <a class="item" href="/events/" aria-current="page">Events</a>
+  <a class="item" href="/events/" aria-current="page">Listings</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main class="cards-intro">

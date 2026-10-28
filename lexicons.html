@@ -3,28 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Protocol — CultureBlocs</title>
-<meta name="description" content="The com.cultureblocs.* lexicons: open schemas for beads, annotations and strands of cultural memory.">
+<title>The format — CultureBlocs</title>
+<meta name="description" content="The com.cultureblocs.* lexicons: open schemas for cultural records, plus how they change.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
-  <a class="item" href="/lexicons.html" aria-current="page">Protocol</a>
-  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/lexicons.html" aria-current="page">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
   <a class="item" href="/howto.html">How to</a>
-  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/events/">Listings</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
-  <div class="hero"><h1>The schema commons.</h1>
+  <div class="hero"><h1>The format.</h1>
   <p class="lede">Nine small <a href="https://atproto.com/guides/lexicon">ATProto
-  lexicons</a> under the <code>com.cultureblocs.*</code> namespace — anchored to
-  this domain, which is what makes them citable. The same shapes describe a record
-  on a device, in a self-hosted String, or published to the open network; privacy is
-  a property of where a record lives, not of its schema. <b>Status: published and
-  resolvable</b> — these schemas are live protocol infrastructure, in daily use by
-  the reference apps.</p>
+  lexicons</a> under <code>com.cultureblocs.*</code>: beads, strands and
+  annotations; creative profiles, works and connections; venue profiles and
+  line-ups. Events themselves use the shared community calendar format,
+  <code>community.lexicon.calendar.event</code>, which we don't own and don't
+  fork. These schemas are anchored to this domain, which is what makes them
+  citable. The same shapes describe a record on a device, in a String, or
+  published to the network; privacy depends on where a record lives, not on its
+  schema.</p>
+  <p class="narrow"><b>How these change.</b> Fields are added, not removed. A
+  shape that has been replaced stays published, so records written with it still
+  resolve: so far <code>venue.listing</code> (replaced by the shared calendar
+  event plus <code>venue.lineup</code>) and <code>defs#workRef</code> (replaced
+  by <code>defs#ref</code>). A written change policy is being prepared.</p>
   <p class="meetup-meta">resolve it yourself: <code>_lexicon.cultureblocs.com</code>
   → <code>did:plc:l3726um33xesakwqhjkkpoet</code> → e.g.
   <code>at://cultureblocs.com/com.atproto.lexicon.schema/com.cultureblocs.bead</code></p>
@@ -170,12 +177,17 @@
     interoperate with the
     <a href="https://github.com/lexicon-community">Lexicon Community</a> calendar
     work rather than fork it.</p>
+    <p><b>Beyond AT Protocol.</b> Today these records live in AT Protocol
+    accounts. Publishing the same records as linked data on an ordinary website,
+    over ActivityPub, or in Solid pods is being looked into. Nothing ships
+    yet.</p>
   </section>
 </main>
 <footer><div class="inner">
-  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
   a <a href="https://geekyoto.com">geekyoto</a> project ·
-  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
+  <a href="/privacy.html">privacy</a>
 </div></footer>
 </body>
 </html>

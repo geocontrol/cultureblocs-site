@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiments — CultureBlocs</title>
+<meta name="description" content="Devices, prototypes and ideas being tried out with the CultureBlocs format. No promises.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Listings</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main>
+  <div class="hero"><h1>Experiments.</h1>
+  <p class="lede">Devices, prototypes and ideas being tried out with the format.
+  Some will become reference tools and some won't. Nothing here comes with a
+  promise, and some of it needs technical setup.</p></div>
+
+  <section>
+    <h2 class="sec">Capturing a moment</h2>
+    <div class="cards">
+      <div class="card"><h3>The totem <span class="status working">working</span></h3>
+        <p>A pocket ESP32 device (M5Stack StickS3). Hold the button to mark a
+        moment; press together with a friend to record an encounter on both
+        devices. No clock and no network: it counts elapsed time, and Loom turns
+        that into real times when you plug it in.</p>
+        <div class="links"><a href="https://github.com/geocontrol/culturebloc-totem">source →</a></div></div>
+      <div class="card"><h3>Pocket Totem <span class="status working">working</span></h3>
+        <p>The totem as a phone web app. Records queue locally and go to your
+        String, or straight to your own account if you sign in. Scanning a venue's
+        QR code attaches that night's event.</p>
+        <div class="links"><a href="/pocket/">open Pocket →</a></div></div>
+      <div class="card"><h3>Scrobble worker <span class="status working">working</span></h3>
+        <p>Turns Last.fm plays into suggested <em>listen</em> records, one per
+        listening session. Suggestions stay suggestions until a person keeps
+        them.</p></div>
+      <div class="card"><h3>By hand <span class="status working">working</span></h3>
+        <p><code>scripts/mint.py</code> on the command line, or a Claude Code skill
+        that mints, edits and publishes from a terminal.</p>
+        <div class="links"><a href="/howto.html#bead">how to →</a></div></div>
+      <div class="card"><h3>AR Gallery <span class="status planned">parked</span></h3>
+        <p>Point a phone at a painting to identify it and make a note. Parked for a
+        rethink: when it returns, matching will happen on the phone against packs
+        published by venues, so no images leave the device.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Keeping your own records</h2>
+    <div class="cards pair">
+      <div class="card"><h3>The timeline <span class="status working">working</span></h3>
+        <p>The String's own day view: annotate, attach photos, keep or release
+        suggestions, group records into strands and publish them. Runs alongside
+        Loom while daily use decides between them.</p></div>
+      <div class="card"><h3>The DataBrick <span class="status planned">spec written</span></h3>
+        <p>A Raspberry Pi as an always-on home for a household's records and a
+        personal sync server, so nothing depends on a laptop being awake.</p></div>
+    </div>
+
+    <h3>How a moment travels</h3>
+    <div class="pipeline">totem press ───┐
+phone mint ────┤
+scrobbled play ┤──> Loom (the desk: write it whole, keep proposals) ──> the String
+hand-written ──┘         │                                              (your store)
+                         │ deliberate publish
+                         ▼
+   your ATProto repo ──> the wall · the catalogue · the strand embed · the AppView</div>
+    <p>Beads arrive from whatever had your hands at the time. Loom is where they
+    become an entry; the String is where they stay. Publishing is a separate,
+    deliberate press — and what leaves is decided by one strip rule, held to its
+    Python and JavaScript implementations by shared fixtures.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">For venues</h2>
+    <div class="cards pair">
+      <div class="card"><h3>Doors <span class="status planned">proof of concept</span></h3>
+        <p>A one-form venue app: a venue profile plus an event in the shared
+        calendar format, with a printable QR code that opens Pocket with the event
+        attached. Kept as a proof of concept; the browser tool at
+        <a href="/start/#event">/start/#event</a> is the simpler route.</p>
+        <div class="links"><a href="/howto.html#event">how to →</a></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Development notes</h2>
+    <h3>What Phase 0 changed</h3>
+    <p>The foundations a local-first client needs. The lexicon validator and
+    the publish strip were ported to the browser and are held to their Python
+    originals by shared fixtures. Records grew an explicit <code>state</code>,
+    so the dotted rail is stored rather than guessed from an app name. The
+    change feed gained HLC stamps, device and actor. <code>PATCH</code> honours
+    <code>If-Match</code> and removes a field sent as <code>null</code>;
+    <code>DELETE</code> honours it too. A connector re-run can revise its own
+    proposal and can no longer erase a person’s edits to one.</p>
+
+    <h3>Where this goes next</h3>
+    <p>Loom’s remaining phases are the plan of record. <b>Phase 2</b> makes the
+    String a <em>personal sync server</em>: a discovery record in your own
+    repository so a new device finds your String by signing in rather than by
+    typing a URL and a token; DID-scoped, NSID-scoped grants in place of one
+    shared bearer, so a connector that may propose listen beads cannot read your
+    identities; and a change feed that goes both ways. <b>Phase 3</b> brings the
+    vault — credentials that sync, encrypted under a passphrase the server never
+    sees — and connectors as manifests, including the resolver that proposes
+    refs. <b>Phase 4</b> moves publishing into Loom, client-side, so a person
+    with no String at all still has the whole loop.</p>
+    <p>Nothing is retired on argument alone. Studio went because two apps could
+    not share one serial port; the rest waits on a season of daily use.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">Retired</h2>
+    <div class="cards pair">
+      <div class="card"><h3>CultureBloc Studio <span class="status planned">retired</span></h3>
+        <p>The first desk for pulling records off the totem over USB. Retired in
+        September 2026 when Loom took over the serial connection; two apps couldn't
+        share one port.</p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+</body>
+</html>
