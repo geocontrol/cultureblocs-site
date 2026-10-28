@@ -97,10 +97,12 @@ lexicons/ (same tree, one level flatter), run build.py, commit:
     done
     python build.py
 
-The nav lives in several places — index.html, apps.html, howto.html, meetup.html,
-privacy.html, went/index.html, build.py's page template, events/index.html, each
-events/<name>/index.html, and the NAV string in tools/events/build_event_pages.py.
-Adding a top-level page means editing all of them.
+The nav lives in several places — index.html, apps.html, experiments.html,
+howto.html, meetup.html, privacy.html, went/index.html, build.py's page template,
+events/index.html, each events/<name>/index.html, and the NAV string in
+tools/events/build_event_pages.py. Adding a top-level page means editing all of
+them. (experiments.html is not in the nav itself; it is linked from the homepage,
+apps.html and howto.html.)
 
 Publishing meetup beads later: from the cultureblocs-string repo,
     python scripts/export_public.py export <strand-id> --out <this-repo>/meetup

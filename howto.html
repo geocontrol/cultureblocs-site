@@ -4,47 +4,179 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to — CultureBlocs</title>
-<meta name="description" content="The basic things: write a bead, tell a strand, keep a proposal, claim a work, publish an event, publish a strand, and render published records on a site.">
+<meta name="description" content="Publish your programme, say you went, claim a work, put records on a site, and run your own tools.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
-  <a class="item" href="/lexicons.html">Protocol</a>
-  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
   <a class="item" href="/howto.html" aria-current="page">How to</a>
-  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/events/">Listings</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
-  <div class="hero"><h1>The basic things.</h1>
-  <p class="lede">Eight recipes covering most of what anyone actually does with
-  CultureBlocs. Each one gives <b>the app way</b> and, where there is one, <b>the
-  command line</b> — they write the same records, so pick whichever is nearer to
-  hand.</p>
+  <div class="hero"><h1>How to.</h1>
+  <p class="lede">Recipes for publishing and reading CultureBlocs records. The
+  first four need only a browser and an account on the network. The rest are for
+  people running their own tools.</p>
   <p class="toc">
+    <a href="#event">publish your programme</a> · <a href="#went">say "I went"</a> ·
+    <a href="#work">claim a work</a> · <a href="#embed">put it on a site</a> ·
     <a href="#bead">write a bead</a> · <a href="#strand">tell a strand</a> ·
-    <a href="#proposal">keep a proposal</a> · <a href="#work">claim a work</a> ·
-    <a href="#event">publish an event</a> · <a href="#publish">publish a strand</a> ·
-    <a href="#embed">put it on a site</a> · <a href="#roundtrip">bring a record home</a>
+    <a href="#proposal">keep a proposal</a> · <a href="#publish">publish a strand</a> ·
+    <a href="#roundtrip">bring a record home</a>
   </p></div>
 
   <section>
     <h2 class="sec">What you need first</h2>
-    <p>Less than you might think. <b>Pocket</b>, <b>Easel</b> and <b>Loom</b> run
-    entirely in a browser: Pocket and Easel publish to your own ATProto repository
-    with nothing of ours in between, and Loom works with no server at all. You need
-    <b>an ATProto account</b> (a Bluesky handle will do) only to publish, and
-    <b>a String</b> only if you want one private store that every app writes into.
-    The command-line recipes below assume a String at
-    <code>http://localhost:8100</code>; set <code>STRING_URL</code> and
-    <code>STRING_TOKEN</code> if yours lives elsewhere.</p>
+    <p><b>An AT Protocol account.</b> A Bluesky handle works; so does Blacksky,
+    Eurosky, or a server you run. That's all the browser tools need.</p>
+    <p><b>For your own tools:</b> the command-line recipes below assume a String
+    at <code>http://localhost:8100</code>. Set <code>STRING_URL</code> and
+    <code>STRING_TOKEN</code> if yours is elsewhere.</p>
     <div class="pipeline">docker compose up -d --build   # in cultureblocs-string  → :8100 the String, :8101 timeline
 docker compose up -d           # in cultureblocs-loom    → :8108 Loom</div>
   </section>
 
   <section>
-    <h2 class="sec">The recipes</h2>
+    <h2 class="sec">In a browser</h2>
+
+    <div class="recipe" id="event">
+      <h3>Publish your programme</h3>
+      <p>Your programme is published as <b>a shared record that no one
+      owns</b>: <code>community.lexicon.calendar.event</code>, maintained by
+      <a href="https://lexicon.community">Lexicon Community</a>. Any calendar or
+      listings app that reads it can show your events, not only ours. Publish
+      under your organisation's own account; that is what makes it your programme
+      rather than someone's copy.</p>
+
+      <p class="way">In a browser</p>
+      <p>Open <a href="/start/#event">Publish an event</a>, sign in with your
+      organisation's account and fill in the form. Add a
+      <a href="/start/#venue">venue profile</a> once, with your address and access
+      information.</p>
+
+      <p class="way">From your box office</p>
+      <p>If your programme already lives in Ticket Tailor or a calendar feed, it
+      can be published from there instead of retyped. That's how the Peckham
+      Digital and Games Transformed listings were built.
+      <a href="https://geekyoto.com">Get in touch</a> if you'd like to try it.</p>
+
+      <p class="way">On the command line</p>
+      <div class="pipeline"># once: the venue as a publishing party, at rkey "self"
+python scripts/venue.py profile --name "The Ivy House" --address "40 Stuart Rd" \
+  --capacity 150 --accessibility "step-free entry, accessible toilet" \
+  --link "https://…|website"
+
+# a night, in the shared type
+python scripts/venue.py event --title "Friday Session" \
+  --start 2026-10-02T20:00:00Z --end 2026-10-02T23:00:00Z \
+  --city London --venue-name "The Ivy House" --link "https://dice.fm/…|tickets"
+
+# optional: who is on
+python scripts/venue.py lineup --event-uri at://…/community.lexicon.calendar.event/… \
+  --event-cid bafy… --billing "The Bug Club|live"
+
+python scripts/promote.py publish &lt;record-id&gt; --identity ivyhouse</div>
+      <p class="note">Add an <em>I went</em> button beside each event on your own
+      site, and people who came can publish their own records pointing at your
+      event. You collect nothing about anyone. Their records are public, so you can
+      find them through an open index of the network, but early on there will be very
+      few. Treat them as a record of a night, not as audience figures.</p>
+    </div>
+
+    <div class="recipe" id="went">
+      <h3>Say “I went”</h3>
+      <p>A record that you went to something, kept in your own account.</p>
+
+      <p class="way">From a listing</p>
+      <p>Press <b>I went</b> on any event in an
+      <a href="/events/">example listing</a> (<b>I saw</b> for a film). Sign in with
+      your account, check the day, write a line if you like, and publish. The record
+      goes to your account and points at the event. You can also post it to
+      Bluesky.</p>
+      <p>On an organiser's own site the button would sit beside the event itself; the
+      record you make is the same.</p>
+
+      <p class="way">Afterwards</p>
+      <p>Correct or delete it in <a href="/beads/">My beads</a>. Gather a week of
+      them into a strand from the listing's “my week” page.</p>
+
+      <p class="way">For something that isn't listed</p>
+      <p>Write a bead yourself (see <a href="#bead">Write a bead</a>) and paste the
+      event's <code>at://</code> address, or simply name it in the note.</p>
+    </div>
+
+    <div class="recipe" id="work">
+      <h3>Claim a work</h3>
+      <p>A <b>work claim</b> tags a piece of work as yours. It lives in your own
+      repository, and that <em>is</em> the claim. What it proves is narrow and
+      honest — this claim was made on this date by the holder of this repository
+      — not authorship, not ownership. That narrowness is the feature. Unattested
+      is the normal state, not a deficient one: there are no verification badges
+      and no completeness scores.</p>
+
+      <p class="way">In Easel</p>
+      <p>Open <a href="/easel/">Easel</a>, sign in with your handle, fill in your
+      <b>profile</b> once, then <b>+ New work</b>: title, date, description,
+      credits, links, external identifiers and images with alt text. Publish it
+      to your repository. Easel tracks drift, so a work you have edited since
+      publishing says so, and republishing updates the same record rather than
+      making a second one.</p>
+
+      <p class="way">On the command line</p>
+      <div class="pipeline">python scripts/creative.py profile --name "Your Name" \
+  --disciplines "sound,installation" --based "London"
+
+python scripts/creative.py work --title "Tideline" --date 2024 \
+  --description "Four-channel piece for a tidal river." \
+  --credit "Your Name|composer" --link "https://…|listen" \
+  --external-id isni:0000000121174403
+
+python scripts/promote.py publish &lt;record-id&gt; --identity personal</div>
+      <p class="note">Layers reference; they never grow the core. Industry
+      metadata, scene vocabularies and licensing terms belong in other namespaces
+      pointing at a work’s URI, which is why the work record stays tiny.
+      Registration with ISNI, ISWC and the rest is somebody else’s business —
+      <code>externalIds</code> is the hook such a bridge writes back into.</p>
+    </div>
+
+    <div class="recipe" id="embed">
+      <h3>Put published records on a site</h3>
+      <p>Everything published is readable by anything that speaks ATProto,
+      including three readers of ours that need no hosting behind them.</p>
+
+      <p class="way">The strand embed</p>
+      <p>A dependency-free web component. Point it at a handle and it reads that
+      repository live; point it at a baked export and the markup is identical.</p>
+      <div class="pipeline">&lt;script type="module" src="/cultureblocs-strands.js"&gt;&lt;/script&gt;
+&lt;cultureblocs-strands actor="cultureblocs.com" limit="5"&gt;&lt;/cultureblocs-strands&gt;</div>
+
+      <p class="way">The wall and the catalogue</p>
+      <p><a href="/wall/">The wall</a> is one person’s published cultureblocs,
+      newest first, with a URL per strand:
+      <code>/wall/&lt;handle&gt;/</code> and
+      <code>/wall/&lt;handle&gt;/&lt;rkey&gt;</code>.
+      <a href="/catalogue/">The catalogue</a> is an artist’s published works —
+      <code>/catalogue/?actor=&lt;handle&gt;&amp;template=grid</code>, with
+      <code>index</code> and <code>feature</code> as the other templates, or your
+      own same-origin stylesheet via <code>&amp;css=</code>. Both read the actor’s
+      own PDS in the browser, so nothing of ours sits between a reader and the
+      record.</p>
+
+      <p class="way">A static export, with photos</p>
+      <div class="pipeline">python scripts/export_public.py export &lt;strand-id&gt; --out &lt;site&gt;/cultureblocs</div>
+      <p class="note">Same privacy strip, plus media copied content-addressed.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2 class="sec">Running your own tools</h2>
+    <p>For people using the String, Loom or the command line. Devices and
+    prototypes live on the <a href="/experiments.html">experiments page →</a></p>
 
     <div class="recipe" id="bead">
       <h3>Write a bead</h3>
@@ -121,82 +253,6 @@ docker compose up -d           # in cultureblocs-loom    → :8108 Loom</div>
       the timeline. This is the whole contract: proposals are not facts.</p>
     </div>
 
-    <div class="recipe" id="work">
-      <h3>Claim a work</h3>
-      <p>A <b>work claim</b> tags a piece of work as yours. It lives in your own
-      repository, and that <em>is</em> the claim. What it proves is narrow and
-      honest — this claim was made on this date by the holder of this repository
-      — not authorship, not ownership. That narrowness is the feature. Unattested
-      is the normal state, not a deficient one: there are no verification badges
-      and no completeness scores.</p>
-
-      <p class="way">In Easel</p>
-      <p>Open <a href="/easel/">Easel</a>, sign in with your handle, fill in your
-      <b>profile</b> once, then <b>+ New work</b>: title, date, description,
-      credits, links, external identifiers and images with alt text. Publish it
-      to your repository. Easel tracks drift, so a work you have edited since
-      publishing says so, and republishing updates the same record rather than
-      making a second one.</p>
-
-      <p class="way">On the command line</p>
-      <div class="pipeline">python scripts/creative.py profile --name "Your Name" \
-  --disciplines "sound,installation" --based "London"
-
-python scripts/creative.py work --title "Tideline" --date 2024 \
-  --description "Four-channel piece for a tidal river." \
-  --credit "Your Name|composer" --link "https://…|listen" \
-  --external-id isni:0000000121174403
-
-python scripts/promote.py publish &lt;record-id&gt; --identity personal</div>
-      <p class="note">Layers reference; they never grow the core. Industry
-      metadata, scene vocabularies and licensing terms belong in other namespaces
-      pointing at a work’s URI, which is why the work record stays tiny.
-      Registration with ISNI, ISWC and the rest is somebody else’s business —
-      <code>externalIds</code> is the hook such a bridge writes back into.</p>
-    </div>
-
-    <div class="recipe" id="event">
-      <h3>Publish an event</h3>
-      <p>A night is published as <b>a shared record we do not own</b>:
-      <code>community.lexicon.calendar.event</code>, stewarded by
-      <a href="https://lexicon.community">Lexicon Community</a>, so your programme
-      reaches every calendar app that speaks it rather than only ours. Our
-      <code>venue.lineup</code> is a thin layer over that event carrying what it
-      does not — who is on, works shown — pinned to it by strongRef.</p>
-
-      <p class="way">In Doors</p>
-      <p>Fill one form and it writes both records, publishes them under the
-      venue’s own identity, and prints a QR code for the door and the poster. The
-      QR opens Pocket with the event attached, so a bead about tonight is one tap
-      for anyone who came.</p>
-
-      <p class="way">On the command line</p>
-      <div class="pipeline"># once: the venue as a publishing party, at rkey "self"
-python scripts/venue.py profile --name "The Ivy House" --address "40 Stuart Rd" \
-  --capacity 150 --accessibility "step-free entry, accessible toilet" \
-  --link "https://…|website"
-
-# a night, in the shared type
-python scripts/venue.py event --title "Friday Session" \
-  --start 2026-10-02T20:00:00Z --end 2026-10-02T23:00:00Z \
-  --city London --venue-name "The Ivy House" --link "https://dice.fm/…|tickets"
-
-# optional: who is on
-python scripts/venue.py lineup --event-uri at://…/community.lexicon.calendar.event/… \
-  --event-cid bafy… --billing "The Bug Club|live"
-
-python scripts/promote.py publish &lt;record-id&gt; --identity ivyhouse</div>
-      <p class="note">Then the audience half happens on its own: people who came
-      publish beads referencing the event, and the venue counts <em>public</em>
-      references. It collects nothing and stores nothing about a person — the
-      evidence is published by the people who chose to publish it. An RSVP says
-      <em>I’m going</em>; a bead pointing at the same event says <em>I was
-      here</em>. Public references are countable; identities are not the venue’s
-      to collect. Early on this is a handful of beads a night, which is a lovely
-      record of an evening and useless as analytics — say so rather than dressing
-      three references as a dashboard.</p>
-    </div>
-
     <div class="recipe" id="publish">
       <h3>Publish a strand</h3>
       <p>Publishing is a deliberate act, per strand, never a default. The String
@@ -221,34 +277,6 @@ python scripts/promote.py status        # what has drifted since it was publishe
       guessed at.</p>
     </div>
 
-    <div class="recipe" id="embed">
-      <h3>Put published records on a site</h3>
-      <p>Everything published is readable by anything that speaks ATProto,
-      including three readers of ours that need no hosting behind them.</p>
-
-      <p class="way">The strand embed</p>
-      <p>A dependency-free web component. Point it at a handle and it reads that
-      repository live; point it at a baked export and the markup is identical.</p>
-      <div class="pipeline">&lt;script type="module" src="/cultureblocs-strands.js"&gt;&lt;/script&gt;
-&lt;cultureblocs-strands actor="cultureblocs.com" limit="5"&gt;&lt;/cultureblocs-strands&gt;</div>
-
-      <p class="way">The wall and the catalogue</p>
-      <p><a href="/wall/">The wall</a> is one person’s published cultureblocs,
-      newest first, with a URL per strand:
-      <code>/wall/&lt;handle&gt;/</code> and
-      <code>/wall/&lt;handle&gt;/&lt;rkey&gt;</code>.
-      <a href="/catalogue/">The catalogue</a> is an artist’s published works —
-      <code>/catalogue/?actor=&lt;handle&gt;&amp;template=grid</code>, with
-      <code>index</code> and <code>feature</code> as the other templates, or your
-      own same-origin stylesheet via <code>&amp;css=</code>. Both read the actor’s
-      own PDS in the browser, so nothing of ours sits between a reader and the
-      record.</p>
-
-      <p class="way">A static export, with photos</p>
-      <div class="pipeline">python scripts/export_public.py export &lt;strand-id&gt; --out &lt;site&gt;/cultureblocs</div>
-      <p class="note">Same privacy strip, plus media copied content-addressed.</p>
-    </div>
-
     <div class="recipe" id="roundtrip">
       <h3>Bring a born-public record home</h3>
       <p>A bead minted on a phone and published straight to your repository has
@@ -266,30 +294,31 @@ python scripts/import_repo.py --actor you.bsky.social</div>
       repository’s history. That is honest, and worth knowing before you edit a
       note someone has already read.</p>
     </div>
+
   </section>
 
   <section>
     <h2 class="sec">Where to go next</h2>
     <div class="cards">
-      <div class="card"><h3>Read the schemas</h3>
-        <p>Every field these recipes fill in, with its type and its notes —
-        generated from the schema files themselves, so the docs cannot drift.</p>
-        <div class="links"><a href="/lexicons.html">Protocol reference →</a></div></div>
+      <div class="card"><h3>Read the format</h3>
+        <p>Every field these recipes fill in, generated from the schema files so
+        the docs can't drift.</p>
+        <div class="links"><a href="/lexicons.html">The format →</a></div></div>
       <div class="card"><h3>See the tools</h3>
-        <p>What each app is, what state it is in, and what the next phases of
-        Loom change about the String.</p>
-        <div class="links"><a href="/apps.html">The apps →</a></div></div>
+        <p>What each tool does and whether it's ready to use.</p>
+        <div class="links"><a href="/apps.html">The tools →</a></div></div>
       <div class="card"><h3>Ask someone</h3>
         <p>A London evening for people working across technology, data,
         creativity and culture. Newcomers welcome.</p>
-        <div class="links"><a href="/meetup.html">CultureBlocs meetup →</a></div></div>
+        <div class="links"><a href="/meetup.html">The meetup →</a></div></div>
     </div>
   </section>
 </main>
 <footer><div class="inner">
-  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
   a <a href="https://geekyoto.com">geekyoto</a> project ·
-  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
+  <a href="/privacy.html">privacy</a>
 </div></footer>
 </body>
 </html>

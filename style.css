@@ -154,6 +154,7 @@ footer a{color:var(--faint)}
 .split{display:flex;flex-wrap:wrap;gap:2rem;align-items:flex-start}
 .split > p{flex:1 1 22rem;max-width:34rem;margin:0}
 .bead-list{flex:1 1 18rem;display:flex;flex-direction:column;gap:.7rem}
+.bead-list.example{max-width:34rem;margin:1.3rem 0 .5rem}
 .bead{display:flex;gap:.85rem;align-items:flex-start;background:var(--card);
   border:1px solid var(--edge);border-radius:8px;padding:.85rem 1rem;font-size:.95rem}
 .bead .when{font:.8rem var(--mono);color:var(--faint)}

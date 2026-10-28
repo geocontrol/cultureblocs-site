@@ -10,10 +10,10 @@
 <body>
 <nav>
   <a class="mark" href="/">Culture<span>Blocs</span></a>
-  <a class="item" href="/lexicons.html">Protocol</a>
-  <a class="item" href="/apps.html">Apps</a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
   <a class="item" href="/howto.html">How to</a>
-  <a class="item" href="/events/">Events</a>
+  <a class="item" href="/events/">Listings</a>
   <a class="item" href="/meetup.html">Meetup</a>
 </nav>
 <main>
@@ -22,7 +22,7 @@
   this site run in your browser and write to your own account. There is no
   CultureBlocs server holding a copy, and no account with us to delete.</p></div>
 
-  <p class="meetup-meta">Applies to: I went · My beads · Pocket Totem · Easel · the wall, catalogue and event pages · last updated 13 October 2026 (My beads added)</p>
+  <p class="meetup-meta">Applies to: I went · My beads · My creative persona · Publish an event (Start) · My week · Pocket Totem · Easel · the wall, catalogue and event pages · last updated 28 October 2026</p>
 
   <section>
     <h2 class="sec">When you sign in</h2>
@@ -56,7 +56,20 @@
     published. My beads never adds a location to a bead; it can remove one.</p>
     <p>Your records are yours. You can delete them in <a href="/beads/">My beads</a>,
     with any ATProto tool, or with <a href="/apps.html">Loom</a>. Deleting a bead does not delete a post you
-    made alongside it — remove that from Bluesky as normal.</p>
+    made alongside it — remove that from Bluesky as normal. Deleting removes a
+    record from your account and from the pages on this site. Services elsewhere
+    on the network that have already read it may keep a copy for a while, and we
+    can’t remove those.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">What a published record says about you</h2>
+    <p>A published record is public and tied to your account. Even without a
+    location, a record pointing at an event says you went to that event on that
+    day, and several together show where you were across a week. “My week” and
+    strands gather them onto one page by design. Bear that in mind before
+    publishing, especially if there are people you’d rather didn’t know where
+    you’ve been.</p>
   </section>
 
   <section>
@@ -66,6 +79,11 @@
     tracking cookies. The site is hosted on Vercel, which, like any web host, may
     keep short-lived technical request logs (such as IP addresses) to run and
     protect the service.</p>
+    <p>CultureBlocs doesn’t run an index or a database of the network. Where a page
+    lists records that point at an event, it finds them through
+    <a href="https://constellation.microcosm.blue">Constellation</a>, an open index
+    run by a third party, and then reads each record from its author’s own account
+    as the page loads.</p>
     <p>Pages that show published records — an event’s page, someone’s wall — only
     ever show what was already public in that person’s repository. Event pages
     list the public beads that point at an event, found through
@@ -80,6 +98,16 @@
   </section>
 
   <section>
+    <h2 class="sec">Event listings</h2>
+    <p>The event records in our listings are examples. CultureBlocs compiled them
+    from organisers’ public announcements and published them from
+    <code>@cultureblocs.com</code>, to show how saying <em>I went</em> could work.
+    They hold nothing about the people who attend. If you’re an organiser and want a
+    correction, or would rather an event wasn’t listed, get in touch and we’ll change
+    or remove it.</p>
+  </section>
+
+  <section>
     <h2 class="sec">Questions</h2>
     <p>CultureBlocs is a <a href="https://geekyoto.com">geekyoto</a> project. Get
     in touch through <a href="https://geekyoto.com">geekyoto.com</a> or
@@ -87,9 +115,10 @@
   </section>
 </main>
 <footer><div class="inner">
-  cultureblocs.com is the schema authority for <code>com.cultureblocs.*</code> ·
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
   a <a href="https://geekyoto.com">geekyoto</a> project ·
-  <a href="https://github.com/Geocontrol">github.com/Geocontrol</a>
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
+  <a href="/privacy.html">privacy</a>
 </div></footer>
 </body>
 </html>
