@@ -1,0 +1,94 @@
+/* Start, Creative Spaces Symposium edition. Builds on /style.css and /start/start.css. */
+
+.kicker{font:600 .75rem var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--dwell);margin:1.8rem 0 -.6rem}
+.hero .kicker + h1{margin-top:1rem}
+.aside-note{font-size:.88rem;color:var(--faint);margin:1.4rem 0 0}
+.three h3{font:600 1rem var(--disp);margin:0 0 .3rem}
+
+/* eight beads on the rail: on a phone only the current step keeps its label */
+.cn-rail .lbl{white-space:nowrap}
+@media (max-width:720px){
+  .cn-rail .lbl{position:absolute;top:32px;left:50%;transform:translateX(-50%);opacity:0;pointer-events:none}
+  .cn-rail li:first-child .lbl{left:0;transform:none}
+  .cn-rail li:last-child .lbl{left:auto;right:0;transform:none}
+  .cn-rail li.here .lbl{opacity:1}
+  .cn-rail ol{padding-bottom:1.5rem}
+}
+
+/* ---------- the guide's list of steps ---------- */
+.guide-steps{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
+.guide-steps a{display:grid;grid-template-columns:auto 1fr auto;gap:.2rem 1rem;align-items:start;
+  padding:.95rem 1.1rem;background:var(--card);border:1px solid var(--edge);border-radius:14px;
+  text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.guide-steps a:hover{border-color:var(--accent);transform:translateX(4px)}
+.guide-steps .n{width:1.9rem;height:1.9rem;border-radius:50%;display:grid;place-items:center;
+  background:var(--wash);font:600 .85rem var(--disp);color:var(--accent)}
+.guide-steps b{font:600 1rem var(--disp)}
+.guide-steps .txt{display:block;margin-top:.2rem;font-size:.92rem;color:var(--faint)}
+.guide-steps .time{font:500 .75rem var(--disp);color:var(--faint);white-space:nowrap;padding-top:.3rem}
+.opt-tag{font:600 .65rem var(--disp);letter-spacing:.1em;text-transform:uppercase;color:var(--dwell);
+  border:1px solid currentColor;border-radius:999px;padding:.1rem .45rem;vertical-align:.15em}
+@media (max-width:560px){
+  .guide-steps a{grid-template-columns:auto 1fr}
+  .guide-steps .time{grid-column:2;padding:0}
+}
+
+.nav-right{display:inline-flex;align-items:center;gap:1.2rem}
+.skip{font:500 .9rem var(--disp)}
+
+/* ---------- organisation ---------- */
+.org-choices{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.2rem;margin:1.2rem 0}
+.signed + .org-choices{margin-top:1.4rem}
+
+/* ---------- the symposium ---------- */
+.ev-card{margin:1.2rem 0;border-left:4px solid var(--dwell)}
+.ev-card .kicker{margin:0 0 .3rem}
+.ev-card h2{font:600 1.2rem var(--disp);margin:0}
+.ev-card p{margin:.3rem 0 0}
+.sessions #sessions{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip-btn{font:500 .84rem var(--disp);padding:.4rem .8rem;border-radius:999px;border:1.5px solid var(--edge);
+  background:var(--card);color:var(--ink);cursor:pointer;transition:all .2s;text-align:left}
+.chip-btn:hover{border-color:var(--dwell)}
+.chip-btn[aria-pressed=true]{background:var(--dwell);border-color:var(--dwell);color:#fff}
+
+/* ---------- boards ---------- */
+.board-tabs{margin-top:.6rem}
+.public + .form,.public + .lede{margin-top:1.4rem}
+.public b{color:#FFD166}
+.warn{background:#FFF4D6;border:1px solid #E8C35A;border-radius:10px;padding:.75rem 1rem;font-size:.92rem}
+.warn code{background:#fff}
+.post-preview{background:var(--wash);border-radius:10px;padding:.75rem 1rem}
+.post-preview .lbl{font:600 .7rem var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.post-preview p{margin:.3rem 0 0;white-space:pre-wrap;word-break:break-word}
+.ack{align-items:flex-start;font-size:.92rem}
+.ack input{margin-top:.25rem}
+.help{display:block;margin-top:.15rem;font-weight:400}
+#room.err{margin:.3rem 0}
+
+.board{margin-top:.6rem}
+.board-list{list-style:none;padding:0;margin:0;display:grid;gap:.7rem}
+.bp{background:var(--card);border:1px solid var(--edge);border-left:4px solid var(--accent);border-radius:12px;padding:.85rem 1.05rem}
+.bp-need{border-left-color:var(--ink)}
+.bp-head{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;font-size:.9rem}
+.bp-head img,.bp-head .dot{width:28px;height:28px;border-radius:50%;object-fit:cover;background:var(--accent);flex:none}
+.bp-head .cat{margin-left:auto;font:600 .68rem var(--disp);letter-spacing:.08em;text-transform:uppercase;
+  background:var(--wash);border-radius:999px;padding:.2rem .55rem;color:var(--faint)}
+.bp p{margin:.55rem 0 .4rem;white-space:pre-wrap;word-break:break-word}
+.bp-foot{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font:.82rem var(--disp);color:var(--faint)}
+.bp-foot a{text-decoration:none}
+.board .empty{padding:1rem 0}
+
+/* ---------- tools ---------- */
+.made-list{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem}
+.made-list a{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .8rem;border-radius:999px;background:var(--wash);
+  font:500 .85rem var(--disp);text-decoration:none;color:var(--ink);max-width:22rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.made-list .k{font-weight:600;color:var(--accent)}
+
+@media (prefers-reduced-motion:no-preference){
+  .guide-steps li{animation:rise .45s calc(.3s + var(--i) * 60ms) backwards}
+  .bp{animation:rise .35s calc(var(--i) * 40ms) backwards}
+}
+
+/* section headings need air after a card or list */
+.view h2.sec{margin-top:2.6rem}
+.view .hint + h2.sec{margin-top:2rem}

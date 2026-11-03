@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "Creative Spaces Symposium 2026 — CultureBlocs event dataset",
+    "name": "Creative Spaces Symposium 2026",
+    "directory": "creative-newham-symposium",
+    "home": "/start/creative-newham/",
+    "tag": "creative-spaces-symposium-2026",
+    "short": "cn",
+    "tz": "Europe/London",
+    "cardLine": "Creative Newham · 3 Nov 2026 · English National Ballet",
+    "repo": "cultureblocs.com",
+    "collection": "community.lexicon.calendar.event",
+    "lexicon": "https://github.com/lexicon-community/lexicon/blob/main/community/lexicon/calendar/event.json",
+    "howToUse": "Publish each entry's `record` with com.atproto.repo.putRecord (repo=cultureblocs.com, collection, rkey). Everything outside `record` is sidecar metadata for the site and is not published.",
+    "source": "https://www.creativenewham.com/creative-newham-symposium-2026",
+    "count": 1,
+    "did": "did:plc:l3726um33xesakwqhjkkpoet"
+  },
+  "records": [
+    {
+      "slug": "2026",
+      "category": "talks",
+      "rkey": "3mzgb53e6k222",
+      "atUri": "at://did:plc:l3726um33xesakwqhjkkpoet/community.lexicon.calendar.event/3mzgb53e6k222",
+      "sources": [
+        "https://www.creativenewham.com/creative-newham-symposium-2026"
+      ],
+      "programme": [
+        {
+          "time": "10:00",
+          "name": "Welcome and introduction"
+        },
+        {
+          "time": "10:25",
+          "name": "Opening address"
+        },
+        {
+          "time": "10:50",
+          "name": "Provocation"
+        },
+        {
+          "time": "11:10",
+          "name": "Placemaking: Those Shaping Places"
+        },
+        {
+          "time": "12:10",
+          "name": "Marketplace of Ideas",
+          "room": "Holloway Production Studio"
+        },
+        {
+          "time": "12:10",
+          "name": "Culture, Nature & the Public Realm",
+          "room": "Bickle Room"
+        },
+        {
+          "time": "14:00",
+          "name": "Spotlight: Who Is Occupying These Spaces?"
+        },
+        {
+          "time": "14:10",
+          "name": "Unexpected Places: Rethinking the Public Realm",
+          "room": "Bickle Room"
+        },
+        {
+          "time": "14:10",
+          "name": "Authentic Co-Creation",
+          "room": "Holloway Production Studio"
+        },
+        {
+          "time": "14:50",
+          "name": "Creative Intervention"
+        },
+        {
+          "time": "15:00",
+          "name": "Civic Involvement & Networks",
+          "room": "Bickle Room"
+        },
+        {
+          "time": "15:00",
+          "name": "Underground: Where Culture Begins",
+          "room": "Holloway Production Studio"
+        },
+        {
+          "time": "15:50",
+          "name": "Creative Hosted Huddles"
+        },
+        {
+          "time": "16:15",
+          "name": "Artist Response, Reflections and Closing"
+        },
+        {
+          "time": "all day",
+          "name": "Drop-in advice and 1:1 sessions",
+          "room": "Bickle Room"
+        },
+        {
+          "time": "all day",
+          "name": "Creative Digestion Space",
+          "room": "Wigoder Gallery"
+        }
+      ],
+      "record": {
+        "$type": "community.lexicon.calendar.event",
+        "name": "Creative Spaces Symposium 2026",
+        "description": "Creative Newham's day on creative spaces in Newham: who shapes places and who gets a say, culture and the public realm, co-creation, civic networks and grassroots culture. Panels and provocations, a marketplace of ideas, drop-in advice and 1:1 sessions with funders and support organisations, and hosted huddles, building towards a Creative Spaces Charter for Newham. For artists, freelancers, producers, community groups, local government, developers, architects, researchers, funders and policymakers.",
+        "createdAt": "2026-11-03T16:30:00.000Z",
+        "startsAt": "2026-11-03T09:30:00+00:00",
+        "endsAt": "2026-11-03T16:30:00+00:00",
+        "mode": "community.lexicon.calendar.event#inperson",
+        "status": "community.lexicon.calendar.event#scheduled",
+        "locations": [
+          {
+            "$type": "community.lexicon.location.address",
+            "country": "GB",
+            "locality": "London",
+            "name": "English National Ballet, London City Island",
+            "street": "Mulryan Centre for Dance, 41 Hopewell Square",
+            "postalCode": "E14 0SY"
+          }
+        ],
+        "uris": [
+          {
+            "uri": "https://www.creativenewham.com/creative-newham-symposium-2026",
+            "name": "Creative Newham"
+          },
+          {
+            "uri": "https://www.cultureblocs.com/start/creative-newham/",
+            "name": "Start with CultureBlocs"
+          }
+        ]
+      }
+    }
+  ]
+}

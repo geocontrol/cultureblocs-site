@@ -19,7 +19,9 @@ test('the feed is found by its at:// URI, with the publisher DID or handle', () 
   assert.equal(findFeed(cfg, 'at://did:plc:someoneelse/app.bsky.feed.generator/frieze-week'), null);
   assert.equal(findFeed(cfg, 'at://did:plc:l3726um33xesakwqhjkkpoet/app.bsky.feed.generator/nope'), null);
   assert.equal(findFeed(cfg, null), null);
-  assert.deepEqual(describe(cfg), { did: 'did:web:www.cultureblocs.com', feeds: [{ uri }] });
+  assert.deepEqual(describe(cfg), { did: 'did:web:www.cultureblocs.com',
+    feeds: cfg.feeds.map(f => ({ uri: feedUri(cfg, f) })) });
+  assert.equal(new Set(cfg.feeds.map(f => f.rkey)).size, cfg.feeds.length);
 });
 
 test('the committed DID document matches the config', () => {

@@ -18,6 +18,23 @@
       ]
     },
     {
+      "source": "/start/creative-newham/client-metadata.json",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/json"
+        },
+        {
+          "key": "access-control-allow-origin",
+          "value": "*"
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
       "source": "/week/client-metadata.json",
       "headers": [
         {
@@ -356,6 +373,31 @@
     {
       "source": "/start",
       "destination": "/start/",
+      "permanent": false
+    },
+    {
+      "source": "/start/creative-newham",
+      "destination": "/start/creative-newham/",
+      "permanent": false
+    },
+    {
+      "source": "/w/cn",
+      "destination": "/start/creative-newham/",
+      "permanent": false
+    },
+    {
+      "source": "/w/cn/:key",
+      "destination": "/went/?dir=creative-newham-symposium&e=:key",
+      "permanent": false
+    },
+    {
+      "source": "/events/creative-newham-symposium",
+      "destination": "/start/creative-newham/",
+      "permanent": false
+    },
+    {
+      "source": "/events/creative-newham-symposium/",
+      "destination": "/start/creative-newham/",
       "permanent": false
     },
     {
