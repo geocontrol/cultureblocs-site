@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapping cultural infrastructure — Experiments — CultureBlocs</title>
+<meta name="description" content="An experiment note: using open CultureBlocs records to map the data ecology of the cultural and creative industries, with artists in the picture from the start.">
+<link rel="canonical" href="https://www.cultureblocs.com/experiments/cultural-infrastructure/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CultureBlocs">
+<meta property="og:title" content="Mapping cultural infrastructure">
+<meta property="og:description" content="Using open CultureBlocs records to map the data ecology of the cultural and creative industries, with artists in the picture from the start.">
+<meta property="og:url" content="https://www.cultureblocs.com/experiments/cultural-infrastructure/">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .note-body p,.note-body ul,.note-body ol{max-width:38rem}
+  .note-body li{margin:0 0 .45rem}
+  .note-body table{margin:.4rem 0 1rem}
+  .note-body td.n{white-space:normal;overflow-wrap:anywhere}
+  .meta{font:.8rem var(--mono);color:var(--faint);margin:0 0 .4rem}
+  .meta a{color:var(--faint)}
+</style>
+</head>
+<body>
+<nav>
+  <a class="mark" href="/">Culture<span>Blocs</span></a>
+  <a class="item" href="/lexicons.html">Format</a>
+  <a class="item" href="/apps.html">Tools</a>
+  <a class="item" href="/howto.html">How to</a>
+  <a class="item" href="/events/">Listings</a>
+  <a class="item" href="/meetup.html">Meetup</a>
+</nav>
+<main class="note-body">
+  <p class="meta"><a href="/experiments.html">Experiments</a> / Reading records back</p>
+  <div class="hero"><h1>Mapping cultural infrastructure.</h1>
+  <p class="lede">An experiment note. Can open records, published by the people
+  and places that make culture happen, be read back into a <b>map of the data
+  ecology</b> of the cultural and creative industries? And can that map put
+  artists in it from the start, rather than as rows in someone else's
+  database?</p></div>
+  <p class="meta"><span class="status planned">idea</span> · written November 2026 ·
+  nothing built yet</p>
+
+  <section>
+    <h2 class="sec">Where the idea comes from</h2>
+    <p>In 2018, while working on Mycelia, Mark Simpkins sketched an
+    <em>Institute of Cultural Infrastructure</em>: a project to map, share and
+    explain the data that sits under culture and creative work. Infrastructure
+    meant everything that gets an idea out of an artist and in front of an
+    audience. Teaching and training. Recording studios, photographic studios and
+    rehearsal rooms. Venues, theatres and galleries. The organisations that
+    represent artists and manage their rights.</p>
+    <p>It drew on two earlier pieces of work: the British Council's
+    <em>Mapping the Creative Industries</em> toolkit (2010) and the Open Data
+    Institute's guide to mapping data ecosystems (2018). It hoped to find which
+    data is, or could be, a shared commons that everyone builds on, and to show
+    where data and value are being held and controlled.</p>
+    <p>The draft also named the problem. Much of culture is run through
+    event-sales and content-management systems. They are good at dates,
+    headline names and scrolling calendar blocks. They are bad at the things
+    that keep going after the night: collaborations, influences, who helped
+    whom. Websites built on them go stale as soon as the season ends, so the
+    connections that make a scene work are never written down anywhere that
+    lasts.</p>
+    <p>The idea stalled in 2018 because there was nothing to map <em>with</em>.
+    Each organisation's data lived in its own systems, and there was no shared
+    format artists could publish into themselves. That has changed.</p>
+  </section>
+
+  <section>
+    <h2 class="sec">What CultureBlocs already gives it</h2>
+    <p>The records needed for a first map already exist in the format. Each one
+    lives in its publisher's own ATProto account, so the map is read from many
+    places and owned by none of them.</p>
+    <table>
+      <tr><th>The map needs</th><th>Already in the format</th></tr>
+      <tr><td>Artists and makers as named parties</td>
+        <td class="n">creative.profile</td></tr>
+      <tr><td>What they made</td>
+        <td class="n">creative.work</td></tr>
+      <tr><td>Who worked with, showed, released or represents whom</td>
+        <td class="n">creative.connection</td></tr>
+      <tr><td>Venues, studios, organisers and other places</td>
+        <td class="n">venue.profile</td></tr>
+      <tr><td>What happened, and who was on</td>
+        <td class="n">calendar.event + venue.lineup</td></tr>
+      <tr><td>Audiences meeting the work</td>
+        <td class="n">bead (visit, watch, listen, read…)</td></tr>
+      <tr><td>The making side: rehearsing, recording, presenting</td>
+        <td class="n">bead (performance, bloc, note)</td></tr>
+      <tr><td>Which outside registries hold a person or a work</td>
+        <td class="n">externalIds (ISNI, IPI, ISRC, ISWC, Wikidata…)</td></tr>
+      <tr><td>Which platforms a venue depends on</td>
+        <td class="n">venue.profile links (ticketing, listings)</td></tr>
+    </table>
+    <p>Three things in the format matter here more than anywhere else:</p>
+    <ul>
+      <li><b>The artist publishes their own node.</b> A creative profile is a
+      self-asserted record in the creative's own account. They are on the map
+      because they put themselves there, not because a venue or a label listed
+      them.</li>
+      <li><b>Connections outlast events.</b> A <code>creative.connection</code> such
+      as <em>collaborated_on</em> or <em>represented_by</em> stays true after the
+      run ends. Relationship types are advisory, so <em>recorded_at</em>,
+      <em>rehearsed_at</em> or <em>trained_at</em> can be tried without a schema
+      change.</li>
+      <li><b>The registries show up on their own.</b> Every external identifier
+      is a trace of a database someone else controls. Counting them shows which
+      registries a scene depends on, and who is missing from them.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">The experiment</h2>
+    <p>Map one small, real patch of cultural infrastructure, using only records
+    people chose to publish, then compare that map with one drawn by hand.</p>
+    <h3>1. Pick a patch</h3>
+    <p>Peckham and Nunhead. There is already sample listings data for local
+    venues, a Peckham Digital directory and the Nunhead Art Trail, and the
+    people are close enough to meet. A patch, not a sector: it keeps the
+    numbers small and lets everyone involved see the result.</p>
+    <h3>2. Help people publish themselves</h3>
+    <p>With their agreement, help around ten to twenty practitioners and five to
+    ten places publish a profile, a few works and the connections they're happy
+    to state, using the <a href="/start/">Start</a> tools. Places should
+    include the less visible ones as well as venues: a rehearsal room, a
+    print studio, a supplier, a college course, a rights or support body. A
+    shared tag on <code>venue.profile</code> (for example
+    <code>infrastructure:rehearsal</code>) marks what kind of place each one
+    is.</p>
+    <h3>3. Read it back</h3>
+    <p>A read-only page in the style of the
+    <a href="/events/frieze-week-london/report/">Frieze Week report</a>. It asks
+    the public backlink index and each publisher's own repository, stores
+    nothing, and draws two views:</p>
+    <ul>
+      <li><b>The ecology.</b> People, works, places and events as one graph,
+      with audiences arriving through beads that point at events and works.</li>
+      <li><b>The dependencies.</b> Which ticketing and listings platforms the
+      places link to, which registries the people and works appear in, and who
+      is described by others but publishes nothing themselves.</li>
+    </ul>
+    <h3>4. Draw it by hand too</h3>
+    <p>Run one workshop using the ODI's data-ecosystem mapping method, with the
+    same people, to draw the flows that records don't carry: money, contracts,
+    who holds the mailing list, who sets the price. Put the two maps side by
+    side. The difference is the finding: what a shared commons is missing, and
+    where data and value are held by someone outside the room.</p>
+
+    <h3>How it fits together</h3>
+    <div class="pipeline">artist ──── creative.profile ──┐
+         └─ creative.work ───────┤
+venue / studio / room ── venue.profile ──┤──> public backlink index ──> map page
+event ── calendar.event + venue.lineup ──┤      + each author's PDS     (reads, stores nothing)
+audience ── beads pointing at events ────┘
+                                                 workshop map (by hand) ──> compare</div>
+  </section>
+
+  <section>
+    <h2 class="sec">Why a venue or studio would take part</h2>
+    <p>The 2018 draft asked this directly, and it's the right question. Some
+    honest answers, to be tested in the experiment rather than assumed:</p>
+    <ul>
+      <li>Being findable and pointable-at without paying a listings platform,
+      and without handing over audience data.</li>
+      <li>The record survives a change of website, ticketing provider or CMS,
+      because it lives in the venue's own account.</li>
+      <li>Collaborations and credits stay attached after the event page is
+      gone.</li>
+      <li>A picture of who came and what it connected to, read from beads people
+      chose to keep, that can go into a funding report without the venue
+      collecting personal data.</li>
+      <li>A clearer view of its own dependencies, which helps when a platform
+      changes its terms.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">What could go wrong</h2>
+    <ul>
+      <li><b>A map of people is a map of people.</b> Networks of freelancers and
+      informal spaces can be exposed by being drawn. Only what each person
+      published goes on the map; one-way connection claims are shown as
+      claims; anyone can be left out through the site's hidden list; small
+      counts are never shown as audience figures.</li>
+      <li><b>Open data is open to everyone.</b> The large players can read the
+      commons too. The difference is that they can't own the source or switch
+      it off. That trade-off should be stated plainly to participants, not
+      buried.</li>
+      <li><b>The map shows who publishes.</b> It will favour people who are
+      comfortable with the tools. It is a sample, not a census, and the
+      hand-drawn map is there to show who is absent.</li>
+      <li><b>Location.</b> Places publish exact locations; people do not.
+      Practitioners' "based in" stays at whatever precision they choose, and
+      bead locations stay stripped on publish as they are now.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec">Questions it should answer</h2>
+    <ol>
+      <li>Are the existing records enough to draw a useful map of a small
+      scene, or is something structural missing?</li>
+      <li>Does a place need a declared <em>kind</em> (rehearsal room, studio,
+      rights body) beyond a tag, and should it become a known value on
+      <code>venue.profile</code>?</li>
+      <li>Do relationships like <em>recorded_at</em> or <em>trained_at</em> get
+      used, and do they belong in the advisory list?</li>
+      <li>Is a record for data flows between organisations needed, or is the
+      hand-drawn map the right place for those? Nothing new goes in the format
+      until the experiment shows it's needed.</li>
+      <li>Would a participant find the map useful enough to keep their records
+      up to date?</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2 class="sec">Related</h2>
+    <p>The <a href="/events/frieze-week-london/report/">Frieze Week report</a>
+    is the reading-back method this would reuse. The
+    <a href="/lexicons.html">format</a> has the full record definitions. The
+    <a href="/howto.html">how-to</a> covers publishing a profile, a venue and an
+    event.</p>
+  </section>
+</main>
+<footer><div class="inner">
+  cultureblocs.com maintains the <code>com.cultureblocs.*</code> schemas ·
+  a <a href="https://geekyoto.com">geekyoto</a> project ·
+  <a href="https://github.com/Geocontrol">source on GitHub</a> ·
+  <a href="/privacy.html">privacy</a>
+</div></footer>
+</body>
+</html>
