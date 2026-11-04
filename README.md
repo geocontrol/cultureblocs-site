@@ -78,6 +78,24 @@ apps built on it, and the London meetup.
                                            (?i= base64url JSON: name, path, message, from — not
                                            secret, nothing stored). Record builders in
                                            start/lib/records.js: node --test 'start/test/*.test.mjs'
+    start/creative-newham/                 Start, Creative Spaces Symposium edition (Creative Newham,
+                                           3 Nov 2026). Guide → account → CreativeID → organisation
+                                           (in its own account; offers to switch and back) → first bloc
+                                           → "I was there" bead pointing at the symposium record, with
+                                           session chips and an optional Bluesky post → Offers and Needs
+                                           boards → tools. Own OAuth client (store "newham").
+                                           The boards are Bluesky posts tagged #CreativeNewhamOffer /
+                                           #CreativeNewhamNeed, collected by the cn-offers / cn-needs
+                                           feeds in feeds/feeds.json and read back through our own
+                                           getFeedSkeleton. The form warns on emails, phone numbers,
+                                           postcodes and street addresses, and needs a "this is public"
+                                           tick. Hide a post with events/hidden.json. Logic in
+                                           start/creative-newham/lib/board.js:
+                                           node --test 'start/creative-newham/test/*.test.mjs'
+                                           Event record: python3 tools/events/build_newham_events.py,
+                                           publish --file events/creative-newham-symposium/events.json,
+                                           build_event_pages.py --dir creative-newham-symposium.
+                                           Short link: cultureblocs.com/w/cn
     ns/creativeid.{html,ttl,jsonld}        GENERATED — the creativeid: Linked Data vocabulary
                                            (namespace https://www.cultureblocs.com/ns/creativeid#).
                                            Edit tools/ns/build_creativeid.py, then run it; --check

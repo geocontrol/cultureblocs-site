@@ -12,8 +12,52 @@
       "avatar": "feeds/avatars/frieze-week.png",
       "sources": {
         "directory": "frieze-week-london",
-        "tags": ["frieze-week-london-2026"],
-        "queries": ["#CultureBlocs frieze"]
+        "tags": [
+          "frieze-week-london-2026"
+        ],
+        "queries": [
+          "#CultureBlocs frieze"
+        ]
+      }
+    },
+    {
+      "rkey": "cn-offers",
+      "displayName": "Creative Newham: Offers",
+      "description": "The Offers board from Creative Newham's Creative Spaces Symposium (3 Nov 2026): space, time, skills and kit people in Newham can share. Post with #CreativeNewhamOffer, or from cultureblocs.com/start/creative-newham. Independent of Creative Newham.",
+      "avatar": "feeds/avatars/cn-offers.png",
+      "sources": {
+        "tags": [
+          "creativenewhamoffer"
+        ],
+        "queries": [
+          "#CreativeNewhamOffer"
+        ]
+      }
+    },
+    {
+      "rkey": "cn-needs",
+      "displayName": "Creative Newham: Needs",
+      "description": "The Needs board from Creative Newham's Creative Spaces Symposium (3 Nov 2026): spaces, collaborators, advice and kit people in Newham are looking for. Post with #CreativeNewhamNeed, or from cultureblocs.com/start/creative-newham. Independent of Creative Newham.",
+      "avatar": "feeds/avatars/cn-needs.png",
+      "sources": {
+        "tags": [
+          "creativenewhamneed"
+        ],
+        "queries": [
+          "#CreativeNewhamNeed"
+        ]
+      }
+    },
+    {
+      "rkey": "creative-spaces-26",
+      "displayName": "Creative Spaces 2026",
+      "description": "Posts from people at Creative Newham's Creative Spaces Symposium, 3 Nov 2026 at English National Ballet, shared with “I went” from cultureblocs.com. An independent feed, not run by Creative Newham.",
+      "avatar": "feeds/avatars/creative-spaces-26.png",
+      "sources": {
+        "directory": "creative-newham-symposium",
+        "tags": [
+          "creative-spaces-symposium-2026"
+        ]
       }
     }
   ]
