@@ -14,6 +14,8 @@ from pathlib import Path
 ORDER = ["com.cultureblocs.bead", "com.cultureblocs.annotation",
          "com.cultureblocs.strand", "com.cultureblocs.creative.profile",
          "com.cultureblocs.creative.work", "com.cultureblocs.creative.connection",
+         "com.cultureblocs.place.profile", "com.cultureblocs.place.lineup",
+         "com.cultureblocs.offer",
          "com.cultureblocs.venue.profile", "com.cultureblocs.venue.lineup",
          "com.cultureblocs.venue.listing", "com.cultureblocs.defs"]
 ESC = html.escape
@@ -109,10 +111,10 @@ def main() -> None:
 </nav>
 <main>
   <div class="hero"><h1>The format.</h1>
-  <p class="lede">Nine small <a href="https://atproto.com/guides/lexicon">ATProto
+  <p class="lede">Ten small <a href="https://atproto.com/guides/lexicon">ATProto
   lexicons</a> under <code>com.cultureblocs.*</code>: beads, strands and
-  annotations; creative profiles, works and connections; venue profiles and
-  line-ups. Events themselves use the shared community calendar format,
+  annotations; creative profiles, works and connections; place profiles,
+  line-ups and offers. Events themselves use the shared community calendar format,
   <code>community.lexicon.calendar.event</code>, which we don't own and don't
   fork. These schemas are anchored to this domain, which is what makes them
   citable. The same shapes describe a record on a device, in a String, or
@@ -121,8 +123,10 @@ def main() -> None:
   <p class="narrow"><b>How these change.</b> Fields are added, not removed. A
   shape that has been replaced stays published, so records written with it still
   resolve: so far <code>venue.listing</code> (replaced by the shared calendar
-  event plus <code>venue.lineup</code>) and <code>defs#workRef</code> (replaced
-  by <code>defs#ref</code>). A written change policy is being prepared.</p>
+  event plus a line-up), <code>venue.profile</code> and <code>venue.lineup</code>
+  (replaced by <code>place.profile</code> and <code>place.lineup</code>, which
+  cover rehearsal rooms, studios, suppliers and shops as well as venues) and
+  <code>defs#workRef</code> (replaced by <code>defs#ref</code>). A written change policy is being prepared.</p>
   <p class="meetup-meta">resolve it yourself: <code>_lexicon.cultureblocs.com</code>
   → <code>did:plc:l3726um33xesakwqhjkkpoet</code> → e.g.
   <code>at://cultureblocs.com/com.atproto.lexicon.schema/com.cultureblocs.bead</code></p>
@@ -132,10 +136,14 @@ def main() -> None:
     <a href="#creative-profile">creative.profile</a> ·
     <a href="#creative-work">creative.work</a> ·
     <a href="#creative-connection">creative.connection</a> ·
-    <a href="/ns/creativeid">Linked Data terms</a><br>venues:
+    <a href="/ns/creativeid">Linked Data terms</a><br>places and offers:
+    <a href="#place-profile">place.profile</a> ·
+    <a href="#place-lineup">place.lineup</a> ·
+    <a href="#offer">offer</a><br>deprecated:
     <a href="#venue-profile">venue.profile</a> ·
     <a href="#venue-lineup">venue.lineup</a> ·
-    <a href="#venue-listing">venue.listing <em>(deprecated)</em></a> ·
+    <a href="#venue-listing">venue.listing</a><br>
+    <a href="#defs">shared defs</a> —
     <a href="#defs">shared defs</a> —
     fields marked <span class="req">✱</span> are required</p></div>
 {body}
@@ -151,17 +159,27 @@ def main() -> None:
     growing them. Attestation is an optional overlay: when two parties
     independently point at each other, a reader can compute a verified
     relationship; unattested records are ordinary, not deficient.</p>
-    <p><b>Venues stay small — and we do not own the event.</b> Nights are
+    <p><b>Places stay small — and we do not own the event.</b> Nights are
     published as
     <a href="https://lexicon.community/lexicons/">community.lexicon.calendar.event</a>,
     the shared event record of the open social web, so a venue's programme
     appears in every calendar app that speaks it rather than only in ours.
-    Our own <code>venue.lineup</code> is a layer over that shared record,
+    Our own <code>place.lineup</code> is a layer over that shared record,
     carrying only what it does not — who is on, works shown — and referencing
-    it by strongRef. <code>venue.listing</code> is deprecated and kept
-    published so old records stay resolvable. An RSVP on an event says
+    it by strongRef. <code>venue.listing</code>, <code>venue.profile</code>
+    and <code>venue.lineup</code> are deprecated and kept published so old
+    records stay resolvable. An RSVP on an event says
     <em>I'm going</em>; a bead pointing at the same event says <em>I was
     here</em> — two tenses, one record, different apps.</p>
+    <p><b>People have an area; places have an address.</b> A creative says
+    where they are based the way a person would — Lewisham, Frome, Brighton —
+    as a <code>defs#areaRef</code>, which carries a Wikidata identifier and
+    national area codes but never coordinates. A street address belongs only
+    in <code>place.profile</code>, and only for spaces the public can visit or
+    book; someone working from a home studio is a person with an offer, not a
+    place. Offers are their own records because they come and go: a status
+    can be paused and reopened on the same record, and an expiry date lets
+    stale offers drop out without anyone tidying up.</p>
     <p><b>What an entry is about is data, not prose.</b> A narrative can
     say that the book was Ben Pester’s <em>The Expansion Project</em>, that it
     rhymes with <em>Severance</em>, and that its ancestry runs back through the

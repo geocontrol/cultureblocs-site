@@ -3,6 +3,13 @@
 Static site for CultureBlocs: the com.cultureblocs.* schema commons, the
 apps built on it, and the London meetup.
 
+The `place.profile`, `place.lineup` and `offer` lexicons, `defs#areaRef`,
+and CreativeID's `basedIn`/`activeIn` fields were added for
+[Culture Catalogue](https://github.com/geocontrol/culture-catalogue), a
+separately branded directory of creative people and places built on
+CultureBlocs data. lexicons.html documents them, and lists
+`venue.profile` and `venue.lineup` as deprecated.
+
     index.html / apps.html / howto.html /
       meetup.html                          hand-written pages
     lexicons.html                          GENERATED — do not edit by hand
