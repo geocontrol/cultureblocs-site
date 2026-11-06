@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   encodeInvite, decodeInvite, slug, domainOf, suggestHandles, clean, linksFrom,
-  profileRecord, workRecord, venueRecord, eventRecord, beadRecord, localToIso, parseAtUri,
+  profileRecord, workRecord, eventRecord, beadRecord, localToIso, parseAtUri,
+  NSID, placeRecord, orgProfileRecord, orgWouldReplace, venuePageRecord, placeKind, placeSource, placeCoords,
 } from '../lib/records.js';
 
 const now = '2026-10-27T12:00:00.000Z';
@@ -70,25 +71,73 @@ test('work: title, freeform date, image', () => {
   assert.equal(r.images[0].alt, 'A red cube');
 });
 
-test('venue: public space has exact geo and the shared address object', () => {
-  const r = venueRecord({ kind: 'venue', name: 'Ivy House', street: '40 Stuart Road',
+test('place: a public space is a place.profile with the shared address object', () => {
+  const r = placeRecord({ kind: 'venue', name: 'Ivy House', street: '40 Stuart Road',
     locality: 'London', postalCode: 'SE15 3BE', lat: '51.4628', lng: '-0.0582', capacity: '250' }, { now });
+  assert.equal(r.$type, 'com.cultureblocs.place.profile');
+  assert.deepEqual(r.spaceTypes, ['venue']);
   assert.deepEqual(r.location, { $type: 'community.lexicon.location.address', name: 'Ivy House',
     street: '40 Stuart Road', locality: 'London', postalCode: 'SE15 3BE', country: 'GB' });
-  assert.deepEqual(r.place, { name: 'Ivy House', geo: { lat: 51.4628, lng: -0.0582, precision: 'exact' } });
-  assert.equal(r.address, '40 Stuart Road, London, SE15 3BE');
   assert.equal(r.capacity, 250);
-  assert.deepEqual(r.tags, ['venue']);
+  assert.equal(r.place, undefined, 'no deprecated venue fields');
+  assert.equal(r.address, undefined);
 });
 
-test('venue: an organisation without a space publishes only its town', () => {
-  const r = venueRecord({ kind: 'org', name: 'Arts Co', street: '1 Home Lane', locality: 'Leeds',
-    lat: '53.80076', lng: '-1.54908', capacity: '20' }, { now });
-  assert.equal(r.location.street, undefined);
-  assert.equal(r.location.locality, 'Leeds');
-  assert.equal(r.place.geo.precision, 'city');
-  assert.equal(r.capacity, undefined);
-  assert.deepEqual(r.tags, ['organisation']);
+test('place: a gallery with no address publishes its map position as a geo location', () => {
+  const r = placeRecord({ kind: 'gallery', name: 'Shed', lat: '51.5', lng: '-0.1' }, { now });
+  assert.deepEqual(r.spaceTypes, ['gallery']);
+  assert.deepEqual(r.location, { $type: 'community.lexicon.location.geo', latitude: '51.5', longitude: '-0.1', name: 'Shed' });
+});
+
+test('place: editing keeps kinds and fields other tools added, and createdAt', () => {
+  const previous = { $type: NSID.place, name: 'Arch 7', spaceTypes: ['venue', 'artist_studio'],
+    hours: 'Thu–Sun', area: { label: 'Peckham, Southwark' }, createdAt: '2026-01-01T00:00:00.000Z' };
+  const r = placeRecord({ kind: 'gallery', name: 'Arch 7', locality: 'London' }, { previous, now });
+  assert.deepEqual(r.spaceTypes, ['gallery', 'artist_studio']);
+  assert.equal(r.hours, 'Thu–Sun');
+  assert.deepEqual(r.area, previous.area);
+  assert.equal(r.createdAt, '2026-01-01T00:00:00.000Z');
+});
+
+test('place: an old venue record fills the form but is never carried into the new record', () => {
+  const venue = { $type: NSID.venue, name: 'Old', tags: ['gallery'], address: '1 Rd', place: { geo: { lat: 1, lng: 2 } } };
+  assert.equal(placeKind(venue), 'gallery');
+  assert.deepEqual(placeSource({ venue: { value: venue } }), venue);
+  assert.deepEqual(placeCoords(venue), { lat: 1, lng: 2 });
+  const r = placeRecord({ kind: 'gallery', name: 'Old', street: '1 Rd', locality: 'Leeds' }, { previous: venue, now });
+  assert.equal(r.$type, NSID.place);
+  assert.equal(r.place, undefined);
+  assert.equal(r.address, undefined);
+});
+
+test('organisation without a space: its own CreativeID, based in its town, no address', () => {
+  const r = orgProfileRecord({ kind: 'org', name: 'Arts Co', description: 'Touring theatre.', street: '1 Home Lane',
+    locality: 'Leeds', postalCode: 'LS1 1AA', lat: '53.8', lng: '-1.5', links: 'artsco.example' }, { now });
+  assert.equal(r.$type, 'com.cultureblocs.creative.profile');
+  assert.equal(r.bio, 'Touring theatre.');
+  assert.deepEqual(r.basedIn, [{ label: 'Leeds', country: 'GB' }]);
+  assert.equal(JSON.stringify(r).includes('Home Lane'), false, 'never the street');
+  assert.equal(JSON.stringify(r).includes('53.8'), false, 'never coordinates');
+});
+
+test('organisation: updating keeps a richer area already published for the same town', () => {
+  const previous = { $type: NSID.profile, name: 'Arts Co', createdAt: '2026-01-01T00:00:00.000Z',
+    basedIn: [{ label: 'Leeds', wikidata: 'Q39121', country: 'GB' }], disciplines: ['theatre'] };
+  const r = orgProfileRecord({ kind: 'org', name: 'Arts Co', locality: 'Leeds' }, { previous, now });
+  assert.deepEqual(r.basedIn, previous.basedIn);
+  assert.deepEqual(r.disciplines, ['theatre']);
+  assert.equal(r.createdAt, previous.createdAt);
+});
+
+test('organisation: refuses to replace someone else’s CreativeID in the same account', () => {
+  assert.equal(orgWouldReplace({ value: { name: 'Mark Simpkins' } }, 'Arts Co'), true);
+  assert.equal(orgWouldReplace({ value: { name: 'Arts Co' } }, 'arts co'), false);
+  assert.equal(orgWouldReplace(null, 'Arts Co'), false);
+});
+
+test('the venue page builds the record for the kind chosen', () => {
+  assert.equal(venuePageRecord({ kind: 'venue', name: 'A', locality: 'B' }, {}, now).$type, NSID.place);
+  assert.equal(venuePageRecord({ kind: 'org', name: 'A', locality: 'B' }, {}, now).$type, NSID.profile);
 });
 
 test('localToIso writes the local offset', () => {

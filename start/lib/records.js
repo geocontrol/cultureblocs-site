@@ -10,6 +10,8 @@
 export const NSID = {
   profile: 'com.cultureblocs.creative.profile',
   work: 'com.cultureblocs.creative.work',
+  place: 'com.cultureblocs.place.profile',
+  // Deprecated since 6 Nov 2026: read so an old venue fills the form, never written.
   venue: 'com.cultureblocs.venue.profile',
   event: 'community.lexicon.calendar.event',
   bead: 'com.cultureblocs.bead',
@@ -224,36 +226,89 @@ export function geoObject(c, name) {
 export const oneLineAddress = (f) =>
   [f.street, f.locality, f.region, f.postalCode].map(x => str(x)).filter(Boolean).join(', ');
 
-/* com.cultureblocs.venue.profile at rkey self — a venue, gallery or
- * organisation. A space open to the public publishes its exact address and
- * coordinates; an organisation without one publishes only its town.
+/* The venue page publishes one of two records, by what the form says it is.
  *
- *   location   the shared address object (what calendar apps read)
- *   place.geo  exact coordinates, our own defs#geo (what maps read)
- *   address    the one-line address, for readers of the older field
- */
-export function venueRecord(f, { createdAt, now }) {
+ *   A venue or gallery (a space the public can visit or book)
+ *     → com.cultureblocs.place.profile at rkey self, with its full address
+ *       in the shared community.lexicon.location.address shape. With no
+ *       address, the map position is published instead, as a geo location.
+ *   An organisation without a public space
+ *     → its own CreativeID (com.cultureblocs.creative.profile at self),
+ *       with the town as the area it is based in. Never an address.
+ *
+ * place.profile replaced venue.profile on 6 Nov 2026. An old venue record
+ * is only read, to fill the form; publishing writes the new record. */
+export const placeKind = (v = {}) => {
+  const types = Array.isArray(v.spaceTypes) ? v.spaceTypes : [];
+  const tags = Array.isArray(v.tags) ? v.tags : [];
+  if (types.includes('gallery') || tags.includes('gallery')) return 'gallery';
+  if (tags.includes('organisation')) return 'org';
+  return 'venue';
+};
+
+/* What fills the form: the place if there is one, else an old venue. */
+export const placeSource = (existing = {}) => existing.place?.value || existing.venue?.value || {};
+
+/* Coordinates already published for a place or an old venue, for the form. */
+export function placeCoords(v = {}) {
+  if (v.place?.geo) return { lat: v.place.geo.lat, lng: v.place.geo.lng };
+  if (v.location?.$type === 'community.lexicon.location.geo') return { lat: v.location.latitude, lng: v.location.longitude };
+  return {};
+}
+
+export function placeRecord(f, { previous, createdAt, now }) {
+  const prev = previous && previous.$type === NSID.place ? previous : {};
   const name = str(f.name, 300);
-  const publicSpace = f.kind !== 'org';
-  const c = coords(f.lat, f.lng);
-  const addr = addressObject(publicSpace ? f : { locality: f.locality, region: f.region, country: f.country }, name);
-  const geo = c && (publicSpace
-    ? { lat: c.lat, lng: c.lng, precision: 'exact' }
-    : { lat: Math.round(c.lat * 10) / 10, lng: Math.round(c.lng * 10) / 10, precision: 'city' });
+  const main = f.kind === 'gallery' ? 'gallery' : 'venue';
+  // keep kinds added elsewhere (studio, shop…), with this form's kind first
+  const others = (Array.isArray(prev.spaceTypes) ? prev.spaceTypes : []).filter(t => t !== 'venue' && t !== 'gallery');
+  const location = addressObject(f, name) || geoObject(coords(f.lat, f.lng), name) || undefined;
+  const cap = num(f.capacity);
   return clean({
-    $type: NSID.venue,
+    ...prev,
+    $type: NSID.place,
     name,
-    description: str(f.description, 3000),
-    location: addr || undefined,
-    place: { name, ...(geo ? { geo } : {}) },
-    address: publicSpace ? oneLineAddress(f) : str(f.locality),
-    capacity: publicSpace ? (num(f.capacity) > 0 ? Math.round(num(f.capacity)) : undefined) : undefined,
-    accessibility: publicSpace ? str(f.accessibility, 2000) : undefined,
+    spaceTypes: [main, ...others].slice(0, 8),
+    description: str(f.description, 2000),
+    location,
+    capacity: cap > 0 ? Math.round(cap) : undefined,
+    accessibility: str(f.accessibility, 1000),
     links: linksFrom(f.links),
-    tags: [f.kind === 'gallery' ? 'gallery' : f.kind === 'org' ? 'organisation' : 'venue',
-      ...list(f.tags)].slice(0, 8),
-    createdAt: createdAt || now,
+    tags: list(f.tags).slice(0, 8),
+    createdAt: prev.createdAt || createdAt || now,
   });
+}
+
+/* An organisation without a public space: its CreativeID, laid over any
+ * profile the account already holds so fields from other tools survive. */
+export function orgProfileRecord(f, { previous, now }) {
+  const prev = previous && typeof previous === 'object' ? previous : {};
+  const label = [str(f.locality), str(f.region)].filter(Boolean).join(', ').slice(0, 200);
+  const country = str(f.country || 'GB').toUpperCase().slice(0, 2);
+  const same = (prev.basedIn || []).find(a => a && a.label === label);
+  return clean({
+    ...prev,
+    $type: NSID.profile,
+    name: str(f.name, 300),
+    bio: str(f.description, 2000),
+    basedIn: label ? [same || { label, country }] : prev.basedIn,
+    links: linksFrom(f.links).length ? linksFrom(f.links) : prev.links,
+    createdAt: prev.createdAt || now,
+  });
+}
+
+/* Publishing an organisation's CreativeID into an account that already
+ * holds someone else's would replace theirs. Same name: it is an update. */
+export function orgWouldReplace(existingProfile, name) {
+  const had = existingProfile?.value?.name;
+  return Boolean(had && str(had).toLowerCase() !== str(name).toLowerCase());
+}
+
+/* The page's record for whatever kind the form is set to. */
+export function venuePageRecord(f, existing = {}, now) {
+  return f.kind === 'org'
+    ? orgProfileRecord(f, { previous: existing.profile?.value, now })
+    : placeRecord(f, { previous: existing.place?.value, createdAt: existing.place?.value?.createdAt, now });
 }
 
 /* A datetime-local value ("2026-11-14T19:30") read in the person's own
