@@ -80,10 +80,12 @@
         <td class="n">creative.work</td></tr>
       <tr><td>Who worked with, showed, released or represents whom</td>
         <td class="n">creative.connection</td></tr>
-      <tr><td>Venues, studios, organisers and other places</td>
-        <td class="n">venue.profile</td></tr>
+      <tr><td>Venues, studios, rehearsal rooms, suppliers and other places</td>
+        <td class="n">place.profile</td></tr>
       <tr><td>What happened, and who was on</td>
-        <td class="n">calendar.event + venue.lineup</td></tr>
+        <td class="n">calendar.event + place.lineup</td></tr>
+      <tr><td>What a person or place offers or needs, for a while</td>
+        <td class="n">offer</td></tr>
       <tr><td>Audiences meeting the work</td>
         <td class="n">bead (visit, watch, listen, read…)</td></tr>
       <tr><td>The making side: rehearsing, recording, presenting</td>
@@ -91,7 +93,7 @@
       <tr><td>Which outside registries hold a person or a work</td>
         <td class="n">externalIds (ISNI, IPI, ISRC, ISWC, Wikidata…)</td></tr>
       <tr><td>Which platforms a venue depends on</td>
-        <td class="n">venue.profile links (ticketing, listings)</td></tr>
+        <td class="n">place.profile links (ticketing, listings)</td></tr>
     </table>
     <p>Three things in the format matter here more than anywhere else:</p>
     <ul>
@@ -124,10 +126,10 @@
     ten places publish a profile, a few works and the connections they're happy
     to state, using the <a href="/start/">Start</a> tools. Places should
     include the less visible ones as well as venues: a rehearsal room, a
-    print studio, a supplier, a college course, a rights or support body. A
-    shared tag on <code>venue.profile</code> (for example
-    <code>infrastructure:rehearsal</code>) marks what kind of place each one
-    is.</p>
+    print studio, a supplier, a college course, a rights or support body.
+    <code>place.profile</code>’s <code>spaceTypes</code> says what kind of
+    place each one is (<code>rehearsal_room</code>, <code>recording_studio</code>,
+    <code>supplier</code>…), and new kinds need no schema change.</p>
     <h3>3. Read it back</h3>
     <p>A read-only page in the style of the
     <a href="/events/frieze-week-london/report/">Frieze Week report</a>. It asks
@@ -150,8 +152,8 @@
     <h3>How it fits together</h3>
     <div class="pipeline">artist ──── creative.profile ──┐
          └─ creative.work ───────┤
-venue / studio / room ── venue.profile ──┤──> public backlink index ──> map page
-event ── calendar.event + venue.lineup ──┤      + each author's PDS     (reads, stores nothing)
+venue / studio / room ── place.profile ──┤──> public backlink index ──> map page
+event ── calendar.event + place.lineup ──┤      + each author's PDS     (reads, stores nothing)
 audience ── beads pointing at events ────┘
                                                  workshop map (by hand) ──> compare</div>
   </section>
@@ -202,8 +204,10 @@ audience ── beads pointing at events ────┘
       <li>Are the existing records enough to draw a useful map of a small
       scene, or is something structural missing?</li>
       <li>Does a place need a declared <em>kind</em> (rehearsal room, studio,
-      rights body) beyond a tag, and should it become a known value on
-      <code>venue.profile</code>?</li>
+      rights body) beyond a tag? Answered on 6 November 2026:
+      <code>venue.profile</code> became <code>place.profile</code>, with a
+      <code>spaceTypes</code> list. Do its starter kinds cover the places this
+      workshop finds?</li>
       <li>Do relationships like <em>recorded_at</em> or <em>trained_at</em> get
       used, and do they belong in the advisory list?</li>
       <li>Is a record for data flows between organisations needed, or is the

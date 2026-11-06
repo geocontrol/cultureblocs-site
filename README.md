@@ -75,8 +75,10 @@ CultureBlocs data. lexicons.html documents them, and lists
     start/                                 "Start": the onboarding journey for people invited to try
                                            CultureBlocs. Welcome → account (sign in, or pick
                                            Bluesky/Blacksky/Eurosky with suggested handles) → make
-                                           (creative profile + works, venue/org with address and
-                                           geo, calendar event, quick note bead) → bookmarkable
+                                           (creative profile + works, a venue or gallery as a
+                                           place.profile with its address, or an organisation
+                                           without premises as its own CreativeID based in its
+                                           town; calendar event, quick note bead) → bookmarkable
                                            tools. Hash-routed (#venue, #event, #note work as
                                            standalone tools). Own OAuth client
                                            (start/client-metadata.json, store "start"); on
@@ -205,8 +207,8 @@ events/serpentine-galleries/ so "I went", My week and publishing work unchanged;
 
 Its listing also carries what a bead-minting app needs beside each record —
 meta.venues (address, coordinates, hours), each entry's venue, beadKind, `about`
-(the exhibition a talk belongs to) and people — plus meta.venueProfile, the
-com.cultureblocs.venue.profile a gallery could publish from its own account.
+(the exhibition a talk belongs to) and people — plus meta.placeProfile, the
+com.cultureblocs.place.profile a gallery could publish from its own account.
 
 What a directory calls being there is meta.verb ({"button": "I saw",
 "past": "saw"}); without it, "I went". The button, the composer, the default

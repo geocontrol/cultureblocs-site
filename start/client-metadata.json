@@ -8,7 +8,7 @@
   "redirect_uris": [
     "https://www.cultureblocs.com/start/"
   ],
-  "scope": "atproto repo:com.cultureblocs.creative.profile repo:com.cultureblocs.creative.work repo:com.cultureblocs.venue.profile repo:community.lexicon.calendar.event repo:com.cultureblocs.bead blob:image/* transition:generic",
+  "scope": "atproto repo:com.cultureblocs.creative.profile repo:com.cultureblocs.creative.work repo:com.cultureblocs.place.profile repo:community.lexicon.calendar.event repo:com.cultureblocs.bead blob:image/* transition:generic",
   "grant_types": [
     "authorization_code",
     "refresh_token"

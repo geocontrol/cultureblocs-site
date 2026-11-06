@@ -18,11 +18,11 @@
 import * as auth from './lib/oauth.js';
 import {
   NSID, NETWORKS, BEAD_KINDS, decodeInvite, suggestHandles, domainOf,
-  profileRecord, workRecord, venueRecord, eventRecord, beadRecord,
-  localToIso,
+  profileRecord, workRecord, eventRecord, beadRecord, localToIso,
+  placeKind, placeSource, placeCoords, venuePageRecord, orgWouldReplace,
 } from './lib/records.js';
 
-const SCOPE = 'atproto ' + [NSID.profile, NSID.work, NSID.venue, NSID.event, NSID.bead]
+const SCOPE = 'atproto ' + [NSID.profile, NSID.work, NSID.place, NSID.event, NSID.bead]
   .map(n => `repo:${n}`).join(' ') + ' blob:image/*';
 const SITE = 'https://www.cultureblocs.com';
 const KEY = 'start:journey';
@@ -69,11 +69,12 @@ async function loadAccount() {
     const p = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=${encodeURIComponent(s.did)}`);
     if (p.ok) { const j = await p.json(); account.displayName = j.displayName || ''; account.avatar = j.avatar || ''; account.handle = j.handle || s.handle; }
   } catch { /* the avatar is a nicety */ }
-  const [profile, venue] = await Promise.all([
+  const [profile, place, venue] = await Promise.all([
     getRecord(NSID.profile, 'self').catch(() => null),
-    getRecord(NSID.venue, 'self').catch(() => null),
+    getRecord(NSID.place, 'self').catch(() => null),
+    getRecord(NSID.venue, 'self').catch(() => null), // deprecated: only fills the form
   ]);
-  existing = { profile, venue };
+  existing = { profile, place, venue };
 }
 
 /* ---------- the shell: rail, who, view transitions ---------- */
@@ -632,10 +633,10 @@ BIND.person = (view) => {
 
 /* ---------- venue, gallery or organisation ---------- */
 PAGES.venue = () => {
-  const v = existing.venue?.value || {};
+  const v = placeSource(existing);
   const a = v.location?.$type === 'community.lexicon.location.address' ? v.location : {};
-  const g = v.place?.geo || {};
-  const kind = (v.tags || []).includes('organisation') ? 'org' : (v.tags || []).includes('gallery') ? 'gallery' : 'venue';
+  const g = placeCoords(v);
+  const kind = placeKind(v);
   return `<section class="step-in">
     <p class="crumb"><a href="#make">← All options</a></p>
     <h1 class="h">Venue, gallery or organisation</h1>
@@ -682,10 +683,12 @@ PAGES.venue = () => {
       <label>Links <span class="faint">(website, socials, ticketing; one per line)</span>
         <textarea name="links" rows="2">${esc((v.links || []).map(l => l.uri).join('\n'))}</textarea></label>
       <details class="explain"><summary>How location is published</summary>
-        <p>The address goes in the shared <code>community.lexicon.location.address</code> format that calendar and
-        event apps on the network already read. The coordinates go in <code>place.geo</code> with a stated
-        precision: <code>exact</code> for a public space, <code>city</code> otherwise. Events you publish next
-        copy both, so nobody retypes the address.</p></details>
+        <p>A venue or gallery is published as a <code>place.profile</code>, with its address in the shared
+        <code>community.lexicon.location.address</code> format that calendar and event apps on the network
+        already read. Without an address, the map position is published instead. Events you publish next copy the
+        address, so nobody retypes it.</p>
+        <p>An organisation without a public space is published as its own CreativeID, with its town as the area
+        it is based in. No address and no map position.</p></details>
       <p class="err" role="alert" hidden></p>
       <button class="btn" type="submit">${v.name ? 'Update' : 'Publish'}</button>
     </form>
@@ -699,11 +702,12 @@ BIND.venue = (view) => {
   bindSignIn(view);
   const form = $('#f-venue', view);
   if (!form) return;
-  const build = () => venueRecord(formData(form), { createdAt: existing.venue?.value?.createdAt, now: nowIso() });
+  const build = () => venuePageRecord(formData(form), existing, nowIso());
   const sync = () => {
     const org = form.kind.value === 'org';
     $$('.only-space', form).forEach(el => { el.hidden = org; });
     $$('.only-org', form).forEach(el => { el.hidden = !org; });
+    $$('.coords, .pair', form).forEach(el => { el.hidden = org; }); // an organisation publishes no map position
   };
   form.addEventListener('change', sync); sync();
   livePreview(form, build);
@@ -719,13 +723,21 @@ BIND.venue = (view) => {
     e.preventDefault();
     if (!form.name.value.trim()) { formError(form, new Error('Add a name.')); return; }
     $('.err', form).hidden = true;
+    const org = form.kind.value === 'org';
+    if (org && orgWouldReplace(existing.profile, form.name.value)) {
+      formError(form, new Error(`This account already has a CreativeID for ${existing.profile.value.name}. `
+        + 'Publishing the organisation here would replace it. Sign in with the organisation’s own account.'));
+      return;
+    }
     setBusy(form, true, 'Publishing…');
     try {
       const rec = build();
-      const res = await auth.putRecord(NSID.venue, 'self', rec, existing.venue?.cid);
-      existing.venue = { uri: res.uri, cid: res.cid, value: rec };
+      const nsid = org ? NSID.profile : NSID.place;
+      const was = org ? existing.profile : existing.place;
+      const res = await auth.putRecord(nsid, 'self', rec, was?.cid);
+      existing[org ? 'profile' : 'place'] = { uri: res.uri, cid: res.cid, value: rec };
       remember('venue', res.uri, rec.name);
-      $('#venue-done').innerHTML = done('Published', res.uri, ' · <a href="#event">Add an event here →</a>');
+      $('#venue-done').innerHTML = done('Published', res.uri, org ? '' : ' · <a href="#event">Add an event here →</a>');
       setBusy(form, false, 'Update');
     } catch (x) { formError(form, x); setBusy(form, false, 'Publish'); }
   };
@@ -733,7 +745,7 @@ BIND.venue = (view) => {
 
 /* ---------- event ---------- */
 PAGES.event = () => {
-  const v = existing.venue?.value;
+  const v = existing.place?.value || existing.venue?.value; // an old venue still offers "At …"
   return `<section class="step-in">
     <p class="crumb"><a href="#make">← All options</a></p>
     <h1 class="h">An event</h1>
@@ -782,13 +794,14 @@ BIND.event = (view) => {
   bindSignIn(view);
   const form = $('#f-event', view);
   if (!form) return;
-  const v = existing.venue?.value;
+  const v = existing.place?.value || existing.venue?.value;
   const fields = () => {
     const f = formData(form);
     if (v && form.atVenue?.checked) {
-      const a = v.location || {};
+      const a = v.location?.$type === 'community.lexicon.location.address' ? v.location : {};
+      const g = placeCoords(v);
       Object.assign(f, { venueName: v.name, street: a.street, locality: a.locality, region: a.region,
-        postalCode: a.postalCode, country: a.country, lat: v.place?.geo?.lat, lng: v.place?.geo?.lng });
+        postalCode: a.postalCode, country: a.country, lat: g.lat, lng: g.lng });
     }
     return f;
   };

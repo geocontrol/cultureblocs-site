@@ -8,7 +8,7 @@
   "redirect_uris": [
     "https://www.cultureblocs.com/start/creative-newham/"
   ],
-  "scope": "atproto repo:com.cultureblocs.creative.profile repo:com.cultureblocs.venue.profile repo:com.cultureblocs.bead repo:app.bsky.feed.post blob:image/* transition:generic",
+  "scope": "atproto repo:com.cultureblocs.creative.profile repo:com.cultureblocs.place.profile repo:com.cultureblocs.bead repo:app.bsky.feed.post blob:image/* transition:generic",
   "grant_types": [
     "authorization_code",
     "refresh_token"

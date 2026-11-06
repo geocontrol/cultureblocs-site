@@ -52,10 +52,14 @@
         "hours": "Daily 10:00–18:00 until 25 October 2026"
       }
     },
-    "venueProfile": {
-      "_about": "What Serpentine could publish once from its own account (rkey self) so that its events, and beads about them, have an organisation to point at.",
-      "$type": "com.cultureblocs.venue.profile",
+    "placeProfile": {
+      "_about": "What Serpentine could publish once from its own account (rkey self) so that its events, and beads about them, have a place to point at. com.cultureblocs.place.profile replaced venue.profile on 6 Nov 2026.",
+      "$type": "com.cultureblocs.place.profile",
       "name": "Serpentine",
+      "spaceTypes": [
+        "gallery"
+      ],
+      "publicAccess": "walk_in",
       "description": "Two galleries and an annual architecture Pavilion in Kensington Gardens, London. Free to visit.",
       "location": {
         "$type": "community.lexicon.location.address",

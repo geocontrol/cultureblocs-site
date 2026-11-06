@@ -7,7 +7,8 @@
  *   #guide     what this page offers, and what you end up with
  *   #account   sign in, or pick a network and a handle
  *   #you       your CreativeID (com.cultureblocs.creative.profile)
- *   #org       your organisation (com.cultureblocs.venue.profile), in its own account
+ *   #org       your organisation, in its own account: a place.profile for a space
+ *              people can visit, otherwise the organisation's own CreativeID
  *   #bloc      a first bloc: one cultural moment (com.cultureblocs.bead)
  *   #there     "I was there": a bead pointing at the symposium's event record
  *   #boards    the Offers and Needs boards: read them, post to them (app.bsky.feed.post)
@@ -18,7 +19,8 @@
  * see /feeds/feeds.json) and Bluesky's public API.
  */
 import * as auth from '../lib/oauth.js';
-import { NSID, NETWORKS, suggestHandles, profileRecord, venueRecord, beadRecord } from '../lib/records.js';
+import { NSID, NETWORKS, suggestHandles, profileRecord, beadRecord,
+  placeKind, placeSource, placeCoords, venuePageRecord, orgWouldReplace } from '../lib/records.js';
 import { buildBead, buildPost, defaultPostText, findExisting, graphemes, POST_MAX } from '../../went/lib/compose.js';
 import { getRecord as getPublicRecord, identify, listBeads } from '../../went/lib/repo.js';
 import { BOARDS, CATEGORIES, boardPost, boardText, cardOf, feedUri, privateBits, roomLeft, POST_NSID }
@@ -28,7 +30,7 @@ const DIR = 'creative-newham-symposium';
 const SITE = 'https://www.cultureblocs.com';
 const HERE = '/start/creative-newham/';
 const APP = 'cultureblocs-start-newham';
-const SCOPE = 'atproto ' + [NSID.profile, NSID.venue, NSID.bead, POST_NSID].map(n => `repo:${n}`).join(' ') + ' blob:image/*';
+const SCOPE = 'atproto ' + [NSID.profile, NSID.place, NSID.bead, POST_NSID].map(n => `repo:${n}`).join(' ') + ' blob:image/*';
 const KEY = 'newham:journey';
 const ORDER = ['guide', 'account', 'you', 'org', 'bloc', 'there', 'boards', 'tools'];
 const TITLES = { guide: 'After the symposium', account: 'Your account', you: 'Your CreativeID',
@@ -80,11 +82,12 @@ async function loadAccount() {
     const p = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=${encodeURIComponent(s.did)}`);
     if (p.ok) { const j = await p.json(); account.displayName = j.displayName || ''; account.avatar = j.avatar || ''; account.handle = j.handle || s.handle; }
   } catch { /* the avatar is a nicety */ }
-  const [profile, venue] = await Promise.all([
+  const [profile, place, venue] = await Promise.all([
     getRecord(NSID.profile, 'self').catch(() => null),
-    getRecord(NSID.venue, 'self').catch(() => null),
+    getRecord(NSID.place, 'self').catch(() => null),
+    getRecord(NSID.venue, 'self').catch(() => null), // deprecated: only fills the form
   ]);
-  existing = { profile, venue };
+  existing = { profile, place, venue };
 }
 
 async function loadSymposium() {
@@ -512,10 +515,10 @@ BIND.you = (view) => {
 
 /* ---------- org ---------- */
 const orgForm = () => {
-  const v = existing.venue?.value || {};
+  const v = placeSource(existing);
   const a = v.location?.$type === 'community.lexicon.location.address' ? v.location : {};
-  const g = v.place?.geo || {};
-  const kind = (v.tags || []).includes('organisation') ? 'org' : (v.tags || []).includes('gallery') ? 'gallery' : (v.name ? 'venue' : 'org');
+  const g = placeCoords(v);
+  const kind = v.name ? placeKind(v) : 'org';
   return `
     <form id="f-org" class="form card" novalidate>
       <fieldset class="kinds"><legend>This is</legend>
@@ -568,7 +571,7 @@ PAGES.org = () => {
       ${signIn('org', "Your organisation's handle")}
       <p class="hint">No organisation account yet? <a href="#account">Set one up</a> and choose
       “An organisation, venue or group”. Ideally its handle is its website domain.</p>`;
-  } else if (mine && !existing.venue) {
+  } else if (mine && !existing.place && !existing.venue) {
     body = `<p class="lede">An organisation's profile belongs in the organisation's own account, so that it stays
       with the organisation if people move on, and its events and posts come from it.</p>
       <div class="card signed">
@@ -586,7 +589,7 @@ PAGES.org = () => {
       <div id="same-form" hidden>${orgForm()}</div>`;
   } else {
     body = `<p class="lede">Name, what it does and where, so events, visits and maps can point at it.
-      ${existing.venue ? 'This account already has one; changes here update it.' : ''}</p>${orgForm()}`;
+      ${existing.place || existing.venue ? 'This account already has one; changes here update it.' : ''}</p>${orgForm()}`;
   }
   return `<section class="step-in">
     <h1 class="h">Your organisation</h1>
@@ -598,11 +601,12 @@ PAGES.org = () => {
 function bindOrgForm(view) {
   const form = $('#f-org', view);
   if (!form) return;
-  const build = () => venueRecord(formData(form), { createdAt: existing.venue?.value?.createdAt, now: nowIso() });
+  const build = () => venuePageRecord(formData(form), existing, nowIso());
   const sync = () => {
     const org = form.kind.value === 'org';
     $$('.only-space', form).forEach(el => { el.hidden = org; });
     $$('.only-org', form).forEach(el => { el.hidden = !org; });
+    $$('.coords, .pair', form).forEach(el => { el.hidden = org; }); // an organisation publishes no map position
   };
   form.addEventListener('change', sync); sync();
   livePreview(form, build);
@@ -617,11 +621,19 @@ function bindOrgForm(view) {
     e.preventDefault();
     if (!form.name.value.trim()) { formError(form, new Error('Add a name.')); return; }
     $('.err', form).hidden = true;
+    const org = form.kind.value === 'org';
+    if (org && orgWouldReplace(existing.profile, form.name.value)) {
+      formError(form, new Error(`This account already has a CreativeID for ${existing.profile.value.name}. `
+        + 'Publishing the organisation here would replace it. Sign in with the organisation’s own account.'));
+      return;
+    }
     setBusy(form, true, 'Publishing…');
     try {
       const rec = build();
-      const res = await auth.putRecord(NSID.venue, 'self', rec, existing.venue?.cid);
-      existing.venue = { uri: res.uri, cid: res.cid, value: rec };
+      const nsid = org ? NSID.profile : NSID.place;
+      const was = org ? existing.profile : existing.place;
+      const res = await auth.putRecord(nsid, 'self', rec, was?.cid);
+      existing[org ? 'profile' : 'place'] = { uri: res.uri, cid: res.cid, value: rec };
       remember('org', res.uri, rec.name);
       const back = state.me && state.me !== account.handle;
       $('#org-done').innerHTML = done(`${rec.name} is published`, res.uri, back

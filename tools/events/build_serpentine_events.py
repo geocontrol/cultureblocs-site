@@ -262,10 +262,12 @@ doc = {
     "omitted": "Ongoing projects without dates (Serpentine Podcast, Future Art Ecosystems, Legal Lab, Changing Play, the fellowships, the How We Hold book) and Danielle Brathwaite-Shirley's online game I DIDNT REALISE YOU THOUGHT LIKE THAT (THE DELUSION) — these are works to read, listen to or play, not dated events, and belong in a bead's refs rather than as calendar records. The Pavilion architects' talk (5 June) is past.",
     "unofficial": "Independent listing by CultureBlocs, made as a demonstration; not affiliated with or endorsed by Serpentine. The aim is for a venue to publish these records from its own account.",
     "venues": venues,
-    "venueProfile": {
-      "_about": "What Serpentine could publish once from its own account (rkey self) so that its events, and beads about them, have an organisation to point at.",
-      "$type": "com.cultureblocs.venue.profile",
+    "placeProfile": {
+      "_about": "What Serpentine could publish once from its own account (rkey self) so that its events, and beads about them, have a place to point at. com.cultureblocs.place.profile replaced venue.profile on 6 Nov 2026.",
+      "$type": "com.cultureblocs.place.profile",
       "name": "Serpentine",
+      "spaceTypes": ["gallery"],
+      "publicAccess": "walk_in",
       "description": "Two galleries and an annual architecture Pavilion in Kensington Gardens, London. Free to visit.",
       "location": {"$type": "community.lexicon.location.address", "country": "GB", "locality": "London",
                    "name": "Serpentine", "street": "Kensington Gardens", "postalCode": "W2 3XA"},
